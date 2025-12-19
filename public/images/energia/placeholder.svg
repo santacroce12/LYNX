@@ -1,0 +1,14 @@
+﻿<svg width="640" height="360" viewBox="0 0 640 360" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="640" height="360" rx="24" fill="#0F172A" />
+  <path d="M64 260L200 140L320 220L460 120L576 180" stroke="#FF6A00" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+  <circle cx="200" cy="140" r="6" fill="#FF8A3D" />
+  <circle cx="320" cy="220" r="6" fill="#FF8A3D" />
+  <circle cx="460" cy="120" r="6" fill="#FF8A3D" />
+  <rect x="64" y="70" width="200" height="90" rx="14" fill="url(#energyGlow)" fill-opacity="0.6" />
+  <defs>
+    <linearGradient id="energyGlow" x1="64" y1="70" x2="264" y2="160" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FF6A00" />
+      <stop offset="1" stop-color="#0F172A" stop-opacity="0" />
+    </linearGradient>
+  </defs>
+</svg>
