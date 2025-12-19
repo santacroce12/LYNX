@@ -1,16 +1,56 @@
-﻿import Link from "next/link";
+﻿"use client";
+
+import { useEffect, useState } from "react";
+import Image from "next/image";
+import Link from "next/link";
 import { site } from "@/content/site";
 import ThemeToggle from "@/components/ui/ThemeToggle";
 
 export default function Navbar() {
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 10);
+    };
+
+    handleScroll();
+    window.addEventListener("scroll", handleScroll, { passive: true });
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
+  const headerClass = `fixed top-0 z-50 w-full transition-all duration-300 ease-in-out ${
+    isScrolled
+      ? "bg-[var(--bg)]/80 backdrop-blur-md border-b border-[var(--border)] shadow-sm"
+      : "bg-transparent border-b border-transparent"
+  }`;
+
+  const containerClass = `mx-auto flex w-full max-w-6xl items-center justify-between px-6 transition-all duration-300 ease-in-out ${
+    isScrolled ? "py-3" : "py-6"
+  }`;
+
+  const logoClass = `w-auto transition-all duration-300 ease-in-out ${
+    isScrolled ? "h-8" : "h-10"
+  }`;
+
   return (
-    <header className="fixed top-0 z-50 w-full border-b border-[var(--border)] bg-[var(--bg)]/80 backdrop-blur">
-      <div className="mx-auto flex h-16 w-full max-w-6xl items-center justify-between px-6">
-        <Link
-          href="/"
-          className="text-lg font-semibold tracking-wide text-[var(--text)]"
-        >
-          {site.name}
+    <header className={headerClass}>
+      <div className={containerClass}>
+        <Link href="/" className="flex items-center gap-3">
+          <Image
+            src="/images/brand/logo-azul.png"
+            alt="LYNX logo"
+            width={160}
+            height={48}
+            className={logoClass}
+            priority
+          />
+          <span className="text-xs font-semibold uppercase tracking-[0.4em] text-[var(--text)]">
+            {site.name}
+          </span>
         </Link>
         <div className="flex items-center gap-4">
           <nav

@@ -1,6 +1,7 @@
 ﻿import type { Metadata } from "next";
 import type { ReactNode } from "react";
 import { Space_Grotesk, Sora } from "next/font/google";
+import BotLynx from "@/components/marketing/BotLynx";
 import "@/styles/globals.css";
 import { site } from "@/content/site";
 
@@ -37,6 +38,9 @@ const themeScript = `(() => {
 export const metadata: Metadata = {
   title: site.name,
   description: site.description,
+  icons: {
+    icon: "/favicon.png",
+  },
 };
 
 export default function RootLayout({
@@ -56,6 +60,7 @@ export default function RootLayout({
       </head>
       <body className="bg-[var(--bg)] text-[var(--text)] antialiased">
         {children}
+        <BotLynx />
       </body>
     </html>
   );

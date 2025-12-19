@@ -217,4 +217,18 @@ export const site = {
       statusSuccess: "Mensaje listo para enviar. Te respondemos pronto.",
     },
   },
+  bot: {
+    buttonLabel: "BOT LYNX",
+    heading: "Hola, soy Lynx Bot.",
+    subheading: "Dejame tus datos y un ingeniero te contactara.",
+    nameLabel: "Nombre",
+    namePlaceholder: "Tu nombre",
+    emailLabel: "Email",
+    emailPlaceholder: "tu@email.com",
+    messageLabel: "Mensaje",
+    messagePlaceholder: "Contanos sobre tu proyecto",
+    submitLabel: "Enviar solicitud",
+    submittingLabel: "Enviando...",
+    successMessage: "Recibido! Nos pondremos en contacto pronto.",
+  },
 };
