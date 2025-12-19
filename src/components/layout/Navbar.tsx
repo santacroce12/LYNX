@@ -22,14 +22,11 @@ export default function Navbar() {
     };
   }, []);
 
-  const headerClass = `fixed top-0 z-50 w-full transition-all duration-300 ease-in-out ${
-    isScrolled
-      ? "bg-[var(--bg)]/80 backdrop-blur-md border-b border-[var(--border)] shadow-sm"
-      : "bg-transparent border-b border-transparent"
-  }`;
+  const headerClass =
+    "fixed top-0 z-50 w-full border-b border-[var(--border)] bg-[var(--bg)] shadow-sm transition-all duration-300 ease-in-out";
 
   const containerClass = `mx-auto flex w-full max-w-6xl items-center justify-between px-6 transition-all duration-300 ease-in-out ${
-    isScrolled ? "py-3" : "py-6"
+    isScrolled ? "py-3" : "py-5"
   }`;
 
   const logoClass = `w-auto transition-all duration-300 ease-in-out ${
