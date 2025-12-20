@@ -1,11 +1,11 @@
 import Image from "next/image";
 import Section from "@/components/layout/Section";
-import Card from "@/components/ui/Card";
 import Reveal from "@/components/motion/Reveal";
 import { site } from "@/content/site";
 
 export default function Partners() {
   const { partners } = site;
+  const items = [...partners.items, ...partners.items];
 
   return (
     <Section id="partners">
@@ -19,28 +19,27 @@ export default function Partners() {
           </p>
         </Reveal>
       </div>
-      <div className="grid gap-6 md:grid-cols-2">
-        {partners.items.map((partner, index) => (
-          <Reveal key={partner.name} delay={index * 0.04}>
-            <Card className="flex h-full items-center gap-5">
-              <div className="h-14 w-20 shrink-0 overflow-hidden rounded-xl border border-[var(--border)] bg-[var(--surface)]/80">
-                <Image
-                  src={partner.image}
-                  alt={partner.name}
-                  width={120}
-                  height={80}
-                  className="h-full w-full object-cover"
-                />
-              </div>
-              <div>
-                <h3 className="text-lg font-semibold">{partner.name}</h3>
-                <p className="mt-2 text-sm text-[var(--muted)]">
-                  {partner.description}
-                </p>
-              </div>
-            </Card>
-          </Reveal>
-        ))}
+      <div className="group relative overflow-hidden rounded-3xl border border-[var(--border)] bg-[var(--surface)]/60 px-6 py-6">
+        <div className="flex w-max items-center gap-10 motion-safe:animate-marquee group-hover:[animation-play-state:paused]">
+          {items.map((partner, index) => (
+            <a
+              key={`${partner.name}-${index}`}
+              href={partner.href}
+              target={partner.href.startsWith("http") ? "_blank" : undefined}
+              rel={partner.href.startsWith("http") ? "noreferrer" : undefined}
+              className="flex w-40 items-center justify-center md:w-48"
+              aria-label={partner.name}
+            >
+              <Image
+                src={partner.image}
+                alt={partner.name}
+                width={180}
+                height={80}
+                className="h-14 w-full object-contain grayscale opacity-70 transition-all duration-300 hover:grayscale-0 hover:opacity-100"
+              />
+            </a>
+          ))}
+        </div>
       </div>
     </Section>
   );

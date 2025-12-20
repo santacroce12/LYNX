@@ -21,6 +21,9 @@ export const energia = {
     useCasesTitle: "Casos de uso",
     useCasesSubtitle:
       "Soluciones diseniadas para entornos criticos y exigentes.",
+    galleryTitle: "Infraestructura en imagenes",
+    gallerySubtitle:
+      "Un vistazo a nuestras soluciones, operaciones y proyectos en energia.",
     faqTitle: "Preguntas frecuentes de energia",
   },
   features: [

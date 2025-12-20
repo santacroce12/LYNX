@@ -1,4 +1,5 @@
-﻿import Section from "@/components/layout/Section";
+﻿import Image from "next/image";
+import Section from "@/components/layout/Section";
 import Badge from "@/components/ui/Badge";
 import FeatureGrid from "@/components/marketing/FeatureGrid";
 import Reveal from "@/components/motion/Reveal";
@@ -7,9 +8,18 @@ import { tecnologia } from "@/content/tecnologia";
 export default function TecnologiaHero() {
   return (
     <Section className="pt-24">
-      <div className="relative overflow-hidden rounded-3xl border border-[var(--border)] bg-[var(--surface)]/70 px-8 py-12">
+      <div className="relative flex min-h-[320px] items-center overflow-hidden rounded-3xl border border-[var(--border)] bg-[var(--surface)]/70 px-8 py-12 md:min-h-[400px]">
+        <Image
+          src="/images/tecnologia/tecnologia-abstracto.jpg"
+          alt="Conexiones digitales abstractas"
+          fill
+          priority
+          sizes="100vw"
+          className="object-cover opacity-25"
+        />
+        <div className="absolute inset-0 bg-gradient-to-r from-[var(--bg)] via-[var(--bg)]/80 to-transparent" />
         <div
-          className="pointer-events-none absolute inset-0 bg-radial-accent opacity-80"
+          className="pointer-events-none absolute inset-0 bg-radial-accent opacity-50"
           aria-hidden="true"
         />
         <div className="relative z-10 max-w-3xl">

@@ -3,6 +3,7 @@ import FAQ from "@/components/marketing/FAQ";
 import { energia } from "@/content/energia";
 import { buildMetadata } from "@/lib/seo";
 import EnergiaHero from "./sections/Hero";
+import EnergiaGallery from "./sections/Gallery";
 import EnergiaServices from "./sections/Services";
 import EnergiaUseCases from "./sections/UseCases";
 
@@ -16,6 +17,7 @@ export default function EnergiaPage() {
   return (
     <>
       <EnergiaHero />
+      <EnergiaGallery />
       <EnergiaServices />
       <EnergiaUseCases />
       <FAQ title={energia.sections.faqTitle} items={energia.faqs} />

@@ -124,24 +124,28 @@ export const site = {
     items: [
       {
         name: "SEL",
+        href: "https://selinc.com",
         description:
           "Schweitzer Engineering Laboratories. Lideres en proteccion, automatizacion y control.",
         image: "/images/brand/partner-sel.svg",
       },
       {
         name: "Survalent",
+        href: "https://survalent.com",
         description:
           "Survalent Technology. SCADA avanzado para energia, mineria, agua y distribucion.",
         image: "/images/brand/partner-survalent.svg",
       },
       {
         name: "Systems With Intelligence",
+        href: "https://systemswithintelligence.com",
         description:
           "Monitoreo y vigilancia para activos criticos en tiempo real.",
         image: "/images/brand/partner-swi.svg",
       },
       {
         name: "N3uron",
+        href: "https://n3uron.com",
         description:
           "Conectividad industrial IoT y gestion de datos.",
         image: "/images/brand/partner-n3uron.svg",
