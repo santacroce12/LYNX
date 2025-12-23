@@ -23,7 +23,7 @@ export default function Navbar() {
   }, []);
 
   const headerClass =
-    "fixed top-0 z-50 w-full border-b border-[var(--border)] bg-[var(--bg)] shadow-sm transition-all duration-300 ease-in-out";
+    "fixed top-0 z-50 w-full border-b border-[var(--border)] bg-[var(--surface)]/95 bg-[radial-gradient(120%_120%_at_0%_0%,rgba(255,106,0,0.16),transparent_60%)] backdrop-blur-md shadow-sm transition-all duration-300 ease-in-out";
 
   const containerClass = `mx-auto flex w-full max-w-6xl items-center justify-between px-6 transition-all duration-300 ease-in-out ${
     isScrolled ? "py-3" : "py-5"

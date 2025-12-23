@@ -3,8 +3,12 @@ import { site } from "@/content/site";
 
 export default function Footer() {
   return (
-    <footer className="border-t border-[var(--border)] bg-[var(--bg)]">
-      <div className="mx-auto grid w-full max-w-6xl gap-10 px-6 py-12 md:grid-cols-3">
+    <footer className="relative overflow-hidden border-t border-[var(--border)] bg-[var(--surface)]">
+      <div
+        className="pointer-events-none absolute inset-0 bg-[radial-gradient(140%_120%_at_0%_0%,rgba(255,106,0,0.18),transparent_60%)]"
+        aria-hidden="true"
+      />
+      <div className="relative mx-auto grid w-full max-w-6xl gap-10 px-6 py-12 md:grid-cols-3">
         <div className="space-y-3">
           <p className="text-lg font-semibold">{site.name}</p>
           <p className="text-xs uppercase tracking-[0.2em] text-[var(--muted)]">
@@ -53,7 +57,7 @@ export default function Footer() {
           </div>
         </div>
       </div>
-      <div className="border-t border-[var(--border)] py-6 text-center text-xs text-[var(--muted)]">
+      <div className="relative border-t border-[var(--border)] py-6 text-center text-xs text-[var(--muted)]">
         (c) {new Date().getFullYear()} {site.name}. {site.footer.rights}
       </div>
     </footer>
