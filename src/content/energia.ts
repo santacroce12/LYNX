@@ -1,54 +1,54 @@
-export const energia = {
+﻿export const energia = {
   meta: {
-    title: "Energia",
+    title: "Energía",
     description:
-      "Soluciones de energia para operaciones criticas: eficiencia, resiliencia y control en tiempo real.",
+      "Soluciones de energía para operaciones críticas: eficiencia, resiliencia y control en tiempo real.",
   },
   hero: {
-    badge: "Vertical Energia",
-    title: "Energia confiable para operaciones criticas",
+    badge: "Vertical Energía",
+    title: "Energía confiable para operaciones críticas",
     subtitle:
-      "Diseniamos infraestructura resiliente y eficiente para industrias que no pueden detenerse.",
+      "Diseñamos infraestructura resiliente y eficiente para industrias que no pueden detenerse.",
     claim: "Control, eficiencia y continuidad con foco en performance.",
   },
   sections: {
     featuresTitle: "Capacidades clave",
     featuresSubtitle:
-      "Combinamos ingenieria energetica y control digital para optimizar cada operacion.",
+      "Combinamos ingeniería energética y control digital para optimizar cada operación.",
     servicesTitle: "Servicios",
     servicesSubtitle:
-      "Soluciones integrales para el control y la calidad de la energia electrica.",
+      "Soluciones integrales para el control y la calidad de la energía eléctrica.",
     useCasesTitle: "Casos de uso",
-    useCasesSubtitle:
-      "Soluciones diseniadas para entornos criticos y exigentes.",
-    galleryTitle: "Infraestructura en imagenes",
+    useCasesSubtitle: "Soluciones diseñadas para entornos críticos y exigentes.",
+    galleryTitle: "Infraestructura en imágenes",
     gallerySubtitle:
-      "Un vistazo a nuestras soluciones, operaciones y proyectos en energia.",
-    faqTitle: "Preguntas frecuentes de energia",
+      "Un vistazo a nuestras soluciones, operaciones y proyectos en energía.",
+    faqTitle: "Preguntas frecuentes de energía",
   },
   features: [
     {
-      title: "Optimizacion de consumo",
-      description: "Modelos predictivos y ajustes finos para reducir costos energeticos.",
+      title: "Optimización de consumo",
+      description:
+        "Modelos predictivos y ajustes finos para reducir costos energéticos.",
       icon: "bolt",
     },
     {
-      title: "Gestion de redes",
+      title: "Gestión de redes",
       description: "Monitoreo centralizado con alertas y decisiones en tiempo real.",
       icon: "grid",
     },
     {
       title: "Resiliencia operativa",
-      description: "Disenios redundantes y planes de continuidad criticos.",
+      description: "Diseños redundantes y planes de continuidad críticos.",
       icon: "shield",
     },
     {
-      title: "Medicion inteligente",
-      description: "Telemetria avanzada con paneles listos para auditorias.",
+      title: "Medición inteligente",
+      description: "Telemetría avanzada con paneles listos para auditorías.",
       icon: "sensor",
     },
     {
-      title: "Integracion OT/IT",
+      title: "Integración OT/IT",
       description: "Conectamos activos industriales con plataformas digitales.",
       icon: "link",
     },
@@ -57,72 +57,71 @@ export const energia = {
     {
       title: "Automatismos de subestaciones",
       description:
-        "Ingenieria, provision, integracion y construccion. Nos adaptamos al estandar del cliente.",
+        "Ingeniería, provisión, integración y construcción. Nos adaptamos al estándar del cliente.",
     },
     {
-      title: "Medicion y calidad de energia",
+      title: "Medición y calidad de energía",
       description:
-        "Soluciones de hardware y software con amplio conocimiento del mercado de magnitudes electricas.",
+        "Soluciones de hardware y software con amplio conocimiento del mercado de magnitudes eléctricas.",
     },
     {
       title: "Bancos de capacitores",
       description:
-        "Estrategias y algoritmos de control para regular el factor de potencia en distribucion y transporte.",
+        "Estrategias y algoritmos de control para regular el factor de potencia en distribución y transporte.",
     },
     {
-      title: "Salas electricas",
+      title: "Salas eléctricas",
       description:
-        "Provisiones a medida con envolventes estandar o disenos propios para usos especiales.",
+        "Provisiones a medida con envolventes estándar o diseños propios para usos especiales.",
     },
     {
-      title: "Energias alternativas",
+      title: "Energías alternativas",
       description:
-        "Estudios de viabilidad para integrar y vender excedentes de energia a la red.",
+        "Estudios de viabilidad para integrar y vender excedentes de energía a la red.",
     },
     {
       title: "Automatismos industriales",
       description:
-        "Maximo aprovechamiento de recursos disponibles y eficiencia en produccion.",
+        "Máximo aprovechamiento de recursos disponibles y eficiencia en producción.",
     },
   ],
   useCases: [
     {
       title: "Parques industriales",
-      description: "Energia estable para clusters con alta demanda simultanea.",
+      description: "Energía estable para clusters con alta demanda simultánea.",
     },
     {
-      title: "Centros logisticos",
+      title: "Centros logísticos",
       description: "Continuidad y respaldo para operaciones 24/7.",
     },
     {
-      title: "Mineria y recursos",
+      title: "Minería y recursos",
       description: "Infraestructura robusta en entornos exigentes.",
     },
     {
       title: "Salud y laboratorios",
-      description: "Proteccion de equipos criticos y datos sensibles.",
+      description: "Protección de equipos críticos y datos sensibles.",
     },
   ],
   faqs: [
     {
-      question: "Cuanto tarda una auditoria inicial?",
+      question: "¿Cuánto tarda una auditoría inicial?",
       answer:
-        "Dependiendo del tamano de la operacion, entre 2 y 4 semanas para un diagnostico accionable.",
+        "Dependiendo del tamaño de la operación, entre 2 y 4 semanas para un diagnóstico accionable.",
     },
     {
-      question: "Integran con sistemas existentes?",
+      question: "¿Integran con sistemas existentes?",
       answer:
-        "Si. Priorizamos integraciones con infraestructura actual para acelerar resultados.",
+        "Sí. Priorizamos integraciones con infraestructura actual para acelerar resultados.",
     },
     {
-      question: "Pueden acompanar la implementacion?",
-      answer:
-        "Incluimos gestion de proyecto, puesta en marcha y monitoreo continuo.",
+      question: "¿Pueden acompañar la implementación?",
+      answer: "Incluimos gestión de proyecto, puesta en marcha y monitoreo continuo.",
     },
   ],
   cta: {
-    title: "Llevemos tu operacion a un nuevo nivel",
-    text: "Contanos tu desafio energetico y diseniemos un plan a medida.",
+    title: "Llevemos tu operación a un nuevo nivel",
+    text: "Contanos tu desafío energético y diseñemos un plan a medida.",
     buttonLabel: "Ir a contacto",
   },
 };

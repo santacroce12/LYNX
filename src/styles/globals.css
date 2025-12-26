@@ -21,19 +21,6 @@ html {
   scroll-behavior: smooth;
 }
 
-html[data-theme="light"] {
-  color-scheme: light;
-}
-
-html[data-theme="light"] {
-  --bg: #F8FAFC;
-  --surface: #FFFFFF;
-  --border: #E2E8F0;
-  --text: #0B0F1A;
-  --muted: #475569;
-  --accent: #FF6A00;
-  --accent-soft: #FF8A3D;
-}
 
 body {
   margin: 0;

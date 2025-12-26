@@ -6,7 +6,7 @@ import { energia } from "@/content/energia";
 const images = [
   {
     src: "/images/energia/energia-subestacion.jpg",
-    alt: "Subestacion electrica",
+    alt: "Subestación eléctrica",
   },
   {
     src: "/images/energia/energia-ingeniero.jpg",
@@ -14,19 +14,19 @@ const images = [
   },
   {
     src: "/images/energia/1.jpg",
-    alt: "Proyecto energia 1",
+    alt: "Proyecto energía 1",
   },
   {
     src: "/images/energia/6.jpg",
-    alt: "Proyecto energia 2",
+    alt: "Proyecto energía 2",
   },
   {
     src: "/images/energia/9.jpg",
-    alt: "Proyecto energia 3",
+    alt: "Proyecto energía 3",
   },
   {
     src: "/images/energia/slide-2.jpg",
-    alt: "Proyecto energia 4",
+    alt: "Proyecto energía 4",
   },
 ];
 

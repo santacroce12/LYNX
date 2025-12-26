@@ -11,7 +11,7 @@ export default function EnergiaHero() {
       <div className="relative flex min-h-[320px] items-center overflow-hidden rounded-3xl border border-[var(--border)] bg-[var(--surface)]/70 px-8 py-12 md:min-h-[400px]">
         <Image
           src="/images/energia/energia-control.jpg"
-          alt="Centro de control de energia"
+          alt="Centro de control de energía"
           fill
           priority
           sizes="100vw"

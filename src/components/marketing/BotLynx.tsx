@@ -5,12 +5,11 @@ import { AnimatePresence, motion } from "framer-motion";
 import { MessageCircle, X, Send, Loader2 } from "lucide-react";
 
 const initialBotMessage =
-  "\u00a1Hola! \u{1F44B} Soy el asistente virtual de LYNX. \u00bfCual es tu nombre?";
+  "¡Hola! 👋 Soy el asistente virtual de LYNX. ¿Cuál es tu nombre?";
 const askEmail = (name: string) =>
-  `Un gusto, ${name}. \u00bfA qu\u00e9 email te podemos escribir?`;
-const askMessage = "\u00bfC\u00f3mo podemos ayudarte hoy?";
-const successMessage =
-  "\u00a1Recibido! Nos pondremos en contacto pronto.";
+  `Un gusto, ${name}. ¿A qué email te podemos escribir?`;
+const askMessage = "¿Cómo podemos ayudarte hoy?";
+const successMessage = "¡Recibido! Nos pondremos en contacto pronto.";
 
 const initialForm = {
   name: "",
@@ -59,11 +58,11 @@ export default function BotLynx() {
         setStep(4);
         addToHistory({ role: "bot", content: successMessage });
       } else {
-        alert("Ocurrio un error al enviar. Intenta nuevamente.");
+        alert("Ocurrió un error al enviar. Intenta nuevamente.");
         setStep(2);
       }
     } catch (error) {
-      alert("Ocurrio un error al enviar. Intenta nuevamente.");
+      alert("Ocurrió un error al enviar. Intenta nuevamente.");
       setStep(2);
     }
   };

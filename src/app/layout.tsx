@@ -17,24 +17,6 @@ const sora = Sora({
   display: "swap",
 });
 
-const themeScript = `(() => {
-  try {
-    const stored = localStorage.getItem("lynx-theme");
-    const prefersDark = window.matchMedia
-      ? window.matchMedia("(prefers-color-scheme: dark)").matches
-      : true;
-    const theme =
-      stored === "light" || stored === "dark"
-        ? stored
-        : prefersDark
-          ? "dark"
-          : "light";
-    document.documentElement.setAttribute("data-theme", theme);
-  } catch (error) {
-    document.documentElement.setAttribute("data-theme", "dark");
-  }
-})();`;
-
 export const metadata: Metadata = {
   title: site.name,
   description: site.description,
@@ -53,11 +35,7 @@ export default function RootLayout({
       lang="es"
       className={`${sora.variable} ${spaceGrotesk.variable}`}
       data-theme="dark"
-      suppressHydrationWarning
     >
-      <head>
-        <script dangerouslySetInnerHTML={{ __html: themeScript }} />
-      </head>
       <body className="bg-[var(--bg)] text-[var(--text)] antialiased">
         {children}
         <BotLynx />

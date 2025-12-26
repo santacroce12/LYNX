@@ -1,42 +1,43 @@
-export const tecnologia = {
+﻿export const tecnologia = {
   meta: {
-    title: "Tecnologia",
+    title: "Tecnología",
     description:
-      "Plataformas y soluciones digitales: apps, automatizacion, IoT e integraciones seguras.",
+      "Plataformas y soluciones digitales: apps, automatización, IoT e integraciones seguras.",
   },
   hero: {
-    badge: "Vertical Tecnologia",
-    title: "Tecnologia que impulsa decisiones inteligentes",
+    badge: "Vertical Tecnología",
+    title: "Tecnología que impulsa decisiones inteligentes",
     subtitle:
-      "Construimos plataformas y automatizaciones para operar con precision y velocidad.",
-    claim: "Ecosistemas conectados, datos utiles y experiencias premium.",
+      "Construimos plataformas y automatizaciones para operar con precisión y velocidad.",
+    claim: "Ecosistemas conectados, datos útiles y experiencias premium.",
   },
   sections: {
     featuresTitle: "Capacidades clave",
     featuresSubtitle:
-      "Diseniamos ecosistemas digitales para acelerar el negocio y reducir fricciones.",
+      "Diseñamos ecosistemas digitales para acelerar el negocio y reducir fricciones.",
     servicesTitle: "Servicios",
     servicesSubtitle:
       "Equipos multidisciplinarios para construir, integrar y escalar plataformas.",
     useCasesTitle: "Casos de uso",
     useCasesSubtitle:
       "Soluciones digitales para operaciones conectadas y resultados medibles.",
-    faqTitle: "Preguntas frecuentes de tecnologia",
+    faqTitle: "Preguntas frecuentes de tecnología",
   },
   features: [
     {
       title: "Apps y portales",
-      description: "Experiencias digitales orientadas a performance y adopcion rapida.",
+      description:
+        "Experiencias digitales orientadas a performance y adopción rápida.",
       icon: "rocket",
     },
     {
-      title: "Automatizacion",
+      title: "Automatización",
       description: "Flujos inteligentes que reducen tiempos operativos.",
       icon: "cpu",
     },
     {
       title: "IoT industrial",
-      description: "Sensores y telemetria para operaciones conectadas.",
+      description: "Sensores y telemetría para operaciones conectadas.",
       icon: "sensor",
     },
     {
@@ -52,7 +53,7 @@ export const tecnologia = {
   ],
   services: [
     {
-      title: "Disenio de producto",
+      title: "Diseño de producto",
       description: "Discovery, UX/UI y prototipos listos para iterar.",
     },
     {
@@ -61,19 +62,19 @@ export const tecnologia = {
     },
     {
       title: "Plataformas IoT",
-      description: "Gestion de dispositivos, eventos y analitica.",
+      description: "Gestión de dispositivos, eventos y analítica.",
     },
     {
       title: "Integraciones empresariales",
       description: "Conectores con ERPs, CRMs y sistemas legados.",
     },
     {
-      title: "Automatizacion inteligente",
+      title: "Automatización inteligente",
       description: "RPA + workflows para eliminar tareas repetitivas.",
     },
     {
       title: "Observabilidad",
-      description: "Monitoreo, logs y alertas con estandares premium.",
+      description: "Monitoreo, logs y alertas con estándares premium.",
     },
   ],
   useCases: [
@@ -86,34 +87,34 @@ export const tecnologia = {
       description: "Modelos que anticipan fallas y optimizan activos.",
     },
     {
-      title: "Integracion multi-sede",
+      title: "Integración multi-sede",
       description: "Sistemas sincronizados en operaciones distribuidas.",
     },
     {
       title: "Experiencias B2B",
-      description: "Portales y apps para clientes estrategicos.",
+      description: "Portales y apps para clientes estratégicos.",
     },
   ],
   faqs: [
     {
-      question: "Que stack utilizan?",
+      question: "¿Qué stack utilizan?",
       answer:
-        "Elegimos tecnologias modernas con foco en performance, seguridad y escalabilidad.",
+        "Elegimos tecnologías modernas con foco en performance, seguridad y escalabilidad.",
     },
     {
-      question: "Pueden integrarse con legacy?",
+      question: "¿Pueden integrarse con legacy?",
       answer:
-        "Si. Diseniamos integraciones seguras para convivir con sistemas existentes.",
+        "Sí. Diseñamos integraciones seguras para convivir con sistemas existentes.",
     },
     {
-      question: "Como entregan el producto?",
+      question: "¿Cómo entregan el producto?",
       answer:
-        "Trabajamos por etapas con releases incrementales y metricas claras.",
+        "Trabajamos por etapas con releases incrementales y métricas claras.",
     },
   ],
   cta: {
     title: "Potenciemos tu ecosistema digital",
-    text: "Contanos tu objetivo y armamos una hoja de ruta tecnologica.",
+    text: "Contanos tu objetivo y armamos una hoja de ruta tecnológica.",
     buttonLabel: "Contactar",
   },
 };

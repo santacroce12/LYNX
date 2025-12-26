@@ -4,7 +4,6 @@ import { useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { site } from "@/content/site";
-import ThemeToggle from "@/components/ui/ThemeToggle";
 
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -64,7 +63,6 @@ export default function Navbar() {
               </Link>
             ))}
           </nav>
-          <ThemeToggle />
         </div>
       </div>
     </header>
