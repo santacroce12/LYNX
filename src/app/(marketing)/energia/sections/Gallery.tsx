@@ -1,4 +1,4 @@
-import Image from "next/image";
+﻿import Image from "next/image";
 import Section from "@/components/layout/Section";
 import Reveal from "@/components/motion/Reveal";
 import { energia } from "@/content/energia";

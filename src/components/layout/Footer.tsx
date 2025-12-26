@@ -5,7 +5,7 @@ export default function Footer() {
   return (
     <footer className="relative overflow-hidden border-t border-[var(--border)] bg-[var(--surface)]">
       <div
-        className="pointer-events-none absolute inset-0 bg-[radial-gradient(140%_120%_at_0%_0%,rgba(255,106,0,0.18),transparent_60%)]"
+        className="pointer-events-none absolute inset-0 bg-[radial-gradient(140%_120%_at_0%_0%,rgba(249,115,22,0.18),transparent_60%)]"
         aria-hidden="true"
       />
       <div className="relative mx-auto grid w-full max-w-6xl gap-10 px-6 py-12 md:grid-cols-3">

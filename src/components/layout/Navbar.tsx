@@ -22,7 +22,7 @@ export default function Navbar() {
   }, []);
 
   const headerClass =
-    "fixed top-0 z-50 w-full border-b border-[var(--border)] bg-[var(--surface)]/95 bg-[radial-gradient(120%_120%_at_0%_0%,rgba(255,106,0,0.16),transparent_60%)] backdrop-blur-md shadow-sm transition-all duration-300 ease-in-out";
+    "fixed top-0 z-50 w-full border-b border-[var(--border)] bg-[var(--surface)]/95 bg-[radial-gradient(120%_120%_at_0%_0%,rgba(249,115,22,0.16),transparent_60%)] backdrop-blur-md shadow-sm transition-all duration-300 ease-in-out";
 
   const containerClass = `mx-auto flex w-full max-w-6xl items-center justify-between px-6 transition-all duration-300 ease-in-out ${
     isScrolled ? "py-3" : "py-5"
@@ -44,7 +44,7 @@ export default function Navbar() {
             className={logoClass}
             priority
           />
-          <span className="text-xs font-semibold uppercase tracking-[0.4em] text-[var(--text)]">
+          <span className="text-xs font-semibold uppercase tracking-[0.4em] text-white">
             {site.name}
           </span>
         </Link>
@@ -57,7 +57,7 @@ export default function Navbar() {
               <Link
                 key={item.href}
                 href={item.href}
-                className="text-xs font-medium uppercase tracking-[0.18em] text-[var(--muted)] transition-colors hover:text-[var(--accent)]"
+                className="text-xs font-medium uppercase tracking-[0.18em] text-white transition-colors hover:text-[var(--accent-soft)]"
               >
                 {item.label}
               </Link>

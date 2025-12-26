@@ -8,8 +8,8 @@
   --border: #1F2937;
   --text: #E5E7EB;
   --muted: #94A3B8;
-  --accent: #FF6A00;
-  --accent-soft: #FF8A3D;
+  --accent: #F97316;
+  --accent-soft: #FB923C;
 }
 
 * {
@@ -49,7 +49,7 @@ img {
 }
 
 ::selection {
-  background: rgba(255, 106, 0, 0.35);
+  background: rgba(249, 115, 22, 0.35);
   color: #0B0F1A;
 }
 

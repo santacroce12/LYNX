@@ -22,8 +22,8 @@ const config: Config = {
         "glow-soft": "0 0 28px rgba(255, 138, 61, 0.25)",
       },
       backgroundImage: {
-        "radial-accent": "radial-gradient(600px circle at 20% 20%, rgba(255, 106, 0, 0.18), transparent 60%)",
-        "radial-accent-2": "radial-gradient(500px circle at 80% 30%, rgba(255, 138, 61, 0.16), transparent 60%)",
+        "radial-accent": "radial-gradient(600px circle at 20% 20%, rgba(249, 115, 22, 0.16), transparent 60%)",
+        "radial-accent-2": "radial-gradient(500px circle at 80% 30%, rgba(251, 146, 60, 0.12), transparent 60%)",
       },
       transitionTimingFunction: {
         "out-expo": "cubic-bezier(0.16, 1, 0.3, 1)",

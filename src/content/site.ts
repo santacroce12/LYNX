@@ -11,6 +11,7 @@
     { label: "Inicio", href: "/" },
     { label: "Energía", href: "/energia" },
     { label: "Tecnología", href: "/tecnologia" },
+    { label: "Recursos", href: "/recursos" },
     { label: "Contacto", href: "/contacto" },
   ],
   aria: {

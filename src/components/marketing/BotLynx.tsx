@@ -2,7 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
-import { MessageCircle, X, Send, Loader2 } from "lucide-react";
+import { Bot, X, Send, Loader2 } from "lucide-react";
 
 const initialBotMessage =
   "¡Hola! 👋 Soy el asistente virtual de LYNX. ¿Cuál es tu nombre?";
@@ -201,7 +201,7 @@ export default function BotLynx() {
           className="flex h-14 w-14 items-center justify-center rounded-full bg-[var(--accent)] text-[var(--bg)] shadow-xl"
           aria-label={isOpen ? "Cerrar chat" : "Abrir chat"}
         >
-          {isOpen ? <X className="h-6 w-6" /> : <MessageCircle className="h-6 w-6" />}
+          {isOpen ? <X className="h-6 w-6" /> : <Bot className="h-6 w-6" />}
         </button>
       </div>
     </div>
