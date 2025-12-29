@@ -107,7 +107,7 @@ export default function BotLynx() {
         <AnimatePresence>
           {isOpen ? (
             <motion.div
-              className="absolute bottom-16 right-0 flex h-[450px] w-[350px] flex-col overflow-hidden rounded-2xl border border-[var(--border)] bg-[var(--surface)] shadow-xl"
+              className="absolute bottom-16 right-0 flex h-[70vh] w-[90vw] max-w-[360px] max-h-[520px] flex-col overflow-hidden rounded-2xl border border-[var(--border)] bg-[var(--surface)] shadow-xl sm:h-[450px] sm:w-[350px]"
               initial={{ opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: 10 }}

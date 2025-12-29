@@ -135,7 +135,7 @@ export default function RecursosGrid() {
               exit={{ y: 20, opacity: 0 }}
               transition={{ duration: 0.2 }}
             >
-              <div className="relative h-56">
+              <div className="relative h-48 sm:h-56">
                 <Image
                   src={activeCase.image}
                   alt={activeCase.title}
@@ -173,7 +173,7 @@ export default function RecursosGrid() {
                 </div>
               </div>
 
-              <div className="max-h-[65vh] overflow-y-auto px-6 py-6">
+              <div className="max-h-[60vh] overflow-y-auto px-6 py-6 sm:max-h-[65vh]">
                 <p className="text-sm text-[var(--muted)] md:text-base">
                   {activeCase.description}
                 </p>

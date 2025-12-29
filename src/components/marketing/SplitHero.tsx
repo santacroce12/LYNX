@@ -1,7 +1,7 @@
 ﻿import Image from "next/image";
+import Link from "next/link";
 import Section from "@/components/layout/Section";
 import Badge from "@/components/ui/Badge";
-import Button from "@/components/ui/Button";
 import Card from "@/components/ui/Card";
 import Reveal from "@/components/motion/Reveal";
 import { site } from "@/content/site";
@@ -35,28 +35,35 @@ export default function SplitHero() {
         <div className="mt-12 grid gap-6 lg:grid-cols-2">
           {site.homeCards.map((card, index) => (
             <Reveal key={card.href} delay={0.1 + index * 0.05}>
-              <Card className="group relative h-full overflow-hidden border border-[var(--border)] bg-[var(--surface)]/60 p-6 transition duration-300 ease-out-expo hover:-translate-y-1 hover:scale-[1.01] hover:border-[var(--accent)] hover:shadow-glow">
-                <div
-                  className="pointer-events-none absolute -right-10 -top-10 h-36 w-36 rounded-full bg-[var(--accent)]/20 blur-3xl opacity-0 transition-opacity duration-300 group-hover:opacity-80"
-                  aria-hidden="true"
-                />
-                <Image
-                  src={card.image}
-                  alt=""
-                  width={640}
-                  height={360}
-                  className="h-40 w-full rounded-xl border border-[var(--border)] object-cover"
-                  priority={index === 0}
-                />
-                <div className="mt-6 space-y-4">
-                  <Badge className="text-[var(--accent)]">{card.label}</Badge>
-                  <h3 className="text-2xl font-semibold">{card.title}</h3>
-                  <p className="text-sm text-[var(--muted)]">
-                    {card.description}
-                  </p>
-                  <Button href={card.href}>{card.cta}</Button>
-                </div>
-              </Card>
+              <Link
+                href={card.href}
+                className="group block h-full rounded-2xl focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--accent)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--bg)]"
+              >
+                <Card className="relative h-full overflow-hidden border border-[var(--border)] bg-[var(--surface)]/60 p-6 transition duration-300 ease-out-expo group-hover:-translate-y-1 group-hover:scale-[1.01] group-hover:border-[var(--accent)] group-hover:shadow-glow">
+                  <div
+                    className="pointer-events-none absolute -right-10 -top-10 h-36 w-36 rounded-full bg-[var(--accent)]/20 blur-3xl opacity-0 transition-opacity duration-300 group-hover:opacity-80"
+                    aria-hidden="true"
+                  />
+                  <Image
+                    src={card.image}
+                    alt=""
+                    width={640}
+                    height={360}
+                    className="h-40 w-full rounded-xl border border-[var(--border)] object-cover"
+                    priority={index === 0}
+                  />
+                  <div className="mt-6 space-y-4">
+                    <Badge className="text-[var(--accent)]">{card.label}</Badge>
+                    <h3 className="text-2xl font-semibold">{card.title}</h3>
+                    <p className="text-sm text-[var(--muted)]">
+                      {card.description}
+                    </p>
+                    <span className="inline-flex items-center justify-center gap-2 rounded-full bg-[var(--accent)] px-5 py-2.5 text-sm font-semibold text-[var(--bg)] transition duration-300 ease-out-expo group-hover:bg-[var(--accent-soft)]">
+                      {card.cta}
+                    </span>
+                  </div>
+                </Card>
+              </Link>
             </Reveal>
           ))}
         </div>
