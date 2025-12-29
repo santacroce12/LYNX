@@ -1,4 +1,4 @@
-import OpenAI from "openai";
+﻿import OpenAI from "openai";
 import { site } from "@/content/site";
 import { energia } from "@/content/energia";
 import { tecnologia } from "@/content/tecnologia";
@@ -12,7 +12,25 @@ const CONTEXT = [
   JSON.stringify(tecnologia, null, 2),
 ].join("\n\n");
 
-const systemPrompt = `Eres un asistente útil de LYNX SpA. Responde preguntas sobre servicios, horarios y proyectos usando solo la información provista. Si no sabes algo, sugiere contactar a un humano. Sé breve y profesional.\n\nCONTEXTO:\n${CONTEXT}`;
+const systemPrompt = `Eres LYNX Bot, un asistente útil.
+- Usa el CONTEXTO provisto para responder dudas.
+- SI EL USUARIO QUIERE CONTACTAR/COTIZAR:
+  1. Pídele amablemente su NOMBRE.
+  2. Luego, pídele su EMAIL.
+  3. Finalmente, pídele un MENSAJE o motivo breve.
+  4. CUANDO TENGAS LOS 3 DATOS (Nombre, Email, Mensaje):
+     NO respondas con texto normal. Responde ÚNICAMENTE con este bloque JSON exacto:
+     {
+       "action": "submit_contact",
+       "data": {
+         "name": "el nombre aquí",
+         "email": "el email aquí",
+         "message": "el mensaje aquí"
+       }
+     }
+
+CONTEXTO:
+${CONTEXT}`;
 
 const openai = new OpenAI({
   apiKey: process.env.OPENAI_API_KEY,
@@ -37,10 +55,10 @@ export async function POST(request: Request) {
 
     const reply = completion.choices[0]?.message?.content?.trim() ?? "";
 
-    return Response.json({ message: reply });
+    return Response.json({ response: reply });
   } catch (error) {
     return Response.json(
-      { message: "Ocurrió un error al procesar tu solicitud." },
+      { response: "Ocurrió un error al procesar tu solicitud." },
       { status: 500 }
     );
   }

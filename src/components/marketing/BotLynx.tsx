@@ -12,6 +12,40 @@ type ChatMessage = {
   content: string;
 };
 
+type SubmitContactPayload = {
+  action: "submit_contact";
+  data: {
+    name: string;
+    email: string;
+    message: string;
+  };
+};
+
+const parseSubmitPayload = (text: string): SubmitContactPayload | null => {
+  try {
+    const parsed = JSON.parse(text);
+    if (!parsed || parsed.action !== "submit_contact") {
+      return null;
+    }
+
+    const data = parsed.data ?? {};
+    if (!data.name || !data.email || !data.message) {
+      return null;
+    }
+
+    return {
+      action: "submit_contact",
+      data: {
+        name: String(data.name),
+        email: String(data.email),
+        message: String(data.message),
+      },
+    };
+  } catch (error) {
+    return null;
+  }
+};
+
 export default function BotLynx() {
   const [isOpen, setIsOpen] = useState(false);
   const [input, setInput] = useState("");
@@ -19,15 +53,16 @@ export default function BotLynx() {
     { role: "bot", content: initialBotMessage },
   ]);
   const [isLoading, setIsLoading] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const endRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
     endRef.current?.scrollIntoView({ behavior: "smooth" });
-  }, [history, isOpen, isLoading]);
+  }, [history, isOpen, isLoading, isSubmitting]);
 
   const handleSend = async () => {
     const value = input.trim();
-    if (!value || isLoading) {
+    if (!value || isLoading || isSubmitting) {
       return;
     }
 
@@ -53,7 +88,43 @@ export default function BotLynx() {
       }
 
       const data = await response.json();
-      const reply = data?.message ||
+      const responseText = typeof data?.response === "string" ? data.response : "";
+      const cleanedText = responseText.trim();
+      const submitPayload = cleanedText ? parseSubmitPayload(cleanedText) : null;
+
+      if (submitPayload) {
+        setIsLoading(false);
+        setIsSubmitting(true);
+        setHistory((prev) => [
+          ...prev,
+          { role: "bot", content: "Enviando solicitud..." },
+        ]);
+
+        const submitResponse = await fetch("/contact.php", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(submitPayload.data),
+        });
+
+        if (submitResponse.ok) {
+          setHistory((prev) => [
+            ...prev,
+            { role: "bot", content: "¡Listo! He enviado tus datos al equipo. 🚀" },
+          ]);
+        } else {
+          setHistory((prev) => [
+            ...prev,
+            {
+              role: "bot",
+              content: "Ocurrió un error al enviar tus datos. Intentá nuevamente.",
+            },
+          ]);
+        }
+        setIsSubmitting(false);
+        return;
+      }
+
+      const reply = cleanedText ||
         "Gracias por tu consulta. Un especialista puede ayudarte con más detalle.";
 
       setHistory((prev) => [...prev, { role: "bot", content: reply }]);
@@ -141,16 +212,16 @@ export default function BotLynx() {
                     value={input}
                     onChange={(event) => setInput(event.target.value)}
                     placeholder="Escribe tu consulta..."
-                    disabled={isLoading}
+                    disabled={isLoading || isSubmitting}
                     className="flex-1 rounded-full border border-[var(--border)] bg-[var(--surface)] px-4 py-2 text-sm text-[var(--text)] placeholder:text-[var(--muted)] focus:outline-none focus:ring-2 focus:ring-[var(--accent)] disabled:opacity-60"
                   />
                   <button
                     type="submit"
-                    disabled={isLoading}
+                    disabled={isLoading || isSubmitting}
                     className="inline-flex h-10 w-10 items-center justify-center rounded-full bg-[var(--accent)] text-[var(--bg)] shadow-sm transition-colors hover:bg-[var(--accent-soft)] disabled:cursor-not-allowed disabled:opacity-60"
                     aria-label="Enviar"
                   >
-                    {isLoading ? (
+                    {isLoading || isSubmitting ? (
                       <Loader2 className="h-4 w-4 animate-spin" />
                     ) : (
                       <Send className="h-4 w-4" />
