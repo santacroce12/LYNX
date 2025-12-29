@@ -5,99 +5,65 @@ import { AnimatePresence, motion } from "framer-motion";
 import { Bot, X, Send, Loader2 } from "lucide-react";
 
 const initialBotMessage =
-  "¡Hola! 👋 Soy el asistente virtual de LYNX. ¿Cuál es tu nombre?";
-const askEmail = (name: string) =>
-  `Un gusto, ${name}. ¿A qué email te podemos escribir?`;
-const askMessage = "¿Cómo podemos ayudarte hoy?";
-const successMessage = "¡Recibido! Nos pondremos en contacto pronto.";
+  "¡Hola! 👋 Soy el asistente virtual de LYNX. ¿En qué puedo ayudarte?";
 
-const initialForm = {
-  name: "",
-  email: "",
-  message: "",
-};
-
-type HistoryItem = {
+type ChatMessage = {
   role: "bot" | "user";
   content: string;
 };
 
 export default function BotLynx() {
   const [isOpen, setIsOpen] = useState(false);
-  const [step, setStep] = useState(0);
   const [input, setInput] = useState("");
-  const [formData, setFormData] = useState(initialForm);
-  const [history, setHistory] = useState<HistoryItem[]>([
+  const [history, setHistory] = useState<ChatMessage[]>([
     { role: "bot", content: initialBotMessage },
   ]);
+  const [isLoading, setIsLoading] = useState(false);
   const endRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
     endRef.current?.scrollIntoView({ behavior: "smooth" });
-  }, [history, isOpen]);
-
-  const addToHistory = (item: HistoryItem) => {
-    setHistory((prev) => [...prev, item]);
-  };
-
-  const submitData = async (payload: {
-    name: string;
-    email: string;
-    message: string;
-  }) => {
-    setStep(3);
-
-    try {
-      const response = await fetch("/contact.php", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(payload),
-      });
-
-      if (response.ok) {
-        setStep(4);
-        addToHistory({ role: "bot", content: successMessage });
-      } else {
-        alert("Ocurrió un error al enviar. Intenta nuevamente.");
-        setStep(2);
-      }
-    } catch (error) {
-      alert("Ocurrió un error al enviar. Intenta nuevamente.");
-      setStep(2);
-    }
-  };
+  }, [history, isOpen, isLoading]);
 
   const handleSend = async () => {
     const value = input.trim();
-    if (!value || step === 3 || step === 4) {
+    if (!value || isLoading) {
       return;
     }
 
-    addToHistory({ role: "user", content: value });
+    const nextHistory = [...history, { role: "user", content: value }];
+    setHistory(nextHistory);
     setInput("");
+    setIsLoading(true);
 
-    if (step === 0) {
-      setFormData((prev) => ({ ...prev, name: value }));
-      addToHistory({ role: "bot", content: askEmail(value) });
-      setStep(1);
-      return;
-    }
-
-    if (step === 1) {
-      setFormData((prev) => ({ ...prev, email: value }));
-      addToHistory({ role: "bot", content: askMessage });
-      setStep(2);
-      return;
-    }
-
-    if (step === 2) {
-      const payload = { ...formData, message: value };
-      setFormData(payload);
-      await submitData({
-        name: payload.name,
-        email: payload.email,
-        message: value,
+    try {
+      const response = await fetch("/api/chat", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          messages: nextHistory.map((message) => ({
+            role: message.role === "bot" ? "assistant" : "user",
+            content: message.content,
+          })),
+        }),
       });
+
+      if (!response.ok) {
+        throw new Error("Request failed");
+      }
+
+      const data = await response.json();
+      const reply = data?.message ||
+        "Gracias por tu consulta. Un especialista puede ayudarte con más detalle.";
+
+      setHistory((prev) => [...prev, { role: "bot", content: reply }]);
+    } catch (error) {
+      setHistory((prev) => [
+        ...prev,
+        { role: "bot", content: "Ocurrió un error. Intentá nuevamente." },
+      ]);
+    } finally {
+      setIsLoading(false);
     }
   };
 
@@ -107,7 +73,7 @@ export default function BotLynx() {
         <AnimatePresence>
           {isOpen ? (
             <motion.div
-              className="absolute bottom-16 right-0 flex h-[70vh] w-[90vw] max-w-[360px] max-h-[520px] flex-col overflow-hidden rounded-2xl border border-[var(--border)] bg-[var(--surface)] shadow-xl sm:h-[450px] sm:w-[350px]"
+              className="absolute bottom-16 right-0 flex h-[70vh] w-[90vw] max-h-[520px] max-w-[360px] flex-col overflow-hidden rounded-2xl border border-[var(--border)] bg-[var(--surface)] shadow-xl sm:h-[450px] sm:w-[350px]"
               initial={{ opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: 10 }}
@@ -152,6 +118,13 @@ export default function BotLynx() {
                     </div>
                   </motion.div>
                 ))}
+                {isLoading ? (
+                  <div className="flex justify-start">
+                    <div className="rounded-2xl border border-[var(--border)] bg-[var(--bg)] px-4 py-2 text-sm text-[var(--muted)]">
+                      Escribiendo...
+                    </div>
+                  </div>
+                ) : null}
                 <div ref={endRef} />
               </div>
 
@@ -167,23 +140,17 @@ export default function BotLynx() {
                     type="text"
                     value={input}
                     onChange={(event) => setInput(event.target.value)}
-                    placeholder={
-                      step === 0
-                        ? "Nombre"
-                        : step === 1
-                          ? "Email"
-                          : "Mensaje"
-                    }
-                    disabled={step === 3 || step === 4}
+                    placeholder="Escribe tu consulta..."
+                    disabled={isLoading}
                     className="flex-1 rounded-full border border-[var(--border)] bg-[var(--surface)] px-4 py-2 text-sm text-[var(--text)] placeholder:text-[var(--muted)] focus:outline-none focus:ring-2 focus:ring-[var(--accent)] disabled:opacity-60"
                   />
                   <button
                     type="submit"
-                    disabled={step === 3 || step === 4}
+                    disabled={isLoading}
                     className="inline-flex h-10 w-10 items-center justify-center rounded-full bg-[var(--accent)] text-[var(--bg)] shadow-sm transition-colors hover:bg-[var(--accent-soft)] disabled:cursor-not-allowed disabled:opacity-60"
                     aria-label="Enviar"
                   >
-                    {step === 3 ? (
+                    {isLoading ? (
                       <Loader2 className="h-4 w-4 animate-spin" />
                     ) : (
                       <Send className="h-4 w-4" />
