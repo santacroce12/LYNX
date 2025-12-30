@@ -1,5 +1,4 @@
-﻿import Image from "next/image";
-import Section from "@/components/layout/Section";
+﻿import Section from "@/components/layout/Section";
 import Badge from "@/components/ui/Badge";
 import Reveal from "@/components/motion/Reveal";
 import EnergyFlow from "@/components/ui/EnergyFlow";
@@ -9,13 +8,15 @@ export default function RecursosHero() {
   return (
     <Section className="pt-24">
       <div className="relative overflow-hidden rounded-3xl border border-[var(--border)] bg-[var(--surface)]/70 px-8 py-12 md:min-h-[360px]">
-        <Image
-          src="/images/energia/energia-control.jpg"
-          alt="Vista general de operaciones críticas"
-          fill
-          priority
-          sizes="100vw"
-          className="object-cover opacity-15"
+        <video
+          className="pointer-events-none absolute inset-0 h-full w-full origin-center scale-[1.06] object-cover object-center opacity-25 md:opacity-30"
+          src="/images/brand/recursos.mp4"
+          autoPlay
+          loop
+          muted
+          playsInline
+          preload="metadata"
+          aria-hidden="true"
         />
         <div className="absolute inset-0 bg-gradient-to-r from-[var(--bg)] via-[var(--bg)]/80 to-transparent" />
         <div
