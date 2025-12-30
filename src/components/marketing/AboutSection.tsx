@@ -1,4 +1,3 @@
-import Image from "next/image";
 import { Building, Clock, Globe, Layers, Shield, Users } from "lucide-react";
 import Section from "@/components/layout/Section";
 import Card from "@/components/ui/Card";
@@ -58,15 +57,24 @@ export default function AboutSection() {
 
         <div className="space-y-6">
           <Reveal>
-            <Card className="overflow-hidden p-0">
-              <Image
-                src={about.cover.image}
-                alt={about.cover.alt}
-                width={720}
-                height={520}
-                className="h-64 w-full object-cover md:h-72"
-                priority
-              />
+            <Card className="overflow-hidden bg-[var(--surface)]/70 p-4 md:p-6">
+              <div className="rounded-2xl bg-[var(--bg)] p-3 md:p-4">
+                <div className="overflow-hidden rounded-xl">
+                  <video
+                    className="h-96 w-full origin-center scale-[1.2] object-contain md:h-[28rem] md:scale-[1.45]"
+                    src="/images/brand/about.mp4"
+                    poster={about.cover.image}
+                    autoPlay
+                    loop
+                    muted
+                    playsInline
+                    preload="metadata"
+                    aria-label={about.cover.alt}
+                  >
+                    Tu navegador no soporta videos HTML5.
+                  </video>
+                </div>
+              </div>
             </Card>
           </Reveal>
 

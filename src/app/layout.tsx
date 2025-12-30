@@ -21,7 +21,8 @@ export const metadata: Metadata = {
   title: site.name,
   description: site.description,
   icons: {
-    icon: "/favicon.png",
+    icon: [{ url: "/favicon.ico?v=2", type: "image/x-icon" }],
+    shortcut: "/favicon.ico?v=2",
   },
 };
 
