@@ -5,7 +5,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import { Bot, X, Send, Loader2 } from "lucide-react";
 
 const initialBotMessage =
-  "¡Hola! 👋 Soy el asistente virtual de LYNX. ¿En qué puedo ayudarte?";
+  "¡Hola! 👋 Soy LYNX BOT. ¿En qué puedo ayudarte?";
 
 type ChatMessage = {
   role: "bot" | "user";
