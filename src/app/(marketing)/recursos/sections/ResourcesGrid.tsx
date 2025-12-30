@@ -1,6 +1,6 @@
 ﻿"use client";
 
-import { useEffect, useMemo, useState } from "react";
+import { Suspense, useEffect, useMemo, useState } from "react";
 import Image from "next/image";
 import { useSearchParams } from "next/navigation";
 import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
@@ -9,7 +9,7 @@ import Card from "@/components/ui/Card";
 import Reveal from "@/components/motion/Reveal";
 import { recursos } from "@/content/recursos";
 
-export default function RecursosGrid() {
+function RecursosGridContent() {
   const reduceMotion = useReducedMotion();
   const [activeId, setActiveId] = useState<string | null>(null);
   const searchParams = useSearchParams();
@@ -237,5 +237,13 @@ export default function RecursosGrid() {
         ) : null}
       </AnimatePresence>
     </Section>
+  );
+}
+
+export default function RecursosGrid() {
+  return (
+    <Suspense fallback={<div className="min-h-[50vh]" />}>
+      <RecursosGridContent />
+    </Suspense>
   );
 }
