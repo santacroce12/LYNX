@@ -1,6 +1,7 @@
 ﻿import Section from "@/components/layout/Section";
 import Reveal from "@/components/motion/Reveal";
 import EnergyFlow from "@/components/ui/EnergyFlow";
+import LocationMap from "@/components/ui/LocationMap";
 import { site } from "@/content/site";
 import { buildMetadata } from "@/lib/seo";
 import ContactForm from "./ContactForm";
@@ -47,6 +48,9 @@ export default function ContactPage() {
         <Reveal delay={0.1}>
           <ContactForm />
         </Reveal>
+      </div>
+      <div className="mt-10">
+        <LocationMap />
       </div>
     </Section>
   );
