@@ -3,6 +3,7 @@ import Section from "@/components/layout/Section";
 import Badge from "@/components/ui/Badge";
 import FeatureGrid from "@/components/marketing/FeatureGrid";
 import Reveal from "@/components/motion/Reveal";
+import EnergyFlow from "@/components/ui/EnergyFlow";
 import { energia } from "@/content/energia";
 
 export default function EnergiaHero() {
@@ -40,6 +41,11 @@ export default function EnergiaHero() {
             <p className="mt-3 text-sm text-[var(--muted)]">
               {energia.hero.claim}
             </p>
+          </Reveal>
+        </div>
+        <div className="relative z-10 mt-6 w-full">
+          <Reveal delay={0.2}>
+            <EnergyFlow className="opacity-80" />
           </Reveal>
         </div>
       </div>

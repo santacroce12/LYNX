@@ -30,11 +30,18 @@ const config: Config = {
       },
       animation: {
         marquee: "marquee 40s linear infinite",
+        "energy-flow": "energy-flow 3s linear infinite",
       },
       keyframes: {
         marquee: {
           "0%": { transform: "translateX(0)" },
           "100%": { transform: "translateX(-50%)" },
+        },
+        "energy-flow": {
+          "0%": { left: "-100%", opacity: "0" },
+          "10%": { opacity: "1" },
+          "90%": { opacity: "1" },
+          "100%": { left: "100%", opacity: "0" },
         },
       },
     },

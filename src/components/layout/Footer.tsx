@@ -1,5 +1,6 @@
 ﻿import Link from "next/link";
 import { site } from "@/content/site";
+import EnergyFlow from "@/components/ui/EnergyFlow";
 
 export default function Footer() {
   return (
@@ -56,6 +57,9 @@ export default function Footer() {
             ))}
           </div>
         </div>
+      </div>
+      <div className="relative mx-auto w-full max-w-6xl px-6">
+        <EnergyFlow className="mb-10 opacity-70" />
       </div>
       <div className="relative border-t border-[var(--border)] py-6 text-center text-xs text-[var(--muted)]">
         (c) {new Date().getFullYear()} {site.name}. {site.footer.rights}

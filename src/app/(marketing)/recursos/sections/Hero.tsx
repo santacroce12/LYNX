@@ -2,6 +2,7 @@
 import Section from "@/components/layout/Section";
 import Badge from "@/components/ui/Badge";
 import Reveal from "@/components/motion/Reveal";
+import EnergyFlow from "@/components/ui/EnergyFlow";
 import { recursos } from "@/content/recursos";
 
 export default function RecursosHero() {
@@ -34,6 +35,11 @@ export default function RecursosHero() {
             <p className="mt-4 text-base text-[var(--muted)] md:text-lg">
               {recursos.hero.subtitle}
             </p>
+          </Reveal>
+        </div>
+        <div className="relative z-10 mt-6 w-full">
+          <Reveal delay={0.15}>
+            <EnergyFlow className="opacity-80" />
           </Reveal>
         </div>
       </div>

@@ -1,5 +1,6 @@
 ﻿import Section from "@/components/layout/Section";
 import Reveal from "@/components/motion/Reveal";
+import EnergyFlow from "@/components/ui/EnergyFlow";
 import { site } from "@/content/site";
 import { buildMetadata } from "@/lib/seo";
 import ContactForm from "./ContactForm";
@@ -31,6 +32,9 @@ export default function ContactPage() {
             </p>
           </Reveal>
           <Reveal delay={0.15}>
+            <EnergyFlow className="opacity-80" />
+          </Reveal>
+          <Reveal delay={0.2}>
             <div className="rounded-2xl border border-[var(--border)] bg-[var(--surface)]/60 p-6 text-sm text-[var(--muted)]">
               <p>{site.contact.email}</p>
               <p>{site.contact.mobile}</p>

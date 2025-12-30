@@ -4,6 +4,7 @@ import Section from "@/components/layout/Section";
 import Badge from "@/components/ui/Badge";
 import Card from "@/components/ui/Card";
 import Reveal from "@/components/motion/Reveal";
+import EnergyFlow from "@/components/ui/EnergyFlow";
 import { site } from "@/content/site";
 
 export default function SplitHero() {
@@ -32,6 +33,9 @@ export default function SplitHero() {
             </p>
           </Reveal>
         </div>
+        <Reveal delay={0.2}>
+          <EnergyFlow className="mt-8 opacity-80" />
+        </Reveal>
         <div className="mt-12 grid gap-6 lg:grid-cols-2">
           {site.homeCards.map((card, index) => (
             <Reveal key={card.href} delay={0.1 + index * 0.05}>

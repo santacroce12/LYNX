@@ -6,6 +6,7 @@ import EnergiaHero from "./sections/Hero";
 import EnergiaGallery from "./sections/Gallery";
 import EnergiaServices from "./sections/Services";
 import EnergiaUseCases from "./sections/UseCases";
+import EnergyFlow from "@/components/ui/EnergyFlow";
 
 export const metadata = buildMetadata({
   title: energia.meta.title,
@@ -21,6 +22,9 @@ export default function EnergiaPage() {
       <EnergiaServices />
       <EnergiaUseCases />
       <FAQ title={energia.sections.faqTitle} items={energia.faqs} />
+      <div className="mx-auto w-full max-w-6xl px-6">
+        <EnergyFlow className="mb-12 opacity-80" />
+      </div>
       <CTA
         title={energia.cta.title}
         text={energia.cta.text}
