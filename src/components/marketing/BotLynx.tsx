@@ -66,7 +66,10 @@ export default function BotLynx() {
       return;
     }
 
-    const nextHistory = [...history, { role: "user", content: value }];
+    const nextHistory: ChatMessage[] = [
+      ...history,
+      { role: "user", content: value },
+    ];
     setHistory(nextHistory);
     setInput("");
     setIsLoading(true);
