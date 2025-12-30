@@ -85,6 +85,36 @@ const iconMap: Record<string, JSX.Element> = {
       fill="none"
     />
   ),
+  search: (
+    <path
+      d="M11 5a6 6 0 1 0 0 12 6 6 0 0 0 0-12zm0 0 7 7"
+      stroke="currentColor"
+      strokeWidth="1.6"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      fill="none"
+    />
+  ),
+  monitor: (
+    <path
+      d="M4 6h16v10H4V6zm4 14h8m-6-4 1 4m4-4-1 4"
+      stroke="currentColor"
+      strokeWidth="1.6"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      fill="none"
+    />
+  ),
+  ladder: (
+    <path
+      d="M7 4v16m10-16v16M7 7h10M7 11h10M7 15h10"
+      stroke="currentColor"
+      strokeWidth="1.6"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      fill="none"
+    />
+  ),
   rocket: (
     <path
       d="M5 19l4-1 7-7c2-2 3-5 3-8-3 0-6 1-8 3l-7 7-1 4 2 2zM14 6l4 4"

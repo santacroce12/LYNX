@@ -190,14 +190,17 @@
   homeBullets: [
     {
       title: "Diagnóstico experto",
+      icon: "search",
       description: "Levantamos requisitos críticos y un plan claro en semanas.",
     },
     {
       title: "Ejecución integral",
+      icon: "monitor",
       description: "Integramos energía, software e infraestructura sin fricciones.",
     },
     {
       title: "Escalabilidad real",
+      icon: "ladder",
       description: "Arquitecturas preparadas para crecer sin deuda técnica.",
     },
   ],
