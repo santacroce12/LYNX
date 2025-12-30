@@ -150,6 +150,18 @@
         description: "Conectividad industrial IoT y gestión de datos.",
         image: "/images/partners/N3uron-favicom-picture.jpg",
       },
+      {
+        name: "Cisco",
+        href: "https://www.cisco.com/",
+        description: "Infraestructura y networking empresarial.",
+        image: "/images/partners/logo-open-graph.avif",
+      },
+      {
+        name: "Sisco",
+        href: "https://sisconet.com/",
+        description: "Integraciones y conectividad industrial.",
+        image: "/images/partners/sisco-logo-color.svg",
+      },
     ],
   },
   experience: {

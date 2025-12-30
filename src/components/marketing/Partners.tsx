@@ -26,6 +26,12 @@ export default function Partners() {
               partner.name === "SEL" ||
               partner.name === "N3uron" ||
               partner.name === "Systems With Intelligence";
+            const logoSizeClass =
+              partner.name === "Sisco"
+                ? "h-16 scale-125"
+                : isEmphasized
+                  ? "h-14 scale-115"
+                  : "h-12";
 
             return (
               <a
@@ -41,9 +47,7 @@ export default function Partners() {
                   alt={partner.name}
                   width={180}
                   height={80}
-                  className={`w-full object-contain grayscale opacity-80 transition-all duration-300 group-hover:grayscale-0 group-hover:opacity-100 dark:brightness-110 dark:contrast-125 ${
-                    isEmphasized ? "h-14 scale-115" : "h-12"
-                  }`}
+                  className={`w-full object-contain grayscale opacity-80 transition-all duration-300 group-hover:grayscale-0 group-hover:opacity-100 dark:brightness-110 dark:contrast-125 ${logoSizeClass}`}
                 />
               </a>
             );
