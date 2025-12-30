@@ -61,7 +61,7 @@ export default function AboutSection() {
               <div className="rounded-2xl bg-[var(--bg)] p-3 md:p-4">
                 <div className="overflow-hidden rounded-xl">
                   <video
-                    className="h-96 w-full origin-center scale-[1.2] object-contain md:h-[28rem] md:scale-[1.45]"
+                    className="h-96 w-full origin-center scale-[1.2] object-contain object-center md:h-[28rem] md:scale-[1.45]"
                     src="/images/brand/about.mp4"
                     poster={about.cover.image}
                     autoPlay

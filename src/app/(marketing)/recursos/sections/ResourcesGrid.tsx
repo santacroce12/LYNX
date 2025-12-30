@@ -2,6 +2,7 @@
 
 import { Suspense, useEffect, useMemo } from "react";
 import Image from "next/image";
+import Link from "next/link";
 import { useSearchParams, useRouter, usePathname } from "next/navigation";
 import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
 import Section from "@/components/layout/Section";
@@ -20,10 +21,6 @@ function RecursosGridContent() {
     () => recursos.cases.find((item) => item.id === activeId) ?? null,
     [activeId]
   );
-
-  const openCase = (id: string) => {
-    router.push(`${pathname}?id=${id}`, { scroll: false });
-  };
 
   const closeCase = () => {
     router.push(pathname, { scroll: false });
@@ -68,11 +65,11 @@ function RecursosGridContent() {
       <div className="grid gap-6 md:grid-cols-3">
         {recursos.cases.map((item, index) => (
           <Reveal key={item.id} delay={index * 0.05}>
-            <button
-              type="button"
-              onClick={() => openCase(item.id)}
-              className="group h-full text-left focus:outline-none"
-              aria-haspopup="dialog"
+            <Link
+              href={`/recursos?id=${item.id}`}
+              scroll={false}
+              className="group block h-full text-left focus:outline-none"
+              aria-label={`Leer caso ${item.title}`}
             >
               <Card className="h-full overflow-hidden p-0 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
                 <div className="relative h-44">
@@ -109,7 +106,7 @@ function RecursosGridContent() {
                   </p>
                 </div>
               </Card>
-            </button>
+            </Link>
           </Reveal>
         ))}
       </div>

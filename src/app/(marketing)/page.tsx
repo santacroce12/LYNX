@@ -1,10 +1,10 @@
 ﻿import CTA from "@/components/marketing/CTA";
 import AboutSection from "@/components/marketing/AboutSection";
-import CaseStudies from "@/components/marketing/CaseStudies";
 import FeatureGrid from "@/components/marketing/FeatureGrid";
 import Partners from "@/components/marketing/Partners";
 import SplitHero from "@/components/marketing/SplitHero";
 import Section from "@/components/layout/Section";
+import EnergyFlow from "@/components/ui/EnergyFlow";
 import { site } from "@/content/site";
 import { buildMetadata } from "@/lib/seo";
 
@@ -27,8 +27,10 @@ export default function HomePage() {
           items={site.homeBullets}
           columns={3}
         />
+        <div className="mt-8">
+          <EnergyFlow className="opacity-80" />
+        </div>
       </Section>
-      <CaseStudies />
       <CTA
         title={site.homeCta.title}
         text={site.homeCta.text}

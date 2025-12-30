@@ -29,9 +29,11 @@ export default function Partners() {
             const logoSizeClass =
               partner.name === "Sisco"
                 ? "h-16 scale-125"
-                : isEmphasized
-                  ? "h-14 scale-115"
-                  : "h-12";
+                : partner.name === "Systems With Intelligence"
+                  ? "h-16 scale-125"
+                  : isEmphasized
+                    ? "h-14 scale-115"
+                    : "h-12";
 
             return (
               <a

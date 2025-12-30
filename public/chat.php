@@ -194,7 +194,7 @@ SITE:
         "name": "N3uron",
         "href": "https://n3uron.com",
         "description": "Conectividad industrial IoT y gestión de datos.",
-        "image": "/images/partners/N3uron-favicom-picture.jpg"
+        "image": "/images/partners/n3uron.svg"
       }
     ]
   },
