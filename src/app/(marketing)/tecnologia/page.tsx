@@ -1,5 +1,6 @@
 ﻿import CTA from "@/components/marketing/CTA";
 import FAQ from "@/components/marketing/FAQ";
+import FeaturedProjects from "@/components/marketing/FeaturedProjects";
 import EnergyFlow from "@/components/ui/EnergyFlow";
 import { tecnologia } from "@/content/tecnologia";
 import { buildMetadata } from "@/lib/seo";
@@ -20,6 +21,7 @@ export default function TecnologiaPage() {
       <TecnologiaServices />
       <TecnologiaUseCases />
       <FAQ title={tecnologia.sections.faqTitle} items={tecnologia.faqs} />
+      <FeaturedProjects filterCategory="Tecnología" />
       <div className="mx-auto w-full max-w-6xl px-6">
         <EnergyFlow className="mb-12 opacity-80" />
       </div>

@@ -5,6 +5,7 @@
 
 type RecursoCaso = {
   id: string;
+  category: "Energía" | "Tecnología";
   title: string;
   subtitle: string;
   summary: string;
@@ -37,6 +38,7 @@ export const recursos = {
   cases: [
     {
       id: "godoy-cruz",
+      category: "Energía",
       title: "Cooperativa Eléctrica de Godoy Cruz",
       subtitle: "Ingeniería de detalle y control en 132 kV",
       summary:
@@ -78,6 +80,7 @@ export const recursos = {
     },
     {
       id: "nihuiles",
+      category: "Energía",
       title: "Hidroeléctrica Nihuiles S.A.",
       subtitle: "Sistema de protección para generación y líneas",
       summary:
@@ -119,6 +122,7 @@ export const recursos = {
     },
     {
       id: "scada",
+      category: "Tecnología",
       title: "Operador regional de distribución",
       subtitle: "Plataforma SCADA e integración IoT",
       summary:

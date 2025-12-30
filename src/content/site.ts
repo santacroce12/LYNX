@@ -52,7 +52,7 @@
         "Optimización de consumo, continuidad operativa y control en tiempo real.",
       cta: "Explorar Energía",
       href: "/energia",
-      image: "/images/energia/placeholder.svg",
+      image: "/images/energia/electrico.jpg",
     },
     {
       label: "Tecnología",
@@ -61,7 +61,7 @@
         "Apps, automatización e integraciones seguras para decisiones rápidas.",
       cta: "Explorar Tecnología",
       href: "/tecnologia",
-      image: "/images/tecnologia/placeholder.svg",
+      image: "/images/tecnologia/tecnologico.jpg",
     },
   ],
   about: {

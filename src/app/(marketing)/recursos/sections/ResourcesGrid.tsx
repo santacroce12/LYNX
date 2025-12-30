@@ -2,6 +2,7 @@
 
 import { useEffect, useMemo, useState } from "react";
 import Image from "next/image";
+import { useSearchParams } from "next/navigation";
 import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
 import Section from "@/components/layout/Section";
 import Card from "@/components/ui/Card";
@@ -11,11 +12,24 @@ import { recursos } from "@/content/recursos";
 export default function RecursosGrid() {
   const reduceMotion = useReducedMotion();
   const [activeId, setActiveId] = useState<string | null>(null);
+  const searchParams = useSearchParams();
 
   const activeCase = useMemo(
     () => recursos.cases.find((item) => item.id === activeId) ?? null,
     [activeId]
   );
+
+  useEffect(() => {
+    const id = searchParams.get("id");
+    if (!id) {
+      return;
+    }
+
+    const match = recursos.cases.find((item) => item.id === id);
+    if (match) {
+      setActiveId(match.id);
+    }
+  }, [searchParams]);
 
   useEffect(() => {
     if (activeId) {

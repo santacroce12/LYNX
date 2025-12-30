@@ -1,5 +1,6 @@
 ﻿import CTA from "@/components/marketing/CTA";
 import FAQ from "@/components/marketing/FAQ";
+import FeaturedProjects from "@/components/marketing/FeaturedProjects";
 import { energia } from "@/content/energia";
 import { buildMetadata } from "@/lib/seo";
 import EnergiaHero from "./sections/Hero";
@@ -22,6 +23,7 @@ export default function EnergiaPage() {
       <EnergiaServices />
       <EnergiaUseCases />
       <FAQ title={energia.sections.faqTitle} items={energia.faqs} />
+      <FeaturedProjects filterCategory="Energía" />
       <div className="mx-auto w-full max-w-6xl px-6">
         <EnergyFlow className="mb-12 opacity-80" />
       </div>
