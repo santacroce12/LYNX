@@ -276,7 +276,7 @@ export default function BotLynx() {
         className="group relative flex h-16 w-16 items-center justify-center rounded-full bg-[var(--accent)] text-white shadow-xl transition-transform hover:scale-105 active:scale-95"
       >
         {/* Efecto de Pulso (Onda expansiva) */}
-        <span className="absolute inset-0 -z-10 animate-ping rounded-full bg-[var(--accent)] opacity-75" />
+        <span className="absolute inset-0 -z-10 animate-ping rounded-full bg-[var(--accent)] opacity-15 animate-ping-slow" />
 
         <AnimatePresence mode="wait">
           {isOpen ? (
