@@ -3,12 +3,20 @@
 import { useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { Menu, X } from "lucide-react";
 import { site } from "@/content/site";
 
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
+  const pathname = usePathname();
+
+  const getBrandSuffix = () => {
+    if (pathname?.startsWith("/energia")) return " ENERGÍA";
+    if (pathname?.startsWith("/tecnologia")) return " TECNOLOGÍA";
+    return "";
+  };
 
   useEffect(() => {
     const handleScroll = () => {
@@ -46,8 +54,9 @@ export default function Navbar() {
             className={logoClass}
             priority
           />
-          <span className="text-xs font-semibold uppercase tracking-[0.4em] text-white">
+          <span className="whitespace-nowrap text-xs font-semibold uppercase tracking-[0.2em] text-white md:tracking-[0.4em]">
             {site.name}
+            <span className="text-[var(--accent)]">{getBrandSuffix()}</span>
           </span>
         </Link>
         <div className="flex items-center gap-4">
