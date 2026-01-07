@@ -13,11 +13,6 @@ const config: Config = {
         accent: "var(--accent)",
         "accent-soft": "var(--accent-soft)",
       },
-      // En tailwind.config.ts > theme > extend
-      animation: {
-        "energy-flow": "energy-flow 3s linear infinite", // (Manten la existente)
-        "ping-slow": "ping 3s cubic-bezier(0, 0, 0.2, 1) infinite", // <--- NUEVA
-      },  
       fontFamily: {
         sans: ["var(--font-sans)", "ui-sans-serif", "system-ui"],
         display: ["var(--font-display)", "ui-sans-serif", "system-ui"],
@@ -36,6 +31,7 @@ const config: Config = {
       animation: {
         marquee: "marquee 40s linear infinite",
         "energy-flow": "energy-flow 3s linear infinite",
+        "ping-slow": "ping 3s cubic-bezier(0, 0, 0.2, 1) infinite",
       },
       keyframes: {
         marquee: {
