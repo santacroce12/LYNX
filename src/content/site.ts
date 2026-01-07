@@ -72,18 +72,14 @@
       alt: "Equipo LYNX en operaciones de energía",
     },
     body: [
-      "Desde sus orígenes en el año 1993, LYNX SpA se ha consolidado como reconocida integradora de tecnologías de la automatización de procesos, a través de la concreción de múltiples implementaciones satisfactorias en los más diversos rubros de la industria, tanto en Argentina como en el exterior.",
-      "Si bien continuamos operando en todas las ramas de la industria, en los últimos años nos hemos focalizado en la provisión de soluciones que involucran la energía eléctrica, desde diferentes puntos de vista.",
-      "A lo largo de nuestra trayectoria nos hemos adaptado a las cambiantes condiciones imperantes en los mercados que atendemos y a la vez hemos sabido mantener un estrecho diálogo con la vanguardia tecnológica, algunas veces como proveedores solo de servicios y otras con provisión de equipamiento, pero siempre defendiendo la consigna de alcanzar y superar los resultados esperados por nuestros clientes.",
-      "LYNX SpA se especializa en control de energía eléctrica como empresa proveedora de soluciones integrales a través de la comercialización de equipamiento eléctrico con tecnología de vanguardia y los servicios de ingeniería complementarios para su programación, instalación, puesta en servicio y explotación, destinados al mercado de la energía eléctrica en cualquiera de sus ámbitos de aplicación.",
+      "Desde 1993, LYNX SpA se consolidó como integradora de tecnologías de automatización de procesos, con implementaciones exitosas en diversos rubros de la industria en Argentina y el exterior. En los últimos años, nos hemos enfocado especialmente en soluciones vinculadas a la energía eléctrica.",
+"A lo largo de nuestra trayectoria, combinamos innovación tecnológica, servicios de ingeniería y provisión de equipamiento, con el objetivo de alcanzar y superar los resultados esperados por nuestros clientes. Nos especializamos en control de energía eléctrica, ofreciendo soluciones integrales que incluyen equipamiento de vanguardia y servicios para su programación, instalación, puesta en servicio y operación.",
     ],
     teamTitle: "Portada Nosotros",
     teamBody: [
-      "Para lograr los objetivos en cada proyecto contamos, como socios estratégicos, a fabricantes y proveedores, de trayectoria y reconocimiento de alcance global, con una cartera de soluciones ampliamente probadas que nos brindan su respaldo tecnológico e institucional. Esto se traduce en un equipo con el más elevado grado de compromiso, asumido en cada trabajo.",
-      "Nuestro equipo de profesionales está constituido por recursos humanos con una sólida formación en tecnologías de automatismos avanzados y una amplia trayectoria en integraciones en las áreas de control, medición y protección de sistemas asociados a la energía eléctrica.",
-      "Las áreas de operación incluyen el personal idóneo para acompañar nuestro producto, desde la concepción del proyecto en sus etapas de ingeniería conceptual y básica, pasando por la definición de materiales, la ingeniería de detalle, hasta cubrir cada uno de los pasos siguientes arribando a la concreción de la solución integral mediante la construcción electromecánica, la programación y configuración de hardware, los ensayos en fábrica, los montajes en obra para concluir con los ensayos en sitio y la puesta en servicio.",
-      "La extensa experiencia de nuestro personal en proyectos eléctricos, unido a la capacitación continua en áreas específicas, junto con el soporte de nuestros proveedores, nos permite encarar día a día nuevos desafíos con confianza y solidez.",
-    ],
+      "Para cada proyecto trabajamos con socios estratégicos globales, cuyos productos y respaldo tecnológico fortalecen nuestras soluciones y el compromiso de nuestro equipo. Contamos con profesionales con sólida formación en automatismos avanzados y amplia experiencia en control, medición y protección de sistemas eléctricos.",
+      "Acompañamos los proyectos de punta a punta: ingeniería conceptual y básica, definición de materiales, ingeniería de detalle, construcción electromecánica, configuración de hardware, ensayos en fábrica, montaje en obra, pruebas en sitio y puesta en servicio. La experiencia, la capacitación continua y el soporte de nuestros proveedores nos permiten asumir nuevos desafíos con solidez y confianza."
+         ],
     highlightsTitle: "Sobre la empresa",
     highlights: [
       {

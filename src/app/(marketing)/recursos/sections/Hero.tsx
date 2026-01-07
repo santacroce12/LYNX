@@ -7,7 +7,7 @@ import { recursos } from "@/content/recursos";
 
 export default function RecursosHero() {
   return (
-    <Section className="pt-24">
+    <Section className="pt-1 pb-8 md:pt-4 md:pb-2">
       <div className="relative overflow-hidden rounded-3xl border border-[var(--border)] bg-[var(--surface)]/70 px-8 py-12 md:min-h-[360px]">
         <Image
           src="/images/energia/panel%20solar.jpg"

@@ -54,9 +54,8 @@ export default function Navbar() {
             className={logoClass}
             priority
           />
-          <span className="whitespace-nowrap text-xs font-semibold uppercase tracking-[0.2em] text-white md:tracking-[0.4em]">
-            {site.name}
-            <span className="text-[var(--accent)]">{getBrandSuffix()}</span>
+          <span className="whitespace-nowrap text-xs font-semibold uppercase tracking-[0.2em] text-[var(--accent)] md:tracking-[0.4em]">
+            {getBrandSuffix()}
           </span>
         </Link>
         <div className="flex items-center gap-4">

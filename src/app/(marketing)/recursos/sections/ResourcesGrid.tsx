@@ -48,7 +48,7 @@ function RecursosGridContent() {
   }, [activeId, pathname, router]); // eslint-disable-line react-hooks/exhaustive-deps
 
   return (
-    <Section id="recursos">
+    <Section id="recursos" className="pt-10 pb-16 md:pt-16 md:pb-24">
       <div className="mb-10 max-w-2xl">
         <Reveal>
           <h2 className="text-3xl font-semibold md:text-4xl">
