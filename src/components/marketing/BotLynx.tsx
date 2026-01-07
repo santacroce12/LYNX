@@ -5,7 +5,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import { Bot, X, Send, Sparkles } from "lucide-react";
 
 // --- 1. Tipos y Utilidades ---
-const initialBotMessage = "?Hola! ?? Soy el asistente virtual de LYNX. ?En qu? puedo ayudarte hoy?";
+const initialBotMessage = "¡Hola! 👋 Soy el asistente virtual de LYNX. ¿En qué puedo ayudarte hoy?";
 
 type ChatMessage = {
   role: "bot" | "user";
@@ -21,7 +21,7 @@ type SubmitContactPayload = {
   };
 };
 
-// Funci?n para detectar si el bot nos pide enviar el formulario
+// Función para detectar si el bot nos pide enviar el formulario
 const parseSubmitPayload = (text: string): SubmitContactPayload | null => {
   try {
     const parsed = JSON.parse(text);
@@ -42,7 +42,7 @@ const parseSubmitPayload = (text: string): SubmitContactPayload | null => {
   }
 };
 
-// --- 2. Sub-componente: Animaci?n de "Escribiendo..." ---
+// --- 2. Sub-componente: Animación de "Escribiendo..." ---
 const TypingIndicator = () => (
   <div className="flex items-center space-x-1 p-1">
     <div className="h-1.5 w-1.5 animate-bounce rounded-full bg-[var(--accent)] [animation-delay:-0.3s]" />
@@ -76,7 +76,7 @@ export default function BotLynx() {
     const nextHistory = [...history, userMsg];
     setHistory(nextHistory);
     setInput("");
-    setIsLoading(true); // Activar animaci?n de "escribiendo"
+    setIsLoading(true); // Activar animación de "escribiendo"
 
     try {
       // 2. Enviar al Backend (PHP)
@@ -103,10 +103,10 @@ export default function BotLynx() {
       if (submitPayload) {
         setIsLoading(false);
         setIsSubmitting(true);
-        // Mensaje temporal del bot mientras env?a el mail
+        // Mensaje temporal del bot mientras envía el mail
         setHistory((prev) => [
           ...prev,
-          { role: "bot", content: "Procesando tu solicitud... ??" },
+          { role: "bot", content: "Procesando tu solicitud... 📨" },
         ]);
 
         const submitResponse = await fetch("/contact.php", {
@@ -121,7 +121,7 @@ export default function BotLynx() {
             {
               role: "bot",
               content:
-                "?Excelente! He enviado tus datos al equipo. Nos pondremos en contacto pronto. ??",
+                "¡Excelente! He enviado tus datos al equipo. Nos pondremos en contacto pronto. 🚀",
             },
           ]);
         } else {
@@ -130,7 +130,7 @@ export default function BotLynx() {
             {
               role: "bot",
               content:
-                "Tuve un peque?o problema t?cnico al enviar el correo. Por favor, intenta de nuevo o escr?benos a contacto@lynx.cl.",
+                "Tuve un pequeño problema técnico al enviar el correo. Por favor, intenta de nuevo o escríbenos a contacto@lynx.cl.",
             },
           ]);
         }
@@ -141,7 +141,7 @@ export default function BotLynx() {
       // 4. Respuesta normal del Bot
       const reply =
         cleanedText ||
-        "Disculpa, no pude procesar eso. ?Podr?as reformularlo?";
+        "Disculpa, no pude procesar eso. ¿Podrías reformularlo?";
       setHistory((prev) => [...prev, { role: "bot", content: reply }]);
     } catch (error) {
       setHistory((prev) => [
@@ -149,7 +149,7 @@ export default function BotLynx() {
         {
           role: "bot",
           content:
-            "Lo siento, parece que hay un problema de conexi?n. Intenta m?s tarde.",
+            "Lo siento, parece que hay un problema de conexión. Intenta más tarde.",
         },
       ]);
     } finally {
@@ -178,7 +178,7 @@ export default function BotLynx() {
                 <div>
                   <h3 className="text-sm font-bold text-[var(--text)]">LYNX AI</h3>
                   <p className="text-[10px] font-medium uppercase tracking-wider text-[var(--muted)]">
-                    En l?nea
+                    En línea
                   </p>
                 </div>
               </div>
@@ -302,7 +302,7 @@ export default function BotLynx() {
           )}
         </AnimatePresence>
 
-        {/* Notificaci?n (Badge) si est? cerrado */}
+        {/* Notificación (Badge) si está cerrado */}
         {!isOpen && (
           <span className="absolute right-0 top-0 flex h-4 w-4 items-center justify-center rounded-full bg-red-500 ring-2 ring-[var(--bg)]">
             <span className="h-2 w-2 rounded-full bg-white" />
