@@ -55,52 +55,63 @@
   ],
   services: [
     {
-      title: "Automatismos de subestaciones",
+      title: "Subestaciones",
       description:
-        "Ingeniería, provisión, integración y construcción. Nos adaptamos al estándar del cliente.",
+        "Diseño, montaje y puesta en servicio de patios de alta y media tensión.",
+      icon: "zap",
     },
     {
-      title: "Medición y calidad de energía",
+      title: "Sistemas de Control",
       description:
-        "Soluciones de hardware y software con amplio conocimiento del mercado de magnitudes eléctricas.",
+        "Integración de SCADA, RTUs y HMIs para operación remota eficiente.",
+      icon: "monitor",
     },
     {
-      title: "Bancos de capacitores",
+      title: "Protecciones",
       description:
-        "Estrategias y algoritmos de control para regular el factor de potencia en distribución y transporte.",
+        "Configuración, pruebas y puesta en servicio de esquemas de protección.",
+      icon: "shield",
     },
     {
-      title: "Salas eléctricas",
+      title: "Telecomunicaciones",
       description:
-        "Provisiones a medida con envolventes estándar o diseños propios para usos especiales.",
+        "Redes industriales robustas (FO, Radio, PLC) para entornos críticos.",
+      icon: "radio",
     },
     {
-      title: "Energías alternativas",
+      title: "Ciberseguridad OT",
       description:
-        "Estudios de viabilidad para integrar y vender excedentes de energía a la red.",
+        "Hardenización de redes y cumplimiento de normativas CIP/NUE.",
+      icon: "lock",
     },
     {
-      title: "Automatismos industriales",
+      title: "Mantenimiento",
       description:
-        "Máximo aprovechamiento de recursos disponibles y eficiencia en producción.",
+        "Servicios preventivos y correctivos para asegurar la continuidad.",
+      icon: "wrench",
     },
   ],
   useCases: [
     {
-      title: "Parques industriales",
-      description: "Energía estable para clusters con alta demanda simultánea.",
+      title: "Subestación Digital 110kV",
+      description:
+        "Modernización completa migrando cableado de cobre a fibra óptica con protocolo IEC 61850, reduciendo costos de mantenimiento y aumentando la seguridad.",
+      image:
+        "https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?auto=format&fit=crop&q=80",
     },
     {
-      title: "Centros logísticos",
-      description: "Continuidad y respaldo para operaciones 24/7.",
+      title: "Centro de Control SCADA",
+      description:
+        "Implementación de un sistema centralizado redundante que permite la operación remota de 15 subestaciones distribuidas geográficamente en tiempo real.",
+      image:
+        "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80",
     },
     {
-      title: "Minería y recursos",
-      description: "Infraestructura robusta en entornos exigentes.",
-    },
-    {
-      title: "Salud y laboratorios",
-      description: "Protección de equipos críticos y datos sensibles.",
+      title: "Retrofit de Protecciones",
+      description:
+        "Reemplazo exitoso de relés electromecánicos por numéricos de última generación sin interrupción del suministro eléctrico crítico.",
+      image:
+        "https://images.unsplash.com/photo-1581092921461-eab62496096b?auto=format&fit=crop&q=80",
     },
   ],
   faqs: [

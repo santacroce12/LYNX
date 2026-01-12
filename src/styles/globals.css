@@ -1,60 +1,53 @@
-ï»¿@tailwind base;
+@tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 :root {
+  /* --- Colores Base (Dark Mode por defecto) --- */
   --bg: #0B0F1A;
   --surface: #0F172A;
   --border: #1F2937;
-  --text: #E5E7EB;
-  --muted: #94A3B8;
+
+  /* Texto Principal (Blanco suave, no puro) */
+  --foreground: 210 40% 98%;
+  --text: hsl(var(--foreground));
+
+  /* Texto Secundario (Gris claro y legible) */
+  --muted: hsl(215 20% 75%);
+
+  /* Acentos */
   --accent: #F97316;
   --accent-soft: #FB923C;
 }
 
-* {
-  box-sizing: border-box;
-}
-
 html {
-  color-scheme: dark;
   scroll-behavior: smooth;
 }
 
+@layer base {
+  /* TIPOGRAFÍA GLOBAL */
+  p {
+    /* Quitamos tracking-wide para mejor lectura */
+    @apply leading-relaxed text-[var(--muted)];
+    font-size: 1.05rem;
+    letter-spacing: 0.01em;
+  }
 
-body {
-  margin: 0;
-  background-color: var(--bg);
-  color: var(--text);
-  font-family: var(--font-sans), ui-sans-serif, system-ui, sans-serif;
-  min-height: 100%;
-}
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    /* Títulos con mejor kerning */
+    @apply tracking-tight text-[var(--text)] font-bold;
+  }
 
-h1,
-h2,
-h3,
-h4 {
-  font-family: var(--font-display), ui-sans-serif, system-ui, sans-serif;
-  letter-spacing: -0.02em;
-}
-
-a {
-  color: inherit;
-  text-decoration: none;
-}
-
-img {
-  max-width: 100%;
-  height: auto;
-}
-
-::selection {
-  background: rgba(249, 115, 22, 0.35);
-  color: #0B0F1A;
-}
-
-@media (prefers-reduced-motion: reduce) {
+  /* Suavizado de fuente para fondo oscuro */
   html {
-    scroll-behavior: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background-color: var(--bg);
+    color: var(--text);
   }
 }
