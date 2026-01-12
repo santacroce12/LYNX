@@ -3,34 +3,38 @@
 @tailwind utilities;
 
 :root {
-  /* --- Colores Base (Dark Mode por defecto) --- */
+  /* --- Paleta de Colores (Modo Oscuro Optimizado) --- */
   --bg: #0B0F1A;
   --surface: #0F172A;
   --border: #1F2937;
 
-  /* Texto Principal (Blanco suave, no puro) */
-  --foreground: 210 40% 98%;
-  --text: hsl(var(--foreground));
+  /* Texto Principal: Casi blanco absoluto para títulos */
+  --text: #F9FAFB;
 
-  /* Texto Secundario (Gris claro y legible) */
-  --muted: hsl(215 20% 75%);
+  /* Texto Secundario (Muted): Aclarado significativamente */
+  --muted: #CBD5E1;
 
-  /* Acentos */
+  /* Acentos de Marca */
   --accent: #F97316;
   --accent-soft: #FB923C;
 }
 
 html {
+  color-scheme: dark;
   scroll-behavior: smooth;
 }
 
+/* --- Reglas de Tipografía Global --- */
 @layer base {
-  /* TIPOGRAFÍA GLOBAL */
+  body {
+    @apply bg-[var(--bg)] text-[var(--text)];
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+
   p {
-    /* Quitamos tracking-wide para mejor lectura */
-    @apply leading-relaxed text-[var(--muted)];
+    @apply text-[var(--muted)] leading-relaxed;
     font-size: 1.05rem;
-    letter-spacing: 0.01em;
+    letter-spacing: 0.015em;
   }
 
   h1,
@@ -39,15 +43,17 @@ html {
   h4,
   h5,
   h6 {
-    /* Títulos con mejor kerning */
-    @apply tracking-tight text-[var(--text)] font-bold;
+    @apply text-[var(--text)] font-bold tracking-tight;
   }
 
-  /* Suavizado de fuente para fondo oscuro */
   html {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    background-color: var(--bg);
-    color: var(--text);
   }
+}
+
+/* Color de selección de texto */
+::selection {
+  background: rgba(249, 115, 22, 0.35);
+  color: #ffffff;
 }
