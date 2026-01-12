@@ -4,11 +4,12 @@ export const tecnologia = {
     description: "Proveemos la mano de obra, logística y gestión para implementar tecnología en tu empresa. Tu socio estratégico en ejecución de proyectos TI.",
   },
   hero: {
-    badge: "Talento & Implementación TI",
-    title: "Hacemos realidad tu Transformación Digital",
+    badge: "Ejecución TI",
+    title: "Tu Socio en Ejecución Tecnológica",
     subtitle:
-      "¿Tienes la visión pero te falta el equipo? Nosotros ponemos la mano de obra especializada y gestionamos toda la logística de implementación. Desde el despliegue en terreno hasta el desarrollo de software, somos tu brazo ejecutor para que tus proyectos tecnológicos aterricen con éxito.",
-    cta: "Cotizar Equipo de Trabajo",
+      "Proveemos el talento especializado y la logística operativa para materializar tus proyectos.",
+    claim: "Ejecución precisa con foco en continuidad y resultados.",
+    cta: "Cotizar Equipo",
     image: "/images/tecnologia/tecnologia-abstracto.jpg",
   },
   sections: {

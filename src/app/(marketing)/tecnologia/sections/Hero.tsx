@@ -1,7 +1,6 @@
-﻿import Image from "next/image";
+import Image from "next/image";
 import Section from "@/components/layout/Section";
 import Badge from "@/components/ui/Badge";
-import Button from "@/components/ui/Button";
 import FeatureGrid from "@/components/marketing/FeatureGrid";
 import Reveal from "@/components/motion/Reveal";
 import EnergyFlow from "@/components/ui/EnergyFlow";
@@ -17,7 +16,7 @@ export default function TecnologiaHero() {
           fill
           priority
           sizes="100vw"
-          className="object-cover opacity-25"
+          className="object-cover opacity-20"
         />
         <div className="absolute inset-0 bg-gradient-to-r from-[var(--bg)] via-[var(--bg)]/80 to-transparent" />
         <div
@@ -29,19 +28,19 @@ export default function TecnologiaHero() {
             <Badge>{tecnologia.hero.badge}</Badge>
           </Reveal>
           <Reveal delay={0.05}>
-            <h1 className="mt-4 text-4xl font-semibold md:text-5xl">
+            <h1 className="mt-3 text-4xl font-semibold leading-tight md:text-5xl">
               {tecnologia.hero.title}
             </h1>
           </Reveal>
           <Reveal delay={0.1}>
-            <p className="mt-4 text-base text-[var(--muted)] md:text-lg">
+            <p className="mt-3 text-base text-[var(--muted)] md:text-lg">
               {tecnologia.hero.subtitle}
             </p>
           </Reveal>
           <Reveal delay={0.15}>
-            <div className="mt-6">
-              <Button href="/contacto">{tecnologia.hero.cta}</Button>
-            </div>
+            <p className="mt-2 text-sm text-[var(--muted)]">
+              {tecnologia.hero.claim}
+            </p>
           </Reveal>
         </div>
         <div className="relative z-10 mt-6 w-full">
