@@ -11,7 +11,6 @@ import {
   Mail,
   MapPin,
   Phone,
-  Twitter,
 } from "lucide-react";
 
 export default function Footer() {
@@ -23,16 +22,13 @@ export default function Footer() {
     if (label.includes("linkedin")) return <Linkedin className="h-5 w-5" />;
     if (label.includes("instagram")) return <Instagram className="h-5 w-5" />;
     if (label.includes("facebook")) return <Facebook className="h-5 w-5" />;
-    if (label.includes("twitter") || label === "x") {
-      return <Twitter className="h-5 w-5" />;
-    }
     return <ExternalLink className="h-5 w-5" />;
   };
 
   return (
     <footer className="border-t border-[var(--border)] bg-[var(--surface)]">
       <div className="mx-auto w-full max-w-6xl px-6 py-12">
-        <div className="grid gap-10 md:grid-cols-4">
+        <div className="grid gap-10 lg:grid-cols-3">
           <div className="space-y-6">
             <Link href="/" className="block">
               <Image
@@ -77,30 +73,6 @@ export default function Footer() {
                   </Link>
                 </li>
               ))}
-            </ul>
-          </div>
-
-          <div>
-            <h3 className="mb-6 text-sm font-semibold uppercase tracking-wider text-[var(--text)]">
-              Legal
-            </h3>
-            <ul className="space-y-4">
-              <li>
-                <Link
-                  href="/privacidad"
-                  className="block text-sm text-[var(--muted)] transition-colors hover:text-[var(--accent)]"
-                >
-                  Politica de Privacidad
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/terminos"
-                  className="block text-sm text-[var(--muted)] transition-colors hover:text-[var(--accent)]"
-                >
-                  Terminos de Servicio
-                </Link>
-              </li>
             </ul>
           </div>
 

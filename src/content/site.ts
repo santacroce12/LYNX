@@ -23,15 +23,14 @@
     dark: "Oscuro",
   },
   contact: {
-    email: "hola@lynx.com",
+    email: "soporte@lynx.cl",
     mobile: "+56 9 6214 8623",
     phone: "+56 2 24054964",
     address: "Santiago, Chile",
     region: "Operación en Chile y Argentina",
     social: [
-      { label: "LinkedIn", href: "#" },
-      { label: "X", href: "#" },
-      { label: "Instagram", href: "#" },
+      { label: "LinkedIn", href: "https://www.linkedin.com/company/lynx-spa/" },
+      { label: "Instagram", href: "https://instagram.com/lynx_latam" },
     ],
   },
   footer: {

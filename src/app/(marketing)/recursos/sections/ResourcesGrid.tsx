@@ -221,7 +221,7 @@ function RecursosGridContent() {
                 {activeCase.gallery && activeCase.gallery.length > 0 && (
                   <div className="mt-12">
                     <h4 className="mb-6 border-b border-[var(--border)] pb-2 text-sm font-bold uppercase tracking-[0.2em] text-[var(--muted)]">
-                      Galer?a del Proyecto
+                      Galería del Proyecto
                     </h4>
                     <div className="grid gap-4 sm:grid-cols-2 md:grid-cols-3">
                       {activeCase.gallery.map((img, idx) => (

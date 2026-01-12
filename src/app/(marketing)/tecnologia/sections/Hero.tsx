@@ -1,6 +1,7 @@
 ﻿import Image from "next/image";
 import Section from "@/components/layout/Section";
 import Badge from "@/components/ui/Badge";
+import Button from "@/components/ui/Button";
 import FeatureGrid from "@/components/marketing/FeatureGrid";
 import Reveal from "@/components/motion/Reveal";
 import EnergyFlow from "@/components/ui/EnergyFlow";
@@ -11,8 +12,8 @@ export default function TecnologiaHero() {
     <Section className="pt-24">
       <div className="relative flex min-h-[320px] items-center overflow-hidden rounded-3xl border border-[var(--border)] bg-[var(--surface)]/70 px-8 py-12 md:min-h-[400px]">
         <Image
-          src="/images/tecnologia/tecnologia-abstracto.jpg"
-          alt="Conexiones digitales abstractas"
+          src={tecnologia.hero.image}
+          alt={tecnologia.hero.title}
           fill
           priority
           sizes="100vw"
@@ -38,9 +39,9 @@ export default function TecnologiaHero() {
             </p>
           </Reveal>
           <Reveal delay={0.15}>
-            <p className="mt-3 text-sm text-[var(--muted)]">
-              {tecnologia.hero.claim}
-            </p>
+            <div className="mt-6">
+              <Button href="/contacto">{tecnologia.hero.cta}</Button>
+            </div>
           </Reveal>
         </div>
         <div className="relative z-10 mt-6 w-full">

@@ -2,22 +2,22 @@ import Section from "@/components/layout/Section";
 import Reveal from "@/components/motion/Reveal";
 import { tecnologia } from "@/content/tecnologia";
 import {
-  Activity,
-  Cpu,
+  Users,
+  Truck,
+  ClipboardCheck,
+  Code,
   Layers,
-  PenTool,
-  Plug,
-  Wifi,
+  LifeBuoy,
   type LucideIcon,
 } from "lucide-react";
 
 const icons: Record<string, LucideIcon> = {
-  "pen-tool": PenTool,
+  users: Users,
+  truck: Truck,
+  "clipboard-check": ClipboardCheck,
+  code: Code,
   layers: Layers,
-  wifi: Wifi,
-  plug: Plug,
-  bot: Cpu,
-  activity: Activity,
+  "life-buoy": LifeBuoy,
 };
 
 export default function TecnologiaServices() {
@@ -30,7 +30,7 @@ export default function TecnologiaServices() {
           </h2>
         </Reveal>
         <Reveal delay={0.1}>
-          <p className="mx-auto mt-4 max-w-2xl text-lg text-[var(--muted)]">
+          <p className="mt-4 mx-auto max-w-2xl text-[var(--muted)] text-lg">
             {tecnologia.sections.servicesSubtitle}
           </p>
         </Reveal>
@@ -47,7 +47,7 @@ export default function TecnologiaServices() {
                 <h3 className="mb-3 text-xl font-bold text-[var(--text)]">
                   {service.title}
                 </h3>
-                <p className="leading-relaxed text-[var(--muted)]">
+                <p className="text-[var(--muted)] leading-relaxed">
                   {service.description}
                 </p>
               </div>

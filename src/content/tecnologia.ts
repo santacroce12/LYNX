@@ -1,86 +1,93 @@
-﻿export const tecnologia = {
+export const tecnologia = {
   meta: {
-    title: "Tecnología",
-    description:
-      "Plataformas y soluciones digitales: apps, automatización, IoT e integraciones seguras.",
+    title: "Servicios de Implementación Tecnológica | LYNX",
+    description: "Proveemos la mano de obra, logística y gestión para implementar tecnología en tu empresa. Tu socio estratégico en ejecución de proyectos TI.",
   },
   hero: {
-    badge: "Vertical Tecnología",
-    title: "Tecnología que impulsa decisiones inteligentes",
+    badge: "Talento & Implementación TI",
+    title: "Hacemos realidad tu Transformación Digital",
     subtitle:
-      "Construimos plataformas y automatizaciones para operar con precisión y velocidad.",
-    claim: "Ecosistemas conectados, datos útiles y experiencias premium.",
+      "¿Tienes la visión pero te falta el equipo? Nosotros ponemos la mano de obra especializada y gestionamos toda la logística de implementación. Desde el despliegue en terreno hasta el desarrollo de software, somos tu brazo ejecutor para que tus proyectos tecnológicos aterricen con éxito.",
+    cta: "Cotizar Equipo de Trabajo",
+    image: "/images/tecnologia/tecnologia-abstracto.jpg",
   },
   sections: {
-    featuresTitle: "Capacidades clave",
+    featuresTitle: "Implementación con foco operativo",
     featuresSubtitle:
-      "Diseñamos ecosistemas digitales para acelerar el negocio y reducir fricciones.",
-    servicesTitle: "Servicios",
+      "Equipos, procesos y logística para desplegar tecnología sin fricciones y con resultados medibles.",
+    servicesTitle: "Soluciones de Implementación Integral",
     servicesSubtitle:
-      "Equipos multidisciplinarios para construir, integrar y escalar plataformas.",
+      "No solo te damos la tecnología, la instalamos, la configuramos y la mantenemos. Cubrimos todo el ciclo operativo para que tu empresa no se detenga.",
     useCasesTitle: "Casos de uso",
     useCasesSubtitle:
       "Soluciones digitales para operaciones conectadas y resultados medibles.",
-    faqTitle: "Preguntas frecuentes de tecnología",
+    faqTitle: "Preguntas frecuentes de implementación",
   },
   features: [
     {
-      title: "Apps y portales",
+      title: "Despliegue en terreno",
       description:
-        "Experiencias digitales orientadas a performance y adopción rápida.",
+        "Cuadrillas listas para instalación, configuración y puesta en marcha.",
       icon: "rocket",
     },
     {
+      title: "Gestión centralizada",
+      description: "Control y monitoreo de múltiples sedes en tiempo real.",
+      icon: "grid",
+    },
+    {
+      title: "Seguridad operativa",
+      description:
+        "Buenas prácticas para continuidad y protección de datos críticos.",
+      icon: "shield",
+    },
+    {
       title: "Automatización",
-      description: "Flujos inteligentes que reducen tiempos operativos.",
+      description: "Flujos eficientes para reducir tiempos y errores operativos.",
       icon: "cpu",
     },
     {
-      title: "IoT industrial",
-      description: "Sensores y telemetría para operaciones conectadas.",
-      icon: "sensor",
-    },
-    {
-      title: "Integraciones seguras",
-      description: "APIs, middleware y control de acceso robusto.",
+      title: "Integración segura",
+      description: "Conectamos sistemas nuevos y existentes sin interrupciones.",
       icon: "link",
-    },
-    {
-      title: "Data en tiempo real",
-      description: "Dashboards con insights accionables y alertas.",
-      icon: "grid",
     },
   ],
   services: [
     {
-      title: "Diseño de Producto",
-      description: "Discovery, UX/UI y prototipos listos para iterar.",
-      icon: "pen-tool",
+      title: "Talento Especializado",
+      description:
+        "Proveemos desarrolladores, ingenieros y técnicos calificados para integrarse a tus equipos de inmediato.",
+      icon: "users",
     },
     {
-      title: "Desarrollo Full-Stack",
-      description: "Arquitectura moderna con foco en escalabilidad.",
+      title: "Logística de Despliegue",
+      description:
+        "Gestión completa de hardware, envíos, instalación en sitio y puesta en marcha en múltiples sedes.",
+      icon: "truck",
+    },
+    {
+      title: "Gestión de Proyectos TI",
+      description:
+        "Liderazgo técnico para asegurar que la implementación cumpla con los plazos y presupuestos.",
+      icon: "clipboard-check",
+    },
+    {
+      title: "Desarrollo a Medida",
+      description:
+        "Creación de software específico para resolver tus cuellos de botella operativos.",
+      icon: "code",
+    },
+    {
+      title: "Integración de Sistemas",
+      description:
+        "Conectamos tu nueva tecnología con la infraestructura existente sin interrupciones.",
       icon: "layers",
     },
     {
-      title: "Plataformas IoT",
-      description: "Gestión de dispositivos, eventos y analítica.",
-      icon: "wifi",
-    },
-    {
-      title: "Integraciones",
-      description: "Conectores con ERPs, CRMs y sistemas legados.",
-      icon: "plug",
-    },
-    {
-      title: "Automatización",
-      description: "RPA + workflows para eliminar tareas repetitivas.",
-      icon: "bot",
-    },
-    {
-      title: "Observabilidad",
-      description: "Monitoreo, logs y alertas con estándares premium.",
-      icon: "activity",
+      title: "Soporte Operativo",
+      description:
+        "Mantenimiento y asistencia técnica continua para garantizar la estabilidad.",
+      icon: "life-buoy",
     },
   ],
   useCases: [
@@ -115,24 +122,29 @@
   ],
   faqs: [
     {
-      question: "¿Qué stack utilizan?",
+      question: "¿Qué tan rápido pueden desplegar un equipo?",
       answer:
-        "Elegimos tecnologías modernas con foco en performance, seguridad y escalabilidad.",
+        "Dependiendo de la complejidad y los perfiles requeridos, podemos integrar especialistas en tu flujo de trabajo en un plazo de 1 a 2 semanas. Para despliegues masivos en terreno, coordinamos la logística caso a caso.",
     },
     {
-      question: "¿Pueden integrarse con legacy?",
+      question: "¿Proveen el hardware además del personal?",
       answer:
-        "Sí. Diseñamos integraciones seguras para convivir con sistemas existentes.",
+        "Sí. Gestionamos la logística integral, lo que incluye la adquisición, configuración y transporte de dispositivos (sensores, gateways, tablets industriales) al lugar de la implementación.",
     },
     {
-      question: "¿Cómo entregan el producto?",
+      question: "¿El personal trabaja remoto o en sitio?",
       answer:
-        "Trabajamos por etapas con releases incrementales y métricas claras.",
+        "Nos adaptamos a tu necesidad. Tenemos equipos 100% remotos para desarrollo de software y cuadrillas de campo para instalaciones físicas, puestas en marcha y soporte en planta.",
+    },
+    {
+      question: "¿Cómo se maneja la propiedad intelectual?",
+      answer:
+        "Todo el código, configuraciones y documentación generada por nuestro equipo durante el servicio es 100% propiedad de tu empresa desde el día uno.",
     },
   ],
   cta: {
-    title: "Potenciemos tu ecosistema digital",
-    text: "Contanos tu objetivo y armamos una hoja de ruta tecnológica.",
-    buttonLabel: "Contactar",
+    title: "¿Listo para implementar?",
+    text: "Contanos tu alcance y te proponemos el equipo y la logística ideal.",
+    buttonLabel: "Solicitar propuesta",
   },
 };
