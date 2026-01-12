@@ -8,7 +8,7 @@
   --surface: #0F172A;
   --border: #1F2937;
 
-  /* Texto Principal: Casi blanco absoluto para títulos */
+  /* Texto Principal: Casi blanco absoluto para titulos */
   --text: #F9FAFB;
 
   /* Texto Secundario (Muted): Aclarado significativamente */
@@ -24,7 +24,7 @@ html {
   scroll-behavior: smooth;
 }
 
-/* --- Reglas de Tipografía Global --- */
+/* --- Reglas de Tipografia Global --- */
 @layer base {
   body {
     @apply bg-[var(--bg)] text-[var(--text)];
@@ -52,8 +52,19 @@ html {
   }
 }
 
-/* Color de selección de texto */
+/* Color de seleccion de texto */
 ::selection {
   background: rgba(249, 115, 22, 0.35);
   color: #ffffff;
+}
+
+@layer utilities {
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
 }

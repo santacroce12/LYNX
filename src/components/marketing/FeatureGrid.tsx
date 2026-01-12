@@ -147,26 +147,30 @@ export default function FeatureGrid({
           ) : null}
         </div>
       ) : null}
-      <div className={`grid gap-6 ${columnsClass}`}>
+      <div
+        className={`flex snap-x snap-mandatory gap-4 overflow-x-auto pb-6 -mx-6 px-6 scrollbar-hide md:grid ${columnsClass} md:gap-8 md:overflow-visible md:pb-0 md:mx-0 md:px-0`}
+      >
         {items.map((item, index) => (
           <Reveal key={item.title} delay={index * 0.05}>
-            <Card className="h-full">
-              {item.icon && iconMap[item.icon] ? (
-                <span className="mb-4 inline-flex h-10 w-10 items-center justify-center rounded-full border border-[var(--border)] bg-[var(--surface)] text-[var(--accent)]">
-                  <svg
-                    viewBox="0 0 24 24"
-                    aria-hidden="true"
-                    className="h-5 w-5"
-                  >
-                    {iconMap[item.icon]}
-                  </svg>
-                </span>
-              ) : null}
-              <h3 className="text-lg font-semibold">{item.title}</h3>
-              <p className="mt-2 text-sm text-[var(--muted)]">
-                {item.description}
-              </p>
-            </Card>
+            <div className="min-w-[85vw] snap-center md:min-w-0 h-full">
+              <Card className="h-full">
+                {item.icon && iconMap[item.icon] ? (
+                  <span className="mb-4 inline-flex h-10 w-10 items-center justify-center rounded-full border border-[var(--border)] bg-[var(--surface)] text-[var(--accent)]">
+                    <svg
+                      viewBox="0 0 24 24"
+                      aria-hidden="true"
+                      className="h-5 w-5"
+                    >
+                      {iconMap[item.icon]}
+                    </svg>
+                  </span>
+                ) : null}
+                <h3 className="text-lg font-semibold">{item.title}</h3>
+                <p className="mt-2 text-sm text-[var(--muted)]">
+                  {item.description}
+                </p>
+              </Card>
+            </div>
           </Reveal>
         ))}
       </div>

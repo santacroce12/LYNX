@@ -36,7 +36,9 @@ export default function AboutSection() {
           <div className="space-y-4 text-sm text-[var(--muted)] md:text-base">
             {about.body.map((paragraph, index) => (
               <Reveal key={paragraph.slice(0, 16)} delay={0.08 + index * 0.03}>
-                <p>{paragraph}</p>
+                <p className={index === 1 ? "hidden md:block" : ""}>
+                  {paragraph}
+                </p>
               </Reveal>
             ))}
           </div>

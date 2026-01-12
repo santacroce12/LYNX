@@ -1,68 +1,151 @@
-﻿import Link from "next/link";
+"use client";
+
+import Link from "next/link";
+import Image from "next/image";
 import { site } from "@/content/site";
-import EnergyFlow from "@/components/ui/EnergyFlow";
+import {
+  ExternalLink,
+  Facebook,
+  Instagram,
+  Linkedin,
+  Mail,
+  MapPin,
+  Phone,
+  Twitter,
+} from "lucide-react";
 
 export default function Footer() {
+  const currentYear = new Date().getFullYear();
+  const socials = site.contact?.social ?? [];
+
+  const getSocialIcon = (platform: string) => {
+    const label = platform.toLowerCase();
+    if (label.includes("linkedin")) return <Linkedin className="h-5 w-5" />;
+    if (label.includes("instagram")) return <Instagram className="h-5 w-5" />;
+    if (label.includes("facebook")) return <Facebook className="h-5 w-5" />;
+    if (label.includes("twitter") || label === "x") {
+      return <Twitter className="h-5 w-5" />;
+    }
+    return <ExternalLink className="h-5 w-5" />;
+  };
+
   return (
-    <footer className="relative overflow-hidden border-t border-[var(--border)] bg-[var(--surface)]">
-      <div
-        className="pointer-events-none absolute inset-0 bg-[radial-gradient(140%_120%_at_0%_0%,rgba(249,115,22,0.18),transparent_60%)]"
-        aria-hidden="true"
-      />
-      <div className="relative mx-auto grid w-full max-w-6xl gap-10 px-6 py-12 md:grid-cols-3">
-        <div className="space-y-3">
-          <p className="text-lg font-semibold">{site.name}</p>
-          <p className="text-xs uppercase tracking-[0.2em] text-[var(--muted)]">
-            {site.company.legalName}
-          </p>
-          <p className="text-sm text-[var(--muted)]">{site.tagline}</p>
-          <p className="text-xs text-[var(--muted)]">{site.company.group}</p>
-        </div>
-        <div className="space-y-3">
-          <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[var(--muted)]">
-            {site.footer.navTitle}
-          </p>
-          <div className="flex flex-col gap-2 text-sm">
-            {site.nav.map((item) => (
-              <Link
-                key={item.href}
-                href={item.href}
-                className="transition-colors hover:text-[var(--accent)]"
-              >
-                {item.label}
-              </Link>
-            ))}
+    <footer className="border-t border-[var(--border)] bg-[var(--surface)]">
+      <div className="mx-auto w-full max-w-6xl px-6 py-12">
+        <div className="grid gap-10 md:grid-cols-4">
+          <div className="space-y-6">
+            <Link href="/" className="block">
+              <Image
+                src="/images/brand/logo-azul.png"
+                alt={site.name}
+                width={140}
+                height={40}
+                className="h-10 w-auto"
+              />
+            </Link>
+            <p className="max-w-xs text-sm leading-relaxed text-[var(--muted)]">
+              {site.description}
+            </p>
+            <div className="flex gap-4">
+              {socials.map((social) => (
+                <a
+                  key={social.label}
+                  href={social.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-[var(--muted)] transition-colors hover:text-[var(--accent)]"
+                  aria-label={social.label}
+                >
+                  {getSocialIcon(social.label)}
+                </a>
+              ))}
+            </div>
+          </div>
+
+          <div>
+            <h3 className="mb-6 text-sm font-semibold uppercase tracking-wider text-[var(--text)]">
+              Navegacion
+            </h3>
+            <ul className="space-y-4">
+              {site.nav.map((item) => (
+                <li key={item.label}>
+                  <Link
+                    href={item.href}
+                    className="block text-sm text-[var(--muted)] transition-colors hover:text-[var(--accent)]"
+                  >
+                    {item.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <div>
+            <h3 className="mb-6 text-sm font-semibold uppercase tracking-wider text-[var(--text)]">
+              Legal
+            </h3>
+            <ul className="space-y-4">
+              <li>
+                <Link
+                  href="/privacidad"
+                  className="block text-sm text-[var(--muted)] transition-colors hover:text-[var(--accent)]"
+                >
+                  Politica de Privacidad
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/terminos"
+                  className="block text-sm text-[var(--muted)] transition-colors hover:text-[var(--accent)]"
+                >
+                  Terminos de Servicio
+                </Link>
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <h3 className="mb-6 text-sm font-semibold uppercase tracking-wider text-[var(--text)]">
+              Contacto
+            </h3>
+            <ul className="space-y-4">
+              <li className="flex items-start gap-3">
+                <MapPin className="h-5 w-5 flex-shrink-0 text-[var(--accent)]" />
+                <span className="text-sm leading-relaxed text-[var(--muted)]">
+                  {site.contact.address}
+                </span>
+              </li>
+              <li>
+                <a
+                  href={`mailto:${site.contact.email}`}
+                  className="group flex items-center gap-3"
+                >
+                  <Mail className="h-5 w-5 flex-shrink-0 text-[var(--accent)] transition-colors group-hover:text-[var(--text)]" />
+                  <span className="text-sm text-[var(--muted)] transition-colors group-hover:text-[var(--accent)]">
+                    {site.contact.email}
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a
+                  href={`tel:${site.contact.phone.replace(/\s/g, "")}`}
+                  className="group flex items-center gap-3"
+                >
+                  <Phone className="h-5 w-5 flex-shrink-0 text-[var(--accent)] transition-colors group-hover:text-[var(--text)]" />
+                  <span className="text-sm text-[var(--muted)] transition-colors group-hover:text-[var(--accent)]">
+                    {site.contact.phone}
+                  </span>
+                </a>
+              </li>
+            </ul>
           </div>
         </div>
-        <div className="space-y-3">
-          <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[var(--muted)]">
-            {site.footer.contactTitle}
+
+        <div className="mt-16 border-t border-[var(--border)] pt-8 text-center">
+          <p className="text-sm text-[var(--muted)]">
+            &copy; {currentYear} {site.name}. Todos los derechos reservados.
           </p>
-          <div className="space-y-2 text-sm text-[var(--muted)]">
-            <p>{site.contact.email}</p>
-            <p>{site.contact.mobile}</p>
-            <p>{site.contact.phone}</p>
-            <p>{site.contact.address}</p>
-            <p>{site.contact.region}</p>
-          </div>
-          <div className="flex gap-3 text-xs uppercase tracking-[0.2em] text-[var(--muted)]">
-            {site.contact.social.map((item) => (
-              <a
-                key={item.label}
-                href={item.href}
-                className="transition-colors hover:text-[var(--accent)]"
-              >
-                {item.label}
-              </a>
-            ))}
-          </div>
         </div>
-      </div>
-      <div className="relative mx-auto w-full max-w-6xl px-6">
-        <EnergyFlow className="mb-10 opacity-70" />
-      </div>
-      <div className="relative border-t border-[var(--border)] py-6 text-center text-xs text-[var(--muted)]">
-        (c) {new Date().getFullYear()} {site.name}. {site.footer.rights}
       </div>
     </footer>
   );

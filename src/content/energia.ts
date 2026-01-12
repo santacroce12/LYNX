@@ -104,14 +104,14 @@
       description:
         "Implementación de un sistema centralizado redundante que permite la operación remota de 15 subestaciones distribuidas geográficamente en tiempo real.",
       image:
-        "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80",
+        "https://images.unsplash.com/photo-1581092160562-40aa08e78837?auto=format&fit=crop&q=80",
     },
     {
       title: "Retrofit de Protecciones",
       description:
         "Reemplazo exitoso de relés electromecánicos por numéricos de última generación sin interrupción del suministro eléctrico crítico.",
       image:
-        "https://images.unsplash.com/photo-1581092921461-eab62496096b?auto=format&fit=crop&q=80",
+        "https://images.unsplash.com/photo-1621905251189-08b45d6a269e?auto=format&fit=crop&q=80",
     },
   ],
   faqs: [
