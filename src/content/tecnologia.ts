@@ -53,46 +53,64 @@
   ],
   services: [
     {
-      title: "Diseño de producto",
+      title: "Diseño de Producto",
       description: "Discovery, UX/UI y prototipos listos para iterar.",
+      icon: "pen-tool",
     },
     {
-      title: "Desarrollo full-stack",
+      title: "Desarrollo Full-Stack",
       description: "Arquitectura moderna con foco en escalabilidad.",
+      icon: "layers",
     },
     {
       title: "Plataformas IoT",
       description: "Gestión de dispositivos, eventos y analítica.",
+      icon: "wifi",
     },
     {
-      title: "Integraciones empresariales",
+      title: "Integraciones",
       description: "Conectores con ERPs, CRMs y sistemas legados.",
+      icon: "plug",
     },
     {
-      title: "Automatización inteligente",
+      title: "Automatización",
       description: "RPA + workflows para eliminar tareas repetitivas.",
+      icon: "bot",
     },
     {
       title: "Observabilidad",
       description: "Monitoreo, logs y alertas con estándares premium.",
+      icon: "activity",
     },
   ],
   useCases: [
     {
-      title: "Operaciones conectadas",
-      description: "Unificamos datos de campo y backoffice.",
+      title: "Operaciones Conectadas",
+      description:
+        "Unificamos datos de campo y backoffice en un solo centro de comando digital, permitiendo la toma de decisiones en tiempo real basada en datos fidedignos.",
+      image:
+        "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80",
     },
     {
-      title: "Mantenimiento predictivo",
-      description: "Modelos que anticipan fallas y optimizan activos.",
+      title: "Mantenimiento Predictivo",
+      description:
+        "Algoritmos que anticipan fallas y optimizan activos antes de que ocurran paradas críticas, ahorrando costos operativos significativos.",
+      image:
+        "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&q=80",
     },
     {
-      title: "Integración multi-sede",
-      description: "Sistemas sincronizados en operaciones distribuidas.",
+      title: "Integración Multi-sede",
+      description:
+        "Sistemas sincronizados que permiten operar múltiples plantas o sucursales como un solo organismo cohesivo.",
+      image:
+        "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&q=80",
     },
     {
       title: "Experiencias B2B",
-      description: "Portales y apps para clientes estratégicos.",
+      description:
+        "Portales y aplicaciones para clientes estratégicos que ofrecen transparencia, autogestión y una experiencia de usuario superior.",
+      image:
+        "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80",
     },
   ],
   faqs: [
