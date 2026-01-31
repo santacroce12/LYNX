@@ -1,108 +1,120 @@
 <?php
 // public/chat.php
+// ==========================================
+// ZONA DE CONFIGURACION DEL CLIENTE
+// ==========================================
 
-// 1. Configuracion de Cabeceras y Seguridad
+// 1. PEGA AQUI TU CLAVE DE OPENAI (Empieza con sk-...)
+$apiKey = 'sk-proj-TU-API-KEY-AQUI';
+
+// 2. ESCRIBE AQUI TU DOMINIO (Sin barra al final)
+// Ejemplo: 'https://lynx-ingenieria.cl'
+// Si estas probando en tu PC, usa 'http://localhost:3000'
+$miDominio = 'www.lynx.cl'; // CAMBIAR POR TU DOMINIO REAL EN PRODUCCION PARA SEGURIDAD
+
+// ==========================================
+// FIN DE LA CONFIGURACION
+// ==========================================
+
+// 1. Configuracion de Seguridad y Cabeceras
 header('Content-Type: application/json; charset=utf-8');
-header("Access-Control-Allow-Origin: *");
+header("Access-Control-Allow-Origin: $miDominio");
 header("Access-Control-Allow-Methods: POST, OPTIONS");
 header("Access-Control-Allow-Headers: Content-Type");
 
+// Manejo de solicitud preliminar (Preflight) del navegador
 if ($_SERVER['REQUEST_METHOD'] === 'OPTIONS') {
     http_response_code(200);
     exit();
 }
 
-// 2. TU API KEY DE OPENAI
-// ADVERTENCIA: En un entorno real de produccion, esto deberia estar en una variable de entorno.
-// Para este deploy, pegala aqui abajo dentro de las comillas.
-$apiKey = 'sk-proj-TU-API-KEY-AQUI';
-
-// 3. Procesar entrada
+// 2. Validacion basica de entrada
 $input = file_get_contents('php://input');
 $data = json_decode($input, true);
 
 if (!$data || !isset($data['messages'])) {
-    echo json_encode(['error' => 'No se recibieron mensajes']);
+    echo json_encode(['error' => 'No se recibieron mensajes validos.']);
     exit();
 }
 
 $messages = $data['messages'];
 
-// 4. LA BASE DE CONOCIMIENTO (CONTEXTO)
-// Aqui volcamos la informacion de tus archivos .ts para que el bot la "lea"
+// 3. EL CEREBRO DE LYNX (Contexto y Reglas)
+// Aqui definimos que sabe la IA y como debe comportarse.
 $contexto = "
 ESTAS REPRESENTANDO A LA EMPRESA: LYNX (Ingenieria y Tecnologia).
 
 DATOS GENERALES:
-- Ubicacion: Av. Ricardo Lyon 445, Providencia, Region Metropolitana, Chile.
-- Contacto: contacto@lynx.cl | +56 2 2345 6789.
-- Mision: Impulsamos la evolucion de la infraestructura critica mediante la convergencia de ingenieria electrica especializada y desarrollo tecnologico avanzado.
+
+Ubicacion: Av. Ricardo Lyon 445, Providencia, Region Metropolitana, Chile.
+
+Contacto: contacto@lynx.cl | +56 2 2345 6789.
+
+Mision: Impulsamos la evolucion de la infraestructura critica mediante ingenieria electrica y tecnologia.
 
 AREA: ENERGIA (Servicios):
-1. Subestaciones: Diseno, montaje y puesta en servicio de patios de alta/media tension.
-2. Sistemas de Control: Integracion SCADA, RTUs, HMIs.
-3. Protecciones: Configuracion y pruebas de esquemas de proteccion electrica.
-4. Telecomunicaciones: Redes industriales (FO, Radio, PLC).
-5. Ciberseguridad OT: Hardenizacion y normativas CIP/NUE.
-6. Mantenimiento: Preventivo y correctivo para continuidad operativa.
-- Casos de Exito Energia: Subestacion Digital 110kV, Centro de Control SCADA regional, Retrofit de Protecciones.
 
-AREA: TECNOLOGIA (Servicios):
-1. Talento Especializado (Staffing): Proveemos desarrolladores e ingenieros para integrarse a equipos del cliente.
-2. Logistica de Despliegue: Gestion de hardware, envios e instalacion en terreno.
-3. Gestion de Proyectos TI: Liderazgo tecnico para plazos y presupuesto.
-4. Desarrollo a Medida: Software especifico para cuellos de botella operativos.
-5. Integracion de Sistemas: Conexion de nueva tecnologia con infraestructura legacy.
-- Enfoque: 'Tu Socio en Ejecucion Tecnologica'. Nosotros ponemos la mano de obra y la logistica.
+Subestaciones: Diseno y montaje de patios de alta/media tension.
 
-PARTNERS:
-- SEL (Schweitzer Engineering Laboratories)
-- Survalent
-- N3uron
-- Systems With Intelligence
+Sistemas de Control: SCADA, RTUs, HMIs.
+
+Protecciones: Esquemas de proteccion electrica.
+
+Telecomunicaciones: Redes industriales (FO, Radio).
+
+Ciberseguridad OT: Normativas CIP/NUE.
+
+Mantenimiento: Preventivo y correctivo.
+
+AREA: TECNOLOGIA (Servicios - Enfoque: Tu Socio en Ejecucion):
+
+Talento Especializado: Proveemos ingenieros y desarrolladores (Staffing).
+
+Logistica de Despliegue: Gestion de hardware e instalacion en terreno.
+
+Gestion de Proyectos TI: Control de plazos y presupuesto.
+
+Desarrollo a Medida: Software especifico operativo.
+
+Integracion de Sistemas: Conexion con infraestructura legacy.
 ";
 
-// 5. LAS REGLAS DE COMPORTAMIENTO (SYSTEM PROMPT)
 $systemPrompt = "
-ERES UN ASISTENTE COMERCIAL DE LYNX.
-Tu objetivo es ayudar a clientes potenciales, resolver dudas tecnicas basicas y capturar leads.
+ERES UN ASISTENTE COMERCIAL EXPERTO DE LYNX. Tu objetivo es resolver dudas sobre nuestros servicios y capturar oportunidades de negocio.
 
-REGLAS DE ORO (STRICT GUIDELINES):
-1.  **ALCANCE LIMITADO:** Solo respondes preguntas relacionadas con LYNX, ingenieria electrica, tecnologia, automatizacion y nuestros servicios.
-2.  **RECHAZO DE TEMAS:** Si el usuario te pregunta por el clima, recetas, politica, chistes, deportes o cualquier tema fuera de contexto, responde educadamente: 'Lo siento, como asistente de LYNX solo puedo responder consultas sobre nuestros servicios de ingenieria y tecnologia. ?En que puedo ayudarte con eso?'.
-3.  **NO INVENTAR:** Si no sabes la respuesta basada en el contexto provisto, di: 'Esa es una consulta muy especifica. Te recomiendo escribir a contacto@lynx.cl para que un especialista te responda en detalle'.
-4.  **TONO:** Profesional, experto, pero cercano y proactivo. Habla siempre en espanol neutro/latino.
+REGLAS DE ORO (SEGURIDAD DE MARCA):
 
-CAPTURA DE LEADS (IMPORTANTE):
-Si el usuario muestra interes real (cotizar, reunion, 'me interesa', precio), sigue este flujo:
-1. Pidele su NOMBRE.
-2. Luego su EMAIL.
-3. Luego un MENSAJE breve sobre su necesidad.
+SOLO LYNX: NO respondas preguntas sobre el clima, deportes, chistes, politica, recetas o cultura general. Si te preguntan eso, di amablemente: 'Disculpa, solo estoy entrenado para asistir en temas de ingenieria y tecnologia relacionados con los servicios de LYNX.'.
 
-Cuando tengas los 3 datos, responde SOLO con este JSON (nada mas):
-{
-  \"action\": \"submit_contact\",
-  \"data\": {
-    \"name\": \"...\",
-    \"email\": \"...\",
-    \"message\": \"...\"
-  }
-}
+NO INVENTAR: Si no tienes la informacion en el contexto, di: 'Esa es una consulta tecnica especifica. Por favor contactanos directamente para derivarte con un ingeniero especialista'.
+
+TONO: Profesional, corporativo pero cercano. Espanol neutro.
+
+CAPTURA DE LEADS (VENTAS): Si el usuario muestra interes en cotizar o contratar:
+
+Pide su NOMBRE.
+
+Pide su EMAIL corporativo.
+
+Pide un breve MENSAJE sobre el proyecto.
+
+Cuando tengas esos 3 datos, RESPONDE UNICAMENTE CON ESTE JSON: { "action": "submit_contact", "data": { "name": "...", "email": "...", "message": "..." } }
 ";
 
-// Insertar instrucciones al principio del chat
+// Insertar las instrucciones al inicio de la conversacion
 array_unshift($messages, ['role' => 'system', 'content' => $contexto . "\n\n" . $systemPrompt]);
 
-// 6. Configuracion de OpenAI
+// 4. Configurar llamada a OpenAI
 $url = 'https://api.openai.com/v1/chat/completions';
+
 $payload = [
     'model' => 'gpt-4o-mini',
     'messages' => $messages,
     'temperature' => 0.3,
-    'max_tokens' => 300
+    'max_tokens' => 400
 ];
 
-// 7. Ejecutar llamada
+// 5. Ejecutar cURL
 $ch = curl_init($url);
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
 curl_setopt($ch, CURLOPT_POST, true);
@@ -115,14 +127,17 @@ curl_setopt($ch, CURLOPT_HTTPHEADER, [
 $response = curl_exec($ch);
 
 if (curl_errno($ch)) {
-    echo json_encode(['error' => 'Error de conexion: ' . curl_error($ch)]);
+    echo json_encode(['error' => 'Error de conexion interno.']);
 } else {
     $result = json_decode($response, true);
+
     if (isset($result['choices'][0]['message']['content'])) {
         echo json_encode(['response' => $result['choices'][0]['message']['content']]);
     } else {
-        echo json_encode(['error' => 'Error en la respuesta de IA', 'raw' => $result]);
+        error_log("OpenAI Error: " . $response);
+        echo json_encode(['error' => 'El asistente no esta disponible en este momento.']);
     }
 }
+
 curl_close($ch);
 ?>
