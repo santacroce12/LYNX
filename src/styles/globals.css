@@ -48,6 +48,7 @@ html {
   h5,
   h6 {
     @apply text-[var(--text)] font-bold tracking-tight;
+    font-family: var(--font-display);
   }
 
   html {
@@ -63,6 +64,9 @@ html {
 }
 
 @layer utilities {
+  .font-display {
+    font-family: var(--font-display);
+  }
   .scrollbar-hide::-webkit-scrollbar {
     display: none;
   }

@@ -29,8 +29,7 @@
     address: "Santiago, Chile",
     region: "Operación en Chile y Argentina",
     social: [
-      { label: "LinkedIn", href: "https://www.linkedin.com/company/lynx-spa/" },
-      { label: "Instagram", href: "https://instagram.com/lynx_latam" },
+      { label: "LinkedIn", href: "https://linkedin.com/company/lynxenergia" },
     ],
   },
   footer: {

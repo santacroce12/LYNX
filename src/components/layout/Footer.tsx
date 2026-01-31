@@ -115,7 +115,7 @@ export default function Footer() {
 
         <div className="mt-16 border-t border-[var(--border)] pt-8 text-center">
           <p className="text-sm text-[var(--muted)]">
-            &copy; {currentYear} {site.name}. Todos los derechos reservados.
+            &copy; {currentYear} <span className="font-display">{site.name}</span>. Todos los derechos reservados.
           </p>
         </div>
       </div>
