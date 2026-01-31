@@ -4,8 +4,11 @@ import { useEffect, useRef, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { Bot, X, Send, Sparkles } from "lucide-react";
 
+const CHAT_ENDPOINT = "/chat.php";
+const CONTACT_ENDPOINT = "/contact.php";
+
 // --- 1. Tipos y Utilidades ---
-const initialBotMessage = "¬°Hola! üëã Soy el asistente virtual de LYNX. ¬øEn qu√© puedo ayudarte hoy?";
+const initialBotMessage = "°Hola! ?? Soy el asistente virtual de LYNX. øEn quÈ puedo ayudarte hoy?";
 
 type ChatMessage = {
   role: "bot" | "user";
@@ -21,7 +24,7 @@ type SubmitContactPayload = {
   };
 };
 
-// Funci√≥n para detectar si el bot nos pide enviar el formulario
+// FunciÛn para detectar si el bot nos pide enviar el formulario
 const parseSubmitPayload = (text: string): SubmitContactPayload | null => {
   try {
     const parsed = JSON.parse(text);
@@ -37,12 +40,12 @@ const parseSubmitPayload = (text: string): SubmitContactPayload | null => {
         message: String(data.message),
       },
     };
-  } catch (error) {
+  } catch {
     return null;
   }
 };
 
-// --- 2. Sub-componente: Animaci√≥n de "Escribiendo..." ---
+// --- 2. Sub-componente: AnimaciÛn de "Escribiendo..." ---
 const TypingIndicator = () => (
   <div className="flex items-center space-x-1 p-1">
     <div className="h-1.5 w-1.5 animate-bounce rounded-full bg-[var(--accent)] [animation-delay:-0.3s]" />
@@ -62,7 +65,6 @@ export default function BotLynx() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const endRef = useRef<HTMLDivElement | null>(null);
 
-  // Auto-scroll al fondo cuando llega un mensaje
   useEffect(() => {
     endRef.current?.scrollIntoView({ behavior: "smooth" });
   }, [history, isLoading, isSubmitting, isOpen]);
@@ -71,16 +73,14 @@ export default function BotLynx() {
     const value = input.trim();
     if (!value || isLoading || isSubmitting) return;
 
-    // 1. Agregar mensaje del usuario inmediatamente
     const userMsg: ChatMessage = { role: "user", content: value };
     const nextHistory = [...history, userMsg];
     setHistory(nextHistory);
     setInput("");
-    setIsLoading(true); // Activar animaci√≥n de "escribiendo"
+    setIsLoading(true);
 
     try {
-      // 2. Enviar al Backend (PHP)
-      const response = await fetch("/chat.php", {
+      const response = await fetch(CHAT_ENDPOINT, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
@@ -97,19 +97,17 @@ export default function BotLynx() {
       const responseText = typeof data?.response === "string" ? data.response : "";
       const cleanedText = responseText.trim();
 
-      // 3. Revisar si es una orden de contacto (JSON oculto)
       const submitPayload = cleanedText ? parseSubmitPayload(cleanedText) : null;
 
       if (submitPayload) {
         setIsLoading(false);
         setIsSubmitting(true);
-        // Mensaje temporal del bot mientras env√≠a el mail
         setHistory((prev) => [
           ...prev,
-          { role: "bot", content: "Procesando tu solicitud... üì®" },
+          { role: "bot", content: "Procesando tu solicitud... ??" },
         ]);
 
-        const submitResponse = await fetch("/contact.php", {
+        const submitResponse = await fetch(CONTACT_ENDPOINT, {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify(submitPayload.data),
@@ -121,7 +119,7 @@ export default function BotLynx() {
             {
               role: "bot",
               content:
-                "¬°Excelente! He enviado tus datos al equipo. Nos pondremos en contacto pronto. üöÄ",
+                "°Excelente! He enviado tus datos al equipo. Nos pondremos en contacto pronto. ??",
             },
           ]);
         } else {
@@ -130,7 +128,7 @@ export default function BotLynx() {
             {
               role: "bot",
               content:
-                "Tuve un peque√±o problema t√©cnico al enviar el correo. Por favor, intenta de nuevo o escr√≠benos a contacto@lynx.cl.",
+                "Tuve un pequeÒo problema tÈcnico al enviar el correo. Por favor, intenta de nuevo o escrÌbenos a soporte@lynx.cl.",
             },
           ]);
         }
@@ -138,18 +136,17 @@ export default function BotLynx() {
         return;
       }
 
-      // 4. Respuesta normal del Bot
       const reply =
         cleanedText ||
-        "Disculpa, no pude procesar eso. ¬øPodr√≠as reformularlo?";
+        "Disculpa, no pude procesar eso. øPodrÌas reformularlo?";
       setHistory((prev) => [...prev, { role: "bot", content: reply }]);
-    } catch (error) {
+    } catch {
       setHistory((prev) => [
         ...prev,
         {
           role: "bot",
           content:
-            "Lo siento, parece que hay un problema de conexi√≥n. Intenta m√°s tarde.",
+            "Lo siento, parece que hay un problema de conexiÛn. Intenta m·s tarde.",
         },
       ]);
     } finally {
@@ -168,7 +165,6 @@ export default function BotLynx() {
             transition={{ duration: 0.2, ease: "easeOut" }}
             className="flex h-[600px] w-[90vw] max-h-[70vh] max-w-[380px] flex-col overflow-hidden rounded-3xl border border-[var(--border)] bg-[var(--surface)] shadow-2xl backdrop-blur-xl"
           >
-            {/* --- HEADER --- */}
             <div className="relative flex items-center justify-between border-b border-[var(--border)] bg-[var(--surface)]/50 px-5 py-4 backdrop-blur-md">
               <div className="flex items-center gap-3">
                 <div className="relative flex h-10 w-10 items-center justify-center rounded-full bg-gradient-to-tr from-[var(--accent)] to-orange-400 shadow-lg">
@@ -178,7 +174,7 @@ export default function BotLynx() {
                 <div>
                   <h3 className="text-sm font-bold text-[var(--text)]">LYNX AI</h3>
                   <p className="text-[10px] font-medium uppercase tracking-wider text-[var(--muted)]">
-                    En l√≠nea
+                    En lÌnea
                   </p>
                 </div>
               </div>
@@ -190,7 +186,6 @@ export default function BotLynx() {
               </button>
             </div>
 
-            {/* --- CHAT AREA --- */}
             <div className="flex-1 space-y-4 overflow-y-auto bg-[var(--bg)]/50 p-5 scrollbar-thin scrollbar-track-transparent scrollbar-thumb-[var(--border)]">
               {history.map((msg, idx) => (
                 <motion.div
@@ -217,7 +212,6 @@ export default function BotLynx() {
                 </motion.div>
               ))}
 
-              {/* Indicador de escribiendo... */}
               {isLoading && (
                 <motion.div
                   initial={{ opacity: 0, y: 10 }}
@@ -236,7 +230,6 @@ export default function BotLynx() {
               <div ref={endRef} />
             </div>
 
-            {/* --- INPUT AREA --- */}
             <div className="border-t border-[var(--border)] bg-[var(--surface)] p-4">
               <form
                 onSubmit={(e) => {
@@ -270,12 +263,10 @@ export default function BotLynx() {
         )}
       </AnimatePresence>
 
-      {/* --- LAUNCHER BUTTON --- */}
       <button
         onClick={() => setIsOpen(!isOpen)}
         className="group relative flex h-16 w-16 items-center justify-center rounded-full bg-[var(--accent)] text-white shadow-xl transition-transform hover:scale-105 active:scale-95"
       >
-        {/* Efecto de Pulso (Onda expansiva) */}
         <span className="absolute inset-0 -z-10 animate-ping rounded-full bg-[var(--accent)] opacity-15 animate-ping-slow" />
 
         <AnimatePresence mode="wait">
@@ -302,7 +293,6 @@ export default function BotLynx() {
           )}
         </AnimatePresence>
 
-        {/* Notificaci√≥n (Badge) si est√° cerrado */}
         {!isOpen && (
           <span className="absolute right-0 top-0 flex h-4 w-4 items-center justify-center rounded-full bg-red-500 ring-2 ring-[var(--bg)]">
             <span className="h-2 w-2 rounded-full bg-white" />

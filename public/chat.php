@@ -1,84 +1,108 @@
 <?php
 // public/chat.php
 
-// 1. Forzar codificaci?n UTF-8 en la respuesta
+// 1. Configuracion de Cabeceras y Seguridad
 header('Content-Type: application/json; charset=utf-8');
-
-// Configuraci?n de CORS (Permitir peticiones desde tu dominio)
 header("Access-Control-Allow-Origin: *");
 header("Access-Control-Allow-Methods: POST, OPTIONS");
 header("Access-Control-Allow-Headers: Content-Type");
 
-// Manejo de solicitud OPTIONS (preflight)
 if ($_SERVER['REQUEST_METHOD'] === 'OPTIONS') {
     http_response_code(200);
     exit();
 }
 
-// 2. Obtener la API Key de una variable de entorno o definirla aqu?
-// IMPORTANTE: En producci?n, usa getenv('OPENAI_API_KEY')
-$apiKey = 'sk-proj-TU-API-KEY-AQUI'; // <--- Reemplaza esto con tu Key real si no usas env vars
+// 2. TU API KEY DE OPENAI
+// ADVERTENCIA: En un entorno real de produccion, esto deberia estar en una variable de entorno.
+// Para este deploy, pegala aqui abajo dentro de las comillas.
+$apiKey = 'sk-proj-TU-API-KEY-AQUI';
 
-// 3. Leer el cuerpo de la solicitud (JSON)
+// 3. Procesar entrada
 $input = file_get_contents('php://input');
 $data = json_decode($input, true);
 
 if (!$data || !isset($data['messages'])) {
-    echo json_encode(['error' => 'No messages provided']);
+    echo json_encode(['error' => 'No se recibieron mensajes']);
     exit();
 }
 
 $messages = $data['messages'];
 
-// 4. Definir el Contexto y el System Prompt (TEXTOS CORREGIDOS)
+// 4. LA BASE DE CONOCIMIENTO (CONTEXTO)
+// Aqui volcamos la informacion de tus archivos .ts para que el bot la "lea"
 $contexto = "
-INFORMACI?N DE LYNX (Resumen):
-- Empresa de ingenier?a especializada en transmisi?n de energ?a y automatizaci?n.
-- Servicios: Subestaciones, Protecciones, SCADA, Telecomunicaciones, Ciberseguridad OT.
-- Partners: SEL, Survalent, N3uron, Systems With Intelligence.
-- Ubicaci?n: Av. Apoquindo 6410, Of. 605, Las Condes.
-- Contacto: contacto@lynx.cl.
+ESTAS REPRESENTANDO A LA EMPRESA: LYNX (Ingenieria y Tecnologia).
+
+DATOS GENERALES:
+- Ubicacion: Av. Ricardo Lyon 445, Providencia, Region Metropolitana, Chile.
+- Contacto: contacto@lynx.cl | +56 2 2345 6789.
+- Mision: Impulsamos la evolucion de la infraestructura critica mediante la convergencia de ingenieria electrica especializada y desarrollo tecnologico avanzado.
+
+AREA: ENERGIA (Servicios):
+1. Subestaciones: Diseno, montaje y puesta en servicio de patios de alta/media tension.
+2. Sistemas de Control: Integracion SCADA, RTUs, HMIs.
+3. Protecciones: Configuracion y pruebas de esquemas de proteccion electrica.
+4. Telecomunicaciones: Redes industriales (FO, Radio, PLC).
+5. Ciberseguridad OT: Hardenizacion y normativas CIP/NUE.
+6. Mantenimiento: Preventivo y correctivo para continuidad operativa.
+- Casos de Exito Energia: Subestacion Digital 110kV, Centro de Control SCADA regional, Retrofit de Protecciones.
+
+AREA: TECNOLOGIA (Servicios):
+1. Talento Especializado (Staffing): Proveemos desarrolladores e ingenieros para integrarse a equipos del cliente.
+2. Logistica de Despliegue: Gestion de hardware, envios e instalacion en terreno.
+3. Gestion de Proyectos TI: Liderazgo tecnico para plazos y presupuesto.
+4. Desarrollo a Medida: Software especifico para cuellos de botella operativos.
+5. Integracion de Sistemas: Conexion de nueva tecnologia con infraestructura legacy.
+- Enfoque: 'Tu Socio en Ejecucion Tecnologica'. Nosotros ponemos la mano de obra y la logistica.
+
+PARTNERS:
+- SEL (Schweitzer Engineering Laboratories)
+- Survalent
+- N3uron
+- Systems With Intelligence
 ";
 
+// 5. LAS REGLAS DE COMPORTAMIENTO (SYSTEM PROMPT)
 $systemPrompt = "
-Eres el asistente virtual de LYNX.
-- Tu tono es profesional, cercano y t?cnico cuando sea necesario.
-- Usa la informaci?n de contexto provista para responder dudas sobre servicios, partners y ubicaci?n.
-- Si no sabes la respuesta, sugiere contactar a un especialista humano.
+ERES UN ASISTENTE COMERCIAL DE LYNX.
+Tu objetivo es ayudar a clientes potenciales, resolver dudas tecnicas basicas y capturar leads.
 
-REGLAS DE CAPTURA DE LEADS (IMPORTANTE):
-Si el usuario expresa inter?s expl?cito en contactar, cotizar, agendar una reuni?n o contratar servicios:
-1. P?dele amablemente su NOMBRE.
-2. Una vez que te lo de, p?dele su EMAIL.
-3. Finalmente, p?dele un MENSAJE o motivo breve.
+REGLAS DE ORO (STRICT GUIDELINES):
+1.  **ALCANCE LIMITADO:** Solo respondes preguntas relacionadas con LYNX, ingenieria electrica, tecnologia, automatizacion y nuestros servicios.
+2.  **RECHAZO DE TEMAS:** Si el usuario te pregunta por el clima, recetas, politica, chistes, deportes o cualquier tema fuera de contexto, responde educadamente: 'Lo siento, como asistente de LYNX solo puedo responder consultas sobre nuestros servicios de ingenieria y tecnologia. ?En que puedo ayudarte con eso?'.
+3.  **NO INVENTAR:** Si no sabes la respuesta basada en el contexto provisto, di: 'Esa es una consulta muy especifica. Te recomiendo escribir a contacto@lynx.cl para que un especialista te responda en detalle'.
+4.  **TONO:** Profesional, experto, pero cercano y proactivo. Habla siempre en espanol neutro/latino.
 
-CUANDO TENGAS LOS 3 DATOS (Nombre, Email, Mensaje):
-NO respondas con texto normal. Responde ?NICAMENTE con este bloque JSON exacto (sin markdown, solo el JSON):
+CAPTURA DE LEADS (IMPORTANTE):
+Si el usuario muestra interes real (cotizar, reunion, 'me interesa', precio), sigue este flujo:
+1. Pidele su NOMBRE.
+2. Luego su EMAIL.
+3. Luego un MENSAJE breve sobre su necesidad.
+
+Cuando tengas los 3 datos, responde SOLO con este JSON (nada mas):
 {
-  "action": "submit_contact",
-  "data": {
-    "name": "(el nombre capturado)",
-    "email": "(el email capturado)",
-    "message": "(el motivo capturado)"
+  \"action\": \"submit_contact\",
+  \"data\": {
+    \"name\": \"...\",
+    \"email\": \"...\",
+    \"message\": \"...\"
   }
 }
 ";
 
-// Insertar el System Prompt al inicio del historial
-array_unshift($messages, ['role' => 'system', 'content' => $contexto . "
-" . $systemPrompt]);
+// Insertar instrucciones al principio del chat
+array_unshift($messages, ['role' => 'system', 'content' => $contexto . "\n\n" . $systemPrompt]);
 
-// 5. Configurar la llamada a OpenAI
+// 6. Configuracion de OpenAI
 $url = 'https://api.openai.com/v1/chat/completions';
-
 $payload = [
-    'model' => 'gpt-4o-mini', // Modelo r?pido y econ?mico
+    'model' => 'gpt-4o-mini',
     'messages' => $messages,
-    'temperature' => 0.7,
-    'max_tokens' => 500
+    'temperature' => 0.3,
+    'max_tokens' => 300
 ];
 
-// 6. Ejecutar cURL
+// 7. Ejecutar llamada
 $ch = curl_init($url);
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
 curl_setopt($ch, CURLOPT_POST, true);
@@ -91,21 +115,14 @@ curl_setopt($ch, CURLOPT_HTTPHEADER, [
 $response = curl_exec($ch);
 
 if (curl_errno($ch)) {
-    echo json_encode(['error' => 'Error en cURL: ' . curl_error($ch)]);
-    curl_close($ch);
-    exit();
-}
-
-curl_close($ch);
-
-// 7. Procesar respuesta
-$result = json_decode($response, true);
-
-if (isset($result['choices'][0]['message']['content'])) {
-    $botReply = $result['choices'][0]['message']['content'];
-    echo json_encode(['response' => $botReply]);
+    echo json_encode(['error' => 'Error de conexion: ' . curl_error($ch)]);
 } else {
-    // Si OpenAI devuelve un error, lo mostramos
-    echo json_encode(['error' => 'Ocurri? un error con la IA', 'details' => $result]);
+    $result = json_decode($response, true);
+    if (isset($result['choices'][0]['message']['content'])) {
+        echo json_encode(['response' => $result['choices'][0]['message']['content']]);
+    } else {
+        echo json_encode(['error' => 'Error en la respuesta de IA', 'raw' => $result]);
+    }
 }
+curl_close($ch);
 ?>
