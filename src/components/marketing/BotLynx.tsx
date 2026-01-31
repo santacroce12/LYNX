@@ -4,26 +4,27 @@ import { useState, useRef, useEffect } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { MessageCircle, X, Send, User, Bot, Loader2 } from "lucide-react";
 
-interface Message {
+type Message = {
   role: "user" | "assistant";
   content: string;
-}
+};
 
 export default function BotLynx() {
   const [isOpen, setIsOpen] = useState(false);
   const [messages, setMessages] = useState<Message[]>([
     {
       role: "assistant",
-      content: "¡Hola! Soy el asistente virtual de LYNX. ¿En qué puedo ayudarte hoy?",
+      content:
+        "Â¡Hola! Soy el asistente virtual de LYNX. Â¿En quÃ© puedo ayudarte con nuestros servicios de EnergÃ­a o TecnologÃ­a?",
     },
   ]);
   const [input, setInput] = useState("");
   const [isLoading, setIsLoading] = useState(false);
-  const messagesEndRef = useRef<HTMLDivElement | null>(null);
+  const messagesEndRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
-  }, [messages]);
+  }, [messages, isOpen]);
 
   const handleSendMessage = async () => {
     if (!input.trim() || isLoading) return;
@@ -50,14 +51,16 @@ export default function BotLynx() {
         }),
       });
 
-      if (!response.ok) throw new Error("Error en la red");
+      if (!response.ok) throw new Error("Error de red");
 
       const data = await response.json();
+
       if (data.error) {
         throw new Error(data.error);
       }
 
-      const botResponse = data.response || "Lo siento, tuve un problema técnico.";
+      const botResponse = data.response || "Lo siento, no pude procesar eso.";
+
       setMessages((prev) => [
         ...prev,
         { role: "assistant", content: botResponse },
@@ -69,7 +72,7 @@ export default function BotLynx() {
         {
           role: "assistant",
           content:
-            "Disculpa, no pude conectar con el servidor. Por favor intenta más tarde.",
+            "Estoy teniendo problemas de conexiÃ³n. Por favor intenta mÃ¡s tarde o contÃ¡ctanos por email.",
         },
       ]);
     } finally {
@@ -85,22 +88,33 @@ export default function BotLynx() {
             initial={{ opacity: 0, y: 20, scale: 0.95 }}
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: 20, scale: 0.95 }}
-            className="fixed bottom-24 right-6 z-50 w-[90vw] max-w-[400px] overflow-hidden rounded-2xl border border-[var(--border)] bg-[var(--surface)] shadow-2xl sm:right-10"
+            className="fixed bottom-24 right-6 z-50 w-[90vw] max-w-[380px] overflow-hidden rounded-2xl border border-[var(--border)] bg-[var(--surface)] shadow-2xl sm:right-10"
           >
-            <div className="flex items-center justify-between border-b border-[var(--border)] bg-[var(--surface)] px-4 py-3">
-              <div className="flex items-center gap-2 text-sm font-semibold text-[var(--text)]">
-                <Bot className="h-5 w-5 text-[var(--accent)]" />
-                LYNX Chat
+            <div className="flex items-center justify-between border-b border-[var(--border)] bg-[var(--surface)] p-4">
+              <div className="flex items-center gap-3">
+                <div className="flex h-10 w-10 items-center justify-center rounded-full bg-[var(--accent)] text-white shadow-md shadow-[var(--accent)]/20">
+                  <Bot className="h-6 w-6" />
+                </div>
+                <div>
+                  <h3 className="font-bold text-[var(--text)]">Asistente LYNX</h3>
+                  <div className="flex items-center gap-1.5">
+                    <span className="relative flex h-2 w-2">
+                      <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-green-400 opacity-75"></span>
+                      <span className="relative inline-flex h-2 w-2 rounded-full bg-green-500"></span>
+                    </span>
+                    <span className="text-xs text-[var(--muted)]">En lÃ­nea</span>
+                  </div>
+                </div>
               </div>
               <button
                 onClick={() => setIsOpen(false)}
-                className="rounded-full p-2 text-[var(--muted)] transition-colors hover:bg-[var(--bg)] hover:text-[var(--text)]"
+                className="rounded-lg p-2 text-[var(--muted)] transition-colors hover:bg-[var(--bg)] hover:text-[var(--text)]"
               >
-                <X className="h-4 w-4" />
+                <X className="h-5 w-5" />
               </button>
             </div>
 
-            <div className="h-[400px] overflow-y-auto bg-[var(--bg)] p-4 scrollbar-thin scrollbar-thumb-[var(--border)]">
+            <div className="h-[400px] overflow-y-auto bg-[var(--bg)] p-4">
               <div className="space-y-4">
                 {messages.map((message, index) => (
                   <div
@@ -123,10 +137,10 @@ export default function BotLynx() {
                       )}
                     </div>
                     <div
-                      className={`max-w-[80%] rounded-2xl px-4 py-3 text-sm leading-relaxed ${
+                      className={`max-w-[85%] rounded-2xl px-4 py-3 text-sm leading-relaxed ${
                         message.role === "user"
                           ? "bg-[var(--accent)] text-white rounded-tr-none"
-                          : "bg-[var(--surface)] text-[var(--text)] border border-[var(--border)] rounded-tl-none"
+                          : "bg-[var(--surface)] border border-[var(--border)] text-[var(--muted)] rounded-tl-none"
                       }`}
                     >
                       {message.content}
@@ -136,15 +150,14 @@ export default function BotLynx() {
 
                 {isLoading && (
                   <div className="flex items-start gap-3">
-                    <div className="flex h-8 w-8 items-center justify-center rounded-full bg-[var(--surface)] border border-[var(--border)] text-[var(--accent)]">
+                    <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full border border-[var(--border)] bg-[var(--surface)] text-[var(--accent)]">
                       <Bot className="h-5 w-5" />
                     </div>
-                    <div className="bg-[var(--surface)] border border-[var(--border)] rounded-2xl rounded-tl-none px-4 py-3">
+                    <div className="rounded-2xl rounded-tl-none border border-[var(--border)] bg-[var(--surface)] px-4 py-3">
                       <Loader2 className="h-5 w-5 animate-spin text-[var(--muted)]" />
                     </div>
                   </div>
                 )}
-
                 <div ref={messagesEndRef} />
               </div>
             </div>
@@ -155,7 +168,7 @@ export default function BotLynx() {
                   e.preventDefault();
                   handleSendMessage();
                 }}
-                className="relative flex items-center"
+                className="relative"
               >
                 <input
                   type="text"
@@ -166,8 +179,8 @@ export default function BotLynx() {
                 />
                 <button
                   type="submit"
-                  disabled={isLoading || !input.trim()}
-                  className="absolute right-2 rounded-lg bg-[var(--accent)] p-2 text-white transition-transform hover:scale-105 disabled:opacity-50 disabled:hover:scale-100"
+                  disabled={!input.trim() || isLoading}
+                  className="absolute right-2 top-1/2 -translate-y-1/2 rounded-lg bg-[var(--accent)] p-2 text-white transition-all hover:bg-[var(--accent-soft)] disabled:opacity-50 disabled:hover:bg-[var(--accent)]"
                 >
                   <Send className="h-4 w-4" />
                 </button>
@@ -179,11 +192,31 @@ export default function BotLynx() {
 
       <motion.button
         onClick={() => setIsOpen(!isOpen)}
-        whileHover={{ scale: 1.1 }}
-        whileTap={{ scale: 0.9 }}
-        className="fixed bottom-6 right-6 z-50 flex h-14 w-14 items-center justify-center rounded-full bg-[var(--accent)] text-white shadow-lg shadow-[var(--accent)]/25 sm:bottom-10 sm:right-10"
+        whileHover={{ scale: 1.05 }}
+        whileTap={{ scale: 0.95 }}
+        className="fixed bottom-6 right-6 z-50 flex h-14 w-14 items-center justify-center rounded-full bg-[var(--accent)] text-white shadow-lg shadow-[var(--accent)]/25 transition-all hover:bg-[var(--accent-soft)] sm:bottom-10 sm:right-10"
       >
-        {isOpen ? <X className="h-7 w-7" /> : <MessageCircle className="h-7 w-7" />}
+        <AnimatePresence mode="wait">
+          {isOpen ? (
+            <motion.div
+              key="close"
+              initial={{ rotate: -90, opacity: 0 }}
+              animate={{ rotate: 0, opacity: 1 }}
+              exit={{ rotate: 90, opacity: 0 }}
+            >
+              <X className="h-7 w-7" />
+            </motion.div>
+          ) : (
+            <motion.div
+              key="chat"
+              initial={{ rotate: 90, opacity: 0 }}
+              animate={{ rotate: 0, opacity: 1 }}
+              exit={{ rotate: -90, opacity: 0 }}
+            >
+              <MessageCircle className="h-7 w-7" />
+            </motion.div>
+          )}
+        </AnimatePresence>
       </motion.button>
     </>
   );
