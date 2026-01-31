@@ -1,152 +1,75 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { useState, useRef, useEffect } from "react";
 import { AnimatePresence, motion } from "framer-motion";
-import { Bot, X, Send, Sparkles } from "lucide-react";
+import { MessageCircle, X, Send, User, Bot, Loader2 } from "lucide-react";
 
-const CHAT_ENDPOINT = "/chat.php";
-const CONTACT_ENDPOINT = "/contact.php";
-
-// --- 1. Tipos y Utilidades ---
-const initialBotMessage = "¡Hola! ?? Soy el asistente virtual de LYNX. ¿En qué puedo ayudarte hoy?";
-
-type ChatMessage = {
-  role: "bot" | "user";
+interface Message {
+  role: "user" | "assistant";
   content: string;
-};
+}
 
-type SubmitContactPayload = {
-  action: "submit_contact";
-  data: {
-    name: string;
-    email: string;
-    message: string;
-  };
-};
-
-// Función para detectar si el bot nos pide enviar el formulario
-const parseSubmitPayload = (text: string): SubmitContactPayload | null => {
-  try {
-    const parsed = JSON.parse(text);
-    if (!parsed || parsed.action !== "submit_contact") return null;
-    const data = parsed.data ?? {};
-    if (!data.name || !data.email || !data.message) return null;
-
-    return {
-      action: "submit_contact",
-      data: {
-        name: String(data.name),
-        email: String(data.email),
-        message: String(data.message),
-      },
-    };
-  } catch {
-    return null;
-  }
-};
-
-// --- 2. Sub-componente: Animación de "Escribiendo..." ---
-const TypingIndicator = () => (
-  <div className="flex items-center space-x-1 p-1">
-    <div className="h-1.5 w-1.5 animate-bounce rounded-full bg-[var(--accent)] [animation-delay:-0.3s]" />
-    <div className="h-1.5 w-1.5 animate-bounce rounded-full bg-[var(--accent)] [animation-delay:-0.15s]" />
-    <div className="h-1.5 w-1.5 animate-bounce rounded-full bg-[var(--accent)]" />
-  </div>
-);
-
-// --- 3. Componente Principal ---
 export default function BotLynx() {
   const [isOpen, setIsOpen] = useState(false);
-  const [input, setInput] = useState("");
-  const [history, setHistory] = useState<ChatMessage[]>([
-    { role: "bot", content: initialBotMessage },
+  const [messages, setMessages] = useState<Message[]>([
+    {
+      role: "assistant",
+      content: "¡Hola! Soy el asistente virtual de LYNX. ¿En qué puedo ayudarte hoy?",
+    },
   ]);
+  const [input, setInput] = useState("");
   const [isLoading, setIsLoading] = useState(false);
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const endRef = useRef<HTMLDivElement | null>(null);
+  const messagesEndRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
-    endRef.current?.scrollIntoView({ behavior: "smooth" });
-  }, [history, isLoading, isSubmitting, isOpen]);
+    messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
+  }, [messages]);
 
-  const handleSend = async () => {
-    const value = input.trim();
-    if (!value || isLoading || isSubmitting) return;
+  const handleSendMessage = async () => {
+    if (!input.trim() || isLoading) return;
 
-    const userMsg: ChatMessage = { role: "user", content: value };
-    const nextHistory = [...history, userMsg];
-    setHistory(nextHistory);
+    const userMessage = input.trim();
     setInput("");
+    setMessages((prev) => [...prev, { role: "user", content: userMessage }]);
     setIsLoading(true);
 
     try {
-      const response = await fetch(CHAT_ENDPOINT, {
+      const response = await fetch("/chat.php", {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
+        headers: {
+          "Content-Type": "application/json",
+        },
         body: JSON.stringify({
-          messages: nextHistory.map((m) => ({
-            role: m.role === "bot" ? "assistant" : "user",
-            content: m.content,
-          })),
+          messages: [
+            ...messages.map((m) => ({
+              role: m.role,
+              content: m.content,
+            })),
+            { role: "user", content: userMessage },
+          ],
         }),
       });
 
       if (!response.ok) throw new Error("Error en la red");
 
       const data = await response.json();
-      const responseText = typeof data?.response === "string" ? data.response : "";
-      const cleanedText = responseText.trim();
-
-      const submitPayload = cleanedText ? parseSubmitPayload(cleanedText) : null;
-
-      if (submitPayload) {
-        setIsLoading(false);
-        setIsSubmitting(true);
-        setHistory((prev) => [
-          ...prev,
-          { role: "bot", content: "Procesando tu solicitud... ??" },
-        ]);
-
-        const submitResponse = await fetch(CONTACT_ENDPOINT, {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify(submitPayload.data),
-        });
-
-        if (submitResponse.ok) {
-          setHistory((prev) => [
-            ...prev,
-            {
-              role: "bot",
-              content:
-                "¡Excelente! He enviado tus datos al equipo. Nos pondremos en contacto pronto. ??",
-            },
-          ]);
-        } else {
-          setHistory((prev) => [
-            ...prev,
-            {
-              role: "bot",
-              content:
-                "Tuve un pequeño problema técnico al enviar el correo. Por favor, intenta de nuevo o escríbenos a soporte@lynx.cl.",
-            },
-          ]);
-        }
-        setIsSubmitting(false);
-        return;
+      if (data.error) {
+        throw new Error(data.error);
       }
 
-      const reply =
-        cleanedText ||
-        "Disculpa, no pude procesar eso. ¿Podrías reformularlo?";
-      setHistory((prev) => [...prev, { role: "bot", content: reply }]);
-    } catch {
-      setHistory((prev) => [
+      const botResponse = data.response || "Lo siento, tuve un problema técnico.";
+      setMessages((prev) => [
+        ...prev,
+        { role: "assistant", content: botResponse },
+      ]);
+    } catch (error) {
+      console.error(error);
+      setMessages((prev) => [
         ...prev,
         {
-          role: "bot",
+          role: "assistant",
           content:
-            "Lo siento, parece que hay un problema de conexión. Intenta más tarde.",
+            "Disculpa, no pude conectar con el servidor. Por favor intenta más tarde.",
         },
       ]);
     } finally {
@@ -155,150 +78,113 @@ export default function BotLynx() {
   };
 
   return (
-    <div className="fixed bottom-6 right-6 z-50 flex flex-col items-end gap-4">
+    <>
       <AnimatePresence>
         {isOpen && (
           <motion.div
             initial={{ opacity: 0, y: 20, scale: 0.95 }}
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: 20, scale: 0.95 }}
-            transition={{ duration: 0.2, ease: "easeOut" }}
-            className="flex h-[600px] w-[90vw] max-h-[70vh] max-w-[380px] flex-col overflow-hidden rounded-3xl border border-[var(--border)] bg-[var(--surface)] shadow-2xl backdrop-blur-xl"
+            className="fixed bottom-24 right-6 z-50 w-[90vw] max-w-[400px] overflow-hidden rounded-2xl border border-[var(--border)] bg-[var(--surface)] shadow-2xl sm:right-10"
           >
-            <div className="relative flex items-center justify-between border-b border-[var(--border)] bg-[var(--surface)]/50 px-5 py-4 backdrop-blur-md">
-              <div className="flex items-center gap-3">
-                <div className="relative flex h-10 w-10 items-center justify-center rounded-full bg-gradient-to-tr from-[var(--accent)] to-orange-400 shadow-lg">
-                  <Bot className="h-6 w-6 text-white" />
-                  <span className="absolute bottom-0 right-0 block h-3 w-3 rounded-full border-2 border-[var(--surface)] bg-green-500 ring-1 ring-green-500/30" />
-                </div>
-                <div>
-                  <h3 className="text-sm font-bold text-[var(--text)]">LYNX AI</h3>
-                  <p className="text-[10px] font-medium uppercase tracking-wider text-[var(--muted)]">
-                    En línea
-                  </p>
-                </div>
+            <div className="flex items-center justify-between border-b border-[var(--border)] bg-[var(--surface)] px-4 py-3">
+              <div className="flex items-center gap-2 text-sm font-semibold text-[var(--text)]">
+                <Bot className="h-5 w-5 text-[var(--accent)]" />
+                LYNX Chat
               </div>
               <button
                 onClick={() => setIsOpen(false)}
                 className="rounded-full p-2 text-[var(--muted)] transition-colors hover:bg-[var(--bg)] hover:text-[var(--text)]"
               >
-                <X className="h-5 w-5" />
+                <X className="h-4 w-4" />
               </button>
             </div>
 
-            <div className="flex-1 space-y-4 overflow-y-auto bg-[var(--bg)]/50 p-5 scrollbar-thin scrollbar-track-transparent scrollbar-thumb-[var(--border)]">
-              {history.map((msg, idx) => (
-                <motion.div
-                  key={idx}
-                  initial={{ opacity: 0, y: 10 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  className={`flex ${msg.role === "user" ? "justify-end" : "justify-start"}`}
-                >
-                  {msg.role === "bot" && (
-                    <div className="mr-2 mt-1 flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-full border border-[var(--border)] bg-[var(--surface)]">
-                      <Bot className="h-4 w-4 text-[var(--accent)]" />
-                    </div>
-                  )}
-
+            <div className="h-[400px] overflow-y-auto bg-[var(--bg)] p-4 scrollbar-thin scrollbar-thumb-[var(--border)]">
+              <div className="space-y-4">
+                {messages.map((message, index) => (
                   <div
-                    className={`relative max-w-[80%] rounded-2xl px-4 py-2.5 text-sm shadow-sm ${
-                      msg.role === "user"
-                        ? "rounded-br-none bg-[var(--accent)] text-white"
-                        : "rounded-bl-none border border-[var(--border)] bg-[var(--surface)] text-[var(--text)]"
+                    key={index}
+                    className={`flex items-start gap-3 ${
+                      message.role === "user" ? "flex-row-reverse" : ""
                     }`}
                   >
-                    {msg.content}
+                    <div
+                      className={`flex h-8 w-8 shrink-0 items-center justify-center rounded-full ${
+                        message.role === "user"
+                          ? "bg-[var(--text)] text-[var(--bg)]"
+                          : "bg-[var(--surface)] border border-[var(--border)] text-[var(--accent)]"
+                      }`}
+                    >
+                      {message.role === "user" ? (
+                        <User className="h-5 w-5" />
+                      ) : (
+                        <Bot className="h-5 w-5" />
+                      )}
+                    </div>
+                    <div
+                      className={`max-w-[80%] rounded-2xl px-4 py-3 text-sm leading-relaxed ${
+                        message.role === "user"
+                          ? "bg-[var(--accent)] text-white rounded-tr-none"
+                          : "bg-[var(--surface)] text-[var(--text)] border border-[var(--border)] rounded-tl-none"
+                      }`}
+                    >
+                      {message.content}
+                    </div>
                   </div>
-                </motion.div>
-              ))}
+                ))}
 
-              {isLoading && (
-                <motion.div
-                  initial={{ opacity: 0, y: 10 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  className="flex justify-start"
-                >
-                  <div className="mr-2 mt-1 flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-full border border-[var(--border)] bg-[var(--surface)]">
-                    <Bot className="h-4 w-4 text-[var(--accent)]" />
+                {isLoading && (
+                  <div className="flex items-start gap-3">
+                    <div className="flex h-8 w-8 items-center justify-center rounded-full bg-[var(--surface)] border border-[var(--border)] text-[var(--accent)]">
+                      <Bot className="h-5 w-5" />
+                    </div>
+                    <div className="bg-[var(--surface)] border border-[var(--border)] rounded-2xl rounded-tl-none px-4 py-3">
+                      <Loader2 className="h-5 w-5 animate-spin text-[var(--muted)]" />
+                    </div>
                   </div>
-                  <div className="rounded-2xl rounded-bl-none border border-[var(--border)] bg-[var(--surface)] px-4 py-3 shadow-sm">
-                    <TypingIndicator />
-                  </div>
-                </motion.div>
-              )}
+                )}
 
-              <div ref={endRef} />
+                <div ref={messagesEndRef} />
+              </div>
             </div>
 
             <div className="border-t border-[var(--border)] bg-[var(--surface)] p-4">
               <form
                 onSubmit={(e) => {
                   e.preventDefault();
-                  handleSend();
+                  handleSendMessage();
                 }}
-                className="relative flex items-center gap-2"
+                className="relative flex items-center"
               >
                 <input
+                  type="text"
                   value={input}
                   onChange={(e) => setInput(e.target.value)}
                   placeholder="Escribe tu consulta..."
-                  disabled={isLoading || isSubmitting}
-                  className="w-full rounded-full border border-[var(--border)] bg-[var(--bg)] py-3 pl-5 pr-12 text-sm text-[var(--text)] shadow-inner placeholder:text-[var(--muted)] transition-all focus:border-[var(--accent)] focus:outline-none focus:ring-1 focus:ring-[var(--accent)]"
+                  className="w-full rounded-xl border border-[var(--border)] bg-[var(--bg)] py-3 pl-4 pr-12 text-sm text-[var(--text)] placeholder:text-[var(--muted)] focus:border-[var(--accent)] focus:outline-none focus:ring-1 focus:ring-[var(--accent)]"
                 />
                 <button
                   type="submit"
-                  disabled={!input.trim() || isLoading || isSubmitting}
-                  className="absolute right-2 top-1/2 -translate-y-1/2 rounded-full bg-[var(--accent)] p-2 text-white shadow-md transition-all hover:scale-105 hover:shadow-lg disabled:cursor-not-allowed disabled:opacity-50 disabled:hover:scale-100"
+                  disabled={isLoading || !input.trim()}
+                  className="absolute right-2 rounded-lg bg-[var(--accent)] p-2 text-white transition-transform hover:scale-105 disabled:opacity-50 disabled:hover:scale-100"
                 >
                   <Send className="h-4 w-4" />
                 </button>
               </form>
-              <div className="mt-2 text-center">
-                <p className="flex items-center justify-center gap-1 text-[10px] text-[var(--muted)]">
-                  <Sparkles className="h-3 w-3" /> Potenciado por IA de LYNX
-                </p>
-              </div>
             </div>
           </motion.div>
         )}
       </AnimatePresence>
 
-      <button
+      <motion.button
         onClick={() => setIsOpen(!isOpen)}
-        className="group relative flex h-16 w-16 items-center justify-center rounded-full bg-[var(--accent)] text-white shadow-xl transition-transform hover:scale-105 active:scale-95"
+        whileHover={{ scale: 1.1 }}
+        whileTap={{ scale: 0.9 }}
+        className="fixed bottom-6 right-6 z-50 flex h-14 w-14 items-center justify-center rounded-full bg-[var(--accent)] text-white shadow-lg shadow-[var(--accent)]/25 sm:bottom-10 sm:right-10"
       >
-        <span className="absolute inset-0 -z-10 animate-ping rounded-full bg-[var(--accent)] opacity-15 animate-ping-slow" />
-
-        <AnimatePresence mode="wait">
-          {isOpen ? (
-            <motion.div
-              key="close"
-              initial={{ rotate: -90, opacity: 0 }}
-              animate={{ rotate: 0, opacity: 1 }}
-              exit={{ rotate: 90, opacity: 0 }}
-              transition={{ duration: 0.2 }}
-            >
-              <X className="h-7 w-7" />
-            </motion.div>
-          ) : (
-            <motion.div
-              key="open"
-              initial={{ scale: 0.5, opacity: 0 }}
-              animate={{ scale: 1, opacity: 1 }}
-              exit={{ scale: 0.5, opacity: 0 }}
-              transition={{ duration: 0.2 }}
-            >
-              <Bot className="h-8 w-8" />
-            </motion.div>
-          )}
-        </AnimatePresence>
-
-        {!isOpen && (
-          <span className="absolute right-0 top-0 flex h-4 w-4 items-center justify-center rounded-full bg-red-500 ring-2 ring-[var(--bg)]">
-            <span className="h-2 w-2 rounded-full bg-white" />
-          </span>
-        )}
-      </button>
-    </div>
+        {isOpen ? <X className="h-7 w-7" /> : <MessageCircle className="h-7 w-7" />}
+      </motion.button>
+    </>
   );
 }
