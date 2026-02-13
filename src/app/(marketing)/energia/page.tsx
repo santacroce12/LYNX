@@ -1,6 +1,7 @@
 ﻿import CTA from "@/components/marketing/CTA";
 import FAQ from "@/components/marketing/FAQ";
 import FeaturedProjects from "@/components/marketing/FeaturedProjects";
+import ImpactStats from "@/components/marketing/ImpactStats";
 import ProcessSteps from "@/components/marketing/ProcessSteps";
 import { energia } from "@/content/energia";
 import { buildMetadata } from "@/lib/seo";
@@ -20,6 +21,12 @@ export default function EnergiaPage() {
   return (
     <>
       <EnergiaHero />
+      <ImpactStats
+        stats={energia.stats}
+        badges={energia.standards}
+        badgeTitle="Normativas & Protocolos Industriales"
+        title="Ingeniería Certificada"
+      />
       <EnergiaGallery />
       <EnergiaServices />
       <ProcessSteps

@@ -156,6 +156,21 @@
       answer: "Incluimos gestión de proyecto, puesta en marcha y monitoreo continuo.",
     },
   ],
+
+  stats: [
+    { label: "Experiencia del Equipo", value: "+10 Años" },
+    { label: "Compromiso HSE", value: "100%" },
+    { label: "Disponibilidad", value: "24/7" },
+    { label: "Cobertura", value: "Nacional" },
+  ],
+  standards: [
+    "IEC 61850",
+    "IEEE C37",
+    "NFPA 70E",
+    "ISO 9001",
+    "DNP3",
+    "Modbus TCP",
+  ],
   cta: {
     title: "Llevemos tu operación a un nuevo nivel",
     text: "Contanos tu desafío energético y diseñemos un plan a medida.",

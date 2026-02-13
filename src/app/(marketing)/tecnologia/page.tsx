@@ -1,6 +1,7 @@
 ﻿import CTA from "@/components/marketing/CTA";
 import FAQ from "@/components/marketing/FAQ";
 import FeaturedProjects from "@/components/marketing/FeaturedProjects";
+import ImpactStats from "@/components/marketing/ImpactStats";
 import ProcessSteps from "@/components/marketing/ProcessSteps";
 import EnergyFlow from "@/components/ui/EnergyFlow";
 import { tecnologia } from "@/content/tecnologia";
@@ -19,6 +20,12 @@ export default function TecnologiaPage() {
   return (
     <>
       <TecnologiaHero />
+      <ImpactStats
+        stats={tecnologia.stats}
+        badges={tecnologia.stack}
+        badgeTitle="Stack Tecnológico Enterprise"
+        title="Capacidad Operativa Escalable"
+      />
       <TecnologiaServices />
       <ProcessSteps
         steps={tecnologia.process}

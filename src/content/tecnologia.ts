@@ -170,6 +170,25 @@ export const tecnologia = {
         "Todo el código, configuraciones y documentación generada por nuestro equipo durante el servicio es 100% propiedad de tu empresa desde el día uno.",
     },
   ],
+
+  stats: [
+    { label: "Metodología", value: "Agile/Scrum" },
+    { label: "Calidad de Código", value: "100%" },
+    { label: "SLA Garantizado", value: "99.9%" },
+    { label: "Soporte", value: "Nivel 2/3" },
+  ],
+  stack: [
+    "Python",
+    "Node.js",
+    "React",
+    "TypeScript",
+    "AWS Cloud",
+    "Docker",
+    "Kubernetes",
+    "PostgreSQL",
+    "MQTT",
+    "REST API",
+  ],
   cta: {
     title: "¿Listo para implementar?",
     text: "Contanos tu alcance y te proponemos el equipo y la logística ideal.",
