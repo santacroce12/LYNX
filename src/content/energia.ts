@@ -91,6 +91,32 @@
       icon: "wrench",
     },
   ],
+  process: [
+    {
+      step: "01",
+      title: "Diagnóstico & Factibilidad",
+      description:
+        "Levantamiento técnico en terreno y análisis de normativas (IEC/IEEE) para validar la viabilidad del proyecto.",
+    },
+    {
+      step: "02",
+      title: "Ingeniería de Detalle",
+      description:
+        "Diseño de planos unilineales, control y protecciones. Simulaciones de flujo de carga y selectividad.",
+    },
+    {
+      step: "03",
+      title: "Ejecución & Montaje",
+      description:
+        "Despliegue de cuadrillas certificadas bajo protocolos de seguridad estricta y supervisión en tiempo real.",
+    },
+    {
+      step: "04",
+      title: "Commissioning (FAT/SAT)",
+      description:
+        "Pruebas de aceptación en fábrica y sitio. Energización controlada y entrega de dossier de calidad.",
+    },
+  ],
   useCases: [
     {
       title: "Subestación Digital 110kV",

@@ -1,7 +1,8 @@
 export const tecnologia = {
   meta: {
     title: "Servicios de Implementación Tecnológica | LYNX",
-    description: "Proveemos la mano de obra, logística y gestión para implementar tecnología en tu empresa. Tu socio estratégico en ejecución de proyectos TI.",
+    description:
+      "Proveemos la mano de obra, logística y gestión para implementar tecnología en tu empresa. Tu socio estratégico en ejecución de proyectos TI.",
   },
   hero: {
     badge: "Ejecución TI",
@@ -89,6 +90,32 @@ export const tecnologia = {
       description:
         "Mantenimiento y asistencia técnica continua para garantizar la estabilidad.",
       icon: "life-buoy",
+    },
+  ],
+  process: [
+    {
+      step: "01",
+      title: "Discovery & Arquitectura",
+      description:
+        "Entendimiento profundo del dolor operativo. Diseño de arquitectura cloud-native escalable y segura.",
+    },
+    {
+      step: "02",
+      title: "Desarrollo Iterativo",
+      description:
+        "Sprints ágiles con entregables quincenales. Código limpio, documentado y bajo control de versiones estricto.",
+    },
+    {
+      step: "03",
+      title: "QA & Hardening",
+      description:
+        "Pruebas automatizadas de carga, seguridad y estrés antes del paso a producción.",
+    },
+    {
+      step: "04",
+      title: "Despliegue & Soporte",
+      description:
+        "Puesta en marcha con estrategia Blue/Green para cero downtime. Monitoreo proactivo 24/7.",
     },
   ],
   useCases: [

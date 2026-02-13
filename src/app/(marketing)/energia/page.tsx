@@ -1,6 +1,7 @@
 ﻿import CTA from "@/components/marketing/CTA";
 import FAQ from "@/components/marketing/FAQ";
 import FeaturedProjects from "@/components/marketing/FeaturedProjects";
+import ProcessSteps from "@/components/marketing/ProcessSteps";
 import { energia } from "@/content/energia";
 import { buildMetadata } from "@/lib/seo";
 import EnergiaHero from "./sections/Hero";
@@ -21,6 +22,11 @@ export default function EnergiaPage() {
       <EnergiaHero />
       <EnergiaGallery />
       <EnergiaServices />
+      <ProcessSteps
+        steps={energia.process}
+        title="Ciclo de Proyecto Certificado"
+        subtitle="Garantizamos cumplimiento normativo desde el dise?o hasta la energizaci?n."
+      />
       <EnergiaUseCases />
       <FAQ title={energia.sections.faqTitle} items={energia.faqs} />
       <FeaturedProjects filterCategory="Energía" />
