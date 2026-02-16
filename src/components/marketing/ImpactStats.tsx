@@ -2,6 +2,7 @@
 
 import Section from "@/components/layout/Section";
 import Reveal from "@/components/motion/Reveal";
+import TechLogo from "@/components/ui/TechLogo";
 
 interface Stat {
   label: string;
@@ -52,17 +53,23 @@ export default function ImpactStats({
         {badges && (
           <Reveal delay={0.4}>
             <div className="rounded-2xl border border-[var(--border)] bg-[var(--bg)]/80 p-6 backdrop-blur-sm md:p-8">
-              <p className="mb-6 text-center text-sm font-medium uppercase tracking-wider text-[var(--muted)]">
+              <p className="mb-8 text-center text-sm font-medium uppercase tracking-wider text-[var(--muted)]">
                 {badgeTitle}
               </p>
 
-              <div className="flex flex-wrap justify-center gap-3 md:gap-4">
-                {badges.map((badge, idx) => (
+              <div className="flex flex-wrap items-start justify-center gap-x-8 gap-y-10 md:gap-x-12">
+                {badges.map((badgeName, idx) => (
                   <div
                     key={idx}
-                    className="flex cursor-default select-none items-center justify-center rounded-lg border border-[var(--border)] bg-[var(--surface)] px-4 py-2 text-sm font-medium text-[var(--text)] shadow-sm transition-all hover:border-[var(--accent)] hover:text-[var(--accent)] hover:shadow-[0_0_15px_rgba(249,115,22,0.15)]"
+                    className="flex w-24 flex-col items-center justify-start text-center"
                   >
-                    {badge}
+                    <TechLogo
+                      name={badgeName}
+                      className="mb-3 h-10 w-10 text-[var(--accent)] opacity-90 transition-all duration-300 hover:opacity-100 hover:scale-110 md:h-12 md:w-12"
+                    />
+                    <span className="text-[11px] font-semibold uppercase tracking-wider leading-tight text-[var(--muted)]">
+                      {badgeName}
+                    </span>
                   </div>
                 ))}
               </div>
