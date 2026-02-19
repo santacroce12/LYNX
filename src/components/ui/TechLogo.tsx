@@ -1,7 +1,7 @@
 "use client";
 
 import {
-  SiAmazonaws,
+  SiAmazon,
   SiDocker,
   SiKubernetes,
   SiPython,
@@ -15,10 +15,10 @@ import {
 } from "react-icons/si";
 import { LucideIcon, ShieldCheck, Zap, Radio, Network } from "lucide-react";
 
-type IconType = LucideIcon | typeof SiAmazonaws;
+type IconType = LucideIcon | typeof SiAmazon;
 
 const logoMap: Record<string, IconType> = {
-  "AWS Cloud": SiAmazonaws,
+  "AWS Cloud": SiAmazon,
   Docker: SiDocker,
   Kubernetes: SiKubernetes,
   Python: SiPython,
