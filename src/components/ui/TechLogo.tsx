@@ -31,7 +31,7 @@ const logoMap: Record<string, IconType> = {
   "IEC 61850": Zap,
   "IEEE C37": SiIeee,
   "NFPA 70E": ShieldCheck,
-  "ISO 9001": ShieldCheck, // Cambiado aquí para usar el escudo de certificación
+  "ISO 9001": ShieldCheck,
   DNP3: Radio,
   "Modbus TCP": Network,
 };
