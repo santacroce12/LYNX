@@ -2,7 +2,7 @@
 
 import { useState, useRef, useEffect } from "react";
 import { AnimatePresence, motion } from "framer-motion";
-import { MessageCircle, X, Send, User, Bot, Loader2 } from "lucide-react";
+import { BotMessageSquare, X, Send, User, Bot, Loader2 } from "lucide-react";
 
 type Message = {
   role: "user" | "assistant";
@@ -190,34 +190,16 @@ export default function BotLynx() {
         )}
       </AnimatePresence>
 
-      <motion.button
-        onClick={() => setIsOpen(!isOpen)}
-        whileHover={{ scale: 1.05 }}
-        whileTap={{ scale: 0.95 }}
-        className="fixed bottom-6 right-6 z-50 flex h-14 w-14 items-center justify-center rounded-full bg-[var(--accent)] text-white shadow-lg shadow-[var(--accent)]/25 transition-all hover:bg-[var(--accent-soft)] sm:bottom-10 sm:right-10"
-      >
-        <AnimatePresence mode="wait">
-          {isOpen ? (
-            <motion.div
-              key="close"
-              initial={{ rotate: -90, opacity: 0 }}
-              animate={{ rotate: 0, opacity: 1 }}
-              exit={{ rotate: 90, opacity: 0 }}
-            >
-              <X className="h-7 w-7" />
-            </motion.div>
-          ) : (
-            <motion.div
-              key="chat"
-              initial={{ rotate: 90, opacity: 0 }}
-              animate={{ rotate: 0, opacity: 1 }}
-              exit={{ rotate: -90, opacity: 0 }}
-            >
-              <MessageCircle className="h-7 w-7" />
-            </motion.div>
-          )}
-        </AnimatePresence>
-      </motion.button>
+      <div className="fixed bottom-6 right-6 z-50 flex items-center justify-center">
+        <div className="absolute h-full w-full animate-ping rounded-full bg-[var(--accent)] opacity-20 duration-1000"></div>
+        <button
+          onClick={() => setIsOpen((prev) => !prev)}
+          className="relative flex h-14 w-14 items-center justify-center rounded-full bg-[var(--accent)] text-white shadow-xl shadow-[var(--accent)]/30 transition-transform duration-300 hover:scale-110 hover:bg-[var(--accent-soft)]"
+          aria-label="Abrir chatbot"
+        >
+          <BotMessageSquare className="h-7 w-7 animate-pulse" />
+        </button>
+      </div>
     </>
   );
 }
