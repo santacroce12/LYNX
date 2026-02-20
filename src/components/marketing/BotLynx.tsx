@@ -88,101 +88,55 @@ export default function BotLynx() {
             initial={{ opacity: 0, y: 20, scale: 0.95 }}
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: 20, scale: 0.95 }}
-            className="fixed bottom-24 right-6 z-50 w-[90vw] max-w-[380px] overflow-hidden rounded-2xl border border-[var(--border)] bg-[var(--surface)] shadow-2xl sm:right-10"
+            transition={{ duration: 0.2, ease: "easeInOut" }}
+            className="fixed bottom-24 right-6 z-50 w-[90vw] max-w-[400px] overflow-hidden rounded-2xl border border-[var(--border)] bg-[var(--surface)] shadow-2xl sm:right-6"
           >
-            <div className="flex items-center justify-between border-b border-[var(--border)] bg-[var(--surface)] p-4">
+            <div className="flex items-center justify-between border-b border-[var(--border)] bg-[var(--bg)] p-4">
               <div className="flex items-center gap-3">
-                <div className="flex h-10 w-10 items-center justify-center rounded-full bg-[var(--accent)] text-white shadow-md shadow-[var(--accent)]/20">
-                  <Bot className="h-6 w-6" />
+                <div className="flex h-10 w-10 items-center justify-center rounded-full bg-[var(--accent)]/10 text-[var(--accent)]">
+                  <BotMessageSquare className="h-6 w-6" />
                 </div>
                 <div>
-                  <h3 className="font-bold text-[var(--text)]">Asistente LYNX</h3>
-                  <div className="flex items-center gap-1.5">
-                    <span className="relative flex h-2 w-2">
-                      <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-green-400 opacity-75"></span>
-                      <span className="relative inline-flex h-2 w-2 rounded-full bg-green-500"></span>
-                    </span>
-                    <span className="text-xs text-[var(--muted)]">En línea</span>
-                  </div>
+                  <h3 className="font-semibold text-[var(--text)]">
+                    Asistente LYNX
+                  </h3>
+                  <p className="text-xs text-[var(--muted)]">En l?nea ahora</p>
                 </div>
               </div>
               <button
                 onClick={() => setIsOpen(false)}
-                className="rounded-lg p-2 text-[var(--muted)] transition-colors hover:bg-[var(--bg)] hover:text-[var(--text)]"
+                className="rounded-full p-1 text-[var(--muted)] hover:bg-[var(--border)] hover:text-[var(--text)]"
               >
                 <X className="h-5 w-5" />
               </button>
             </div>
 
-            <div className="h-[400px] overflow-y-auto bg-[var(--bg)] p-4">
-              <div className="space-y-4">
-                {messages.map((message, index) => (
-                  <div
-                    key={index}
-                    className={`flex items-start gap-3 ${
-                      message.role === "user" ? "flex-row-reverse" : ""
-                    }`}
-                  >
-                    <div
-                      className={`flex h-8 w-8 shrink-0 items-center justify-center rounded-full ${
-                        message.role === "user"
-                          ? "bg-[var(--text)] text-[var(--bg)]"
-                          : "bg-[var(--surface)] border border-[var(--border)] text-[var(--accent)]"
-                      }`}
-                    >
-                      {message.role === "user" ? (
-                        <User className="h-5 w-5" />
-                      ) : (
-                        <Bot className="h-5 w-5" />
-                      )}
-                    </div>
-                    <div
-                      className={`max-w-[85%] rounded-2xl px-4 py-3 text-sm leading-relaxed ${
-                        message.role === "user"
-                          ? "bg-[var(--accent)] text-white rounded-tr-none"
-                          : "bg-[var(--surface)] border border-[var(--border)] text-[var(--muted)] rounded-tl-none"
-                      }`}
-                    >
-                      {message.content}
-                    </div>
-                  </div>
-                ))}
-
-                {isLoading && (
-                  <div className="flex items-start gap-3">
-                    <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full border border-[var(--border)] bg-[var(--surface)] text-[var(--accent)]">
-                      <Bot className="h-5 w-5" />
-                    </div>
-                    <div className="rounded-2xl rounded-tl-none border border-[var(--border)] bg-[var(--surface)] px-4 py-3">
-                      <Loader2 className="h-5 w-5 animate-spin text-[var(--muted)]" />
-                    </div>
-                  </div>
-                )}
-                <div ref={messagesEndRef} />
+            <div className="h-80 overflow-y-auto bg-[var(--bg-subtle)] p-4">
+              <div className="flex gap-3">
+                <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-[var(--accent)]/10 text-[var(--accent)]">
+                  <BotMessageSquare className="h-5 w-5" />
+                </div>
+                <div className="rounded-2xl rounded-tl-none bg-[var(--surface)] p-3 text-sm shadow-sm">
+                  <p>
+                    ?Hola! Soy el asistente virtual de LYNX SpA. ?En qu? puedo
+                    ayudarte hoy con tus proyectos de energ?a y automatizaci?n?
+                  </p>
+                </div>
               </div>
             </div>
 
             <div className="border-t border-[var(--border)] bg-[var(--surface)] p-4">
-              <form
-                onSubmit={(e) => {
-                  e.preventDefault();
-                  handleSendMessage();
-                }}
-                className="relative"
-              >
+              <form className="flex gap-2">
                 <input
                   type="text"
-                  value={input}
-                  onChange={(e) => setInput(e.target.value)}
                   placeholder="Escribe tu consulta..."
-                  className="w-full rounded-xl border border-[var(--border)] bg-[var(--bg)] py-3 pl-4 pr-12 text-sm text-[var(--text)] placeholder:text-[var(--muted)] focus:border-[var(--accent)] focus:outline-none focus:ring-1 focus:ring-[var(--accent)]"
+                  className="flex-1 rounded-full border border-[var(--border)] bg-[var(--bg)] px-4 py-2 text-sm focus:border-[var(--accent)] focus:outline-none"
                 />
                 <button
                   type="submit"
-                  disabled={!input.trim() || isLoading}
-                  className="absolute right-2 top-1/2 -translate-y-1/2 rounded-lg bg-[var(--accent)] p-2 text-white transition-all hover:bg-[var(--accent-soft)] disabled:opacity-50 disabled:hover:bg-[var(--accent)]"
+                  className="flex h-10 w-10 items-center justify-center rounded-full bg-[var(--accent)] text-white transition-transform hover:scale-105 hover:bg-[var(--accent-dark)]"
                 >
-                  <Send className="h-4 w-4" />
+                  <Send className="h-5 w-5" />
                 </button>
               </form>
             </div>
@@ -190,12 +144,12 @@ export default function BotLynx() {
         )}
       </AnimatePresence>
 
-      <div className="fixed bottom-6 right-6 z-50 flex items-center justify-center">
-        <div className="absolute h-full w-full animate-ping rounded-full bg-[var(--accent)] opacity-20 duration-1000"></div>
+      <div className="fixed bottom-6 right-6 z-50 h-14 w-14">
+        <div className="absolute inset-0 animate-ping rounded-full bg-[var(--accent)] opacity-25 duration-1000"></div>
         <button
-          onClick={() => setIsOpen((prev) => !prev)}
-          className="relative flex h-14 w-14 items-center justify-center rounded-full bg-[var(--accent)] text-white shadow-xl shadow-[var(--accent)]/30 transition-transform duration-300 hover:scale-110 hover:bg-[var(--accent-soft)]"
-          aria-label="Abrir chatbot"
+          onClick={() => setIsOpen(true)}
+          className="relative flex h-full w-full items-center justify-center rounded-full bg-[var(--accent)] text-white shadow-xl shadow-[var(--accent)]/30 transition-transform duration-300 hover:scale-110 hover:bg-[var(--accent-dark)]"
+          aria-label="Abrir chat"
         >
           <BotMessageSquare className="h-7 w-7 animate-pulse" />
         </button>
