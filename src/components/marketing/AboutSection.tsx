@@ -77,8 +77,8 @@ export default function AboutSection() {
           const Icon = iconMap[item.icon as keyof typeof iconMap];
           return (
             <Reveal key={item.title} delay={0.1 + index * 0.05}>
-              <div className="group relative flex h-full flex-col gap-4 rounded-2xl border border-[var(--border)] bg-[var(--surface)]/30 p-6 transition-all duration-300 hover:-translate-y-1 hover:bg-[var(--surface)] hover:shadow-xl hover:shadow-[var(--accent)]/5 hover:border-[var(--accent)]/30">
-                <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-[var(--accent)]/10 text-[var(--accent)] transition-colors duration-300 group-hover:bg-[var(--accent)] group-hover:text-white">
+              <div className="group relative flex h-full cursor-pointer flex-col gap-4 rounded-2xl border border-[var(--border)] bg-[var(--surface)]/30 p-6 transition-all duration-300 hover:-translate-y-1 hover:border-[var(--accent)]/30 hover:bg-[var(--surface)] hover:shadow-xl hover:shadow-[var(--accent)]/5 active:scale-[0.97] active:bg-[var(--surface)]/50 active:shadow-sm">
+                <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-[var(--accent)]/10 text-[var(--accent)] transition-all duration-300 group-hover:bg-[var(--accent)] group-hover:text-white group-active:scale-90">
                   {Icon ? <Icon className="h-6 w-6" /> : null}
                 </div>
                 <div>

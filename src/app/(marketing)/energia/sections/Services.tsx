@@ -40,8 +40,8 @@ export default function EnergiaServices() {
           const Icon = icons[service.icon as string] || Zap;
           return (
             <Reveal key={service.title} delay={index * 0.05}>
-              <div className="group relative h-full overflow-hidden rounded-2xl border border-[var(--border)] bg-[var(--surface)]/50 p-8 transition-all hover:border-[var(--accent)]/50 hover:shadow-lg hover:shadow-[var(--accent)]/10">
-                <div className="mb-6 inline-flex h-12 w-12 items-center justify-center rounded-xl bg-[var(--accent)]/10 text-[var(--accent)] transition-transform duration-300 group-hover:scale-110">
+              <div className="group relative h-full cursor-pointer overflow-hidden rounded-2xl border border-[var(--border)] bg-[var(--surface)]/50 p-8 transition-all hover:border-[var(--accent)]/50 hover:shadow-lg hover:shadow-[var(--accent)]/10 active:scale-[0.97] active:bg-[var(--surface)]/60 active:shadow-sm">
+                <div className="mb-6 inline-flex h-12 w-12 items-center justify-center rounded-xl bg-[var(--accent)]/10 text-[var(--accent)] transition-transform duration-300 group-hover:scale-110 group-active:scale-95">
                   <Icon className="h-6 w-6" />
                 </div>
                 <h3 className="mb-3 text-xl font-bold text-[var(--text)]">
