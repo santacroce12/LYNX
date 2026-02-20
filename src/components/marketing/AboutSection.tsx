@@ -44,7 +44,7 @@ export default function AboutSection() {
           </Reveal>
           <Reveal delay={0.1}>
             <p className="text-lg leading-relaxed text-[var(--muted)]">
-              Desde 1993, combinamos innovaci?n tecnol?gica, ingenier?a experta y equipamiento de vanguardia para acelerar y proteger las operaciones cr?ticas del sector energ?tico e industrial.
+              Desde 1993, combinamos innovación tecnológica, ingeniería experta y equipamiento de vanguardia para acelerar y proteger las operaciones críticas del sector energético e industrial.
             </p>
           </Reveal>
         </div>
@@ -53,15 +53,18 @@ export default function AboutSection() {
           <div className="relative overflow-hidden rounded-3xl border border-[var(--border)] shadow-2xl shadow-[var(--accent)]/5">
             <div className="pointer-events-none absolute inset-0 z-10 bg-gradient-to-t from-black/20 to-transparent"></div>
             <video
-              className="w-full object-cover md:h-[400px]"
+              className="pointer-events-none w-full select-none object-cover md:h-[400px]"
               src="/images/brand/about.mp4"
               poster={about.cover.image}
               autoPlay
               loop
               muted
               playsInline
-              preload="metadata"
+              disablePictureInPicture
+              controls={false}
+              controlsList="nodownload nofullscreen noremoteplayback"
               aria-label={about.cover.alt}
+              onContextMenu={(e) => e.preventDefault()}
             >
               Tu navegador no soporta videos HTML5.
             </video>
