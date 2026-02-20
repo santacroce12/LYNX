@@ -1,4 +1,4 @@
-﻿export type RecursoDetalle = {
+export type RecursoDetalle = {
   title: string;
   items: string[];
 };
@@ -23,142 +23,116 @@ export const recursos = {
       "Casos de éxito y proyectos destacados en energía, automatización y tecnología aplicada.",
   },
   hero: {
-    badge: "Recursos",
-    title: "Recursos y casos de éxito",
+    badge: "Casos de Éxito",
+    title: "Proyectos Destacados",
     subtitle:
-      "Explorá experiencias reales con impacto medible en operaciones críticas y transformación digital.",
+      "Explorá nuestra experiencia real desarrollando soluciones críticas para el sector energético e industrial.",
   },
   sections: {
-    casesTitle: "Casos de éxito",
+    casesTitle: "Portafolio de Proyectos",
     casesSubtitle:
-      "Tarjetas con resumen y acceso a la información detallada de cada proyecto.",
-    detailTitle: "Detalle del caso",
-    galleryTitle: "Más imágenes",
+      "Conoce en detalle las soluciones implementadas y los resultados obtenidos en cada desafío.",
+    detailTitle: "Detalle del proyecto",
+    galleryTitle: "Galería del proyecto",
   },
   cases: [
     {
-      id: "godoy-cruz",
+      id: "villa-hipodromo",
       category: "Energía",
-      title: "Cooperativa Eléctrica de Godoy Cruz",
-      subtitle: "Ingeniería de detalle y control en 132 kV",
+      title: "ET Villa Hipódromo",
+      subtitle: "Sistema de control de bahía en 132 kV",
       summary:
-        "Supervisión y comando de interruptores en playa de 132 kV con foco en continuidad operativa.",
+        "Ingeniería de detalle y sistema de control basado en PLC para dos líneas y dos transformadores de 132/33/13 kV.",
       description:
-        "Desarrollamos la ingeniería de detalle de tableros de control y la lógica de supervisión para mejorar la visibilidad en tiempo real y reducir tiempos de respuesta ante eventos críticos.",
-      image: "/images/energia/energia-subestacion.jpg",
-      tags: ["Energía", "Protección", "Alta tensión"],
+        "Para la Cooperativa Eléctrica de Godoy Cruz, ejecutamos la ingeniería de detalle de los tableros de control. El proyecto abarcó la interconexión y repetición de señales críticas para garantizar la correcta supervisión y comando de los interruptores y seccionadores en la playa de 132 kV de la Estación Transformadora.",
+      image: "/images/recursos/villahipodromo.jpg",
+      tags: ["Control", "Alta Tensión", "PLC", "Subestación"],
       details: [
         {
-          title: "Desafío",
+          title: "Alcance del Proyecto",
           items: [
-            "Modernizar el control de interruptores sin detener la operación.",
-            "Reducir tiempos de diagnóstico en maniobras críticas.",
+            "Sistema de control de bahía para 2 líneas de 132 kV.",
+            "Control para 2 transformadores de 132-33-13 kV.",
+            "Supervisión y comando de interruptores y seccionadores de playa.",
           ],
         },
         {
-          title: "Solución",
+          title: "Solución Implementada",
           items: [
-            "Ingeniería de detalle y documentación técnica completa.",
-            "Integración de señalización y lógica de enclavamientos.",
-            "Pruebas FAT y soporte en puesta en servicio.",
-          ],
-        },
-        {
-          title: "Resultados",
-          items: [
-            "Mayor visibilidad operativa en tiempo real.",
-            "Reducción de riesgos por maniobras manuales.",
-            "Operación más segura y confiable.",
+            "Ingeniería de detalle completa para tableros de control.",
+            "Diseño de interconexión y lógica de repetición de señales.",
+            "Arquitectura de control basada en tecnología PLC.",
           ],
         },
       ],
       gallery: [
-        "/images/energia/energia-control.jpg",
-        "/images/energia/1.jpg",
-        "/images/energia/slide-2.jpg",
+        "/images/recursos/villahipodromo.jpg",
       ],
     },
     {
-      id: "nihuiles",
+      id: "antena-esa",
       category: "Energía",
-      title: "Hidroeléctrica Nihuiles S.A.",
-      subtitle: "Sistema de protección para generación y líneas",
+      title: "Agencia Espacial Europea (ESA)",
+      subtitle: "Planta de energía para Antena de Espacio Profundo (DSG)",
       summary:
-        "Paneles de protección para el conjunto Generador-Transformador y líneas de transmisión.",
+        "Consultoría, ingeniería y provisión llave en mano del sistema eléctrico y control de alimentación asegurada.",
       description:
-        "Implementamos el diseño de protecciones para unidades de generación y líneas críticas, asegurando selectividad, confiabilidad y tiempos de respuesta adecuados para operación continua.",
-      image: "/images/energia/energia-control.jpg",
-      tags: ["Protección", "Generación", "Continuidad"],
+        "Desarrollamos una solución integral para asegurar la alimentación ininterrumpida de la antena DSG. El sistema principal cuenta con 2 transformadores secos de 1 MVA, respaldados por 3 grupos electrógenos de 800 kVA. La alimentación asegurada se garantiza mediante un robusto sistema de barras UPS de 220 kVA y 80 kVA.",
+      image: "/images/recursos/antenaespacioprofundo.jpg",
+      tags: ["Alimentación Crítica", "UPS", "Generación", "SCADA"],
       details: [
         {
-          title: "Desafío",
+          title: "Consultoría y Diseño",
           items: [
-            "Coordinar protecciones para múltiples unidades de generación.",
-            "Garantizar selectividad ante fallas en líneas de transmisión.",
+            "Definiciones críticas sobre el sistema eléctrico general.",
+            "Estudio de coordinación del sistema de protecciones en baja tensión.",
+            "Ingeniería de detalle del sistema de control completo.",
           ],
         },
         {
-          title: "Solución",
+          title: "Provisión e Instalación",
           items: [
-            "Ingeniería de protecciones con estudios de coordinación.",
-            "Diseño de paneles y pruebas de lógica de disparo.",
-            "Protocolos de puesta en marcha y ensayos en sitio.",
-          ],
-        },
-        {
-          title: "Resultados",
-          items: [
-            "Mayor estabilidad y seguridad operativa.",
-            "Tiempos de respuesta optimizados ante contingencias.",
-            "Disminución de riesgos para activos críticos.",
+            "Montaje y cableado de distribución en BT y red de control.",
+            "Sistema de control PLC cold redundant (Schneider M340).",
+            "Medición avanzada con transductores ION inteligentes.",
           ],
         },
       ],
       gallery: [
-        "/images/energia/energia-subestacion.jpg",
-        "/images/energia/6.jpg",
-        "/images/energia/9.jpg",
+        "/images/recursos/antenaespacioprofundo.jpg",
       ],
     },
     {
-      id: "scada",
-      category: "Tecnología",
-      title: "Operador regional de distribución",
-      subtitle: "Plataforma SCADA e integración IoT",
+      id: "nihuil-2",
+      category: "Energía",
+      title: "Central Hidroeléctrica Nihuil 2",
+      subtitle: "Actualización de sistema de protecciones",
       summary:
-        "Centralización de datos para operación, alarmas y mantenimiento predictivo.",
+        "Ingeniería de detalle para el recambio y modernización de los paneles de protección del complejo hidroeléctrico.",
       description:
-        "Creamos una plataforma unificada para visualizar activos, automatizar alarmas y habilitar análisis en tiempo real con integraciones IoT.",
-      image: "/images/tecnologia/tecnologia-datacenter.jpg",
-      tags: ["SCADA", "IoT", "Automatización"],
+        "A solicitud de Hidroeléctrica Nihuiles SA, llevamos a cabo la elaboración exhaustiva de la ingeniería de detalle para el nuevo sistema de protecciones de la central. El objetivo fue elevar los estándares de seguridad y confiabilidad de los activos de generación primaria.",
+      image: "/images/recursos/Nihuil.jpg",
+      tags: ["Protecciones", "Hidroeléctrica", "Generación"],
       details: [
         {
-          title: "Desafío",
+          title: "Alcance de la Ingeniería",
           items: [
-            "Datos dispersos en múltiples sistemas heredados.",
-            "Falta de visibilidad en equipos críticos de campo.",
+            "Diseño de 6 paneles de protección para conjuntos Generador-Transformador (Unidades 1 al 6).",
+            "Diseño de 2 paneles de protección de línea de transmisión.",
+            "Diseño de 1 panel de protección dedicado para interruptor de acoplamiento.",
           ],
         },
         {
-          title: "Solución",
+          title: "Impacto",
           items: [
-            "Integración de señales OT/IT con gateway seguro.",
-            "Dashboards en tiempo real y reglas de alarma.",
-            "Modelo de mantenimiento predictivo por activos.",
-          ],
-        },
-        {
-          title: "Resultados",
-          items: [
-            "Mejoras en tiempos de respuesta y continuidad.",
-            "Ahorro en costos operativos y mantenimiento.",
-            "Decisiones más rápidas con datos confiables.",
+            "Modernización tecnológica de la seguridad de la planta.",
+            "Mayor selectividad ante fallas en la red.",
+            "Protección integral de los activos más valiosos de la central.",
           ],
         },
       ],
       gallery: [
-        "/images/tecnologia/tecnologia-abstracto.jpg",
-        "/images/tecnologia/tecnologia-robot.jpg",
+        "/images/recursos/Nihuil.jpg",
       ],
     },
   ] as RecursoCaso[],
