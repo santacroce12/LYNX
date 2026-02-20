@@ -1,4 +1,15 @@
-import { Building, Clock, Globe, Layers, Shield, Users } from "lucide-react";
+"use client";
+
+import {
+  Building,
+  Clock,
+  Globe,
+  Layers,
+  Shield,
+  Users,
+  Zap,
+  Activity,
+} from "lucide-react";
 import Section from "@/components/layout/Section";
 import Card from "@/components/ui/Card";
 import Reveal from "@/components/motion/Reveal";
@@ -11,6 +22,8 @@ const iconMap = {
   globe: Globe,
   users: Users,
   shield: Shield,
+  zap: Zap,
+  activity: Activity,
 };
 
 export default function AboutSection() {
@@ -18,7 +31,7 @@ export default function AboutSection() {
 
   return (
     <Section id="nosotros">
-      <div className="grid gap-10 lg:grid-cols-[1.1fr_0.9fr] lg:items-start">
+      <div className="grid gap-10 lg:grid-cols-[1.2fr_0.8fr] lg:items-center">
         <div className="space-y-8">
           <div>
             <Reveal>
@@ -33,32 +46,30 @@ export default function AboutSection() {
             </Reveal>
           </div>
 
-          <div className="space-y-4 text-sm text-[var(--muted)] md:text-base">
-            {about.body.map((paragraph, index) => (
-              <Reveal key={paragraph.slice(0, 16)} delay={0.08 + index * 0.03}>
-                <p className={index === 1 ? "hidden md:block" : ""}>
-                  {paragraph}
-                </p>
-              </Reveal>
-            ))}
-          </div>
-
-          <div>
-            <Reveal>
-              <h3 className="text-xl font-semibold">{about.teamTitle}</h3>
-            </Reveal>
-            <div className="mt-4 space-y-4 text-sm text-[var(--muted)] md:text-base">
-              {about.teamBody.map((paragraph, index) => (
-                <Reveal key={paragraph.slice(0, 16)} delay={0.05 + index * 0.03}>
-                  <p>{paragraph}</p>
+          <div className="grid gap-4 sm:grid-cols-2">
+            {about.highlights.map((item, index) => {
+              const Icon = iconMap[item.icon as keyof typeof iconMap];
+              return (
+                <Reveal key={item.title} delay={0.1 + index * 0.05}>
+                  <Card className="h-full p-5 transition-colors hover:border-[var(--accent)]/50">
+                    <div className="mb-4 flex h-10 w-10 items-center justify-center rounded-xl border border-[var(--border)] bg-[var(--surface)] text-[var(--accent)]">
+                      {Icon ? <Icon className="h-5 w-5" /> : null}
+                    </div>
+                    <h4 className="text-base font-semibold text-[var(--text)]">
+                      {item.title}
+                    </h4>
+                    <p className="mt-2 text-sm leading-relaxed text-[var(--muted)]">
+                      {item.description}
+                    </p>
+                  </Card>
                 </Reveal>
-              ))}
-            </div>
+              );
+            })}
           </div>
         </div>
 
         <div className="space-y-6">
-          <Reveal>
+          <Reveal delay={0.3}>
             <Card className="overflow-hidden bg-[var(--surface)]/70 p-4 md:p-6">
               <div className="rounded-2xl bg-[var(--bg)] p-3 md:p-4">
                 <div className="overflow-hidden rounded-xl">
@@ -79,32 +90,6 @@ export default function AboutSection() {
               </div>
             </Card>
           </Reveal>
-
-          <div>
-            <Reveal>
-              <p className="text-xs font-semibold uppercase tracking-[0.3em] text-[var(--muted)]">
-                {about.highlightsTitle}
-              </p>
-            </Reveal>
-            <div className="mt-4 grid gap-4 sm:grid-cols-2">
-              {about.highlights.map((item, index) => {
-                const Icon = iconMap[item.icon as keyof typeof iconMap];
-                return (
-                  <Reveal key={item.title} delay={0.05 + index * 0.03}>
-                    <Card className="h-full">
-                      <div className="mb-3 flex h-10 w-10 items-center justify-center rounded-full border border-[var(--border)] bg-[var(--surface)] text-[var(--accent)]">
-                        {Icon ? <Icon className="h-5 w-5" /> : null}
-                      </div>
-                      <h4 className="text-base font-semibold">{item.title}</h4>
-                      <p className="mt-2 text-sm text-[var(--muted)]">
-                        {item.description}
-                      </p>
-                    </Card>
-                  </Reveal>
-                );
-              })}
-            </div>
-          </div>
         </div>
       </div>
     </Section>

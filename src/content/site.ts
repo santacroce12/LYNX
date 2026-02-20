@@ -24,8 +24,7 @@
   },
   contact: {
     email: "soporte@lynx.cl",
-    mobile: "+56 9 6214 8623",
-    phone: "+56 2 24054964",
+    mobile: "+56 9 9219 1328",
     address: "Santiago, Chile",
     region: "Operación en Chile y Argentina",
     social: [
@@ -69,45 +68,42 @@
       image: "/images/brand/about.svg",
       alt: "Equipo LYNX en operaciones de energía",
     },
-    body: [
-      "Desde 1993, LYNX SpA se consolidó como integradora de tecnologías de automatización de procesos, con implementaciones exitosas en diversos rubros de la industria en Argentina y el exterior. En los últimos años, nos hemos enfocado especialmente en soluciones vinculadas a la energía eléctrica.",
-"A lo largo de nuestra trayectoria, combinamos innovación tecnológica, servicios de ingeniería y provisión de equipamiento, con el objetivo de alcanzar y superar los resultados esperados por nuestros clientes. Nos especializamos en control de energía eléctrica, ofreciendo soluciones integrales que incluyen equipamiento de vanguardia y servicios para su programación, instalación, puesta en servicio y operación.",
-    ],
-    teamTitle: "Portada Nosotros",
-    teamBody: [
-      "Para cada proyecto trabajamos con socios estratégicos globales, cuyos productos y respaldo tecnológico fortalecen nuestras soluciones y el compromiso de nuestro equipo. Contamos con profesionales con sólida formación en automatismos avanzados y amplia experiencia en control, medición y protección de sistemas eléctricos.",
-      "Acompañamos los proyectos de punta a punta: ingeniería conceptual y básica, definición de materiales, ingeniería de detalle, construcción electromecánica, configuración de hardware, ensayos en fábrica, montaje en obra, pruebas en sitio y puesta en servicio. La experiencia, la capacitación continua y el soporte de nuestros proveedores nos permiten asumir nuevos desafíos con solidez y confianza."
-         ],
-    highlightsTitle: "Sobre la empresa",
+    highlightsTitle: "Nuestra Esencia",
     highlights: [
       {
-        title: "Identidad",
-        description: "Integradora de tecnologías de automatización de procesos.",
-        icon: "layers",
-      },
-      {
-        title: "Trayectoria",
-        description: "Orígenes desde 1993 con presencia regional.",
+        title: "Trayectoria y Alcance",
+        description:
+          "Desde 1993, integramos tecnologías de automatización con implementaciones exitosas en Argentina y el exterior.",
         icon: "clock",
       },
       {
-        title: "Respaldo corporativo",
-        description: "Parte del Grupo Oeste en Argentina y Chile.",
-        icon: "building",
+        title: "Foco en Energía",
+        description:
+          "Especialistas en control, medición y protección de sistemas eléctricos con tecnología de vanguardia.",
+        icon: "zap",
       },
       {
-        title: "Alcance",
-        description: "Implementaciones locales e internacionales.",
+        title: "Soluciones Integrales",
+        description:
+          "Combinamos innovación, ingeniería y provisión de equipamiento para superar los resultados esperados.",
+        icon: "layers",
+      },
+      {
+        title: "Ciclo de Proyecto 360°",
+        description:
+          "Acompañamos de punta a punta: desde la ingeniería conceptual hasta el montaje, pruebas y puesta en servicio.",
+        icon: "activity",
+      },
+      {
+        title: "Partners Globales",
+        description:
+          "Trabajamos con socios estratégicos cuyo respaldo tecnológico fortalece la calidad de nuestras soluciones.",
         icon: "globe",
       },
       {
-        title: "Filosofía",
-        description: "Capacitación continua y soporte de partners.",
-        icon: "users",
-      },
-      {
-        title: "Propuesta de valor",
-        description: "Desafíos diarios con confianza y solidez.",
+        title: "Equipo Experto",
+        description:
+          "Profesionales con sólida formación en automatismos avanzados para asumir desafíos con confianza y solidez.",
         icon: "shield",
       },
     ],

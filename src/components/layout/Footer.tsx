@@ -100,12 +100,12 @@ export default function Footer() {
               </li>
               <li>
                 <a
-                  href={`tel:${site.contact.phone.replace(/\s/g, "")}`}
+                  href={`tel:${site.contact.mobile.replace(/\s/g, "")}`}
                   className="group flex items-center gap-3"
                 >
                   <Phone className="h-5 w-5 flex-shrink-0 text-[var(--accent)] transition-colors group-hover:text-[var(--text)]" />
                   <span className="text-sm text-[var(--muted)] transition-colors group-hover:text-[var(--accent)]">
-                    {site.contact.phone}
+                    {site.contact.mobile}
                   </span>
                 </a>
               </li>
