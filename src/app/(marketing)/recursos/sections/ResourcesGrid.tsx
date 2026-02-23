@@ -231,7 +231,7 @@ function RecursosGridContent() {
                         >
                           <Image
                             src={img}
-                            alt={`Galer?a ${activeCase.title} ${idx + 1}`}
+                            alt={`Galería ${activeCase.title} ${idx + 1}`}
                             fill
                             className="object-cover transition duration-500 group-hover:scale-110"
                           />

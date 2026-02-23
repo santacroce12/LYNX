@@ -11,7 +11,7 @@ export default function RecursosHero() {
       <div className="relative overflow-hidden rounded-3xl border border-[var(--border)] bg-[var(--surface)]/70 px-8 py-12 md:min-h-[360px]">
         <Image
           src="/images/energia/panel%20solar.jpg"
-          alt="Paneles solares en operaci?n"
+          alt="Paneles solares en operación"
           fill
           priority
           sizes="100vw"
