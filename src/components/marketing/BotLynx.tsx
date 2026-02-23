@@ -100,7 +100,7 @@ export default function BotLynx() {
                   <h3 className="font-semibold text-[var(--text)]">
                     Asistente LYNX
                   </h3>
-                  <p className="text-xs text-[var(--muted)]">En l?nea ahora</p>
+                  <p className="text-xs text-[var(--muted)]">En línea ahora</p>
                 </div>
               </div>
               <button
@@ -118,8 +118,8 @@ export default function BotLynx() {
                 </div>
                 <div className="rounded-2xl rounded-tl-none bg-[var(--surface)] p-3 text-sm shadow-sm">
                   <p>
-                    ?Hola! Soy el asistente virtual de LYNX SpA. ?En qu? puedo
-                    ayudarte hoy con tus proyectos de energ?a y automatizaci?n?
+                    ¡Hola! Soy el asistente virtual de LYNX SpA. ¿En qué puedo
+                    ayudarte hoy con tus proyectos de energía y automatización?
                   </p>
                 </div>
               </div>
