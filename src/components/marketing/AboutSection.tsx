@@ -53,7 +53,7 @@ export default function AboutSection() {
           <div className="relative overflow-hidden rounded-3xl border border-[var(--border)] shadow-2xl shadow-[var(--accent)]/5">
             <div className="pointer-events-none absolute inset-0 z-10 bg-gradient-to-t from-black/20 to-transparent"></div>
             <video
-              className="pointer-events-none w-full select-none object-cover md:h-[400px]"
+              className="pointer-events-none w-full select-none object-cover md:h-[260px]"
               src="/images/brand/about.mp4"
               poster={about.cover.image}
               autoPlay

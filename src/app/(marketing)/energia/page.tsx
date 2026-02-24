@@ -32,7 +32,7 @@ export default function EnergiaPage() {
       <ProcessSteps
         steps={energia.process}
         title="Ciclo de Proyecto Certificado"
-        subtitle="Garantizamos cumplimiento normativo desde el dise?o hasta la energizaci?n."
+        subtitle="Garantizamos cumplimiento normativo desde el diseño hasta la energización."
       />
       <EnergiaUseCases />
       <FAQ title={energia.sections.faqTitle} items={energia.faqs} />

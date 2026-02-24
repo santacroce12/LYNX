@@ -15,6 +15,7 @@ interface ProcessStepsProps {
   subtitle?: string;
 }
 
+
 export default function ProcessSteps({
   steps,
   title = "Nuestra Metodolog\u00eda",
@@ -33,23 +34,25 @@ export default function ProcessSteps({
         </Reveal>
       </div>
 
-      <div className="relative grid gap-8 md:grid-cols-4">
-        <div className="absolute left-0 top-12 hidden h-0.5 w-full bg-[var(--border)] md:block -z-10" />
+      <div className="relative grid gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5">
+        <div className="absolute left-0 top-10 hidden h-0.5 w-full bg-[var(--border)] xl:block -z-10" />
 
         {steps.map((item, index) => (
           <Reveal key={item.step} delay={index * 0.1}>
             <div className="group relative">
-              <div className="mx-auto mb-6 flex h-24 w-24 items-center justify-center rounded-full border-2 border-[var(--border)] bg-[var(--bg)] shadow-xl shadow-[var(--bg)] transition-all duration-300 group-hover:scale-110 group-hover:border-[var(--accent)]">
-                <span className="text-2xl font-bold text-[var(--muted)] transition-colors group-hover:text-[var(--accent)]">
-                  {item.step}
-                </span>
+              <div className="mx-auto mb-6 flex h-20 w-20 items-center justify-center rounded-full border-2 border-[var(--border)] bg-[var(--bg)] shadow-xl shadow-[var(--bg)] transition-all duration-300 group-hover:scale-110 group-hover:border-[var(--accent)]">
+                <div className="flex flex-col items-center gap-1">
+                  <span className="text-xl font-bold text-[var(--muted)] transition-colors group-hover:text-[var(--accent)]">
+                    {item.step}
+                  </span>
+                </div>
               </div>
 
               <div className="px-2 text-center">
-                <h3 className="mb-3 text-lg font-bold text-[var(--text)] transition-colors group-hover:text-[var(--accent)]">
+                <h3 className="mb-2 text-lg font-bold text-[var(--text)] transition-colors group-hover:text-[var(--accent)] md:text-xl">
                   {item.title}
                 </h3>
-                <p className="text-sm leading-relaxed text-[var(--muted)]">
+                <p className="text-sm leading-relaxed text-[var(--muted)] md:text-base">
                   {item.description}
                 </p>
               </div>

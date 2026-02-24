@@ -88,7 +88,6 @@
       title: "Mantenimiento",
       description:
         "Servicios preventivos y correctivos para asegurar la continuidad.",
-      icon: "wrench",
     },
   ],
   process: [
@@ -115,6 +114,12 @@
       title: "Commissioning (FAT/SAT)",
       description:
         "Pruebas de aceptación en fábrica y sitio. Energización controlada y entrega de dossier de calidad.",
+    },
+    {
+      step: "05",
+      title: "Soporte & Continuidad",
+      description:
+        "Soporte post-venta y mantenimiento preventivo con garantías extendidas.",
     },
   ],
   useCases: [

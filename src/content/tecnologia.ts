@@ -117,6 +117,13 @@ export const tecnologia = {
       description:
         "Puesta en marcha con estrategia Blue/Green para cero downtime. Monitoreo proactivo 24/7.",
     },
+
+    {
+      step: "05",
+      title: "Soporte y Mantenimiento",
+      description:
+        "Nuestro compromiso continúa tras la puesta en marcha. Ofrecemos garantía extendida, mantenimiento preventivo y soporte técnico especializado para asegurar la máxima disponibilidad de sus activos.",
+    },
   ],
   useCases: [
     {
