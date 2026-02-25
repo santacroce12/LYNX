@@ -109,6 +109,19 @@ export default function Footer() {
                   </span>
                 </a>
               </li>
+              <li>
+                <a
+                  href={`https://wa.me/${site.contact.phone.replace(/\D/g, "")}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group flex items-center gap-3"
+                >
+                  <Phone className="h-5 w-5 flex-shrink-0 text-[var(--accent)] transition-colors group-hover:text-[var(--text)]" />
+                  <span className="text-sm text-[var(--muted)] transition-colors group-hover:text-[var(--accent)]">
+                    {site.contact.phone}
+                  </span>
+                </a>
+              </li>
             </ul>
           </div>
         </div>

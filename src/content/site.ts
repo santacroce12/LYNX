@@ -24,8 +24,8 @@
   },
   contact: {
     email: "soporte@lynx.cl",
-    mobile: "+56 9 6214 8623",
-    phone: "+56 9 XXXX XXXX",
+    mobile: "+56 9 9219 1328",
+    phone: "+56 9 9216 2573",
     address: "Santiago, Chile",
     region: "Operación en Chile y Argentina",
     social: [
