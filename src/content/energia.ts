@@ -54,6 +54,12 @@ export const energia = {
       description: "Conectamos activos industriales con plataformas digitales.",
       icon: "link",
     },
+    {
+      title: "Auditorías Técnicas",
+      description:
+        "Revisión de instalaciones, informes y planes de mejora para cumplimiento normativo.",
+      icon: "clipboard",
+    },
   ],
   services: [
     {
@@ -91,12 +97,6 @@ export const energia = {
       description:
         "Hardenización de redes y cumplimiento de normativas CIP/NUE.",
       icon: "lock",
-    },
-    {
-      title: "Mantenimiento",
-      description:
-        "Servicios preventivos y correctivos para asegurar la continuidad.",
-      icon: "life-buoy",
     },
   ],
   process: [
@@ -166,7 +166,7 @@ export const energia = {
         "Especialistas en IEC 61850, DNP3, Modbus y C37.118 (Sincrofasores) para transmisión de datos en tiempo real.",
     },
     {
-      question: "?Pueden acompañar la implementación?",
+      question: "¿Pueden acompañar la implementación?",
       answer: "Incluimos gestión de proyecto, puesta en marcha y monitoreo continuo.",
     },
   ],

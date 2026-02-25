@@ -125,6 +125,26 @@ const iconMap: Record<string, JSX.Element> = {
       fill="none"
     />
   ),
+  clipboard: (
+    <>
+      <path
+        d="M16 4h-1a2 2 0 0 0-4 0H8a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2z"
+        stroke="currentColor"
+        strokeWidth="1.6"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        fill="none"
+      />
+      <path
+        d="M12 2h.01"
+        stroke="currentColor"
+        strokeWidth="1.6"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        fill="none"
+      />
+    </>
+  ),
 };
 
 export default function FeatureGrid({
