@@ -142,6 +142,12 @@
         image: "/images/partners/n3uron.svg",
       },
       {
+        name: "Lexa",
+        href: "#",
+        description: "Partner tecnológico para soluciones industriales.",
+        image: "/images/partners/lexa.jpeg",
+      },
+      {
         name: "Cisco",
         href: "https://www.cisco.com/",
         description: "Infraestructura y networking empresarial.",
