@@ -1,24 +1,24 @@
-﻿export const energia = {
+export const energia = {
   meta: {
     title: "Energía",
     description:
-      "Soluciones de energía para operaciones críticas: eficiencia, resiliencia y control en tiempo real.",
+      "Soluciones de energía para operaciones críticas: eficiencia, resiliencia y cumplimiento normativo CEN.",
   },
   hero: {
     badge: "Vertical Energía",
     title: "Energía confiable para operaciones críticas",
     subtitle:
-      "Diseñamos infraestructura resiliente y eficiente para industrias que no pueden detenerse.",
+      "Diseñamos infraestructura resiliente y sistemas de monitoreo avanzado (WAMS) para industrias que no pueden detenerse.",
     claim: "Control, eficiencia y continuidad con foco en performance.",
   },
   sections: {
     featuresTitle: "Capacidades clave",
     featuresSubtitle:
-      "Combinamos ingeniería energética y control digital para optimizar cada operación.",
-    servicesTitle: "Servicios",
+      "Combinamos ingeniería de potencia y cumplimiento normativo para optimizar cada operación.",
+    servicesTitle: "Servicios Especializados",
     servicesSubtitle:
-      "Soluciones integrales para el control y la calidad de la energía eléctrica.",
-    useCasesTitle: "Casos de uso",
+      "Desde la integración de Sincrofasores (PMU) hasta el control de subestaciones.",
+    useCasesTitle: "Experiencia Aplicada",
     useCasesSubtitle: "Soluciones diseñadas para entornos críticos y exigentes.",
     galleryTitle: "Infraestructura en imágenes",
     gallerySubtitle:
@@ -27,6 +27,12 @@
   },
   features: [
     {
+      title: "Cumplimiento CEN",
+      description:
+        "Garantizamos la observabilidad y cumplimiento de la Norma Técnica de Seguridad y Calidad.",
+      icon: "shield",
+    },
+    {
       title: "Optimización de consumo",
       description:
         "Modelos predictivos y ajustes finos para reducir costos energéticos.",
@@ -34,13 +40,9 @@
     },
     {
       title: "Gestión de redes",
-      description: "Monitoreo centralizado con alertas y decisiones en tiempo real.",
+      description:
+        "Monitoreo centralizado con alertas y decisiones en tiempo real.",
       icon: "grid",
-    },
-    {
-      title: "Resiliencia operativa",
-      description: "Diseños redundantes y planes de continuidad críticos.",
-      icon: "shield",
     },
     {
       title: "Medición inteligente",
@@ -54,6 +56,12 @@
     },
   ],
   services: [
+    {
+      title: "Sistemas WAMS y PMU",
+      description:
+        "Implementación de Unidades de Medición Fasorial (PMU) y PDCs. Monitoreo dinámico de la red en cumplimiento con los anexos técnicos del CEN.",
+      icon: "activity",
+    },
     {
       title: "Subestaciones",
       description:
@@ -88,6 +96,7 @@
       title: "Mantenimiento",
       description:
         "Servicios preventivos y correctivos para asegurar la continuidad.",
+      icon: "life-buoy",
     },
   ],
   process: [
@@ -107,13 +116,13 @@
       step: "03",
       title: "Ejecución & Montaje",
       description:
-        "Despliegue de cuadrillas certificadas bajo protocolos de seguridad estricta y supervisión en tiempo real.",
+        "Despliegue bajo estrictos protocolos HSE (Reglamento Especial de Contratistas) y supervisión en tiempo real.",
     },
     {
       step: "04",
       title: "Commissioning (FAT/SAT)",
       description:
-        "Pruebas de aceptación en fábrica y sitio. Energización controlada y entrega de dossier de calidad.",
+        "Pruebas de aceptación en fábrica y sitio. Validación de señales ante el Coordinador Eléctrico Nacional (CEN).",
     },
     {
       step: "05",
@@ -124,16 +133,16 @@
   ],
   useCases: [
     {
-      title: "Subestación Digital 110kV",
+      title: "Sistema de Monitoreo Fasorial",
       description:
-        "Modernización completa migrando cableado de cobre a fibra óptica con protocolo IEC 61850, reduciendo costos de mantenimiento y aumentando la seguridad.",
+        "Implementación de solución WAMS con PMUs para observabilidad en tiempo real de oscilaciones de potencia, cumpliendo exigencias del Coordinador.",
       image:
         "https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?auto=format&fit=crop&q=80",
     },
     {
       title: "Centro de Control SCADA",
       description:
-        "Implementación de un sistema centralizado redundante que permite la operación remota de 15 subestaciones distribuidas geográficamente en tiempo real.",
+        "Implementación de un sistema centralizado redundante que permite la operación remota de 15 subestaciones distribuidas geográficamente.",
       image:
         "https://images.unsplash.com/photo-1581092160562-40aa08e78837?auto=format&fit=crop&q=80",
     },
@@ -147,17 +156,17 @@
   ],
   faqs: [
     {
-      question: "¿Cuánto tarda una auditoría inicial?",
+      question: "¿Realizan estudios de conexión al CEN?",
       answer:
-        "Dependiendo del tamaño de la operación, entre 2 y 4 semanas para un diagnóstico accionable.",
+        "Sí. Desarrollamos la ingeniería y gestionamos la validación de señales y pruebas punto a punto con el Coordinador.",
     },
     {
-      question: "¿Integran con sistemas existentes?",
+      question: "¿Qué protocolos manejan?",
       answer:
-        "Sí. Priorizamos integraciones con infraestructura actual para acelerar resultados.",
+        "Especialistas en IEC 61850, DNP3, Modbus y C37.118 (Sincrofasores) para transmisión de datos en tiempo real.",
     },
     {
-      question: "¿Pueden acompañar la implementación?",
+      question: "?Pueden acompañar la implementación?",
       answer: "Incluimos gestión de proyecto, puesta en marcha y monitoreo continuo.",
     },
   ],

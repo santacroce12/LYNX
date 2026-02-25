@@ -30,7 +30,7 @@ export default function TecnologiaPage() {
       <ProcessSteps
         steps={tecnologia.process}
         title="Framework de Desarrollo"
-        subtitle="Agilidad t?cnica y rigor arquitect?nico para soluciones de misi?n cr?tica."
+        subtitle="Agilidad técnica y rigor arquitectónico para soluciones de misión crítica."
       />
       <TecnologiaUseCases />
       <FAQ title={tecnologia.sections.faqTitle} items={tecnologia.faqs} />

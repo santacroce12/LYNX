@@ -2,6 +2,9 @@ import Section from "@/components/layout/Section";
 import Reveal from "@/components/motion/Reveal";
 import { energia } from "@/content/energia";
 import {
+  Activity,
+  FileText,
+  LifeBuoy,
   Lock,
   Monitor,
   Radio,
@@ -12,6 +15,9 @@ import {
 } from "lucide-react";
 
 const icons: Record<string, LucideIcon> = {
+  activity: Activity,
+  "file-text": FileText,
+  "life-buoy": LifeBuoy,
   zap: Zap,
   monitor: Monitor,
   shield: ShieldCheck,
