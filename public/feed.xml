@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<channel>
+    <title>LYNX - Recursos y Casos de Éxito</title>
+    <link>https://lynx.cuencotech.com/recursos</link>
+    <description>Soluciones tecnológicas de alta complejidad en energía y tecnología.</description>
+    <language>es</language>
+    <lastBuildDate>Thu, 26 Feb 2026 11:45:00 -0300</lastBuildDate>
+    <atom:link href="https://lynx.cuencotech.com/feed.xml" rel="self" type="application/rss+xml" />
+
+    <item>
+        <title>Modernización Central Hidroeléctrica Nihuil</title>
+        <link>https://lynx.cuencotech.com/recursos#nihuil</link>
+        <guid isPermaLink="false">recurso-nihuil</guid>
+        <pubDate>Thu, 26 Feb 2026 09:00:00 -0300</pubDate>
+        <description>Implementación de sistemas de control y monitoreo en tiempo real para optimizar la generación de energía.</description>
+    </item>
+
+    <item>
+        <title>Soporte Tecnológico - Antena de Espacio Profundo</title>
+        <link>https://lynx.cuencotech.com/recursos#antena</link>
+        <guid isPermaLink="false">recurso-antena</guid>
+        <pubDate>Wed, 25 Feb 2026 14:00:00 -0300</pubDate>
+        <description>Infraestructura crítica de conectividad y energía para misiones de exploración espacial.</description>
+    </item>
+</channel>
+</rss>

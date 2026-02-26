@@ -37,6 +37,14 @@ export default function RootLayout({
       className={`${sora.variable} ${spaceGrotesk.variable}`}
       data-theme="dark"
     >
+      <head>
+        <link
+          rel="alternate"
+          type="application/rss+xml"
+          title="RSS Feed de LYNX"
+          href="/feed.xml"
+        />
+      </head>
       <body className="bg-[var(--bg)] text-[var(--text)] antialiased">
         {children}
         <BotLynx />
