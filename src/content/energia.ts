@@ -128,7 +128,7 @@ export const energia = {
       step: "05",
       title: "Soporte & Continuidad",
       description:
-        "Soporte post-venta y mantenimiento preventivo con garantías extendidas.",
+        "Acompañamiento integral post-venta, mantenimiento preventivo y gestión de garantías para asegurar la operatividad a largo plazo.",
     },
   ],
   useCases: [

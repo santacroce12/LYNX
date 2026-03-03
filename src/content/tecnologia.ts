@@ -53,6 +53,12 @@ export const tecnologia = {
       description: "Conectamos sistemas nuevos y existentes sin interrupciones.",
       icon: "link",
     },
+    {
+      title: "Soporte y Evolución",
+      description:
+        "Mantenimiento y asistencia técnica para asegurar la estabilidad operativa.",
+      icon: "life-buoy",
+    },
   ],
   services: [
     {
@@ -120,23 +126,23 @@ export const tecnologia = {
 
     {
       step: "05",
-      title: "Soporte y Mantenimiento",
+      title: "Soporte & Continuidad",
       description:
-        "Nuestro compromiso continúa tras la puesta en marcha. Ofrecemos garantía extendida, mantenimiento preventivo y soporte técnico especializado para asegurar la máxima disponibilidad de sus activos.",
+        "Acompañamiento integral post-venta, mantenimiento preventivo y gestión de garantías para asegurar la operatividad a largo plazo.",
     },
   ],
   useCases: [
     {
       title: "Operaciones Conectadas",
       description:
-        "Unificamos datos de campo y backoffice en un solo centro de comando digital, permitiendo la toma de decisiones en tiempo real basada en datos fidedignos.",
+        "Unificamos datos de campo y backoffice en un solo centro de comando digital, permitiendo decisiones en tiempo real.",
       image:
         "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80",
     },
     {
       title: "Mantenimiento Predictivo",
       description:
-        "Algoritmos que anticipan fallas y optimizan activos antes de que ocurran paradas críticas, ahorrando costos operativos significativos.",
+        "Algoritmos que anticipan fallas y optimizan activos antes de que ocurran paradas críticas, ahorrando costos operativos.",
       image:
         "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&q=80",
     },
@@ -146,13 +152,6 @@ export const tecnologia = {
         "Sistemas sincronizados que permiten operar múltiples plantas o sucursales como un solo organismo cohesivo.",
       image:
         "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&q=80",
-    },
-    {
-      title: "Experiencias B2B",
-      description:
-        "Portales y aplicaciones para clientes estratégicos que ofrecen transparencia, autogestión y una experiencia de usuario superior.",
-      image:
-        "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80",
     },
   ],
   faqs: [

@@ -125,6 +125,34 @@ const iconMap: Record<string, JSX.Element> = {
       fill="none"
     />
   ),
+  "life-buoy": (
+    <>
+      <circle
+        cx="12"
+        cy="12"
+        r="8"
+        stroke="currentColor"
+        strokeWidth="1.6"
+        fill="none"
+      />
+      <circle
+        cx="12"
+        cy="12"
+        r="3"
+        stroke="currentColor"
+        strokeWidth="1.6"
+        fill="none"
+      />
+      <path
+        d="M12 4v5M20 12h-5M12 20v-5M4 12h5"
+        stroke="currentColor"
+        strokeWidth="1.6"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        fill="none"
+      />
+    </>
+  ),
   clipboard: (
     <>
       <path
