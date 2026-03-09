@@ -126,30 +126,30 @@ export const energia = {
     },
     {
       step: "05",
-      title: "Soporte & Continuidad",
+      title: "Servicios de Monitoreo y Mantenimiento",
       description:
-        "Acompañamiento integral post-venta, mantenimiento preventivo y gestión de garantías para asegurar la operatividad a largo plazo.",
+        "Supervisi\u00f3n continua de sus activos y mantenimiento preventivo peri\u00f3dico para garantizar la m\u00e1xima disponibilidad y evitar detenciones imprevistas.",
     },
   ],
   useCases: [
     {
       title: "Sistema de Monitoreo Fasorial",
       description:
-        "Implementación de solución WAMS con PMUs para observabilidad en tiempo real de oscilaciones de potencia, cumpliendo exigencias del Coordinador.",
+        "Implementaci\u00f3n de soluci\u00f3n WAMS con PMUs para observabilidad en tiempo real de oscilaciones de potencia, cumpliendo exigencias del Coordinador.",
       image:
         "https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?auto=format&fit=crop&q=80",
     },
     {
       title: "Centro de Control SCADA",
       description:
-        "Implementación de un sistema centralizado redundante que permite la operación remota de 15 subestaciones distribuidas geográficamente.",
+        "Implementaci\u00f3n de un sistema centralizado redundante que permite la operaci\u00f3n remota de 15 subestaciones distribuidas geogr\u00e1ficamente.",
       image:
         "https://images.unsplash.com/photo-1581092160562-40aa08e78837?auto=format&fit=crop&q=80",
     },
     {
-      title: "Retrofit de Protecciones",
+      title: "Cumplimiento Normativo SITR",
       description:
-        "Reemplazo exitoso de relés electromecánicos por numéricos de última generación sin interrupción del suministro eléctrico crítico.",
+        "Dise\u00f1o, instalaci\u00f3n, puesta en marcha y mantenimiento de infraestructura para la integraci\u00f3n al Sistema de Informaci\u00f3n en Tiempo Real (SITR) en Central Yungay y proyectos Barrick.",
       image:
         "https://images.unsplash.com/photo-1621905251189-08b45d6a269e?auto=format&fit=crop&q=80",
     },
@@ -172,10 +172,10 @@ export const energia = {
   ],
 
   stats: [
-    { label: "Experiencia del Equipo", value: "+10 Años" },
+    { label: "Experiencia en Argentina", value: "+30 Años" },
+    { label: "Experiencia en Chile", value: "+10 Años" },
     { label: "Compromiso HSE", value: "100%" },
     { label: "Disponibilidad", value: "24/7" },
-    { label: "Cobertura", value: "Nacional" },
   ],
   standards: [
     "IEC 61850",

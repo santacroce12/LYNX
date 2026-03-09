@@ -5,12 +5,12 @@ export const tecnologia = {
       "Proveemos la mano de obra, logística y gestión para implementar tecnología en tu empresa. Tu socio estratégico en ejecución de proyectos TI.",
   },
   hero: {
-    badge: "Ejecución TI",
-    title: "Tu Socio en Ejecución Tecnológica",
+    badge: "Tecnología y Automatización",
+    title: "Operaciones Inteligentes y Conectadas",
     subtitle:
-      "Proveemos el talento especializado y la logística operativa para materializar tus proyectos.",
-    claim: "Ejecución precisa con foco en continuidad y resultados.",
-    cta: "Cotizar Equipo",
+      "Implementamos plataformas digitales, sistemas SCADA e IoT para transformar datos operativos en decisiones ejecutables. Te acompañamos desde el diseño de la arquitectura hasta el despliegue logístico y técnico en terreno.",
+    claim: "Control, integración y visibilidad en tiempo real.",
+    cta: "Explorar soluciones",
     image: "/images/tecnologia/tecnologia-abstracto.jpg",
   },
   sections: {
@@ -123,12 +123,11 @@ export const tecnologia = {
       description:
         "Puesta en marcha con estrategia Blue/Green para cero downtime. Monitoreo proactivo 24/7.",
     },
-
     {
       step: "05",
-      title: "Soporte & Continuidad",
+      title: "Servicios de Monitoreo y Mantenimiento",
       description:
-        "Acompañamiento integral post-venta, mantenimiento preventivo y gestión de garantías para asegurar la operatividad a largo plazo.",
+        "Supervisi\u00f3n continua de sus activos y mantenimiento preventivo peri\u00f3dico para garantizar la m\u00e1xima disponibilidad y evitar detenciones imprevistas.",
     },
   ],
   useCases: [
@@ -176,7 +175,6 @@ export const tecnologia = {
         "Todo el código, configuraciones y documentación generada por nuestro equipo durante el servicio es 100% propiedad de tu empresa desde el día uno.",
     },
   ],
-
   stats: [
     { label: "Metodología", value: "Agile/Scrum" },
     { label: "Calidad de Código", value: "100%" },
