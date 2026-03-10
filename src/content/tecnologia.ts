@@ -5,12 +5,12 @@ export const tecnologia = {
       "Proveemos la mano de obra, logística y gestión para implementar tecnología en tu empresa. Tu socio estratégico en ejecución de proyectos TI.",
   },
   hero: {
-    badge: "Tecnología y Automatización",
-    title: "Operaciones Inteligentes y Conectadas",
+    badge: "Transformación Digital y Staffing TI",
+    title: "Cerramos la brecha entre tu estado actual y tu visión",
     subtitle:
-      "Implementamos plataformas digitales, sistemas SCADA e IoT para transformar datos operativos en decisiones ejecutables. Te acompañamos desde el diseño de la arquitectura hasta el despliegue logístico y técnico en terreno.",
-    claim: "Control, integración y visibilidad en tiempo real.",
-    cta: "Explorar soluciones",
+      "Realizamos un assessment profundo (As-Is) de tus sistemas para definir juntos tu escenario ideal (To-Be). Luego, cerramos esa brecha con pequeños proyectos ágiles: desarrollamos la solución completa o te proveemos el talento especializado (Staffing) para que lo hagas tú.",
+    claim: "Consultoría, Desarrollo Ágil y Provisión de Talento TI.",
+    cta: "Diseñar plan de transformación",
     image: "/images/tecnologia/tecnologia-abstracto.jpg",
   },
   sections: {
@@ -62,72 +62,78 @@ export const tecnologia = {
   ],
   services: [
     {
-      title: "Talento Especializado",
+      title: "Consultoría de Transformación",
       description:
-        "Proveemos desarrolladores, ingenieros y técnicos calificados para integrarse a tus equipos de inmediato.",
+        "Levantamiento del estado actual (As-Is) y diseño de la arquitectura y estrategia para alcanzar el escenario tecnológico ideal (To-Be).",
+      icon: "clipboard-check",
+    },
+    {
+      title: "Modalidad Staffing TI",
+      description:
+        "Inyectamos desarrolladores, ingenieros y líderes técnicos directamente en tus equipos corporativos para acelerar tus propios proyectos.",
       icon: "users",
+    },
+    {
+      title: "Proyectos End-to-End",
+      description:
+        "Tomamos el control total. Construimos el software a medida e implementamos la solución completa bajo metodologías ágiles.",
+      icon: "code",
     },
     {
       title: "Logística de Despliegue",
       description:
-        "Gestión completa de hardware, envíos, instalación en sitio y puesta en marcha en múltiples sedes.",
+        "Gestión integral que incluye adquisición de hardware, envíos, instalación física en sitio y puesta en marcha en múltiples sucursales.",
       icon: "truck",
-    },
-    {
-      title: "Gestión de Proyectos TI",
-      description:
-        "Liderazgo técnico para asegurar que la implementación cumpla con los plazos y presupuestos.",
-      icon: "clipboard-check",
-    },
-    {
-      title: "Desarrollo a Medida",
-      description:
-        "Creación de software específico para resolver tus cuellos de botella operativos.",
-      icon: "code",
     },
     {
       title: "Integración de Sistemas",
       description:
-        "Conectamos tu nueva tecnología con la infraestructura existente sin interrupciones.",
+        "Conectamos las nuevas herramientas con tu ERP o infraestructura existente sin fricciones, unificando el flujo de información.",
       icon: "layers",
     },
     {
       title: "Soporte Operativo",
       description:
-        "Mantenimiento y asistencia técnica continua para garantizar la estabilidad.",
+        "Servicios de mantenimiento, asistencia técnica continua y monitoreo preventivo para garantizar la estabilidad de tus operaciones.",
       icon: "life-buoy",
     },
   ],
   process: [
     {
       step: "01",
-      title: "Discovery & Arquitectura",
+      title: "Assessment (As-Is)",
       description:
-        "Entendimiento profundo del dolor operativo. Diseño de arquitectura cloud-native escalable y segura.",
+        "Auditamos tu ecosistema actual: sistemas operativos, procesos de negocio y madurez digital para entender tu verdadero punto de partida.",
     },
     {
       step: "02",
-      title: "Desarrollo Iterativo",
+      title: "Definición del 'To-Be'",
       description:
-        "Sprints ágiles con entregables quincenales. Código limpio, documentado y bajo control de versiones estricto.",
+        "Nos sentamos contigo a responder la pregunta clave: ¿hasta dónde quieres llegar? Definimos juntos la meta de tu transformación.",
     },
     {
       step: "03",
-      title: "QA & Hardening",
+      title: "Roadmap de Brecha",
       description:
-        "Pruebas automatizadas de carga, seguridad y estrés antes del paso a producción.",
+        "Trazamos la hoja de ruta estratégica para ir del As-Is al To-Be, dividiendo la brecha tecnológica en pequeños proyectos abordables.",
     },
     {
       step: "04",
-      title: "Despliegue & Soporte",
+      title: "Definición de Modalidad",
       description:
-        "Puesta en marcha con estrategia Blue/Green para cero downtime. Monitoreo proactivo 24/7.",
+        "Elegimos el modelo ideal: nos encargamos del proyecto End-to-End o te brindamos los profesionales necesarios mediante modelo Staffing.",
     },
     {
       step: "05",
-      title: "Servicios de Monitoreo y Mantenimiento",
+      title: "Ejecución Ágil",
       description:
-        "Supervisi\u00f3n continua de sus activos y mantenimiento preventivo peri\u00f3dico para garantizar la m\u00e1xima disponibilidad y evitar detenciones imprevistas.",
+        "Implementamos la tecnología paso a paso mediante sprints iterativos. Entregamos valor de forma continua asegurando que el plan se cumpla.",
+    },
+    {
+      step: "06",
+      title: "Monitoreo y Evolución",
+      description:
+        "Acompañamos la post-implementación. Mantenemos el ecosistema estable y lo evolucionamos según las nuevas necesidades del negocio.",
     },
   ],
   useCases: [

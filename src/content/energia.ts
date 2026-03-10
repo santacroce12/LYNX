@@ -128,28 +128,28 @@ export const energia = {
       step: "05",
       title: "Servicios de Monitoreo y Mantenimiento",
       description:
-        "Supervisi\u00f3n continua de sus activos y mantenimiento preventivo peri\u00f3dico para garantizar la m\u00e1xima disponibilidad y evitar detenciones imprevistas.",
+        "Supervisión continua de sus activos y mantenimiento preventivo periódico para garantizar la máxima disponibilidad y evitar detenciones imprevistas.",
     },
   ],
   useCases: [
     {
       title: "Sistema de Monitoreo Fasorial",
       description:
-        "Implementaci\u00f3n de soluci\u00f3n WAMS con PMUs para observabilidad en tiempo real de oscilaciones de potencia, cumpliendo exigencias del Coordinador.",
+        "Implementación de solución WAMS con PMUs para observabilidad en tiempo real de oscilaciones de potencia, cumpliendo exigencias del Coordinador.",
       image:
         "https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?auto=format&fit=crop&q=80",
     },
     {
       title: "Centro de Control SCADA",
       description:
-        "Implementaci\u00f3n de un sistema centralizado redundante que permite la operaci\u00f3n remota de 15 subestaciones distribuidas geogr\u00e1ficamente.",
+        "Implementación de un sistema centralizado redundante que permite la operación remota de 15 subestaciones distribuidas geográficamente.",
       image:
         "https://images.unsplash.com/photo-1581092160562-40aa08e78837?auto=format&fit=crop&q=80",
     },
     {
       title: "Cumplimiento Normativo SITR",
       description:
-        "Dise\u00f1o, instalaci\u00f3n, puesta en marcha y mantenimiento de infraestructura para la integraci\u00f3n al Sistema de Informaci\u00f3n en Tiempo Real (SITR) en Central Yungay y proyectos Barrick.",
+        "Diseño, instalación, puesta en marcha y mantenimiento de infraestructura para la integración al Sistema de Información en Tiempo Real (SITR) en Central Yungay y proyectos Barrick.",
       image:
         "https://images.unsplash.com/photo-1621905251189-08b45d6a269e?auto=format&fit=crop&q=80",
     },
@@ -167,10 +167,10 @@ export const energia = {
     },
     {
       question: "¿Pueden acompañar la implementación?",
-      answer: "Incluimos gestión de proyecto, puesta en marcha y monitoreo continuo.",
+      answer:
+        "Incluimos gestión de proyecto, puesta en marcha y monitoreo continuo.",
     },
   ],
-
   stats: [
     { label: "Experiencia en Argentina", value: "+30 Años" },
     { label: "Experiencia en Chile", value: "+10 Años" },

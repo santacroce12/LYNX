@@ -15,11 +15,10 @@ interface ProcessStepsProps {
   subtitle?: string;
 }
 
-
 export default function ProcessSteps({
   steps,
-  title = "Nuestra Metodolog\u00eda",
-  subtitle = "Est\u00e1ndares de ejecuci\u00f3n t\u00e9cnica",
+  title = "Nuestra Metodología",
+  subtitle = "Estándares de ejecución técnica",
 }: ProcessStepsProps) {
   return (
     <Section className="relative overflow-hidden">
@@ -34,8 +33,9 @@ export default function ProcessSteps({
         </Reveal>
       </div>
 
-      <div className="relative grid gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5">
-        <div className="absolute left-0 top-10 hidden h-0.5 w-full bg-[var(--border)] xl:block -z-10" />
+      {/* AQUÍ ESTÁ EL CAMBIO: xl:grid-cols-6 para que entren los 6 pasos en una fila */}
+      <div className="relative grid gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6">
+        <div className="absolute left-0 top-10 -z-10 hidden h-0.5 w-full bg-[var(--border)] xl:block" />
 
         {steps.map((item, index) => (
           <Reveal key={item.step} delay={index * 0.1}>

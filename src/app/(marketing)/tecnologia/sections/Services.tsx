@@ -32,7 +32,7 @@ export default function TecnologiaServices() {
           </h2>
         </Reveal>
         <Reveal delay={0.1}>
-          <p className="mt-4 mx-auto max-w-2xl text-[var(--muted)] text-lg">
+          <p className="mx-auto mt-4 max-w-2xl text-lg text-[var(--muted)]">
             {tecnologia.sections.servicesSubtitle}
           </p>
         </Reveal>
@@ -45,7 +45,7 @@ export default function TecnologiaServices() {
               {/* ANIMACIÓN PREMIUM APLICADA AQUÍ */}
               <div className="group relative h-full cursor-pointer overflow-hidden rounded-3xl border border-[var(--border)] bg-[var(--surface)]/40 p-8 transition-all duration-500 hover:-translate-y-2 hover:border-[var(--accent)]/40 hover:bg-[var(--surface)] hover:shadow-2xl hover:shadow-[var(--accent)]/10">
                 {/* Fondo degradado sutil al pasar el mouse */}
-                <div className="absolute inset-0 opacity-0 transition-opacity duration-500 group-hover:opacity-100 bg-gradient-to-br from-transparent to-[var(--accent)]/5 pointer-events-none" />
+                <div className="absolute inset-0 pointer-events-none bg-gradient-to-br from-transparent to-[var(--accent)]/5 opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
 
                 <div className="relative mb-6 inline-flex h-14 w-14 items-center justify-center rounded-2xl bg-[var(--accent)]/10 text-[var(--accent)] transition-all duration-500 group-hover:scale-110 group-hover:bg-[var(--accent)] group-hover:text-white group-hover:shadow-lg group-hover:shadow-[var(--accent)]/30">
                   <Icon className="h-7 w-7 transition-transform duration-500 group-hover:rotate-3" />
@@ -54,7 +54,7 @@ export default function TecnologiaServices() {
                   <h3 className="mb-3 text-xl font-bold text-[var(--text)] transition-colors duration-300 group-hover:text-[var(--accent)]">
                     {service.title}
                   </h3>
-                  <p className="text-[var(--muted)] leading-relaxed transition-colors duration-300 group-hover:text-[var(--text-secondary)]">
+                  <p className="leading-relaxed text-[var(--muted)] transition-colors duration-300 group-hover:text-[var(--text-secondary)]">
                     {service.description}
                   </p>
                 </div>
