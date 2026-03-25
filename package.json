@@ -3,10 +3,10 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev -p 3005",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint"
+    "dev": "$root = $pwd.ProviderPath; if ($root.StartsWith('\\\\?\\')) { $root = $root.Substring(4) }; Set-Location $root; node ./node_modules/next/dist/bin/next dev -p 3005",
+    "build": "$root = $pwd.ProviderPath; if ($root.StartsWith('\\\\?\\')) { $root = $root.Substring(4) }; Set-Location $root; node ./node_modules/next/dist/bin/next build",
+    "start": "$root = $pwd.ProviderPath; if ($root.StartsWith('\\\\?\\')) { $root = $root.Substring(4) }; Set-Location $root; node ./node_modules/next/dist/bin/next start",
+    "lint": "$root = $pwd.ProviderPath; if ($root.StartsWith('\\\\?\\')) { $root = $root.Substring(4) }; Set-Location $root; node ./node_modules/next/dist/bin/next lint"
   },
   "dependencies": {
     "framer-motion": "^10.18.0",

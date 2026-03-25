@@ -5,12 +5,12 @@ export const tecnologia = {
       "Proveemos la mano de obra, logística y gestión para implementar tecnología en tu empresa. Tu socio estratégico en ejecución de proyectos TI.",
   },
   hero: {
-    badge: "Transformación Digital y Staffing TI",
-    title: "Cerramos la brecha entre tu estado actual y tu visión",
+    badge: "Vertical Tecnología",
+    title: "Tecnología conectada para operaciones exigentes",
     subtitle:
-      "Realizamos un assessment profundo (As-Is) de tus sistemas para definir juntos tu escenario ideal (To-Be). Luego, cerramos esa brecha con pequeños proyectos ágiles: desarrollamos la solución completa o te proveemos el talento especializado (Staffing) para que lo hagas tú.",
-    claim: "Consultoría, Desarrollo Ágil y Provisión de Talento TI.",
-    cta: "Diseñar plan de transformación",
+      "Implementamos plataformas digitales, integraciones y automatización operativa para empresas que necesitan visibilidad, continuidad y despliegue sin fricciones.",
+    claim: "Integración, ejecución y soporte con foco en resultados.",
+    cta: "Explorar soluciones",
     image: "/images/tecnologia/tecnologia-abstracto.jpg",
   },
   sections: {

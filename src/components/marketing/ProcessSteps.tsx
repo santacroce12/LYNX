@@ -20,6 +20,15 @@ export default function ProcessSteps({
   title = "Nuestra Metodología",
   subtitle = "Estándares de ejecución técnica",
 }: ProcessStepsProps) {
+  const desktopColumnsClass =
+    steps.length >= 6
+      ? "xl:grid-cols-6"
+      : steps.length === 5
+        ? "xl:grid-cols-5"
+        : steps.length === 4
+          ? "xl:grid-cols-4"
+          : "xl:grid-cols-3";
+
   return (
     <Section className="relative overflow-hidden">
       <div className="absolute left-0 top-0 h-px w-full bg-gradient-to-r from-transparent via-[var(--border)] to-transparent opacity-50" />
@@ -33,19 +42,18 @@ export default function ProcessSteps({
         </Reveal>
       </div>
 
-      {/* AQUÍ ESTÁ EL CAMBIO: xl:grid-cols-6 para que entren los 6 pasos en una fila */}
-      <div className="relative grid gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6">
+      <div
+        className={`relative grid gap-6 sm:grid-cols-2 lg:grid-cols-3 ${desktopColumnsClass}`}
+      >
         <div className="absolute left-0 top-10 -z-10 hidden h-0.5 w-full bg-[var(--border)] xl:block" />
 
         {steps.map((item, index) => (
           <Reveal key={item.step} delay={index * 0.1}>
             <div className="group relative">
               <div className="mx-auto mb-6 flex h-20 w-20 items-center justify-center rounded-full border-2 border-[var(--border)] bg-[var(--bg)] shadow-xl shadow-[var(--bg)] transition-all duration-300 group-hover:scale-110 group-hover:border-[var(--accent)]">
-                <div className="flex flex-col items-center gap-1">
-                  <span className="text-xl font-bold text-[var(--muted)] transition-colors group-hover:text-[var(--accent)]">
-                    {item.step}
-                  </span>
-                </div>
+                <span className="text-xl font-bold text-[var(--muted)] transition-colors group-hover:text-[var(--accent)]">
+                  {item.step}
+                </span>
               </div>
 
               <div className="px-2 text-center">

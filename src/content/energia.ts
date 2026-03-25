@@ -17,7 +17,7 @@ export const energia = {
       "Combinamos ingeniería de potencia y cumplimiento normativo para optimizar cada operación.",
     servicesTitle: "Servicios Especializados",
     servicesSubtitle:
-      "Desde la integración de Sincrofasores (PMU) hasta el control de subestaciones.",
+      "Desde la integración de sincrofasores (PMU) hasta el control de subestaciones.",
     useCasesTitle: "Experiencia Aplicada",
     useCasesSubtitle: "Soluciones diseñadas para entornos críticos y exigentes.",
     galleryTitle: "Infraestructura en imágenes",
@@ -89,7 +89,7 @@ export const energia = {
     {
       title: "Telecomunicaciones",
       description:
-        "Redes industriales robustas (FO, Radio, PLC) para entornos críticos.",
+        "Redes industriales robustas (FO, radio, PLC) para entornos críticos.",
       icon: "radio",
     },
     {
@@ -126,9 +126,9 @@ export const energia = {
     },
     {
       step: "05",
-      title: "Servicios de Monitoreo y Mantenimiento",
+      title: "Monitoreo y Mantenimiento",
       description:
-        "Supervisión continua de sus activos y mantenimiento preventivo periódico para garantizar la máxima disponibilidad y evitar detenciones imprevistas.",
+        "Supervisión continua y mantenimiento preventivo para asegurar disponibilidad y evitar detenciones.",
     },
   ],
   useCases: [
@@ -163,7 +163,7 @@ export const energia = {
     {
       question: "¿Qué protocolos manejan?",
       answer:
-        "Especialistas en IEC 61850, DNP3, Modbus y C37.118 (Sincrofasores) para transmisión de datos en tiempo real.",
+        "Especialistas en IEC 61850, DNP3, Modbus y C37.118 (sincrofasores) para transmisión de datos en tiempo real.",
     },
     {
       question: "¿Pueden acompañar la implementación?",
