@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import Image from "next/image";
 import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
 
-const INTRO_DURATION_MS = 2400;
+const INTRO_DURATION_MS = 2500;
 const REDUCED_DURATION_MS = 900;
 
 export default function HomeBrandIntro() {
@@ -50,6 +50,7 @@ export default function HomeBrandIntro() {
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(249,115,22,0.18),transparent_32%)]" />
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_15%_50%,rgba(249,115,22,0.14),transparent_24%)]" />
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_85%_50%,rgba(251,146,60,0.12),transparent_24%)]" />
+          <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(8,12,22,0.94)_0%,rgba(8,12,22,0.62)_48%,rgba(8,12,22,0.94)_100%)]" />
 
           <motion.div
             className="absolute inset-y-0 left-0 w-[18vw] min-w-16 bg-gradient-to-r from-[var(--accent)]/35 via-[var(--accent)]/12 to-transparent blur-2xl"
@@ -104,13 +105,39 @@ export default function HomeBrandIntro() {
               }}
             >
               <motion.div
-                className="absolute -inset-16 rounded-full bg-[var(--accent)]/12 blur-3xl"
+                className="pointer-events-none absolute inset-x-0 top-1/2 flex -translate-y-1/2 justify-center"
+                initial={{ opacity: 0, scale: 0.88, filter: "blur(26px)" }}
                 animate={{
-                  opacity: reduceMotion ? 0.45 : [0.2, 0.8, 0.28],
-                  scale: reduceMotion ? 1 : [0.86, 1.1, 0.98],
+                  opacity: reduceMotion ? 0.2 : [0, 0.42, 0.16],
+                  scale: reduceMotion ? 1 : [0.88, 1.05, 1],
+                  filter: reduceMotion
+                    ? "blur(18px)"
+                    : ["blur(26px)", "blur(12px)", "blur(18px)"],
                 }}
                 transition={{
-                  duration: reduceMotion ? 0.6 : 1.3,
+                  duration: reduceMotion ? 0.55 : 1.15,
+                  ease: [0.16, 1, 0.3, 1],
+                }}
+              >
+                <Image
+                  src="/images/brand/logo-azul.png"
+                  alt=""
+                  width={960}
+                  height={288}
+                  priority
+                  aria-hidden="true"
+                  className="h-auto w-[72vw] max-w-[1040px] min-w-[320px]"
+                />
+              </motion.div>
+
+              <motion.div
+                className="absolute -inset-20 rounded-full bg-[var(--accent)]/16 blur-3xl"
+                animate={{
+                  opacity: reduceMotion ? 0.5 : [0.22, 0.82, 0.3],
+                  scale: reduceMotion ? 1 : [0.84, 1.12, 1],
+                }}
+                transition={{
+                  duration: reduceMotion ? 0.7 : 1.35,
                   ease: "easeOut",
                 }}
               />
@@ -118,17 +145,17 @@ export default function HomeBrandIntro() {
               <Image
                 src="/images/brand/logo-azul.png"
                 alt="LYNX"
-                width={320}
-                height={96}
+                width={520}
+                height={156}
                 priority
-                className="relative h-auto w-[220px] md:w-[320px]"
+                className="relative h-auto w-[320px] drop-shadow-[0_0_18px_rgba(255,255,255,0.22)] drop-shadow-[0_0_48px_rgba(249,115,22,0.18)] md:w-[520px]"
               />
 
               <motion.div
                 className="mt-5 h-px bg-gradient-to-r from-transparent via-[var(--accent)] to-transparent"
                 initial={{ width: 0, opacity: 0 }}
                 animate={{
-                  width: reduceMotion ? 140 : [0, 220, 160],
+                  width: reduceMotion ? 180 : [0, 300, 220],
                   opacity: 1,
                 }}
                 transition={{
