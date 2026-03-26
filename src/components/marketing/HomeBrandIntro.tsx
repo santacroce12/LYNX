@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import Image from "next/image";
 import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
+import logo4k from "../../../Logo_4k.jpg";
 
 const INTRO_DURATION_MS = 2500;
 const REDUCED_DURATION_MS = 900;
@@ -75,8 +76,14 @@ export default function HomeBrandIntro() {
           <motion.div
             className="absolute left-0 top-1/2 h-px w-full -translate-y-1/2 bg-gradient-to-r from-transparent via-[var(--accent)]/55 to-transparent"
             initial={{ scaleX: 0, opacity: 0 }}
-            animate={{ scaleX: 1, opacity: reduceMotion ? 0.55 : [0, 0.85, 0.45] }}
-            transition={{ duration: reduceMotion ? 0.4 : 0.9, ease: [0.16, 1, 0.3, 1] }}
+            animate={{
+              scaleX: 1,
+              opacity: reduceMotion ? 0.55 : [0, 0.85, 0.45],
+            }}
+            transition={{
+              duration: reduceMotion ? 0.4 : 0.9,
+              ease: [0.16, 1, 0.3, 1],
+            }}
           />
 
           <div className="relative flex h-full items-center justify-center px-6">
@@ -120,7 +127,7 @@ export default function HomeBrandIntro() {
                 }}
               >
                 <Image
-                  src="/images/brand/logo-azul.png"
+                  src={logo4k}
                   alt=""
                   width={960}
                   height={288}
@@ -143,7 +150,7 @@ export default function HomeBrandIntro() {
               />
 
               <Image
-                src="/images/brand/logo-azul.png"
+                src={logo4k}
                 alt="LYNX"
                 width={520}
                 height={156}
