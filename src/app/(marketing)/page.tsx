@@ -1,6 +1,7 @@
-﻿import CTA from "@/components/marketing/CTA";
+import CTA from "@/components/marketing/CTA";
 import AboutSection from "@/components/marketing/AboutSection";
 import FeatureGrid from "@/components/marketing/FeatureGrid";
+import HomeBrandIntro from "@/components/marketing/HomeBrandIntro";
 import Partners from "@/components/marketing/Partners";
 import SplitHero from "@/components/marketing/SplitHero";
 import Section from "@/components/layout/Section";
@@ -17,6 +18,7 @@ export const metadata = buildMetadata({
 export default function HomePage() {
   return (
     <>
+      <HomeBrandIntro />
       <SplitHero />
       <AboutSection />
       <Partners />
