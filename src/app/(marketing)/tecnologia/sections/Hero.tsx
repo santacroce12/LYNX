@@ -2,14 +2,14 @@ import Image from "next/image";
 import Section from "@/components/layout/Section";
 import Badge from "@/components/ui/Badge";
 import FeatureGrid from "@/components/marketing/FeatureGrid";
+import TechCircuit from "@/components/marketing/TechCircuit";
 import Reveal from "@/components/motion/Reveal";
-import EnergyFlow from "@/components/ui/EnergyFlow";
 import { tecnologia } from "@/content/tecnologia";
 
 export default function TecnologiaHero() {
   return (
     <Section className="pt-24">
-      <div className="relative flex min-h-[320px] items-center overflow-hidden rounded-3xl border border-[var(--border)] bg-[var(--surface)]/70 px-8 py-12 md:min-h-[400px]">
+      <div className="relative overflow-hidden rounded-3xl border border-[var(--border)] bg-[var(--surface)]/70 px-8 py-12 md:min-h-[400px] md:px-10 lg:px-12">
         <Image
           src={tecnologia.hero.image}
           alt={tecnologia.hero.title}
@@ -23,7 +23,8 @@ export default function TecnologiaHero() {
           className="pointer-events-none absolute inset-0 bg-radial-accent opacity-50"
           aria-hidden="true"
         />
-        <div className="relative z-10 max-w-3xl">
+        <TechCircuit />
+        <div className="relative z-10 max-w-3xl md:max-w-[54%]">
           <Reveal>
             <Badge>{tecnologia.hero.badge}</Badge>
           </Reveal>
@@ -41,11 +42,6 @@ export default function TecnologiaHero() {
             <p className="mt-2 text-sm text-[var(--muted)]">
               {tecnologia.hero.claim}
             </p>
-          </Reveal>
-        </div>
-        <div className="relative z-10 mt-6 w-full">
-          <Reveal delay={0.2}>
-            <EnergyFlow className="opacity-80" />
           </Reveal>
         </div>
       </div>

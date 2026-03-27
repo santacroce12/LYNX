@@ -93,51 +93,20 @@ export default function HomeBrandIntro() {
               initial={{
                 opacity: 0,
                 scale: 0.94,
-                filter: reduceMotion ? "blur(0px)" : "blur(14px)",
               }}
               animate={{
                 opacity: 1,
                 scale: reduceMotion ? 1 : [0.94, 1.015, 1],
-                filter: reduceMotion
-                  ? "blur(0px)"
-                  : ["blur(14px)", "blur(5px)", "blur(0px)"],
               }}
               exit={{
                 opacity: 0,
                 scale: reduceMotion ? 1 : 1.02,
-                filter: reduceMotion ? "blur(0px)" : "blur(8px)",
               }}
               transition={{
                 duration: reduceMotion ? 0.45 : 0.95,
                 ease: [0.16, 1, 0.3, 1],
               }}
             >
-              <motion.div
-                className="pointer-events-none absolute inset-x-0 top-1/2 flex -translate-y-1/2 justify-center"
-                initial={{ opacity: 0, scale: 0.88, filter: "blur(28px)" }}
-                animate={{
-                  opacity: reduceMotion ? 0.18 : [0, 0.38, 0.1],
-                  scale: reduceMotion ? 1 : [0.88, 1.06, 1],
-                  filter: reduceMotion
-                    ? "blur(16px)"
-                    : ["blur(28px)", "blur(12px)", "blur(18px)"],
-                }}
-                transition={{
-                  duration: reduceMotion ? 0.55 : 1,
-                  ease: [0.16, 1, 0.3, 1],
-                }}
-              >
-                <Image
-                  src={logo4k}
-                  alt=""
-                  width={720}
-                  height={216}
-                  priority
-                  aria-hidden="true"
-                  className="h-auto w-[220px] md:w-[300px]"
-                />
-              </motion.div>
-
               <motion.div
                 className="absolute -inset-14 rounded-full bg-[var(--accent)]/10 blur-3xl"
                 animate={{
@@ -151,15 +120,12 @@ export default function HomeBrandIntro() {
               />
 
               <motion.div
-                initial={{
-                  opacity: 0,
-                  clipPath: "inset(0 48% 0 48%)",
-                }}
+                className="overflow-hidden"
+                initial={{ opacity: 0, scaleX: 0.72, scaleY: 0.94 }}
                 animate={{
                   opacity: 1,
-                  clipPath: reduceMotion
-                    ? "inset(0 0% 0 0%)"
-                    : ["inset(0 48% 0 48%)", "inset(0 18% 0 18%)", "inset(0 0% 0 0%)"],
+                  scaleX: reduceMotion ? 1 : [0.72, 1.03, 1],
+                  scaleY: reduceMotion ? 1 : [0.94, 1.01, 1],
                 }}
                 transition={{
                   duration: reduceMotion ? 0.45 : 1.02,
@@ -167,14 +133,27 @@ export default function HomeBrandIntro() {
                   ease: [0.16, 1, 0.3, 1],
                 }}
               >
-                <Image
-                  src={logo4k}
-                  alt="LYNX"
-                  width={720}
-                  height={216}
-                  priority
-                  className="relative h-auto w-[155px] drop-shadow-[0_0_18px_rgba(255,255,255,0.14)] drop-shadow-[0_0_36px_rgba(249,115,22,0.12)] md:w-[220px]"
-                />
+                <motion.div
+                  initial={{ opacity: 0.2, scale: 1.04 }}
+                  animate={{
+                    opacity: 1,
+                    scale: reduceMotion ? 1 : [1.04, 1, 1.005, 1],
+                  }}
+                  transition={{
+                    duration: reduceMotion ? 0.45 : 1.1,
+                    delay: reduceMotion ? 0.04 : 0.1,
+                    ease: [0.16, 1, 0.3, 1],
+                  }}
+                >
+                  <Image
+                    src={logo4k}
+                    alt="LYNX"
+                    width={720}
+                    height={216}
+                    priority
+                    className="relative h-auto w-[155px] drop-shadow-[0_0_18px_rgba(255,255,255,0.14)] drop-shadow-[0_0_36px_rgba(249,115,22,0.12)] md:w-[220px]"
+                  />
+                </motion.div>
               </motion.div>
 
               <motion.div
