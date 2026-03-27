@@ -1,7 +1,6 @@
 ﻿import type { Metadata } from "next";
 import type { ReactNode } from "react";
 import { Space_Grotesk, Sora } from "next/font/google";
-import BotLynx from "@/components/marketing/BotLynx";
 import "@/styles/globals.css";
 import { site } from "@/content/site";
 
@@ -45,10 +44,7 @@ export default function RootLayout({
           href="/feed.xml"
         />
       </head>
-      <body className="bg-[var(--bg)] text-[var(--text)] antialiased">
-        {children}
-        <BotLynx />
-      </body>
+      <body className="bg-[var(--bg)] text-[var(--text)] antialiased">{children}</body>
     </html>
   );
 }
