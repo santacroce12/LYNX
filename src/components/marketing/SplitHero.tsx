@@ -20,8 +20,8 @@ export default function SplitHero() {
       <div className="absolute inset-0 bg-radial-accent-2 opacity-55" aria-hidden="true" />
 
       <Section className="pt-10 pb-6 md:pt-14 md:pb-8">
-        <div className="grid gap-4 lg:grid-cols-[1.04fr_0.96fr] lg:items-start">
-          <div className="panel-shell rounded-[1.65rem] px-5 py-5 md:px-6 md:py-6 lg:px-7">
+        <div className="grid gap-3 lg:grid-cols-[minmax(0,1fr)_minmax(0,1fr)] lg:items-stretch">
+          <div className="panel-shell h-full rounded-[1.65rem] px-5 py-5 md:px-6 md:py-6 lg:px-7">
             <Reveal>
               <Badge>{site.homeHero.badge}</Badge>
             </Reveal>
@@ -89,12 +89,12 @@ export default function SplitHero() {
             </Reveal>
           </div>
 
-          <div className="grid gap-3 md:grid-cols-2 lg:grid-cols-1">
+          <div className="grid h-full gap-3 md:grid-cols-2 lg:grid-cols-1 lg:grid-rows-2">
             {site.homeCards.map((card, index) => (
               <Reveal key={card.href} delay={0.1 + index * 0.06}>
                 <Link
                   href={card.href}
-                  className="panel-shell group block overflow-hidden rounded-[1.4rem] p-3.5 transition duration-300 hover:-translate-y-0.5 hover:border-[rgba(255,194,131,0.24)]"
+                  className="panel-shell group flex h-full flex-col overflow-hidden rounded-[1.4rem] p-3.5 transition duration-300 hover:-translate-y-0.5 hover:border-[rgba(255,194,131,0.24)]"
                 >
                   <div className="relative overflow-hidden rounded-[1.05rem] border border-white/6">
                     <Image
@@ -103,12 +103,12 @@ export default function SplitHero() {
                       width={720}
                       height={620}
                       priority={index === 0}
-                      className="h-[190px] w-full object-cover transition duration-500 group-hover:scale-105 md:h-[200px]"
+                      className="h-[190px] w-full object-cover transition duration-500 group-hover:scale-105 md:h-[200px] lg:h-[184px] xl:h-[198px]"
                     />
                     <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(4,8,16,0.02)_0%,rgba(4,8,16,0.1)_30%,rgba(4,8,16,0.84)_100%)]" />
                   </div>
 
-                  <div className="mt-3 space-y-2.5">
+                  <div className="mt-3 flex flex-1 flex-col">
                     <div className="flex items-center justify-between gap-4">
                       <span className="section-kicker text-[var(--accent-soft)]">
                         {card.label}
@@ -117,13 +117,13 @@ export default function SplitHero() {
                         0{index + 1}
                       </span>
                     </div>
-                    <h3 className="text-[1.55rem] font-semibold leading-[0.98] text-[var(--text-strong)]">
+                    <h3 className="mt-2.5 text-[1.55rem] font-semibold leading-[0.98] text-[var(--text-strong)]">
                       {card.title}
                     </h3>
-                    <p className="text-sm leading-7 text-[var(--muted)]">
+                    <p className="mt-2.5 flex-1 text-sm leading-7 text-[var(--muted)]">
                       {card.description}
                     </p>
-                    <div className="inline-flex items-center gap-2 text-[10px] font-semibold uppercase tracking-[0.2em] text-[var(--accent-soft)]">
+                    <div className="mt-3 inline-flex items-center gap-2 text-[10px] font-semibold uppercase tracking-[0.2em] text-[var(--accent-soft)]">
                       <span className="h-px w-7 bg-[var(--accent)]/60" />
                       {card.cta}
                     </div>
