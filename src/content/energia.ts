@@ -143,15 +143,13 @@ export const energia = {
       title: "Centro de Control SCADA",
       description:
         "Implementación de un sistema centralizado redundante que permite la operación remota de 15 subestaciones distribuidas geográficamente.",
-      image:
-        "https://images.unsplash.com/photo-1581092160562-40aa08e78837?auto=format&fit=crop&q=80",
+      image: "/images/energia/control-scada.png",
     },
     {
       title: "Cumplimiento Normativo SITR",
       description:
         "Diseño, instalación, puesta en marcha y mantenimiento de infraestructura para la integración al Sistema de Información en Tiempo Real (SITR) en Central Yungay y proyectos Barrick.",
-      image:
-        "https://images.unsplash.com/photo-1621905251189-08b45d6a269e?auto=format&fit=crop&q=80",
+      image: "/images/energia/cumplimiento-normativo-sitr.png",
     },
   ],
   faqs: [

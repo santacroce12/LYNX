@@ -38,8 +38,7 @@ export default function ProcessSteps({
       </div>
 
       <div className="relative mx-auto max-w-5xl">
-        <div className="absolute bottom-5 left-7 top-5 hidden w-px bg-gradient-to-b from-white/6 via-white/10 to-white/6 md:block" />
-        <div className="timeline-beam absolute bottom-10 left-[22px] top-6 hidden w-[10px] -translate-x-1/2 md:block" />
+        <div className="absolute bottom-6 left-[42px] top-6 hidden w-px -translate-x-1/2 bg-gradient-to-b from-white/6 via-[var(--accent)]/18 to-white/6 md:block" />
 
         <div className="space-y-4 md:space-y-5">
           {steps.map((item, index) => {
@@ -49,8 +48,8 @@ export default function ProcessSteps({
 
             return (
               <Reveal key={item.step} delay={index * 0.06}>
-                <article className="relative grid gap-3 md:grid-cols-[84px_minmax(0,1fr)] md:gap-5">
-                  <div className="relative flex items-start md:justify-center">
+                <article className="relative grid gap-3 md:grid-cols-[84px_minmax(0,1fr)] md:items-center md:gap-5">
+                  <div className="relative flex items-center md:h-full md:justify-center">
                     <div
                       className="timeline-step-chip flex h-12 w-12 items-center justify-center rounded-[1.15rem] border border-[rgba(255,194,131,0.18)] bg-[linear-gradient(180deg,rgba(255,122,26,0.14)_0%,rgba(255,122,26,0.08)_100%)] text-[var(--accent)] shadow-[0_10px_28px_rgba(255,122,26,0.12)]"
                       style={{ "--timeline-delay": stepDelay } as CSSProperties}
@@ -59,7 +58,7 @@ export default function ProcessSteps({
                     </div>
 
                     <div
-                      className="timeline-connector absolute left-12 top-6 hidden h-px w-8 md:block"
+                      className="timeline-connector absolute left-[calc(50%+1.5rem)] top-1/2 hidden h-px w-8 -translate-y-1/2 md:block"
                       style={
                         { "--timeline-delay": connectorDelay } as CSSProperties
                       }

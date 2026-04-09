@@ -25,8 +25,8 @@ export default function FooterContent() {
 
   return (
     <>
-      <div className="grid gap-8 lg:grid-cols-[1.08fr_0.76fr_0.96fr]">
-        <div className="space-y-6">
+      <div className="grid gap-10 lg:gap-12 xl:grid-cols-3 xl:gap-16">
+        <div className="w-full max-w-[360px] space-y-6">
           <span className="section-kicker">Infraestructura crítica</span>
 
           <div className="space-y-5">
@@ -65,18 +65,18 @@ export default function FooterContent() {
           </div>
         </div>
 
-        <div className="space-y-4">
+        <div className="w-full xl:mx-auto xl:max-w-[380px] xl:justify-self-center">
           <h3 className="section-kicker">{site.footer.navTitle}</h3>
 
-          <div className="grid gap-2">
+          <div className="mt-4 grid gap-2.5">
             {site.nav.map((item, index) => (
               <Link
                 key={item.label}
                 href={item.href}
-                className="group flex items-center justify-between rounded-[1.15rem] border border-transparent bg-white/[0.01] px-4 py-3 text-base text-[var(--muted)] transition hover:border-white/8 hover:bg-white/[0.03] hover:text-[var(--text-strong)]"
+                className="group grid min-h-[64px] grid-cols-[1fr_auto] items-center gap-8 rounded-[1.15rem] border border-transparent bg-white/[0.01] px-5 py-3 text-base text-[var(--muted)] transition hover:border-white/8 hover:bg-white/[0.03] hover:text-[var(--text-strong)]"
               >
                 <span>{item.label}</span>
-                <span className="text-[10px] uppercase tracking-[0.2em] text-[var(--muted-soft)] transition group-hover:text-[var(--accent-soft)]">
+                <span className="w-10 text-right text-[10px] uppercase tracking-[0.2em] text-[var(--muted-soft)] transition group-hover:text-[var(--accent-soft)]">
                   0{index + 1}
                 </span>
               </Link>
@@ -84,10 +84,10 @@ export default function FooterContent() {
           </div>
         </div>
 
-        <div className="space-y-4">
+        <div className="w-full xl:ml-auto xl:max-w-[420px]">
           <h3 className="section-kicker">{site.footer.contactTitle}</h3>
 
-          <div className="grid gap-3">
+          <div className="mt-4 grid gap-3">
             <div className="rounded-[1.4rem] border border-[var(--border)] bg-[rgba(255,255,255,0.03)] p-4 shadow-[inset_0_1px_0_rgba(255,255,255,0.04)]">
               <div className="flex items-start gap-3">
                 <MapPin className="mt-0.5 h-5 w-5 text-[var(--accent)]" />
@@ -112,13 +112,13 @@ export default function FooterContent() {
               </span>
             </a>
 
-            <div className="grid gap-3 sm:grid-cols-2">
+            <div className="grid gap-3">
               <a
                 href={`tel:${site.contact.mobile.replace(/\s/g, "")}`}
                 className="flex items-center gap-3 rounded-[1.4rem] border border-[var(--border)] bg-[rgba(255,255,255,0.03)] px-4 py-4 transition hover:border-[rgba(255,194,131,0.34)] hover:bg-[rgba(255,122,26,0.06)]"
               >
                 <Phone className="h-5 w-5 text-[var(--accent)]" />
-                <span className="text-sm text-[var(--text-secondary)]">
+                <span className="whitespace-nowrap text-sm text-[var(--text-secondary)]">
                   {site.contact.mobile}
                 </span>
               </a>
@@ -130,7 +130,7 @@ export default function FooterContent() {
                 className="flex items-center gap-3 rounded-[1.4rem] border border-[var(--border)] bg-[rgba(255,255,255,0.03)] px-4 py-4 transition hover:border-[rgba(255,194,131,0.34)] hover:bg-[rgba(255,122,26,0.06)]"
               >
                 <Phone className="h-5 w-5 text-[var(--accent)]" />
-                <span className="text-sm text-[var(--text-secondary)]">
+                <span className="whitespace-nowrap text-sm text-[var(--text-secondary)]">
                   {site.contact.phone}
                 </span>
               </a>
