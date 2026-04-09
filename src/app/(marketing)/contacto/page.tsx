@@ -1,3 +1,4 @@
+import Footer from "@/components/layout/Footer";
 import Section from "@/components/layout/Section";
 import Reveal from "@/components/motion/Reveal";
 import EnergyFlow from "@/components/ui/EnergyFlow";
@@ -14,74 +15,82 @@ export const metadata = buildMetadata({
 
 export default function ContactPage() {
   return (
-    <Section className="pt-24">
-      <div className="grid gap-10 lg:grid-cols-[1.1fr_1fr] lg:items-start">
-        <div className="space-y-6">
-          <Reveal>
-            <p className="text-xs font-semibold uppercase tracking-[0.3em] text-[var(--accent)]">
-              {site.contactPage.eyebrow}
-            </p>
-          </Reveal>
-          <Reveal delay={0.05}>
-            <h1 className="text-4xl font-semibold md:text-5xl">
-              {site.contactPage.heading}
-            </h1>
-          </Reveal>
-          <Reveal delay={0.1}>
-            <p className="text-sm text-[var(--muted)] md:text-base">
-              {site.contactPage.subtitle}
-            </p>
-          </Reveal>
-          <Reveal delay={0.15}>
-            <EnergyFlow className="opacity-80" />
-          </Reveal>
-          <Reveal delay={0.2}>
-            {/* Agregué 'flex flex-col gap-2' para que queden mejor separados visualmente */}
-            <div className="flex flex-col gap-2 rounded-2xl border border-[var(--border)] bg-[var(--surface)]/60 p-6 text-sm text-[var(--muted)]">
-              <p>
+    <>
+      <Section className="pt-12 md:pt-16">
+        <div className="grid gap-6 lg:grid-cols-[0.94fr_1.06fr] lg:items-start">
+          <div className="panel-shell rounded-[2rem] p-5 md:p-6">
+            <div className="space-y-5">
+              <Reveal>
+                <span className="section-kicker">{site.contactPage.eyebrow}</span>
+              </Reveal>
+              <Reveal delay={0.05}>
+                <h1 className="section-heading max-w-xl">
+                  {site.contactPage.heading}
+                </h1>
+              </Reveal>
+              <Reveal delay={0.1}>
+                <p className="max-w-xl text-base leading-8 text-[var(--text)]/82 md:text-lg">
+                  {site.contactPage.subtitle}
+                </p>
+              </Reveal>
+              <Reveal delay={0.15}>
+                <EnergyFlow className="hidden max-w-md opacity-75 md:block" />
+              </Reveal>
+            </div>
+
+            <Reveal delay={0.2}>
+              <div className="mt-6 grid gap-4 sm:grid-cols-2">
                 <a
                   href={`mailto:${site.contact.email}`}
-                  className="transition-colors hover:text-[var(--accent)]"
+                  className="rounded-[1.3rem] border border-[var(--border)] bg-white/[0.03] p-4 transition hover:border-[rgba(255,194,131,0.34)] hover:bg-[rgba(255,122,26,0.05)]"
                 >
-                  {site.contact.email}
+                  <p className="text-[11px] uppercase tracking-[0.24em] text-[var(--muted-soft)]">
+                    Email
+                  </p>
+                  <p className="mt-3 text-base text-[var(--text-secondary)]">
+                    {site.contact.email}
+                  </p>
                 </a>
-              </p>
-              <p>
+
                 <a
-                  // El replace(/\D/g, '') limpia el string para que solo queden los números de Chile
                   href={`https://wa.me/${site.contact.mobile.replace(/\D/g, "")}`}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="transition-colors hover:text-[var(--accent)]"
+                  className="rounded-[1.3rem] border border-[var(--border)] bg-white/[0.03] p-4 transition hover:border-[rgba(255,194,131,0.34)] hover:bg-[rgba(255,122,26,0.05)]"
                 >
-                  {site.contact.mobile}
+                  <p className="text-[11px] uppercase tracking-[0.24em] text-[var(--muted-soft)]">
+                    WhatsApp
+                  </p>
+                  <p className="mt-3 text-base text-[var(--text-secondary)]">
+                    {site.contact.mobile}
+                  </p>
                 </a>
-              </p>
-              <p>
-                <a
-                  href={`https://wa.me/${site.contact.phone.replace(/\D/g, "")}`}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="transition-colors hover:text-[var(--accent)]"
-                >
-                  {site.contact.phone}
-                </a>
-              </p>
 
-              <div className="mt-2 border-t border-[var(--border)] pt-2">
-                <p>{site.contact.address}</p>
-                <p>{site.contact.region}</p>
+                <div className="rounded-[1.3rem] border border-[var(--border)] bg-white/[0.03] p-4 sm:col-span-2">
+                  <p className="text-[11px] uppercase tracking-[0.24em] text-[var(--muted-soft)]">
+                    Presencia
+                  </p>
+                  <p className="mt-3 text-base text-[var(--text-secondary)]">
+                    {site.contact.address}
+                  </p>
+                  <p className="mt-1 text-sm text-[var(--muted)]">
+                    {site.contact.region}
+                  </p>
+                </div>
               </div>
-            </div>
+            </Reveal>
+          </div>
+
+          <Reveal delay={0.12}>
+            <ContactForm />
           </Reveal>
         </div>
-        <Reveal delay={0.1}>
-          <ContactForm />
-        </Reveal>
-      </div>
-      <div className="mt-10">
-        <LocationMap />
-      </div>
-    </Section>
+
+        <div className="mt-8">
+          <LocationMap />
+        </div>
+      </Section>
+      <Footer />
+    </>
   );
 }

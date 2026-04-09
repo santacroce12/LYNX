@@ -1,9 +1,8 @@
-﻿"use client";
+"use client";
 
 import { useState } from "react";
 import type { FormEvent } from "react";
 import Button from "@/components/ui/Button";
-import Card from "@/components/ui/Card";
 import { site } from "@/content/site";
 
 const initialValues = {
@@ -74,8 +73,8 @@ export default function ContactForm() {
   };
 
   const fieldClass = (hasError?: boolean) =>
-    `w-full rounded-xl border bg-[var(--surface)]/70 px-4 py-3 text-sm text-[var(--text)] placeholder:text-[var(--muted)] focus:outline-none focus:ring-2 focus:ring-[var(--accent)] ${
-      hasError ? "border-[var(--accent)]" : "border-[var(--border)]"
+    `field-shell px-4 py-3.5 text-base text-[var(--text-secondary)] placeholder:text-[var(--muted-soft)] focus:outline-none focus:ring-2 focus:ring-[var(--accent)] ${
+      hasError ? "border-[var(--accent)]" : ""
     }`;
 
   const statusClass =
@@ -86,10 +85,22 @@ export default function ContactForm() {
         : "text-[var(--muted)]";
 
   return (
-    <Card className="p-8">
-      <form className="space-y-5" onSubmit={handleSubmit} noValidate>
+    <div className="panel-shell overflow-hidden rounded-[2rem] p-5 md:p-6">
+      <div className="panel-decoration pointer-events-none absolute -right-12 top-0 h-40 w-40 rounded-full bg-[var(--accent-cool)]/10 blur-3xl" />
+
+      <div className="mb-6 rounded-[1.5rem] border border-white/8 bg-[linear-gradient(180deg,rgba(10,17,30,0.76)_0%,rgba(8,13,23,0.92)_100%)] p-4 md:p-5">
+        <p className="section-kicker">Formulario</p>
+        <h2 className="mt-4 text-3xl font-semibold leading-[0.96] text-[var(--text-strong)] md:text-[3rem]">
+          Contanos qué necesitás.
+        </h2>
+      </div>
+
+      <form className="space-y-4" onSubmit={handleSubmit} noValidate>
         <div className="space-y-2">
-          <label htmlFor="name" className="text-sm font-semibold">
+          <label
+            htmlFor="name"
+            className="text-[11px] font-semibold uppercase tracking-[0.24em] text-[var(--muted-soft)]"
+          >
             {form.nameLabel}
           </label>
           <input
@@ -113,7 +124,10 @@ export default function ContactForm() {
         </div>
 
         <div className="space-y-2">
-          <label htmlFor="email" className="text-sm font-semibold">
+          <label
+            htmlFor="email"
+            className="text-[11px] font-semibold uppercase tracking-[0.24em] text-[var(--muted-soft)]"
+          >
             {form.emailLabel}
           </label>
           <input
@@ -137,13 +151,16 @@ export default function ContactForm() {
         </div>
 
         <div className="space-y-2">
-          <label htmlFor="message" className="text-sm font-semibold">
+          <label
+            htmlFor="message"
+            className="text-[11px] font-semibold uppercase tracking-[0.24em] text-[var(--muted-soft)]"
+          >
             {form.messageLabel}
           </label>
           <textarea
             id="message"
             name="message"
-            rows={5}
+            rows={6}
             placeholder={form.messagePlaceholder}
             value={values.message}
             onChange={(event) =>
@@ -160,15 +177,17 @@ export default function ContactForm() {
           ) : null}
         </div>
 
-        <div className="flex items-center justify-between gap-4">
-          <Button type="submit" disabled={isSubmitting}>
-            {isSubmitting ? form.submittingLabel : form.submitLabel}
-          </Button>
-          <p className={`text-xs ${statusClass}`} aria-live="polite">
-            {status.message}
-          </p>
+        <div className="flex flex-col gap-4 pt-3">
+          <div className="flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
+            <Button type="submit" disabled={isSubmitting} size="lg">
+              {isSubmitting ? form.submittingLabel : form.submitLabel}
+            </Button>
+            <p className={`text-xs ${statusClass}`} aria-live="polite">
+              {status.message}
+            </p>
+          </div>
         </div>
       </form>
-    </Card>
+    </div>
   );
 }

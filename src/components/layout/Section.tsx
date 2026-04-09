@@ -8,8 +8,11 @@ type SectionProps = {
 
 export default function Section({ children, id, className }: SectionProps) {
   return (
-    <section id={id} className={`relative py-16 md:py-24 ${className ?? ""}`}>
-      <div className="mx-auto w-full max-w-6xl px-6">{children}</div>
+    <section
+      id={id}
+      className={`relative py-10 md:py-12 ${className ?? ""}`}
+    >
+      <div className="mx-auto w-full max-w-6xl px-5 sm:px-6">{children}</div>
     </section>
   );
 }

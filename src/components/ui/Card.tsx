@@ -8,11 +8,12 @@ type CardProps = {
 export default function Card({ children, className }: CardProps) {
   return (
     <div
-      className={`group relative cursor-pointer rounded-2xl border border-[var(--border)] bg-[var(--surface)]/70 p-6 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-[var(--accent)]/30 hover:bg-[var(--surface)] hover:shadow-xl hover:shadow-[var(--accent)]/5 active:scale-[0.98] active:bg-[var(--surface)]/50 active:shadow-sm ${
+      className={`panel-shell group relative cursor-pointer overflow-hidden rounded-[1.5rem] p-5 transition-all duration-300 hover:-translate-y-1 hover:border-[rgba(255,194,131,0.24)] active:scale-[0.985] ${
         className ?? ""
       }`}
     >
-      {children}
+      <div className="panel-decoration pointer-events-none absolute inset-x-8 top-0 h-px bg-gradient-to-r from-transparent via-white/14 to-transparent" />
+      <div className="relative z-10">{children}</div>
     </div>
   );
 }

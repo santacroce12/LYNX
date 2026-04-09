@@ -22,21 +22,24 @@ export default function FeaturedProjects({
 
   return (
     <Section>
-      <div className="mb-10 max-w-2xl">
+      <div className="mb-8 max-w-2xl">
         <Reveal>
-          <h2 className="text-3xl font-semibold md:text-4xl">
+          <span className="section-kicker">Proyectos</span>
+        </Reveal>
+        <Reveal delay={0.05}>
+          <h2 className="section-heading mt-4">
             Proyectos destacados de {filterCategory}
           </h2>
         </Reveal>
-        <Reveal delay={0.05}>
-          <p className="mt-3 text-sm text-[var(--muted)] md:text-base">
-            Explorá casos reales y abrí el detalle completo en nuestra sección de
-            recursos.
+        <Reveal delay={0.1}>
+          <p className="section-copy mt-4">
+            Explorá casos reales y abrí el detalle completo en nuestra sección
+            de recursos.
           </p>
         </Reveal>
       </div>
 
-      <div className="grid gap-6 md:grid-cols-3">
+      <div className="grid gap-4 md:grid-cols-3">
         {items.map((item, index) => (
           <Reveal key={item.id} delay={index * 0.05}>
             <Link
@@ -51,32 +54,36 @@ export default function FeaturedProjects({
                     alt={item.title}
                     fill
                     sizes="(min-width: 768px) 33vw, 100vw"
-                    className="object-cover transition-transform duration-300 ease-out group-hover:scale-105"
+                    className="object-cover transition-transform duration-500 ease-out group-hover:scale-105"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-[var(--bg)]/70 via-transparent to-transparent" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-[var(--bg)]/82 via-transparent to-transparent" />
                 </div>
-                <div className="space-y-3 px-6 py-5">
+
+                <div className="space-y-3 px-5 py-5">
                   <div className="flex flex-wrap gap-2">
                     {item.tags.slice(0, 2).map((tag) => (
                       <span
                         key={tag}
-                        className="rounded-full border border-[var(--border)] bg-[var(--surface)]/80 px-2 py-0.5 text-[10px] font-semibold uppercase tracking-[0.2em] text-[var(--muted)]"
+                        className="rounded-full border border-[var(--border)] bg-[rgba(255,255,255,0.04)] px-3 py-1 text-[10px] font-semibold uppercase tracking-[0.22em] text-[var(--muted)]"
                       >
                         {tag}
                       </span>
                     ))}
                   </div>
+
                   <div>
-                    <h3 className="text-lg font-semibold text-[var(--text)]">
+                    <h3 className="text-[1.15rem] font-semibold leading-[1.05] text-[var(--text-strong)]">
                       {item.title}
                     </h3>
-                    <p className="mt-2 text-sm text-[var(--muted)]">
+                    <p className="mt-3 text-sm leading-7 text-[var(--muted)]">
                       {item.summary}
                     </p>
                   </div>
-                  <p className="text-xs uppercase tracking-[0.2em] text-[var(--accent)]">
+
+                  <div className="inline-flex items-center gap-2 text-xs uppercase tracking-[0.24em] text-[var(--accent-soft)]">
+                    <span className="h-px w-8 bg-[var(--accent)]/60" />
                     Ver detalle
-                  </p>
+                  </div>
                 </div>
               </Card>
             </Link>

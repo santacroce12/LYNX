@@ -1,5 +1,6 @@
 "use client";
 
+import type { CSSProperties } from "react";
 import Section from "@/components/layout/Section";
 import Reveal from "@/components/motion/Reveal";
 
@@ -17,56 +18,76 @@ interface ProcessStepsProps {
 
 export default function ProcessSteps({
   steps,
-  title = "Nuestra Metodología",
+  title = "Nuestra metodología",
   subtitle = "Estándares de ejecución técnica",
 }: ProcessStepsProps) {
-  const desktopColumnsClass =
-    steps.length >= 6
-      ? "xl:grid-cols-6"
-      : steps.length === 5
-        ? "xl:grid-cols-5"
-        : steps.length === 4
-          ? "xl:grid-cols-4"
-          : "xl:grid-cols-3";
-
   return (
     <Section className="relative overflow-hidden">
-      <div className="absolute left-0 top-0 h-px w-full bg-gradient-to-r from-transparent via-[var(--border)] to-transparent opacity-50" />
+      <div className="pointer-events-none absolute inset-x-0 top-0 h-40 bg-[radial-gradient(circle_at_18%_0%,rgba(255,122,26,0.1),transparent_22%),radial-gradient(circle_at_82%_0%,rgba(125,168,255,0.1),transparent_20%)]" />
 
-      <div className="mb-16 text-center">
+      <div className="mb-10 text-center">
         <Reveal>
-          <h2 className="mb-4 text-3xl font-bold md:text-4xl">{title}</h2>
+          <span className="section-kicker">Framework</span>
         </Reveal>
-        <Reveal delay={0.1}>
-          <p className="mx-auto max-w-2xl text-[var(--muted)]">{subtitle}</p>
+        <Reveal delay={0.08}>
+          <h2 className="section-heading mt-4">{title}</h2>
+        </Reveal>
+        <Reveal delay={0.14}>
+          <p className="section-copy mx-auto mt-4">{subtitle}</p>
         </Reveal>
       </div>
 
-      <div
-        className={`relative grid gap-6 sm:grid-cols-2 lg:grid-cols-3 ${desktopColumnsClass}`}
-      >
-        <div className="absolute left-0 top-10 -z-10 hidden h-0.5 w-full bg-[var(--border)] xl:block" />
+      <div className="relative mx-auto max-w-5xl">
+        <div className="absolute bottom-5 left-7 top-5 hidden w-px bg-gradient-to-b from-white/6 via-white/10 to-white/6 md:block" />
+        <div className="timeline-beam absolute bottom-10 left-[22px] top-6 hidden w-[10px] -translate-x-1/2 md:block" />
 
-        {steps.map((item, index) => (
-          <Reveal key={item.step} delay={index * 0.1}>
-            <div className="group relative">
-              <div className="mx-auto mb-6 flex h-20 w-20 items-center justify-center rounded-full border-2 border-[var(--border)] bg-[var(--bg)] shadow-xl shadow-[var(--bg)] transition-all duration-300 group-hover:scale-110 group-hover:border-[var(--accent)]">
-                <span className="text-xl font-bold text-[var(--muted)] transition-colors group-hover:text-[var(--accent)]">
-                  {item.step}
-                </span>
-              </div>
+        <div className="space-y-4 md:space-y-5">
+          {steps.map((item, index) => {
+            const stepDelay = `${index * 0.45}s`;
+            const connectorDelay = `${index * 0.45 + 0.18}s`;
+            const scanDelay = `${index * 0.45 + 0.32}s`;
 
-              <div className="px-2 text-center">
-                <h3 className="mb-2 text-lg font-bold text-[var(--text)] transition-colors group-hover:text-[var(--accent)] md:text-xl">
-                  {item.title}
-                </h3>
-                <p className="text-sm leading-relaxed text-[var(--muted)] md:text-base">
-                  {item.description}
-                </p>
-              </div>
-            </div>
-          </Reveal>
-        ))}
+            return (
+              <Reveal key={item.step} delay={index * 0.06}>
+                <article className="relative grid gap-3 md:grid-cols-[84px_minmax(0,1fr)] md:gap-5">
+                  <div className="relative flex items-start md:justify-center">
+                    <div
+                      className="timeline-step-chip flex h-12 w-12 items-center justify-center rounded-[1.15rem] border border-[rgba(255,194,131,0.18)] bg-[linear-gradient(180deg,rgba(255,122,26,0.14)_0%,rgba(255,122,26,0.08)_100%)] text-[var(--accent)] shadow-[0_10px_28px_rgba(255,122,26,0.12)]"
+                      style={{ "--timeline-delay": stepDelay } as CSSProperties}
+                    >
+                      <span className="text-sm font-semibold">{item.step}</span>
+                    </div>
+
+                    <div
+                      className="timeline-connector absolute left-12 top-6 hidden h-px w-8 md:block"
+                      style={
+                        { "--timeline-delay": connectorDelay } as CSSProperties
+                      }
+                    />
+                  </div>
+
+                  <div className="panel-shell relative overflow-hidden rounded-[1.6rem] px-5 py-5 md:px-6 md:py-6">
+                    <div
+                      className="panel-decoration timeline-card-scan absolute inset-x-6 top-0 h-[2px]"
+                      style={{ "--timeline-delay": scanDelay } as CSSProperties}
+                    />
+
+                    <div className="flex flex-col gap-3 md:flex-row md:items-start md:justify-between">
+                      <h3 className="max-w-2xl text-[1.45rem] font-semibold leading-[1] text-[var(--text-strong)] md:text-[1.7rem]">
+                        {item.title}
+                      </h3>
+                      <div className="h-px w-20 bg-gradient-to-r from-[var(--accent)]/46 via-[var(--accent-soft)]/24 to-transparent" />
+                    </div>
+
+                    <p className="mt-4 text-sm leading-7 text-[var(--text)]/76 md:text-base md:leading-8">
+                      {item.description}
+                    </p>
+                  </div>
+                </article>
+              </Reveal>
+            );
+          })}
+        </div>
       </div>
     </Section>
   );

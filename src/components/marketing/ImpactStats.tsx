@@ -20,29 +20,28 @@ export default function ImpactStats({
   stats,
   badges,
   badgeTitle = "Estándares & Tecnologías",
-  title = "Respaldo Operativo",
+  title = "Respaldo operativo",
 }: ImpactStatsProps) {
   return (
-    <Section className="relative border-y border-[var(--border)] bg-[var(--surface)]/50">
-      <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)]" />
-
-      <div className="relative z-10">
-        <div className="mb-12 text-center">
+    <Section className="relative">
+      <div className="panel-shell overflow-hidden rounded-[1.75rem] px-5 py-6 md:px-6 md:py-7">
+        <div className="mb-8 text-center">
           <Reveal>
-            <h2 className="text-2xl font-bold text-[var(--text)] md:text-3xl">
-              {title}
-            </h2>
+            <span className="section-kicker">Respaldo</span>
+          </Reveal>
+          <Reveal delay={0.08}>
+            <h2 className="section-heading mt-4">{title}</h2>
           </Reveal>
         </div>
 
-        <div className="mb-16 grid grid-cols-2 gap-8 md:grid-cols-4">
+        <div className="mb-6 grid gap-4 sm:grid-cols-2 xl:grid-cols-4">
           {stats.map((stat, index) => (
-            <Reveal key={stat.label} delay={index * 0.1}>
-              <div className="group text-center">
-                <div className="mb-2 text-4xl font-extrabold tracking-tight text-[var(--accent)] transition-transform duration-300 group-hover:scale-110 md:text-5xl">
+            <Reveal key={stat.label} delay={index * 0.08}>
+              <div className="rounded-[1.25rem] border border-[var(--border)] bg-[rgba(255,255,255,0.03)] px-4 py-5 text-center shadow-[inset_0_1px_0_rgba(255,255,255,0.04)]">
+                <div className="text-3xl font-semibold tracking-tight text-[var(--accent-soft)] md:text-4xl">
                   {stat.value}
                 </div>
-                <div className="text-xs font-semibold uppercase tracking-widest text-[var(--muted)]">
+                <div className="mt-3 text-[11px] font-semibold uppercase tracking-[0.24em] text-[var(--muted-soft)]">
                   {stat.label}
                 </div>
               </div>
@@ -50,24 +49,24 @@ export default function ImpactStats({
           ))}
         </div>
 
-        {badges && (
-          <Reveal delay={0.4}>
-            <div className="rounded-2xl border border-[var(--border)] bg-[var(--bg)]/80 p-6 backdrop-blur-sm md:p-8">
-              <p className="mb-8 text-center text-sm font-medium uppercase tracking-wider text-[var(--muted)]">
+        {badges ? (
+          <Reveal delay={0.32}>
+            <div className="rounded-[1.45rem] border border-[var(--border)] bg-[rgba(255,255,255,0.03)] p-5 shadow-[inset_0_1px_0_rgba(255,255,255,0.04)] md:p-6">
+              <p className="mb-6 text-center text-[11px] font-semibold uppercase tracking-[0.28em] text-[var(--muted-soft)]">
                 {badgeTitle}
               </p>
 
-              <div className="flex flex-wrap items-start justify-center gap-x-8 gap-y-10 md:gap-x-12">
+              <div className="flex flex-wrap items-start justify-center gap-x-7 gap-y-7 md:gap-x-10">
                 {badges.map((badgeName, idx) => (
                   <div
                     key={idx}
-                    className="flex w-24 flex-col items-center justify-start text-center"
+                    className="flex w-20 flex-col items-center justify-start text-center"
                   >
                     <TechLogo
                       name={badgeName}
-                      className="mb-3 h-10 w-10 text-[var(--accent)] opacity-90 transition-all duration-300 hover:opacity-100 hover:scale-110 md:h-12 md:w-12"
+                      className="mb-3 h-10 w-10 text-[var(--accent)] opacity-90 transition-all duration-300 hover:scale-110 hover:opacity-100 md:h-12 md:w-12"
                     />
-                    <span className="text-[11px] font-semibold uppercase tracking-wider leading-tight text-[var(--muted)]">
+                    <span className="text-[11px] font-semibold uppercase leading-tight tracking-wider text-[var(--muted)]">
                       {badgeName}
                     </span>
                   </div>
@@ -75,7 +74,7 @@ export default function ImpactStats({
               </div>
             </div>
           </Reveal>
-        )}
+        ) : null}
       </div>
     </Section>
   );

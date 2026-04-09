@@ -39,7 +39,7 @@ export default function TechCircuit() {
       aria-hidden="true"
       className="pointer-events-none absolute right-[4%] top-1/2 hidden aspect-[520/340] w-[42%] max-w-[520px] -translate-y-1/2 overflow-hidden md:block"
     >
-      <div className="absolute inset-0 rounded-[28px] border border-white/6 bg-[linear-gradient(180deg,rgba(15,23,42,0.2),rgba(15,23,42,0.04))]" />
+      <div className="absolute inset-0 rounded-[28px] bg-[linear-gradient(180deg,rgba(15,23,42,0.14),rgba(15,23,42,0.02))]" />
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_66%_36%,rgba(249,115,22,0.14),transparent_24%)]" />
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_34%_68%,rgba(251,146,60,0.08),transparent_18%)]" />
       <div className="absolute inset-0 bg-[linear-gradient(to_right,rgba(148,163,184,0.08)_1px,transparent_1px),linear-gradient(to_bottom,rgba(148,163,184,0.08)_1px,transparent_1px)] bg-[size:32px_32px] opacity-35 [mask-image:radial-gradient(circle_at_center,#000_62%,transparent_100%)]" />

@@ -8,40 +8,34 @@ export default function Partners() {
   const items = [...partners.items, ...partners.items];
 
   return (
-    <Section id="partners">
-      <div className="mb-10 max-w-2xl">
-        <Reveal>
-          <h2 className="text-3xl font-semibold md:text-4xl">{partners.title}</h2>
-        </Reveal>
-        <Reveal delay={0.05}>
-          <p className="mt-3 text-sm text-[var(--muted)] md:text-base">
-            {partners.subtitle}
-          </p>
+    <Section id="partners" className="pt-4">
+      <div className="grid gap-6 lg:grid-cols-[0.82fr_1.18fr] lg:items-end">
+        <div className="space-y-4">
+          <Reveal>
+            <span className="section-kicker">Partners</span>
+          </Reveal>
+          <Reveal delay={0.05}>
+            <h2 className="section-heading">{partners.title}</h2>
+          </Reveal>
+        </div>
+        <Reveal delay={0.1}>
+          <p className="section-copy">{partners.subtitle}</p>
         </Reveal>
       </div>
-      <div className="group relative overflow-hidden rounded-3xl border border-[var(--border)] bg-[var(--surface)]/60 px-6 py-8">
-        <div className="flex w-max items-center gap-8 motion-safe:animate-marquee group-hover:[animation-play-state:paused]">
-          {items.map((partner, index) => {
-            const isEmphasized =
-              partner.name === "SEL" ||
-              partner.name === "N3uron" ||
-              partner.name === "Systems With Intelligence";
-            const logoSizeClass =
-              partner.name === "Sisco"
-                ? "h-16 scale-125"
-                : partner.name === "Systems With Intelligence"
-                  ? "h-16 scale-125"
-                  : isEmphasized
-                    ? "h-14 scale-115"
-                    : "h-12";
 
-            return (
+      <Reveal delay={0.12}>
+        <div className="group relative mt-7 overflow-hidden rounded-[1.9rem] border border-[var(--border)] bg-[linear-gradient(180deg,rgba(9,17,31,0.92)_0%,rgba(7,12,22,0.98)_100%)] px-3 py-4 md:px-4">
+          <div className="pointer-events-none absolute inset-y-0 left-0 z-10 w-20 bg-gradient-to-r from-[var(--bg)] via-[var(--bg)]/82 to-transparent" />
+          <div className="pointer-events-none absolute inset-y-0 right-0 z-10 w-20 bg-gradient-to-l from-[var(--bg)] via-[var(--bg)]/82 to-transparent" />
+
+          <div className="flex w-max items-center gap-4 motion-safe:animate-marquee group-hover:[animation-play-state:paused]">
+            {items.map((partner, index) => (
               <a
                 key={`${partner.name}-${index}`}
                 href={partner.href}
                 target={partner.href.startsWith("http") ? "_blank" : undefined}
                 rel={partner.href.startsWith("http") ? "noreferrer" : undefined}
-                className="group flex h-24 w-44 items-center justify-center rounded-2xl border border-[var(--border)] bg-[var(--surface)]/85 px-6 shadow-sm transition-colors hover:border-[var(--accent)]/40 md:w-48"
+                className="group/logo flex h-[88px] w-[152px] shrink-0 items-center justify-center rounded-[1.35rem] border border-white/8 bg-[linear-gradient(180deg,rgba(255,255,255,0.08)_0%,rgba(255,255,255,0.03)_100%)] px-5 transition duration-300 hover:border-[rgba(255,194,131,0.22)] hover:bg-[linear-gradient(180deg,rgba(255,255,255,0.13)_0%,rgba(255,255,255,0.05)_100%)]"
                 aria-label={partner.name}
               >
                 <Image
@@ -49,13 +43,14 @@ export default function Partners() {
                   alt={partner.name}
                   width={180}
                   height={80}
-                  className={`w-full object-contain grayscale opacity-80 transition-all duration-300 group-hover:grayscale-0 group-hover:opacity-100 dark:brightness-110 dark:contrast-125 ${logoSizeClass}`}
+                  priority={index < 4}
+                  className="max-h-10 w-full object-contain brightness-110 contrast-125 grayscale saturate-0 opacity-72 transition duration-300 group-hover/logo:scale-[1.02] group-hover/logo:grayscale-0 group-hover/logo:opacity-100 group-hover/logo:saturate-100"
                 />
               </a>
-            );
-          })}
+            ))}
+          </div>
         </div>
-      </div>
+      </Reveal>
     </Section>
   );
 }

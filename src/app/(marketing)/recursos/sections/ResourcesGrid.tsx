@@ -19,7 +19,7 @@ function RecursosGridContent() {
   const activeId = searchParams.get("id");
   const activeCase = useMemo(
     () => recursos.cases.find((item) => item.id === activeId) ?? null,
-    [activeId]
+    [activeId],
   );
 
   const closeCase = () => {
@@ -48,15 +48,13 @@ function RecursosGridContent() {
   }, [activeId, pathname, router]); // eslint-disable-line react-hooks/exhaustive-deps
 
   return (
-    <Section id="recursos" className="pt-10 pb-16 md:pt-16 md:pb-24">
+    <Section id="recursos" className="pt-6 pb-14 md:pt-10 md:pb-20">
       <div className="mb-10 max-w-2xl">
         <Reveal>
-          <h2 className="text-3xl font-semibold md:text-4xl">
-            {recursos.sections.casesTitle}
-          </h2>
+          <h2 className="section-heading">{recursos.sections.casesTitle}</h2>
         </Reveal>
         <Reveal delay={0.05}>
-          <p className="mt-3 text-sm text-[var(--muted)] md:text-base">
+          <p className="mt-3 text-sm leading-7 text-[var(--muted)] md:text-base">
             {recursos.sections.casesSubtitle}
           </p>
         </Reveal>
@@ -72,7 +70,7 @@ function RecursosGridContent() {
               aria-label={`Leer caso ${item.title}`}
             >
               <Card className="h-full overflow-hidden p-0 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
-                <div className="relative h-44">
+                <div className="relative aspect-[4/3]">
                   <Image
                     src={item.image}
                     alt={item.title}
@@ -80,30 +78,34 @@ function RecursosGridContent() {
                     sizes="(min-width: 768px) 33vw, 100vw"
                     className="object-cover transition-transform duration-500 ease-out group-hover:scale-105"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-[var(--bg)]/80 via-transparent to-transparent" />
+                  <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(4,8,16,0.12)_0%,rgba(4,8,16,0.16)_38%,rgba(4,8,16,0.76)_100%)]" />
                 </div>
-                <div className="space-y-3 px-6 py-5">
+
+                <div className="space-y-4 px-5 py-5 md:px-6 md:py-6">
                   <div className="flex flex-wrap gap-2">
                     {item.tags.map((tag) => (
                       <span
                         key={tag}
-                        className="rounded-full border border-[var(--border)] bg-[var(--surface)]/80 px-2 py-0.5 text-[10px] font-semibold uppercase tracking-[0.2em] text-[var(--muted)]"
+                        className="rounded-full border border-[var(--border)] bg-[rgba(255,255,255,0.04)] px-2.5 py-1 text-[10px] font-semibold uppercase tracking-[0.2em] text-[var(--muted)]"
                       >
                         {tag}
                       </span>
                     ))}
                   </div>
+
                   <div>
-                    <h3 className="text-lg font-semibold text-[var(--text)] transition-colors group-hover:text-[var(--accent)]">
+                    <h3 className="text-xl font-semibold leading-[1.02] text-[var(--text)] transition-colors group-hover:text-[var(--accent-soft)]">
                       {item.title}
                     </h3>
-                    <p className="mt-2 text-sm text-[var(--muted)] line-clamp-3">
+                    <p className="mt-3 line-clamp-3 text-sm leading-7 text-[var(--text)]/72">
                       {item.summary}
                     </p>
                   </div>
-                  <p className="text-xs font-medium uppercase tracking-[0.2em] text-[var(--accent)]">
-                    Leer caso completo &rarr;
-                  </p>
+
+                  <div className="inline-flex items-center gap-2 text-xs font-medium uppercase tracking-[0.2em] text-[var(--accent-soft)]">
+                    <span className="h-px w-8 bg-[var(--accent)]/60" />
+                    Leer caso completo
+                  </div>
                 </div>
               </Card>
             </Link>
@@ -120,7 +122,7 @@ function RecursosGridContent() {
             exit={{ opacity: 0 }}
           >
             <motion.div
-              className="absolute inset-0 bg-black/60 backdrop-blur-sm"
+              className="absolute inset-0 bg-black/70 backdrop-blur-md"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
@@ -130,13 +132,15 @@ function RecursosGridContent() {
             <motion.div
               role="dialog"
               aria-modal="true"
-              className="relative flex max-h-[90vh] w-full max-w-5xl flex-col overflow-hidden rounded-3xl border border-[var(--border)] bg-[var(--surface)] shadow-2xl"
-              initial={reduceMotion ? false : { y: 20, opacity: 0, scale: 0.95 }}
+              className="panel-shell relative flex max-h-[90vh] w-full max-w-5xl flex-col overflow-hidden rounded-[2rem]"
+              initial={
+                reduceMotion ? false : { y: 20, opacity: 0, scale: 0.96 }
+              }
               animate={{ y: 0, opacity: 1, scale: 1 }}
-              exit={{ y: 20, opacity: 0, scale: 0.95 }}
-              transition={{ type: "spring", damping: 25, stiffness: 300 }}
+              exit={{ y: 20, opacity: 0, scale: 0.96 }}
+              transition={{ type: "spring", damping: 26, stiffness: 280 }}
             >
-              <div className="relative h-48 flex-shrink-0 sm:h-64">
+              <div className="relative h-56 flex-shrink-0 sm:h-72">
                 <Image
                   src={activeCase.image}
                   alt={activeCase.title}
@@ -144,12 +148,12 @@ function RecursosGridContent() {
                   sizes="100vw"
                   className="object-cover"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-[var(--surface)] via-[var(--surface)]/20 to-transparent" />
+                <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(7,12,22,0.18)_0%,rgba(7,12,22,0.34)_38%,rgba(7,12,22,0.96)_100%)]" />
 
                 <button
                   type="button"
                   onClick={closeCase}
-                  className="absolute right-4 top-4 z-10 rounded-full bg-black/20 p-2 text-white backdrop-blur-md transition hover:bg-black/40"
+                  className="absolute right-4 top-4 z-10 rounded-full border border-white/10 bg-black/25 p-2 text-white backdrop-blur-md transition hover:bg-black/40"
                 >
                   <span className="sr-only">Cerrar</span>
                   <svg
@@ -168,39 +172,39 @@ function RecursosGridContent() {
                 </button>
 
                 <div className="absolute bottom-6 left-6 right-6">
-                  <div className="mb-3 flex flex-wrap gap-2">
-                    {activeCase.tags.map((tag) => (
-                      <span
-                        key={tag}
-                        className="rounded-full bg-[var(--accent)] px-3 py-1 text-xs font-bold uppercase tracking-wider text-white shadow-sm"
-                      >
-                        {tag}
-                      </span>
-                    ))}
+                  <div className="inline-block rounded-[1.4rem] border border-white/10 bg-[rgba(7,12,22,0.68)] px-4 py-4 backdrop-blur-md">
+                    <div className="mb-3 flex flex-wrap gap-2">
+                      {activeCase.tags.map((tag) => (
+                        <span
+                          key={tag}
+                          className="rounded-full border border-[rgba(255,194,131,0.24)] bg-[rgba(255,122,26,0.18)] px-3 py-1 text-[10px] font-bold uppercase tracking-[0.22em] text-white"
+                        >
+                          {tag}
+                        </span>
+                      ))}
+                    </div>
+                    <h3 className="text-2xl font-bold leading-[0.96] text-[var(--text)] drop-shadow-sm md:text-4xl">
+                      {activeCase.title}
+                    </h3>
+                    <p className="mt-2 text-sm font-medium text-[var(--text)]/84 md:text-base">
+                      {activeCase.subtitle}
+                    </p>
                   </div>
-                  <h3 className="text-2xl font-bold text-[var(--text)] drop-shadow-sm md:text-4xl">
-                    {activeCase.title}
-                  </h3>
-                  <p className="mt-1 text-sm font-medium text-[var(--text)]/80 md:text-base">
-                    {activeCase.subtitle}
-                  </p>
                 </div>
               </div>
 
               <div className="flex-1 overflow-y-auto px-6 py-8 md:px-10">
-                <div className="prose prose-neutral max-w-none dark:prose-invert">
-                  <p className="text-lg leading-relaxed text-[var(--text)]/90">
-                    {activeCase.description}
-                  </p>
-                </div>
+                <p className="text-lg leading-relaxed text-[var(--text)]/90">
+                  {activeCase.description}
+                </p>
 
                 <div className="mt-10 grid gap-6 md:grid-cols-3">
                   {activeCase.details.map((detail) => (
                     <div
                       key={detail.title}
-                      className="rounded-2xl border border-[var(--border)] bg-[var(--bg)]/50 p-5"
+                      className="rounded-[1.5rem] border border-[var(--border)] bg-[rgba(255,255,255,0.03)] p-5 shadow-[inset_0_1px_0_rgba(255,255,255,0.04)]"
                     >
-                      <h4 className="mb-3 text-sm font-bold uppercase tracking-wider text-[var(--accent)]">
+                      <h4 className="mb-3 text-sm font-bold uppercase tracking-wider text-[var(--accent-soft)]">
                         {detail.title}
                       </h4>
                       <ul className="space-y-2">
@@ -209,7 +213,7 @@ function RecursosGridContent() {
                             key={item}
                             className="flex items-start gap-2 text-sm text-[var(--muted)]"
                           >
-                            <span className="mt-1.5 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-[var(--text)]/30" />
+                            <span className="mt-1.5 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-[var(--accent)]/55" />
                             <span>{item}</span>
                           </li>
                         ))}
@@ -227,7 +231,7 @@ function RecursosGridContent() {
                       {activeCase.gallery.map((img, idx) => (
                         <div
                           key={`${img}-${idx}`}
-                          className="group relative aspect-video overflow-hidden rounded-xl border border-[var(--border)]"
+                          className="group relative aspect-[4/3] overflow-hidden rounded-[1.2rem] border border-[var(--border)]"
                         >
                           <Image
                             src={img}

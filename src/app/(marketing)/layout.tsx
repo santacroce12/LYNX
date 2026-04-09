@@ -1,5 +1,4 @@
-﻿import type { ReactNode } from "react";
-import Footer from "@/components/layout/Footer";
+import type { ReactNode } from "react";
 import Navbar from "@/components/layout/Navbar";
 import MotionProvider from "@/components/motion/MotionProvider";
 
@@ -12,9 +11,8 @@ export default function MarketingLayout({
     <>
       <Navbar />
       <MotionProvider>
-        <main className="pt-20">{children}</main>
+        <main className="relative pt-24 md:pt-28">{children}</main>
       </MotionProvider>
-      <Footer />
     </>
   );
 }

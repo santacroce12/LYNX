@@ -5,14 +5,14 @@ type EnergyFlowProps = {
 export default function EnergyFlow({ className }: EnergyFlowProps) {
   return (
     <div className={`relative h-8 w-full overflow-hidden ${className ?? ""}`}>
-      <div className="absolute left-0 top-1/2 h-[1px] w-full -translate-y-1/2 bg-[var(--accent-soft)]/20" />
+      <div className="absolute left-0 top-1/2 h-[1px] w-full -translate-y-1/2 bg-[linear-gradient(90deg,rgba(255,122,26,0.06),rgba(255,194,131,0.28),rgba(125,168,255,0.16),rgba(255,122,26,0.06))]" />
       <div className="absolute inset-0 flex items-center">
         <div
           className="absolute h-[2px] w-24 animate-energy-flow bg-gradient-to-r from-transparent via-[var(--accent)] to-transparent opacity-0"
           style={{ animationDelay: "0s", animationDuration: "3s" }}
         />
         <div
-          className="absolute h-[2px] w-32 animate-energy-flow bg-gradient-to-r from-transparent via-[var(--accent)] to-transparent opacity-0"
+          className="absolute h-[2px] w-32 animate-energy-flow bg-gradient-to-r from-transparent via-[var(--accent-soft)] to-transparent opacity-0"
           style={{ animationDelay: "1.2s", animationDuration: "4s" }}
         />
         <div
@@ -20,8 +20,8 @@ export default function EnergyFlow({ className }: EnergyFlowProps) {
           style={{ animationDelay: "2.5s", animationDuration: "6s" }}
         />
       </div>
-      <div className="absolute left-0 top-1/2 h-1 w-1 -translate-x-1/2 -translate-y-1/2 animate-pulse rounded-full bg-[var(--accent)] shadow-[0_0_10px_var(--accent)]" />
-      <div className="absolute right-0 top-1/2 h-1 w-1 translate-x-1/2 -translate-y-1/2 animate-pulse rounded-full bg-[var(--accent)] shadow-[0_0_10px_var(--accent)]" />
+      <div className="absolute left-0 top-1/2 h-1.5 w-1.5 -translate-x-1/2 -translate-y-1/2 animate-pulse rounded-full bg-[var(--accent)] shadow-[0_0_12px_var(--accent)]" />
+      <div className="absolute right-0 top-1/2 h-1.5 w-1.5 translate-x-1/2 -translate-y-1/2 animate-pulse rounded-full bg-[var(--accent)] shadow-[0_0_12px_var(--accent)]" />
     </div>
   );
 }

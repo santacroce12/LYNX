@@ -27,42 +27,44 @@ const icons: Record<string, LucideIcon> = {
 export default function EnergiaServices() {
   return (
     <Section id="servicios">
-      <div className="relative mb-12 text-center md:mb-20">
+      <div className="relative mb-7 text-center md:mb-8">
         <Reveal>
-          <h2 className="text-3xl font-bold md:text-5xl">
+          <span className="section-kicker">Servicios</span>
+        </Reveal>
+        <Reveal delay={0.08}>
+          <h2 className="section-heading mt-4">
             {energia.sections.servicesTitle}
           </h2>
         </Reveal>
-        <Reveal delay={0.1}>
-          <p className="mx-auto mt-4 max-w-2xl text-lg text-[var(--muted)]">
+        <Reveal delay={0.14}>
+          <p className="section-copy mx-auto mt-4">
             {energia.sections.servicesSubtitle}
           </p>
         </Reveal>
       </div>
 
-      <div className="relative grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+      <div className="grid gap-3.5 sm:grid-cols-2 lg:grid-cols-3">
         {energia.services.map((service, index) => {
           const Icon = icons[service.icon as string] || Zap;
+
           return (
             <Reveal key={service.title} delay={index * 0.05}>
-              {/* Aquí está la animación exclusiva para este segmento */}
-              <div className="group relative h-full cursor-pointer overflow-hidden rounded-3xl border border-[var(--border)] bg-[var(--surface)]/40 p-8 transition-all duration-500 hover:-translate-y-2 hover:border-[var(--accent)]/40 hover:bg-[var(--surface)] hover:shadow-2xl hover:shadow-[var(--accent)]/10">
-                {/* Fondo degradado sutil al pasar el mouse */}
-                <div className="pointer-events-none absolute inset-0 bg-gradient-to-br from-transparent to-[var(--accent)]/5 opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
-
-                {/* Ícono que se enciende */}
-                <div className="relative mb-6 inline-flex h-14 w-14 items-center justify-center rounded-2xl bg-[var(--accent)]/10 text-[var(--accent)] transition-all duration-500 group-hover:scale-110 group-hover:bg-[var(--accent)] group-hover:text-white group-hover:shadow-lg group-hover:shadow-[var(--accent)]/30">
-                  <Icon className="h-7 w-7 transition-transform duration-500 group-hover:rotate-3" />
+              <div className="panel-shell group h-full rounded-[1.35rem] p-[1.125rem] transition duration-300 hover:-translate-y-0.5">
+                <div className="mb-4 flex items-center justify-between gap-4">
+                  <div className="inline-flex h-10 w-10 items-center justify-center rounded-[0.9rem] border border-[rgba(255,194,131,0.18)] bg-[rgba(255,122,26,0.08)] text-[var(--accent)] transition-all duration-300 group-hover:scale-105">
+                    <Icon className="h-5 w-5" />
+                  </div>
+                  <span className="text-[11px] uppercase tracking-[0.24em] text-[var(--muted-soft)]">
+                    0{index + 1}
+                  </span>
                 </div>
 
-                <div className="relative">
-                  <h3 className="mb-3 text-xl font-bold text-[var(--text)] transition-colors duration-300 group-hover:text-[var(--accent)]">
-                    {service.title}
-                  </h3>
-                  <p className="leading-relaxed text-[var(--muted)] transition-colors duration-300 group-hover:text-[var(--text-secondary)]">
-                    {service.description}
-                  </p>
-                </div>
+                <h3 className="text-[1.2rem] font-semibold leading-[1.04] text-[var(--text-strong)]">
+                  {service.title}
+                </h3>
+                <p className="mt-2.5 text-sm leading-7 text-[var(--muted)]">
+                  {service.description}
+                </p>
               </div>
             </Reveal>
           );

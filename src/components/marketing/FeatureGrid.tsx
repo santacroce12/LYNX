@@ -1,4 +1,4 @@
-﻿import Card from "@/components/ui/Card";
+import Card from "@/components/ui/Card";
 import Reveal from "@/components/motion/Reveal";
 
 type FeatureItem = {
@@ -181,44 +181,52 @@ export default function FeatureGrid({
   items,
   columns = 3,
 }: FeatureGridProps) {
-  const columnsClass = columns === 2 ? "md:grid-cols-2" : "md:grid-cols-3";
+  const columnsClass = columns === 2 ? "md:grid-cols-2" : "lg:grid-cols-3";
 
   return (
-    <div>
+    <div className="space-y-5">
       {title ? (
-        <div className="mb-10 max-w-2xl">
-          <h2 className="text-3xl font-semibold md:text-4xl">{title}</h2>
+        <div className="grid gap-3 lg:grid-cols-[0.92fr_1.08fr] lg:items-end">
+          <div className="space-y-3">
+            <span className="section-kicker">Capacidades</span>
+            <h2 className="section-heading max-w-xl">{title}</h2>
+          </div>
           {subtitle ? (
-            <p className="mt-3 text-sm text-[var(--muted)] md:text-base">
-              {subtitle}
-            </p>
+            <p className="section-copy lg:justify-self-end">{subtitle}</p>
           ) : null}
         </div>
       ) : null}
-      <div
-        className={`flex snap-x snap-mandatory gap-4 overflow-x-auto pb-6 -mx-6 px-6 scrollbar-hide md:grid ${columnsClass} md:gap-8 md:overflow-visible md:pb-0 md:mx-0 md:px-0`}
-      >
+
+      <div className={`grid gap-3.5 sm:grid-cols-2 ${columnsClass}`}>
         {items.map((item, index) => (
           <Reveal key={item.title} delay={index * 0.05}>
-            <div className="min-w-[85vw] snap-center md:min-w-0 h-full">
-              <Card className="h-full">
-                {item.icon && iconMap[item.icon] ? (
-                  <span className="mb-4 inline-flex h-10 w-10 items-center justify-center rounded-full border border-[var(--border)] bg-[var(--surface)] text-[var(--accent)]">
-                    <svg
-                      viewBox="0 0 24 24"
-                      aria-hidden="true"
-                      className="h-5 w-5"
-                    >
-                      {iconMap[item.icon]}
-                    </svg>
+            <Card className="h-full p-0">
+              <div className="relative flex h-full flex-col px-[1.125rem] py-[1.125rem] md:px-5 md:py-5">
+                <div className="mb-4 flex items-center justify-between">
+                  {item.icon && iconMap[item.icon] ? (
+                    <span className="inline-flex h-9 w-9 items-center justify-center rounded-[0.9rem] border border-[rgba(255,194,131,0.14)] bg-[rgba(255,122,26,0.07)] text-[var(--accent)]">
+                      <svg viewBox="0 0 24 24" aria-hidden="true" className="h-4 w-4">
+                        {iconMap[item.icon]}
+                      </svg>
+                    </span>
+                  ) : (
+                    <span className="inline-flex h-9 w-9 rounded-[0.9rem] border border-[var(--border)] bg-white/5" />
+                  )}
+                  <span className="text-[10px] uppercase tracking-[0.18em] text-[var(--muted-soft)]">
+                    0{index + 1}
                   </span>
-                ) : null}
-                <h3 className="text-lg font-semibold">{item.title}</h3>
-                <p className="mt-2 text-sm text-[var(--muted)]">
-                  {item.description}
-                </p>
-              </Card>
-            </div>
+                </div>
+
+                <div className="flex h-full flex-col">
+                  <h3 className="text-[1.2rem] font-semibold leading-[1.04] text-[var(--text-strong)] md:text-[1.28rem]">
+                    {item.title}
+                  </h3>
+                  <p className="mt-2.5 text-sm leading-[1.7] text-[var(--muted)]">
+                    {item.description}
+                  </p>
+                </div>
+              </div>
+            </Card>
           </Reveal>
         ))}
       </div>

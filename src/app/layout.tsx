@@ -1,21 +1,23 @@
-﻿import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import type { ReactNode } from "react";
-import { Space_Grotesk, Sora } from "next/font/google";
+import { IBM_Plex_Sans, Oxanium } from "next/font/google";
 import Script from "next/script";
 import "@/styles/globals.css";
 import { site } from "@/content/site";
 
 const GTM_ID = "GTM-WCTH78XQ";
 
-const spaceGrotesk = Space_Grotesk({
+const oxanium = Oxanium({
   subsets: ["latin"],
   variable: "--font-display",
+  weight: ["500", "600", "700"],
   display: "swap",
 });
 
-const sora = Sora({
+const ibmPlexSans = IBM_Plex_Sans({
   subsets: ["latin"],
   variable: "--font-sans",
+  weight: ["300", "400", "500", "600", "700"],
   display: "swap",
 });
 
@@ -28,6 +30,12 @@ export const metadata: Metadata = {
   },
 };
 
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  viewportFit: "cover",
+};
+
 export default function RootLayout({
   children,
 }: {
@@ -36,7 +44,7 @@ export default function RootLayout({
   return (
     <html
       lang="es"
-      className={`${sora.variable} ${spaceGrotesk.variable}`}
+      className={`${ibmPlexSans.variable} ${oxanium.variable}`}
       data-theme="dark"
     >
       <head>
