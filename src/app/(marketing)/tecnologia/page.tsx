@@ -1,11 +1,12 @@
 ﻿import CTA from "@/components/marketing/CTA";
 import FAQ from "@/components/marketing/FAQ";
 import FeaturedProjects from "@/components/marketing/FeaturedProjects";
-import ProcessSteps from "@/components/marketing/ProcessSteps";
 import EnergyFlow from "@/components/ui/EnergyFlow";
 import { tecnologia } from "@/content/tecnologia";
 import { buildMetadata } from "@/lib/seo";
 import TecnologiaHero from "./sections/Hero";
+import TecnologiaIndustries from "./sections/Industries";
+import TecnologiaProcess from "./sections/Process";
 import TecnologiaServices from "./sections/Services";
 import TecnologiaUseCases from "./sections/UseCases";
 
@@ -20,12 +21,9 @@ export default function TecnologiaPage() {
     <>
       <TecnologiaHero />
       <TecnologiaServices />
-      <ProcessSteps
-        steps={tecnologia.process}
-        title="Framework de Desarrollo"
-        subtitle="Agilidad técnica y rigor arquitectónico para soluciones de misión crítica."
-      />
+      <TecnologiaProcess />
       <TecnologiaUseCases />
+      <TecnologiaIndustries />
       <FAQ title={tecnologia.sections.faqTitle} items={tecnologia.faqs} />
       <FeaturedProjects filterCategory="Tecnología" />
       <div className="mx-auto w-full max-w-6xl px-6">

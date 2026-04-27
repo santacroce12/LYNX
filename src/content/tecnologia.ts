@@ -1,207 +1,321 @@
 export const tecnologia = {
   meta: {
-    title: "Servicios de Implementación Tecnológica | LYNX",
+    title: "Integración Tecnológica y Operación Continua",
     description:
-      "Proveemos la mano de obra, logística y gestión para implementar tecnología en tu empresa. Tu socio estratégico en ejecución de proyectos TI.",
+      "Integramos, implementamos y mantenemos sistemas, datos, infraestructura y procesos para operaciones con mayor visibilidad, eficiencia y continuidad.",
   },
   hero: {
-    badge: "Vertical Tecnología",
-    title: "Tecnología conectada para operaciones exigentes",
+    badge: "Integración Tecnológica y Operación Continua",
+    title: "Tecnología conectada, implementada y mantenida para operaciones exigentes",
     subtitle:
-      "Implementamos plataformas digitales, integraciones y automatización operativa para empresas que necesitan visibilidad, continuidad y despliegue sin fricciones.",
-    claim: "Integración, ejecución y soporte con foco en resultados.",
+      "Integramos sistemas, datos, infraestructura y procesos para que las organizaciones puedan operar con mayor visibilidad, eficiencia y control.",
+    body: [
+      "No solo implementamos soluciones tecnológicas: las acompañamos en operación, mantenimiento y mejora continua para asegurar estabilidad, continuidad y evolución en el tiempo.",
+      "Construimos, operamos y mantenemos ecosistemas tecnológicos integrados.",
+    ],
+    claim:
+      "No hacemos tecnología aislada. Construimos, operamos y mantenemos ecosistemas tecnológicos integrados.",
     cta: "Explorar soluciones",
     image: "/images/tecnologia/tecnologia-abstracto.jpg",
   },
   sections: {
-    featuresTitle: "Implementación con foco operativo",
+    featuresTitle: "Integración, ejecución y mantenimiento con foco operativo",
     featuresSubtitle:
-      "Equipos, procesos y logística para desplegar tecnología sin fricciones y con resultados medibles.",
-    servicesTitle: "Soluciones de Implementación Integral",
+      "Convertimos sistemas aislados, procesos manuales e información dispersa en operaciones conectadas, medibles, escalables y sostenibles en el tiempo.",
+    servicesTitle: "Soluciones tecnológicas de punta a punta",
     servicesSubtitle:
-      "No solo te damos la tecnología, la instalamos, la configuramos y la mantenemos. Cubrimos todo el ciclo operativo para que tu empresa no se detenga.",
+      "No solo proponemos tecnología. La diseñamos, la integramos, la implementamos, la ponemos en marcha y la mantenemos en operación.",
+    processKicker: "Cómo trabajamos",
+    processTitle: "De la necesidad del negocio a la operación mantenida",
+    processSubtitle:
+      "Ordenamos cada iniciativa desde el diagnóstico hasta la adopción, asegurando ejecución técnica, continuidad operativa y soporte posterior.",
     useCasesTitle: "Casos de uso",
     useCasesSubtitle:
-      "Soluciones digitales para operaciones conectadas y resultados medibles.",
-    faqTitle: "Preguntas frecuentes de implementación",
+      "Aplicaciones concretas para conectar sistemas, sedes, datos y equipos, asegurando continuidad operativa en el tiempo.",
+    faqTitle: "Preguntas frecuentes de integración tecnológica",
   },
   features: [
     {
-      title: "Despliegue en terreno",
+      title: "Integración de sistemas",
       description:
-        "Cuadrillas listas para instalación, configuración y puesta en marcha.",
-      icon: "rocket",
-    },
-    {
-      title: "Gestión centralizada",
-      description: "Control y monitoreo de múltiples sedes en tiempo real.",
-      icon: "grid",
-    },
-    {
-      title: "Seguridad operativa",
-      description:
-        "Buenas prácticas para continuidad y protección de datos críticos.",
-      icon: "shield",
-    },
-    {
-      title: "Automatización",
-      description: "Flujos eficientes para reducir tiempos y errores operativos.",
-      icon: "cpu",
-    },
-    {
-      title: "Integración segura",
-      description: "Conectamos sistemas nuevos y existentes sin interrupciones.",
+        "Conectamos ERP, CRM, bases de datos, sistemas legacy, plataformas digitales y herramientas operativas.",
       icon: "link",
     },
     {
-      title: "Soporte y Evolución",
+      title: "Automatización de procesos",
       description:
-        "Mantenimiento y asistencia técnica para asegurar la estabilidad operativa.",
+        "Digitalizamos tareas repetitivas, aprobaciones, alertas, reportes, controles y circuitos operativos.",
+      icon: "cpu",
+    },
+    {
+      title: "Gestión centralizada",
+      description:
+        "Unificamos información, sedes, sistemas y procesos en entornos de control claros y monitoreables.",
+      icon: "grid",
+    },
+    {
+      title: "Despliegue en terreno",
+      description:
+        "Coordinamos instalación, configuración, pruebas, capacitación y puesta en marcha multisede.",
+      icon: "rocket",
+    },
+    {
+      title: "Continuidad operativa",
+      description:
+        "Aplicamos buenas prácticas para reducir interrupciones, proteger datos críticos y sostener la disponibilidad de las soluciones.",
+      icon: "shield",
+    },
+    {
+      title: "Mantenimiento y evolución",
+      description:
+        "Acompañamos la operación con soporte técnico, mantenimiento preventivo, atención correctiva, monitoreo y mejoras continuas.",
       icon: "life-buoy",
     },
   ],
   services: [
     {
-      title: "Consultoría de Transformación",
+      title: "Consultoría tecnológica",
       description:
-        "Levantamiento del estado actual (As-Is) y diseño de la arquitectura y estrategia para alcanzar el escenario tecnológico ideal (To-Be).",
+        "Levantamos sistemas, procesos, datos e infraestructura para definir oportunidades concretas de integración, automatización y mejora.",
       icon: "clipboard-check",
     },
     {
-      title: "Modalidad Staffing TI",
+      title: "Arquitectura de solución",
       description:
-        "Inyectamos desarrolladores, ingenieros y líderes técnicos directamente en tus equipos corporativos para acelerar tus propios proyectos.",
-      icon: "users",
-    },
-    {
-      title: "Proyectos End-to-End",
-      description:
-        "Tomamos el control total. Construimos el software a medida e implementamos la solución completa bajo metodologías ágiles.",
-      icon: "code",
-    },
-    {
-      title: "Logística de Despliegue",
-      description:
-        "Gestión integral que incluye adquisición de hardware, envíos, instalación física en sitio y puesta en marcha en múltiples sucursales.",
-      icon: "truck",
-    },
-    {
-      title: "Integración de Sistemas",
-      description:
-        "Conectamos las nuevas herramientas con tu ERP o infraestructura existente sin fricciones, unificando el flujo de información.",
+        "Definimos componentes, integraciones, flujos de información, herramientas y etapas de implementación.",
       icon: "layers",
     },
     {
-      title: "Soporte Operativo",
+      title: "Integración de plataformas",
       description:
-        "Servicios de mantenimiento, asistencia técnica continua y monitoreo preventivo para garantizar la estabilidad de tus operaciones.",
+        "Conectamos herramientas nuevas y existentes para unificar la operación y evitar sistemas aislados.",
+      icon: "network",
+    },
+    {
+      title: "Desarrollo e implementación",
+      description:
+        "Construimos automatizaciones, tableros, APIs, conectores, aplicaciones y soluciones digitales a medida.",
+      icon: "code",
+    },
+    {
+      title: "Logística y despliegue operativo",
+      description:
+        "Gestionamos hardware, instalación, configuración, pruebas, capacitación y puesta en marcha en campo.",
+      icon: "truck",
+    },
+    {
+      title: "Mantenimiento y soporte continuo",
+      description:
+        "Operamos y acompañamos las soluciones implementadas mediante soporte especializado, mantenimiento preventivo y correctivo, monitoreo, gestión de incidencias y mejoras evolutivas.",
       icon: "life-buoy",
     },
   ],
   process: [
     {
       step: "01",
-      title: "Assessment (As-Is)",
+      title: "Diagnóstico As-Is",
       description:
-        "Auditamos tu ecosistema actual: sistemas operativos, procesos de negocio y madurez digital para entender tu verdadero punto de partida.",
+        "Mapeamos problema, sistemas, procesos, infraestructura y madurez tecnológica.",
     },
     {
       step: "02",
-      title: "Definición del 'To-Be'",
+      title: "Diseño To-Be",
       description:
-        "Nos sentamos contigo a responder la pregunta clave: ¿hasta dónde quieres llegar? Definimos juntos la meta de tu transformación.",
+        "Definimos qué integrar, automatizar, desarrollar, mejorar o mantener.",
     },
     {
       step: "03",
-      title: "Roadmap de Brecha",
+      title: "Roadmap de implementación",
       description:
-        "Trazamos la hoja de ruta estratégica para ir del As-Is al To-Be, dividiendo la brecha tecnológica en pequeños proyectos abordables.",
+        "Priorizamos iniciativas por impacto, urgencia, complejidad y sostenibilidad operativa.",
     },
     {
       step: "04",
-      title: "Definición de Modalidad",
+      title: "Ejecución ágil",
       description:
-        "Elegimos el modelo ideal: nos encargamos del proyecto End-to-End o te brindamos los profesionales necesarios mediante modelo Staffing.",
+        "Implementamos con equipos técnicos, entregas iterativas, pruebas y seguimiento.",
     },
     {
       step: "05",
-      title: "Ejecución Ágil",
+      title: "Puesta en marcha",
       description:
-        "Implementamos la tecnología paso a paso mediante sprints iterativos. Entregamos valor de forma continua asegurando que el plan se cumpla.",
+        "Validamos en operación real, capacitamos usuarios y acompañamos la adopción.",
     },
     {
       step: "06",
-      title: "Monitoreo y Evolución",
+      title: "Operación y mantenimiento",
       description:
-        "Acompañamos la post-implementación. Mantenemos el ecosistema estable y lo evolucionamos según las nuevas necesidades del negocio.",
+        "Monitoreamos, damos soporte, resolvemos incidencias, ejecutamos mantenimiento preventivo y evolucionamos la solución según nuevas necesidades.",
     },
   ],
   useCases: [
     {
-      title: "Operaciones Conectadas",
+      title: "Operaciones conectadas",
       description:
-        "Unificamos datos de campo y backoffice en un solo centro de comando digital, permitiendo decisiones en tiempo real.",
-      image:
-        "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80",
+        "Sistemas de campo, plataformas internas y áreas de negocio integradas en una visión centralizada.",
+      icon: "network",
+      image: "/images/tecnologia/generated/caso-operaciones-conectadas.png",
     },
     {
-      title: "Mantenimiento Predictivo",
+      title: "Automatización administrativa y operativa",
       description:
-        "Algoritmos que anticipan fallas y optimizan activos antes de que ocurran paradas críticas, ahorrando costos operativos.",
-      image:
-        "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&q=80",
+        "Flujos digitales, reglas de negocio, alertas, aprobaciones y reportes automáticos.",
+      icon: "workflow",
+      image: "/images/tecnologia/generated/caso-automatizacion.png",
     },
     {
-      title: "Integración Multi-sede",
+      title: "Tecnología en campo",
       description:
-        "Sistemas sincronizados que permiten operar múltiples plantas o sucursales como un solo organismo cohesivo.",
-      image:
-        "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&q=80",
+        "Hardware, conectividad, sensores, cámaras, monitoreo y software para operación real.",
+      icon: "radio",
+      image: "/images/tecnologia/generated/caso-tecnologia-campo.png",
+    },
+    {
+      title: "Integración multisede",
+      description:
+        "Plantas, sucursales, oficinas o centros operativos gestionados como una red coordinada.",
+      icon: "map",
+      image: "/images/tecnologia/generated/caso-integracion-multisede.png",
+    },
+    {
+      title: "Tableros de gestión",
+      description:
+        "Datos de distintas fuentes convertidos en indicadores claros para decidir mejor.",
+      icon: "chart",
+      image: "/images/tecnologia/generated/caso-tableros-gestion.png",
+    },
+    {
+      title: "Mantenimiento tecnológico operativo",
+      description:
+        "Soporte continuo, monitoreo, atención de incidencias, mantenimiento preventivo y mejoras evolutivas para sostener la operación tecnológica del cliente.",
+      icon: "refresh",
+      image: "/images/tecnologia/generated/caso-modernizacion-sistemas.png",
     },
   ],
+  industries: {
+    title: "LYNX en tu industria",
+    subtitle:
+      "Integramos, desplegamos y mantenemos tecnología para operaciones reales.",
+    support:
+      "Aplicamos soluciones tecnológicas en distintos sectores, conectando sistemas, datos, infraestructura y procesos críticos.",
+    items: [
+      {
+        title: "Energía e infraestructura crítica",
+        description: "Continuidad para operaciones exigentes.",
+        bullets: [
+          "Integración de sistemas críticos",
+          "Monitoreo y soporte operativo",
+          "Mantenimiento preventivo",
+        ],
+        buttonLabel: "Ver soluciones",
+        href: "/energia",
+        image: "/images/tecnologia/industrias/energia-infraestructura.png",
+      },
+      {
+        title: "Industria y manufactura",
+        description: "Tecnología para plantas y procesos.",
+        bullets: [
+          "Automatización operativa",
+          "Datos y tableros de control",
+          "Soporte en planta",
+        ],
+        buttonLabel: "Ver soluciones",
+        href: "/contacto",
+        image: "/images/tecnologia/industrias/industria-manufactura.png",
+      },
+      {
+        title: "Seguridad y monitoreo",
+        description: "Sistemas conectados y operación centralizada.",
+        bullets: [
+          "Cámaras, VMS y control de acceso",
+          "Monitoreo multisede",
+          "Mantenimiento y diagnóstico",
+        ],
+        buttonLabel: "Ver soluciones",
+        href: "/contacto",
+        image: "/images/tecnologia/industrias/seguridad-monitoreo.png",
+      },
+      {
+        title: "Retail y multisede",
+        description: "Sucursales conectadas y soporte continuo.",
+        bullets: [
+          "Despliegue en campo",
+          "Gestión centralizada",
+          "Soporte técnico recurrente",
+        ],
+        buttonLabel: "Ver soluciones",
+        href: "/contacto",
+        image: "/images/tecnologia/industrias/retail-multisede.png",
+      },
+      {
+        title: "Servicios corporativos",
+        description: "Procesos internos más integrados.",
+        bullets: [
+          "ERP, CRM y sistemas internos",
+          "Automatización de tareas",
+          "Tableros de gestión",
+        ],
+        buttonLabel: "Ver soluciones",
+        href: "/contacto",
+        image: "/images/tecnologia/industrias/finanzas-corporativo.png",
+      },
+      {
+        title: "Instituciones y organizaciones",
+        description: "Digitalización con trazabilidad.",
+        bullets: [
+          "Procesos digitales",
+          "Información centralizada",
+          "Acompañamiento operativo",
+        ],
+        buttonLabel: "Ver soluciones",
+        href: "/contacto",
+        image: "/images/tecnologia/industrias/gobierno-educacion.png",
+      },
+    ],
+  },
   faqs: [
     {
-      question: "¿Qué tan rápido pueden desplegar un equipo?",
+      question: "¿Pueden integrarse con sistemas que ya usamos?",
       answer:
-        "Dependiendo de la complejidad y los perfiles requeridos, podemos integrar especialistas en tu flujo de trabajo en un plazo de 1 a 2 semanas. Para despliegues masivos en terreno, coordinamos la logística caso a caso.",
+        "Sí. Relevamos el ecosistema actual y definimos conectores, APIs, flujos de datos o capas intermedias para integrar herramientas nuevas y existentes sin forzar reemplazos innecesarios.",
     },
     {
-      question: "¿Proveen el hardware además del personal?",
+      question: "¿Trabajan solo con software o también con despliegue físico?",
       answer:
-        "Sí. Gestionamos la logística integral, lo que incluye la adquisición, configuración y transporte de dispositivos (sensores, gateways, tablets industriales) al lugar de la implementación.",
+        "Cubrimos ambos frentes. Podemos desarrollar e integrar software, y también coordinar hardware, instalación, configuración, pruebas, capacitación y puesta en marcha en sitio.",
     },
     {
-      question: "¿El personal trabaja remoto o en sitio?",
+      question: "¿Cómo sostienen la operación después de implementar?",
       answer:
-        "Nos adaptamos a tu necesidad. Tenemos equipos 100% remotos para desarrollo de software y cuadrillas de campo para instalaciones físicas, puestas en marcha y soporte en planta.",
+        "Acompañamos las soluciones con monitoreo, soporte técnico, mantenimiento preventivo y correctivo, gestión de incidencias y mejoras evolutivas para asegurar continuidad operativa.",
     },
     {
-      question: "¿Cómo se maneja la propiedad intelectual?",
+      question: "¿Pueden sumar especialistas al equipo del cliente?",
       answer:
-        "Todo el código, configuraciones y documentación generada por nuestro equipo durante el servicio es 100% propiedad de tu empresa desde el día uno.",
+        "Sí. Podemos aportar desarrolladores, analistas, ingenieros, líderes técnicos o perfiles especializados para acelerar iniciativas internas del cliente cuando el proyecto lo requiera.",
     },
   ],
   stats: [
-    { label: "Metodología", value: "Agile/Scrum" },
-    { label: "Calidad de Código", value: "100%" },
-    { label: "SLA Garantizado", value: "99.9%" },
-    { label: "Soporte", value: "Nivel 2/3" },
+    { label: "Enfoque", value: "As-Is a Operación" },
+    { label: "Ejecución", value: "Iterativa" },
+    { label: "Cobertura", value: "Software + campo + soporte" },
+    { label: "Soporte", value: "Continuo" },
   ],
   stack: [
-    "Python",
-    "Node.js",
-    "React",
-    "TypeScript",
-    "AWS Cloud",
-    "Docker",
-    "Kubernetes",
-    "PostgreSQL",
-    "MQTT",
-    "REST API",
+    "APIs",
+    "ERP",
+    "CRM",
+    "Bases de datos",
+    "Dashboards",
+    "Automatización",
+    "Cloud",
+    "IoT",
+    "Conectividad",
+    "Soporte",
   ],
   cta: {
-    title: "¿Listo para implementar?",
-    text: "Contanos tu alcance y te proponemos el equipo y la logística ideal.",
-    buttonLabel: "Solicitar propuesta",
+    title: "Conectemos tu operación",
+    text: "Contanos qué sistemas, procesos o sedes necesitás integrar y armamos un plan claro de implementación, operación y mantenimiento.",
+    buttonLabel: "Hablar con LYNX",
   },
 };

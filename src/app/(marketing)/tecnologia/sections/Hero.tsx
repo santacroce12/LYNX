@@ -2,7 +2,7 @@ import Image from "next/image";
 import Section from "@/components/layout/Section";
 import Badge from "@/components/ui/Badge";
 import FeatureGrid from "@/components/marketing/FeatureGrid";
-import TechCircuit from "@/components/marketing/TechCircuit";
+import TechSignal from "@/components/marketing/TechSignal";
 import Reveal from "@/components/motion/Reveal";
 import EnergyFlow from "@/components/ui/EnergyFlow";
 import { tecnologia } from "@/content/tecnologia";
@@ -24,7 +24,7 @@ export default function TecnologiaHero() {
           <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(3,7,15,0.68)_0%,rgba(3,7,15,0.34)_42%,rgba(3,7,15,0.52)_100%)]" />
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_18%_18%,rgba(125,168,255,0.14),transparent_24%),radial-gradient(circle_at_82%_20%,rgba(255,122,26,0.08),transparent_16%)]" />
           <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(255,255,255,0.04)_0%,transparent_34%,transparent_100%)]" />
-          <TechCircuit />
+          <TechSignal />
 
           <div className="relative z-10 max-w-3xl">
             <Reveal>
