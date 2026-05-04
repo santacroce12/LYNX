@@ -47,7 +47,7 @@ export default function TecnologiaServices() {
       <div className="grid gap-4 lg:grid-cols-[0.9fr_1.1fr] lg:items-start">
         <Reveal>
           <div className="panel-shell overflow-hidden rounded-[1.55rem] p-2.5">
-            <div className="relative aspect-video min-h-[280px] overflow-hidden rounded-[1.15rem] border border-white/8 px-5 py-5 md:min-h-[340px] lg:min-h-0">
+            <div className="relative aspect-[4/3] overflow-hidden rounded-[1.15rem] border border-white/8 px-4 py-4 md:aspect-video md:min-h-[340px] md:px-5 md:py-5 lg:min-h-0">
               <Image
                 src="/images/tecnologia/generated/integracion-servicios.png"
                 alt="Arquitectura de integración tecnológica con soporte operativo"
@@ -62,7 +62,7 @@ export default function TecnologiaServices() {
                 <span className="section-kicker text-[var(--accent-cool)]">
                   Punta a punta
                 </span>
-                <h3 className="mt-4 max-w-sm text-[1.65rem] font-semibold leading-[1] text-[var(--text-strong)]">
+                <h3 className="mt-4 max-w-sm text-[1.28rem] font-semibold leading-[1.08] text-[var(--text-strong)] md:text-[1.65rem] md:leading-[1]">
                   Arquitectura de integración tecnológica con soporte operativo.
                 </h3>
                 <div className="mt-5 flex flex-wrap gap-2">
@@ -76,7 +76,7 @@ export default function TecnologiaServices() {
                   ].map((item) => (
                     <span
                       key={item}
-                      className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-black/30 px-3 py-2 text-[10px] font-semibold uppercase tracking-[0.18em] text-white/78 backdrop-blur-md"
+                      className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-black/30 px-3 py-2 text-[10px] font-semibold uppercase tracking-normal text-white/78 backdrop-blur-md md:tracking-[0.18em]"
                     >
                       <span className="h-1.5 w-1.5 rounded-full bg-[var(--accent)] shadow-[0_0_12px_rgba(255,122,26,0.6)]" />
                       {item}
@@ -99,7 +99,7 @@ export default function TecnologiaServices() {
                     <div className="inline-flex h-9 w-9 items-center justify-center rounded-[0.85rem] border border-[rgba(125,168,255,0.2)] bg-[rgba(125,168,255,0.08)] text-[var(--accent-cool)] transition-all duration-300 group-hover:scale-105">
                       <Icon className="h-[18px] w-[18px]" />
                     </div>
-                    <span className="text-[10px] uppercase tracking-[0.22em] text-[var(--muted-soft)]">
+                    <span className="text-[10px] uppercase tracking-normal text-[var(--muted-soft)] md:tracking-[0.22em]">
                       0{index + 1}
                     </span>
                   </div>

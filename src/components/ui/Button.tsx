@@ -12,7 +12,7 @@ type ButtonProps = {
 const sizeClasses = {
   sm: "px-4 py-2 text-[11px]",
   md: "px-5 py-2.5 text-sm",
-  lg: "px-6 py-3 text-[15px]",
+  lg: "px-5 py-3 text-[13px] md:px-6 md:text-[15px]",
 };
 
 const variantClasses = {
@@ -33,7 +33,7 @@ export default function Button({
   ...rest
 }: ButtonProps) {
   const classes =
-    "inline-flex items-center justify-center gap-2 rounded-full font-semibold uppercase tracking-[0.2em] transition duration-300 ease-out-expo focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--accent)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--bg)] disabled:cursor-not-allowed disabled:opacity-60 " +
+    "inline-flex min-h-11 items-center justify-center gap-2 rounded-full text-center font-semibold uppercase leading-none tracking-normal transition duration-300 ease-out-expo focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--accent)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--bg)] disabled:cursor-not-allowed disabled:opacity-60 md:tracking-[0.18em] " +
     sizeClasses[size] +
     " " +
     variantClasses[variant] +

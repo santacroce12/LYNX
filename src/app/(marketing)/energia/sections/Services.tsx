@@ -27,7 +27,7 @@ const icons: Record<string, LucideIcon> = {
 export default function EnergiaServices() {
   return (
     <Section id="servicios">
-      <div className="relative mb-7 text-center md:mb-8">
+      <div className="relative mb-7 text-left md:mb-8 md:text-center">
         <Reveal>
           <span className="section-kicker">Servicios</span>
         </Reveal>
@@ -37,7 +37,7 @@ export default function EnergiaServices() {
           </h2>
         </Reveal>
         <Reveal delay={0.14}>
-          <p className="section-copy mx-auto mt-4">
+          <p className="section-copy mt-4 md:mx-auto">
             {energia.sections.servicesSubtitle}
           </p>
         </Reveal>
@@ -54,7 +54,7 @@ export default function EnergiaServices() {
                   <div className="inline-flex h-10 w-10 items-center justify-center rounded-[0.9rem] border border-[rgba(255,194,131,0.18)] bg-[rgba(255,122,26,0.08)] text-[var(--accent)] transition-all duration-300 group-hover:scale-105">
                     <Icon className="h-5 w-5" />
                   </div>
-                  <span className="text-[11px] uppercase tracking-[0.24em] text-[var(--muted-soft)]">
+                <span className="text-[11px] uppercase tracking-normal text-[var(--muted-soft)] md:tracking-[0.24em]">
                     0{index + 1}
                   </span>
                 </div>

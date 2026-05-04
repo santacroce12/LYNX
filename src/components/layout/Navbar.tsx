@@ -64,7 +64,7 @@ export default function Navbar() {
           className={`mx-auto flex w-full max-w-[1180px] items-center justify-between gap-6 transition-all duration-500 ${
             compact
               ? "h-[60px] px-4 md:h-[64px] md:px-6"
-              : "h-[72px] px-5 md:h-[78px] md:px-6"
+              : "h-[64px] px-4 md:h-[78px] md:px-6"
           }`}
         >
           <Link href="/" className="flex min-w-0 items-center">
@@ -75,7 +75,7 @@ export default function Navbar() {
               height={45}
               priority
               className={`h-auto shrink-0 transition-all duration-500 ${
-                compact ? "w-[104px] md:w-[118px]" : "w-[112px] md:w-[128px]"
+                compact ? "w-[104px] md:w-[118px]" : "w-[104px] md:w-[128px]"
               }`}
             />
           </Link>
@@ -117,7 +117,7 @@ export default function Navbar() {
               type="button"
               onClick={() => setMenuOpen((prev) => !prev)}
               className={`inline-flex items-center justify-center rounded-full border border-[var(--border)] bg-white/[0.04] text-[var(--text)] transition-all duration-300 hover:border-[rgba(255,194,131,0.3)] hover:text-[var(--accent-soft)] lg:hidden ${
-                compact ? "h-9 w-9" : "h-10 w-10"
+                compact ? "h-9 w-9" : "h-9 w-9 md:h-10 md:w-10"
               }`}
               aria-label={menuOpen ? "Cerrar menu" : "Abrir menu"}
               aria-expanded={menuOpen}
@@ -131,6 +131,7 @@ export default function Navbar() {
 
       <div
         id="mobile-nav"
+        aria-hidden={!menuOpen}
         className={`fixed inset-0 z-40 lg:hidden ${
           menuOpen ? "pointer-events-auto" : "pointer-events-none"
         }`}
@@ -149,8 +150,8 @@ export default function Navbar() {
             menuOpen ? "translate-y-0 opacity-100" : "-translate-y-3 opacity-0"
           }`}
         >
-          <div className="mx-auto flex min-h-screen w-full max-w-6xl flex-col px-5 pb-8 pt-24 sm:px-6">
-            <div className="panel-shell flex min-h-[calc(100dvh-8rem)] flex-1 flex-col rounded-[2rem] px-5 py-6 md:px-8 md:py-8">
+          <div className="mx-auto flex min-h-screen w-full max-w-6xl flex-col px-4 pb-6 pt-20 sm:px-6 md:pb-8 md:pt-24">
+            <div className="panel-shell flex min-h-[calc(100dvh-7rem)] flex-1 flex-col rounded-[2rem] px-4 py-5 md:min-h-[calc(100dvh-8rem)] md:px-8 md:py-8">
               <div className="border-b border-white/8 pb-5">
                 <span className="section-kicker">{activeNavItem.label}</span>
                 <p className="mt-4 max-w-md text-sm leading-7 text-[var(--text)]/76">
@@ -158,21 +159,21 @@ export default function Navbar() {
                 </p>
               </div>
 
-              <nav className="flex flex-1 flex-col justify-center gap-2 py-6">
+              <nav className="flex flex-1 flex-col justify-start gap-2 py-7 md:justify-center">
                 {site.nav.map((item, index) => (
                   <Link
                     key={item.href}
                     href={item.href}
-                    className={`group flex items-center justify-between rounded-[1.4rem] border px-5 py-4 transition ${
+                  className={`group flex items-center justify-between rounded-[1.15rem] border px-4 py-3.5 transition md:rounded-[1.4rem] md:px-5 md:py-4 ${
                       isActive(item.href)
                         ? "border-[rgba(255,194,131,0.24)] bg-[rgba(255,122,26,0.1)] text-[var(--text-strong)]"
                         : "border-transparent bg-transparent text-[var(--muted)] hover:border-white/8 hover:bg-white/[0.03] hover:text-[var(--text-strong)]"
                     }`}
                   >
-                    <span className="text-[1.6rem] font-semibold leading-none">
+                    <span className="text-[1.35rem] font-semibold leading-none md:text-[1.6rem]">
                       {item.label}
                     </span>
-                    <span className="text-[11px] uppercase tracking-[0.24em] text-[var(--muted-soft)] transition group-hover:text-[var(--accent-soft)]">
+                    <span className="text-[11px] uppercase tracking-normal text-[var(--muted-soft)] transition group-hover:text-[var(--accent-soft)] md:tracking-[0.24em]">
                       0{index + 1}
                     </span>
                   </Link>
@@ -182,7 +183,7 @@ export default function Navbar() {
               <div className="pt-4">
                 <Link
                   href="/contacto"
-                  className="inline-flex items-center justify-center rounded-full border border-[rgba(255,194,131,0.2)] bg-[rgba(255,122,26,0.12)] px-5 py-3 text-[10px] font-semibold uppercase tracking-[0.18em] text-[var(--text-strong)] transition hover:border-[rgba(255,194,131,0.34)] hover:bg-[rgba(255,122,26,0.18)]"
+                  className="inline-flex w-full items-center justify-center rounded-full border border-[rgba(255,194,131,0.2)] bg-[rgba(255,122,26,0.12)] px-5 py-3 text-[10px] font-semibold uppercase tracking-normal text-[var(--text-strong)] transition hover:border-[rgba(255,194,131,0.34)] hover:bg-[rgba(255,122,26,0.18)] sm:w-auto md:tracking-[0.18em]"
                 >
                   Agendar diagnostico
                 </Link>

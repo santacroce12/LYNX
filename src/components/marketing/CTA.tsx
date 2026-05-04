@@ -19,14 +19,14 @@ export default function CTA({ title, text, buttonLabel, href }: CTAProps) {
         <div className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-white/12 to-transparent" />
         <div className="pointer-events-none absolute inset-x-0 bottom-0 h-px bg-gradient-to-r from-transparent via-white/10 to-transparent" />
 
-        <div className="mx-auto w-full max-w-[1320px] px-5 py-8 sm:px-6 md:px-8 md:py-10">
+        <div className="mx-auto w-full max-w-[1320px] px-4 py-8 sm:px-6 md:px-8 md:py-10">
           <div className="grid gap-6 xl:grid-cols-[minmax(0,1fr)_auto] xl:items-center xl:gap-14">
             <div className="max-w-[700px] space-y-3">
               <Reveal>
                 <h2 className="section-heading max-w-3xl">{title}</h2>
               </Reveal>
               <Reveal delay={0.05}>
-                <p className="max-w-[640px] text-base leading-8 text-[var(--text)]/76">
+                <p className="max-w-[640px] text-[0.95rem] leading-7 text-[var(--text)]/76 md:text-base md:leading-8">
                   {text}
                 </p>
               </Reveal>

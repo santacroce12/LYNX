@@ -9,9 +9,9 @@ import { tecnologia } from "@/content/tecnologia";
 
 export default function TecnologiaHero() {
   return (
-    <Section className="pt-12 md:pt-16">
-      <div className="panel-shell overflow-hidden rounded-[2rem] p-3 md:p-4">
-        <div className="relative overflow-hidden rounded-[1.65rem] border border-white/8 px-5 pb-20 pt-6 md:min-h-[430px] md:px-8 md:pb-24 md:pt-8">
+    <Section className="pt-6 md:pt-16">
+      <div className="panel-shell overflow-hidden rounded-[2rem] p-2 md:p-4">
+        <div className="relative overflow-hidden rounded-[1.65rem] border border-white/8 px-4 pb-16 pt-5 md:min-h-[430px] md:px-8 md:pb-24 md:pt-8">
           <Image
             src={tecnologia.hero.image}
             alt={tecnologia.hero.title}
@@ -31,24 +31,24 @@ export default function TecnologiaHero() {
               <Badge>{tecnologia.hero.badge}</Badge>
             </Reveal>
             <Reveal delay={0.05}>
-              <h1 className="mt-5 max-w-3xl text-[2.85rem] font-semibold leading-[0.92] text-white [text-shadow:0_10px_28px_rgba(0,0,0,0.38)] md:text-[3.7rem] lg:text-[4rem]">
+              <h1 className="mt-4 max-w-3xl text-[2.05rem] font-semibold leading-[1.02] text-white [text-shadow:0_10px_28px_rgba(0,0,0,0.38)] md:mt-5 md:text-[3.7rem] md:leading-[0.92] lg:text-[4rem]">
                 {tecnologia.hero.title}
               </h1>
             </Reveal>
             <Reveal delay={0.1}>
-              <p className="mt-5 max-w-2xl text-base leading-8 text-white/84 md:text-[1.08rem]">
+              <p className="mt-4 max-w-2xl text-[0.95rem] leading-7 text-white/84 md:mt-5 md:text-[1.08rem] md:leading-8">
                 {tecnologia.hero.subtitle}
               </p>
             </Reveal>
             <Reveal delay={0.14}>
-              <p className="mt-5 max-w-2xl text-sm leading-7 text-white/68">
+              <p className="mt-4 max-w-2xl text-sm leading-7 text-white/68 md:mt-5">
                 {tecnologia.hero.claim}
               </p>
             </Reveal>
           </div>
 
-          <div className="absolute inset-x-5 bottom-6 z-10 md:inset-x-8">
-            <EnergyFlow className="h-10 opacity-90" />
+          <div className="absolute inset-x-4 bottom-5 z-10 md:inset-x-8 md:bottom-6">
+            <EnergyFlow className="h-10 opacity-45" />
           </div>
         </div>
       </div>

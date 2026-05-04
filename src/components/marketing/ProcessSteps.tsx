@@ -12,12 +12,14 @@ interface Step {
 
 interface ProcessStepsProps {
   steps: Step[];
+  kicker?: string;
   title?: string;
   subtitle?: string;
 }
 
 export default function ProcessSteps({
   steps,
+  kicker = "Framework",
   title = "Nuestra metodología",
   subtitle = "Estándares de ejecución técnica",
 }: ProcessStepsProps) {
@@ -25,15 +27,15 @@ export default function ProcessSteps({
     <Section className="relative overflow-hidden">
       <div className="pointer-events-none absolute inset-x-0 top-0 h-40 bg-[radial-gradient(circle_at_18%_0%,rgba(255,122,26,0.1),transparent_22%),radial-gradient(circle_at_82%_0%,rgba(125,168,255,0.1),transparent_20%)]" />
 
-      <div className="mb-10 text-center">
+      <div className="mb-7 text-left md:mb-10 md:text-center">
         <Reveal>
-          <span className="section-kicker">Framework</span>
+          <span className="section-kicker">{kicker}</span>
         </Reveal>
         <Reveal delay={0.08}>
           <h2 className="section-heading mt-4">{title}</h2>
         </Reveal>
         <Reveal delay={0.14}>
-          <p className="section-copy mx-auto mt-4">{subtitle}</p>
+          <p className="section-copy mt-4 md:mx-auto">{subtitle}</p>
         </Reveal>
       </div>
 
@@ -65,20 +67,20 @@ export default function ProcessSteps({
                     />
                   </div>
 
-                  <div className="panel-shell relative overflow-hidden rounded-[1.6rem] px-5 py-5 md:px-6 md:py-6">
+                  <div className="panel-shell relative overflow-hidden rounded-[1.6rem] px-4 py-4 md:px-6 md:py-6">
                     <div
                       className="panel-decoration timeline-card-scan absolute inset-x-6 top-0 h-[2px]"
                       style={{ "--timeline-delay": scanDelay } as CSSProperties}
                     />
 
                     <div className="flex flex-col gap-3 md:flex-row md:items-start md:justify-between">
-                      <h3 className="max-w-2xl text-[1.45rem] font-semibold leading-[1] text-[var(--text-strong)] md:text-[1.7rem]">
+                      <h3 className="max-w-2xl text-[1.22rem] font-semibold leading-[1.08] text-[var(--text-strong)] md:text-[1.7rem] md:leading-[1]">
                         {item.title}
                       </h3>
                       <div className="h-px w-20 bg-gradient-to-r from-[var(--accent)]/46 via-[var(--accent-soft)]/24 to-transparent" />
                     </div>
 
-                    <p className="mt-4 text-sm leading-7 text-[var(--text)]/76 md:text-base md:leading-8">
+                    <p className="mt-3 text-sm leading-7 text-[var(--text)]/76 md:mt-4 md:text-base md:leading-8">
                       {item.description}
                     </p>
                   </div>

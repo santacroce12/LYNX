@@ -73,10 +73,10 @@ export default function FooterContent() {
               <Link
                 key={item.label}
                 href={item.href}
-                className="group grid min-h-[64px] grid-cols-[1fr_auto] items-center gap-8 rounded-[1.15rem] border border-transparent bg-white/[0.01] px-5 py-3 text-base text-[var(--muted)] transition hover:border-white/8 hover:bg-white/[0.03] hover:text-[var(--text-strong)]"
+                className="group grid min-h-[56px] grid-cols-[1fr_auto] items-center gap-6 rounded-[1.05rem] border border-transparent bg-white/[0.01] px-4 py-3 text-base text-[var(--muted)] transition hover:border-white/8 hover:bg-white/[0.03] hover:text-[var(--text-strong)] md:min-h-[64px] md:gap-8 md:rounded-[1.15rem] md:px-5"
               >
                 <span>{item.label}</span>
-                <span className="w-10 text-right text-[10px] uppercase tracking-[0.2em] text-[var(--muted-soft)] transition group-hover:text-[var(--accent-soft)]">
+                <span className="w-10 text-right text-[10px] uppercase tracking-normal text-[var(--muted-soft)] transition group-hover:text-[var(--accent-soft)] md:tracking-[0.2em]">
                   0{index + 1}
                 </span>
               </Link>
@@ -118,7 +118,7 @@ export default function FooterContent() {
                 className="flex items-center gap-3 rounded-[1.4rem] border border-[var(--border)] bg-[rgba(255,255,255,0.03)] px-4 py-4 transition hover:border-[rgba(255,194,131,0.34)] hover:bg-[rgba(255,122,26,0.06)]"
               >
                 <Phone className="h-5 w-5 text-[var(--accent)]" />
-                <span className="whitespace-nowrap text-sm text-[var(--text-secondary)]">
+                  <span className="text-sm text-[var(--text-secondary)]">
                   {site.contact.mobile}
                 </span>
               </a>
@@ -130,7 +130,7 @@ export default function FooterContent() {
                 className="flex items-center gap-3 rounded-[1.4rem] border border-[var(--border)] bg-[rgba(255,255,255,0.03)] px-4 py-4 transition hover:border-[rgba(255,194,131,0.34)] hover:bg-[rgba(255,122,26,0.06)]"
               >
                 <Phone className="h-5 w-5 text-[var(--accent)]" />
-                <span className="whitespace-nowrap text-sm text-[var(--text-secondary)]">
+                <span className="text-sm text-[var(--text-secondary)]">
                   {site.contact.phone}
                 </span>
               </a>

@@ -39,7 +39,7 @@ export default function AboutSection() {
             <h2 className="section-heading max-w-xl">{about.subtitle}</h2>
           </Reveal>
           <Reveal delay={0.1}>
-            <p className="max-w-2xl text-lg leading-8 text-[var(--text-secondary)]">
+            <p className="max-w-2xl text-base leading-7 text-[var(--text-secondary)] md:text-lg md:leading-8">
               Desde 1993 conectamos ingeniería, automatización y software para
               que las operaciones energéticas e industriales ganen velocidad,
               visibilidad y control.
@@ -75,16 +75,16 @@ export default function AboutSection() {
               </video>
               <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(4,8,16,0.04)_0%,rgba(4,8,16,0.24)_34%,rgba(4,8,16,0.86)_100%)]" />
 
-              <div className="absolute bottom-0 left-0 right-0 flex flex-wrap items-end justify-between gap-4 px-5 py-5 md:px-6 md:py-6">
+            <div className="absolute bottom-0 left-0 right-0 flex flex-wrap items-end justify-between gap-3 px-4 py-4 md:gap-4 md:px-6 md:py-6">
                 <div>
                   <p className="section-kicker">Capacidad instalada</p>
-                  <h3 className="mt-3 max-w-sm text-2xl font-semibold leading-[1.02] text-[var(--text-strong)]">
+                  <h3 className="mt-3 max-w-sm text-[1.25rem] font-semibold leading-[1.06] text-[var(--text-strong)] md:text-2xl md:leading-[1.02]">
                     Ingeniería aplicada para sistemas donde fallar no es opción.
                   </h3>
                 </div>
 
-                <div className="rounded-[1.35rem] border border-[rgba(255,194,131,0.2)] bg-black/25 px-4 py-3 backdrop-blur-md">
-                  <p className="text-[11px] uppercase tracking-[0.24em] text-[var(--muted-soft)]">
+                <div className="rounded-[1.1rem] border border-[rgba(255,194,131,0.2)] bg-black/25 px-3.5 py-3 backdrop-blur-md md:rounded-[1.35rem] md:px-4">
+                  <p className="text-[11px] uppercase tracking-normal text-[var(--muted-soft)] md:tracking-[0.24em]">
                     Operación
                   </p>
                   <p className="mt-2 text-sm text-[var(--text-secondary)]">
@@ -113,7 +113,7 @@ export default function AboutSection() {
                   </span>
                 </div>
 
-                <h3 className="mt-5 text-[1.4rem] font-semibold leading-[1.02] text-[var(--text-strong)]">
+                <h3 className="mt-5 text-[1.22rem] font-semibold leading-[1.08] text-[var(--text-strong)] md:text-[1.4rem] md:leading-[1.02]">
                   {item.title}
                 </h3>
                 <p className="mt-3 text-sm leading-7 text-[var(--muted)]">

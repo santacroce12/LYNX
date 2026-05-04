@@ -3,7 +3,7 @@ import { site } from "@/content/site";
 
 export default function LocationMap() {
   return (
-    <div className="panel-shell overflow-hidden rounded-[2.15rem] p-3 md:p-4">
+    <div className="panel-shell overflow-hidden rounded-[2.15rem] p-2 md:p-4">
       <div className="relative overflow-hidden rounded-[1.6rem] border border-[var(--border)]">
         <iframe
           title="Mapa de oficinas LYNX"
@@ -14,7 +14,7 @@ export default function LocationMap() {
           allowFullScreen
         />
         <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(180deg,rgba(4,9,18,0.08)_0%,rgba(4,9,18,0.24)_100%)]" />
-        <div className="absolute left-4 top-4 max-w-xs rounded-[1.35rem] border border-white/10 bg-[rgba(8,14,24,0.82)] p-4 backdrop-blur-md">
+        <div className="absolute left-3 top-3 max-w-[78%] rounded-[1.1rem] border border-white/10 bg-[rgba(8,14,24,0.82)] p-3 backdrop-blur-md md:left-4 md:top-4 md:max-w-xs md:rounded-[1.35rem] md:p-4">
           <p className="text-base font-semibold text-[var(--text-strong)]">
             {site.contact.address}
           </p>

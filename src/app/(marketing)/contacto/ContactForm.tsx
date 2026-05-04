@@ -85,12 +85,12 @@ export default function ContactForm() {
         : "text-[var(--muted)]";
 
   return (
-    <div className="panel-shell overflow-hidden rounded-[2rem] p-5 md:p-6">
+    <div className="panel-shell overflow-hidden rounded-[2rem] p-4 md:p-6">
       <div className="panel-decoration pointer-events-none absolute -right-12 top-0 h-40 w-40 rounded-full bg-[var(--accent-cool)]/10 blur-3xl" />
 
-      <div className="mb-6 rounded-[1.5rem] border border-white/8 bg-[linear-gradient(180deg,rgba(10,17,30,0.76)_0%,rgba(8,13,23,0.92)_100%)] p-4 md:p-5">
+      <div className="mb-6 rounded-[1.25rem] border border-white/8 bg-[linear-gradient(180deg,rgba(10,17,30,0.76)_0%,rgba(8,13,23,0.92)_100%)] p-4 md:rounded-[1.5rem] md:p-5">
         <p className="section-kicker">Formulario</p>
-        <h2 className="mt-4 text-3xl font-semibold leading-[0.96] text-[var(--text-strong)] md:text-[3rem]">
+        <h2 className="mt-4 text-[1.85rem] font-semibold leading-[1.04] text-[var(--text-strong)] md:text-[3rem] md:leading-[0.96]">
           Contanos qué necesitás.
         </h2>
       </div>
@@ -99,7 +99,7 @@ export default function ContactForm() {
         <div className="space-y-2">
           <label
             htmlFor="name"
-            className="text-[11px] font-semibold uppercase tracking-[0.24em] text-[var(--muted-soft)]"
+            className="text-[11px] font-semibold uppercase tracking-normal text-[var(--muted-soft)] md:tracking-[0.24em]"
           >
             {form.nameLabel}
           </label>
@@ -126,7 +126,7 @@ export default function ContactForm() {
         <div className="space-y-2">
           <label
             htmlFor="email"
-            className="text-[11px] font-semibold uppercase tracking-[0.24em] text-[var(--muted-soft)]"
+            className="text-[11px] font-semibold uppercase tracking-normal text-[var(--muted-soft)] md:tracking-[0.24em]"
           >
             {form.emailLabel}
           </label>
@@ -153,7 +153,7 @@ export default function ContactForm() {
         <div className="space-y-2">
           <label
             htmlFor="message"
-            className="text-[11px] font-semibold uppercase tracking-[0.24em] text-[var(--muted-soft)]"
+            className="text-[11px] font-semibold uppercase tracking-normal text-[var(--muted-soft)] md:tracking-[0.24em]"
           >
             {form.messageLabel}
           </label>
@@ -179,7 +179,7 @@ export default function ContactForm() {
 
         <div className="flex flex-col gap-4 pt-3">
           <div className="flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
-            <Button type="submit" disabled={isSubmitting} size="lg">
+            <Button type="submit" disabled={isSubmitting} size="lg" className="w-full md:w-auto">
               {isSubmitting ? form.submittingLabel : form.submitLabel}
             </Button>
             <p className={`text-xs ${statusClass}`} aria-live="polite">

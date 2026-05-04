@@ -11,7 +11,7 @@ export default function MarketingLayout({
     <>
       <Navbar />
       <MotionProvider>
-        <main className="relative pt-24 md:pt-28">{children}</main>
+        <main className="relative overflow-x-hidden pt-[76px] md:pt-28">{children}</main>
       </MotionProvider>
     </>
   );

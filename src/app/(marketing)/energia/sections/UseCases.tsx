@@ -48,12 +48,12 @@ export default function EnergiaUseCases() {
               </Reveal>
 
               <Reveal y={20} delay={0.14}>
-                <div className="panel-shell flex h-full flex-col justify-center rounded-[1.55rem] p-5 md:p-6">
+                <div className="panel-shell flex h-full flex-col justify-center rounded-[1.55rem] p-4 md:p-6">
                   <span className="section-kicker">Caso {index + 1}</span>
-                  <h3 className="mt-4 text-[1.45rem] font-semibold leading-[1] text-[var(--text-strong)] md:text-[1.7rem]">
+                  <h3 className="mt-4 text-[1.24rem] font-semibold leading-[1.08] text-[var(--text-strong)] md:text-[1.7rem] md:leading-[1]">
                     {useCase.title}
                   </h3>
-                  <p className="mt-4 text-base leading-8 text-[var(--text)]/76">
+                  <p className="mt-3 text-[0.95rem] leading-7 text-[var(--text)]/76 md:mt-4 md:text-base md:leading-8">
                     {useCase.description}
                   </p>
                 </div>

@@ -24,7 +24,7 @@ const icons: LucideIcon[] = [
 export default function TecnologiaProcess() {
   return (
     <Section id="proceso" className="relative overflow-hidden">
-      <div className="pointer-events-none absolute inset-x-0 top-0 h-40 bg-[radial-gradient(circle_at_18%_0%,rgba(255,122,26,0.08),transparent_22%),radial-gradient(circle_at_82%_0%,rgba(125,168,255,0.1),transparent_20%)]" />
+      <div className="pointer-events-none absolute inset-x-0 top-0 h-28 bg-[linear-gradient(180deg,rgba(125,168,255,0.03),transparent_80%)]" />
 
       <div className="mb-7 grid gap-4 lg:grid-cols-[0.78fr_1.22fr] lg:items-end">
         <div>
@@ -61,7 +61,7 @@ export default function TecnologiaProcess() {
               <p className="section-kicker text-[var(--accent-cool)]">
                 As-Is / To-Be / Implementación / Operación / Mantenimiento
               </p>
-              <h3 className="mt-4 max-w-sm text-[1.65rem] font-semibold leading-[1] text-[var(--text-strong)]">
+              <h3 className="mt-4 max-w-sm text-[1.28rem] font-semibold leading-[1.08] text-[var(--text-strong)] md:text-[1.65rem] md:leading-[1]">
                 Un recorrido claro, sin transformar todo a la vez y con acompañamiento posterior a la puesta en marcha.
               </h3>
             </div>
@@ -79,7 +79,7 @@ export default function TecnologiaProcess() {
                     <span className="inline-flex h-8 w-8 items-center justify-center rounded-[0.8rem] border border-[rgba(255,194,131,0.16)] bg-[rgba(255,122,26,0.08)] text-[var(--accent)]">
                       <Icon className="h-4 w-4" aria-hidden="true" />
                     </span>
-                    <span className="text-[10px] font-semibold uppercase tracking-[0.22em] text-[var(--muted-soft)]">
+                    <span className="text-[10px] font-semibold uppercase tracking-normal text-[var(--muted-soft)] md:tracking-[0.22em]">
                       {step.step}
                     </span>
                   </div>

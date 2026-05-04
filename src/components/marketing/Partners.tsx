@@ -24,9 +24,9 @@ export default function Partners() {
       </div>
 
       <Reveal delay={0.12}>
-        <div className="group relative mt-7 overflow-hidden rounded-[1.9rem] border border-[var(--border)] bg-[linear-gradient(180deg,rgba(9,17,31,0.92)_0%,rgba(7,12,22,0.98)_100%)] px-3 py-4 md:px-4">
-          <div className="pointer-events-none absolute inset-y-0 left-0 z-10 w-20 bg-gradient-to-r from-[var(--bg)] via-[var(--bg)]/82 to-transparent" />
-          <div className="pointer-events-none absolute inset-y-0 right-0 z-10 w-20 bg-gradient-to-l from-[var(--bg)] via-[var(--bg)]/82 to-transparent" />
+        <div className="group relative mt-6 overflow-hidden rounded-[1.45rem] border border-[var(--border)] bg-[linear-gradient(180deg,rgba(9,17,31,0.92)_0%,rgba(7,12,22,0.98)_100%)] px-2.5 py-3 md:mt-7 md:rounded-[1.9rem] md:px-4 md:py-4">
+          <div className="pointer-events-none absolute inset-y-0 left-0 z-10 w-12 bg-gradient-to-r from-[var(--bg)] via-[var(--bg)]/82 to-transparent md:w-20" />
+          <div className="pointer-events-none absolute inset-y-0 right-0 z-10 w-12 bg-gradient-to-l from-[var(--bg)] via-[var(--bg)]/82 to-transparent md:w-20" />
 
           <div className="flex w-max items-center gap-4 motion-safe:animate-marquee group-hover:[animation-play-state:paused]">
             {items.map((partner, index) => (
@@ -35,7 +35,7 @@ export default function Partners() {
                 href={partner.href}
                 target={partner.href.startsWith("http") ? "_blank" : undefined}
                 rel={partner.href.startsWith("http") ? "noreferrer" : undefined}
-                className="group/logo flex h-[88px] w-[152px] shrink-0 items-center justify-center rounded-[1.35rem] border border-white/8 bg-[linear-gradient(180deg,rgba(255,255,255,0.08)_0%,rgba(255,255,255,0.03)_100%)] px-5 transition duration-300 hover:border-[rgba(255,194,131,0.22)] hover:bg-[linear-gradient(180deg,rgba(255,255,255,0.13)_0%,rgba(255,255,255,0.05)_100%)]"
+                className="group/logo flex h-[76px] w-[132px] shrink-0 items-center justify-center rounded-[1.05rem] border border-white/8 bg-[linear-gradient(180deg,rgba(255,255,255,0.08)_0%,rgba(255,255,255,0.03)_100%)] px-4 transition duration-300 hover:border-[rgba(255,194,131,0.22)] hover:bg-[linear-gradient(180deg,rgba(255,255,255,0.13)_0%,rgba(255,255,255,0.05)_100%)] md:h-[88px] md:w-[152px] md:rounded-[1.35rem] md:px-5"
                 aria-label={partner.name}
               >
                 <Image

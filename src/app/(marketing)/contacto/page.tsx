@@ -16,9 +16,9 @@ export const metadata = buildMetadata({
 export default function ContactPage() {
   return (
     <>
-      <Section className="pt-12 md:pt-16">
+      <Section className="pt-6 md:pt-16">
         <div className="grid gap-6 lg:grid-cols-[0.94fr_1.06fr] lg:items-start">
-          <div className="panel-shell rounded-[2rem] p-5 md:p-6">
+          <div className="panel-shell rounded-[2rem] p-4 md:p-6">
             <div className="space-y-5">
               <Reveal>
                 <span className="section-kicker">{site.contactPage.eyebrow}</span>
@@ -29,7 +29,7 @@ export default function ContactPage() {
                 </h1>
               </Reveal>
               <Reveal delay={0.1}>
-                <p className="max-w-xl text-base leading-8 text-[var(--text)]/82 md:text-lg">
+                <p className="max-w-xl text-[0.95rem] leading-7 text-[var(--text)]/82 md:text-lg md:leading-8">
                   {site.contactPage.subtitle}
                 </p>
               </Reveal>
@@ -44,7 +44,7 @@ export default function ContactPage() {
                   href={`mailto:${site.contact.email}`}
                   className="rounded-[1.3rem] border border-[var(--border)] bg-white/[0.03] p-4 transition hover:border-[rgba(255,194,131,0.34)] hover:bg-[rgba(255,122,26,0.05)]"
                 >
-                  <p className="text-[11px] uppercase tracking-[0.24em] text-[var(--muted-soft)]">
+                  <p className="text-[11px] uppercase tracking-normal text-[var(--muted-soft)] md:tracking-[0.24em]">
                     Email
                   </p>
                   <p className="mt-3 text-base text-[var(--text-secondary)]">
@@ -58,7 +58,7 @@ export default function ContactPage() {
                   rel="noopener noreferrer"
                   className="rounded-[1.3rem] border border-[var(--border)] bg-white/[0.03] p-4 transition hover:border-[rgba(255,194,131,0.34)] hover:bg-[rgba(255,122,26,0.05)]"
                 >
-                  <p className="text-[11px] uppercase tracking-[0.24em] text-[var(--muted-soft)]">
+                  <p className="text-[11px] uppercase tracking-normal text-[var(--muted-soft)] md:tracking-[0.24em]">
                     WhatsApp
                   </p>
                   <p className="mt-3 text-base text-[var(--text-secondary)]">
@@ -67,7 +67,7 @@ export default function ContactPage() {
                 </a>
 
                 <div className="rounded-[1.3rem] border border-[var(--border)] bg-white/[0.03] p-4 sm:col-span-2">
-                  <p className="text-[11px] uppercase tracking-[0.24em] text-[var(--muted-soft)]">
+                  <p className="text-[11px] uppercase tracking-normal text-[var(--muted-soft)] md:tracking-[0.24em]">
                     Presencia
                   </p>
                   <p className="mt-3 text-base text-[var(--text-secondary)]">

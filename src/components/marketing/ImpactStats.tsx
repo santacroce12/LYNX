@@ -24,8 +24,8 @@ export default function ImpactStats({
 }: ImpactStatsProps) {
   return (
     <Section className="relative">
-      <div className="panel-shell overflow-hidden rounded-[1.75rem] px-5 py-6 md:px-6 md:py-7">
-        <div className="mb-8 text-center">
+      <div className="panel-shell overflow-hidden rounded-[1.75rem] px-4 py-5 md:px-6 md:py-7">
+        <div className="mb-6 text-left md:mb-8 md:text-center">
           <Reveal>
             <span className="section-kicker">Respaldo</span>
           </Reveal>
@@ -38,10 +38,10 @@ export default function ImpactStats({
           {stats.map((stat, index) => (
             <Reveal key={stat.label} delay={index * 0.08}>
               <div className="rounded-[1.25rem] border border-[var(--border)] bg-[rgba(255,255,255,0.03)] px-4 py-5 text-center shadow-[inset_0_1px_0_rgba(255,255,255,0.04)]">
-                <div className="text-3xl font-semibold tracking-tight text-[var(--accent-soft)] md:text-4xl">
+                <div className="text-[1.85rem] font-semibold text-[var(--accent-soft)] md:text-4xl">
                   {stat.value}
                 </div>
-                <div className="mt-3 text-[11px] font-semibold uppercase tracking-[0.24em] text-[var(--muted-soft)]">
+                <div className="mt-3 text-[11px] font-semibold uppercase tracking-normal text-[var(--muted-soft)] md:tracking-[0.24em]">
                   {stat.label}
                 </div>
               </div>
@@ -52,7 +52,7 @@ export default function ImpactStats({
         {badges ? (
           <Reveal delay={0.32}>
             <div className="rounded-[1.45rem] border border-[var(--border)] bg-[rgba(255,255,255,0.03)] p-5 shadow-[inset_0_1px_0_rgba(255,255,255,0.04)] md:p-6">
-              <p className="mb-6 text-center text-[11px] font-semibold uppercase tracking-[0.28em] text-[var(--muted-soft)]">
+              <p className="mb-6 text-left text-[11px] font-semibold uppercase tracking-normal text-[var(--muted-soft)] md:text-center md:tracking-[0.28em]">
                 {badgeTitle}
               </p>
 
@@ -66,7 +66,7 @@ export default function ImpactStats({
                       name={badgeName}
                       className="mb-3 h-10 w-10 text-[var(--accent)] opacity-90 transition-all duration-300 hover:scale-110 hover:opacity-100 md:h-12 md:w-12"
                     />
-                    <span className="text-[11px] font-semibold uppercase leading-tight tracking-wider text-[var(--muted)]">
+                    <span className="text-[11px] font-semibold uppercase leading-tight tracking-normal text-[var(--muted)] md:tracking-wider">
                       {badgeName}
                     </span>
                   </div>

@@ -22,7 +22,7 @@ export default function FeaturedProjects({
 
   return (
     <Section>
-      <div className="mb-8 max-w-2xl">
+      <div className="mb-7 max-w-2xl md:mb-8">
         <Reveal>
           <span className="section-kicker">Proyectos</span>
         </Reveal>
@@ -59,12 +59,12 @@ export default function FeaturedProjects({
                   <div className="absolute inset-0 bg-gradient-to-t from-[var(--bg)]/82 via-transparent to-transparent" />
                 </div>
 
-                <div className="space-y-3 px-5 py-5">
+                <div className="space-y-3 px-4 py-5 md:px-5">
                   <div className="flex flex-wrap gap-2">
                     {item.tags.slice(0, 2).map((tag) => (
                       <span
                         key={tag}
-                        className="rounded-full border border-[var(--border)] bg-[rgba(255,255,255,0.04)] px-3 py-1 text-[10px] font-semibold uppercase tracking-[0.22em] text-[var(--muted)]"
+                        className="rounded-full border border-[var(--border)] bg-[rgba(255,255,255,0.04)] px-3 py-1 text-[10px] font-semibold uppercase tracking-normal text-[var(--muted)] md:tracking-[0.22em]"
                       >
                         {tag}
                       </span>
@@ -80,7 +80,7 @@ export default function FeaturedProjects({
                     </p>
                   </div>
 
-                  <div className="inline-flex items-center gap-2 text-xs uppercase tracking-[0.24em] text-[var(--accent-soft)]">
+                  <div className="inline-flex items-center gap-2 text-xs uppercase tracking-normal text-[var(--accent-soft)] md:tracking-[0.24em]">
                     <span className="h-px w-8 bg-[var(--accent)]/60" />
                     Ver detalle
                   </div>

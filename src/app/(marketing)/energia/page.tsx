@@ -37,7 +37,7 @@ export default function EnergiaPage() {
       <EnergiaUseCases />
       <FAQ title={energia.sections.faqTitle} items={energia.faqs} />
       <FeaturedProjects filterCategory="Energía" />
-      <div className="mx-auto w-full max-w-6xl px-6">
+      <div className="mx-auto w-full max-w-6xl px-4 sm:px-6">
         <EnergyFlow className="mb-12 opacity-80" />
       </div>
       <CTA

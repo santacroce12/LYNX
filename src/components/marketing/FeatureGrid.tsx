@@ -184,7 +184,7 @@ export default function FeatureGrid({
   const columnsClass = columns === 2 ? "md:grid-cols-2" : "lg:grid-cols-3";
 
   return (
-    <div className="space-y-5">
+    <div className="space-y-5 md:space-y-6">
       {title ? (
         <div className="grid gap-3 lg:grid-cols-[0.92fr_1.08fr] lg:items-end">
           <div className="space-y-3">
@@ -197,11 +197,11 @@ export default function FeatureGrid({
         </div>
       ) : null}
 
-      <div className={`grid gap-3.5 sm:grid-cols-2 ${columnsClass}`}>
+      <div className={`grid gap-3.5 sm:grid-cols-2 md:gap-4 ${columnsClass}`}>
         {items.map((item, index) => (
           <Reveal key={item.title} delay={index * 0.05}>
             <Card className="h-full p-0">
-              <div className="relative flex h-full flex-col px-[1.125rem] py-[1.125rem] md:px-5 md:py-5">
+              <div className="relative flex h-full flex-col px-4 py-4 md:px-5 md:py-5">
                 <div className="mb-4 flex items-center justify-between">
                   {item.icon && iconMap[item.icon] ? (
                     <span className="inline-flex h-9 w-9 items-center justify-center rounded-[0.9rem] border border-[rgba(255,194,131,0.14)] bg-[rgba(255,122,26,0.07)] text-[var(--accent)]">
@@ -212,13 +212,13 @@ export default function FeatureGrid({
                   ) : (
                     <span className="inline-flex h-9 w-9 rounded-[0.9rem] border border-[var(--border)] bg-white/5" />
                   )}
-                  <span className="text-[10px] uppercase tracking-[0.18em] text-[var(--muted-soft)]">
+                  <span className="text-[10px] uppercase tracking-normal text-[var(--muted-soft)] md:tracking-[0.18em]">
                     0{index + 1}
                   </span>
                 </div>
 
                 <div className="flex h-full flex-col">
-                  <h3 className="text-[1.2rem] font-semibold leading-[1.04] text-[var(--text-strong)] md:text-[1.28rem]">
+                  <h3 className="text-[1.12rem] font-semibold leading-[1.08] text-[var(--text-strong)] md:text-[1.28rem] md:leading-[1.04]">
                     {item.title}
                   </h3>
                   <p className="mt-2.5 text-sm leading-[1.7] text-[var(--muted)]">

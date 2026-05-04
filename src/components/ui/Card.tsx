@@ -8,7 +8,7 @@ type CardProps = {
 export default function Card({ children, className }: CardProps) {
   return (
     <div
-      className={`panel-shell group relative cursor-pointer overflow-hidden rounded-[1.5rem] p-5 transition-all duration-300 hover:-translate-y-1 hover:border-[rgba(255,194,131,0.24)] active:scale-[0.985] ${
+      className={`panel-shell group relative overflow-hidden rounded-[1.5rem] p-5 transition-all duration-300 ${
         className ?? ""
       }`}
     >
