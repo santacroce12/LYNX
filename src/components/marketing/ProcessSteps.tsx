@@ -25,7 +25,7 @@ export default function ProcessSteps({
 }: ProcessStepsProps) {
   return (
     <Section className="relative overflow-hidden">
-      <div className="pointer-events-none absolute inset-x-0 top-0 h-40 bg-[radial-gradient(circle_at_18%_0%,rgba(255,122,26,0.1),transparent_22%),radial-gradient(circle_at_82%_0%,rgba(125,168,255,0.1),transparent_20%)]" />
+      <div className="pointer-events-none absolute inset-x-0 -top-24 h-72 bg-[radial-gradient(circle_at_24%_36%,rgba(255,122,26,0.035),transparent_30%),radial-gradient(circle_at_78%_36%,rgba(125,168,255,0.045),transparent_32%)] opacity-70 [mask-image:linear-gradient(180deg,transparent_0%,#000_30%,transparent_100%)]" />
 
       <div className="mb-7 text-left md:mb-10 md:text-center">
         <Reveal>
@@ -40,7 +40,7 @@ export default function ProcessSteps({
       </div>
 
       <div className="relative mx-auto max-w-5xl">
-        <div className="absolute bottom-6 left-[42px] top-6 hidden w-px -translate-x-1/2 bg-gradient-to-b from-white/6 via-[var(--accent)]/18 to-white/6 md:block" />
+        <div className="absolute bottom-6 left-[42px] top-6 hidden w-px -translate-x-1/2 bg-gradient-to-b from-white/6 via-[var(--accent-cool)]/14 to-white/6 md:block" />
 
         <div className="space-y-4 md:space-y-5">
           {steps.map((item, index) => {
@@ -53,7 +53,7 @@ export default function ProcessSteps({
                 <article className="relative grid gap-3 md:grid-cols-[84px_minmax(0,1fr)] md:items-center md:gap-5">
                   <div className="relative flex items-center md:h-full md:justify-center">
                     <div
-                      className="timeline-step-chip flex h-12 w-12 items-center justify-center rounded-[1.15rem] border border-[rgba(255,194,131,0.18)] bg-[linear-gradient(180deg,rgba(255,122,26,0.14)_0%,rgba(255,122,26,0.08)_100%)] text-[var(--accent)] shadow-[0_10px_28px_rgba(255,122,26,0.12)]"
+                      className="timeline-step-chip flex h-12 w-12 items-center justify-center rounded-[1.15rem] border border-[rgba(255,194,131,0.14)] bg-[linear-gradient(180deg,rgba(255,122,26,0.08)_0%,rgba(125,168,255,0.035)_100%)] text-[var(--accent-soft)] shadow-[0_10px_28px_rgba(3,8,20,0.18)]"
                       style={{ "--timeline-delay": stepDelay } as CSSProperties}
                     >
                       <span className="text-sm font-semibold">{item.step}</span>
@@ -77,7 +77,7 @@ export default function ProcessSteps({
                       <h3 className="max-w-2xl text-[1.22rem] font-semibold leading-[1.08] text-[var(--text-strong)] md:text-[1.7rem] md:leading-[1]">
                         {item.title}
                       </h3>
-                      <div className="h-px w-20 bg-gradient-to-r from-[var(--accent)]/46 via-[var(--accent-soft)]/24 to-transparent" />
+                      <div className="h-px w-20 bg-gradient-to-r from-[var(--accent-soft)]/22 via-[var(--accent-cool)]/14 to-transparent" />
                     </div>
 
                     <p className="mt-3 text-sm leading-7 text-[var(--text)]/76 md:mt-4 md:text-base md:leading-8">

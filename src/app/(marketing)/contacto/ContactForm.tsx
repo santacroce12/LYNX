@@ -85,99 +85,101 @@ export default function ContactForm() {
         : "text-[var(--muted)]";
 
   return (
-    <div className="panel-shell overflow-hidden rounded-[2rem] p-4 md:p-6">
+    <div className="panel-shell flex h-full min-h-[640px] flex-col overflow-hidden rounded-[2rem] p-4 md:p-6 lg:min-h-[700px]">
       <div className="panel-decoration pointer-events-none absolute -right-12 top-0 h-40 w-40 rounded-full bg-[var(--accent-cool)]/10 blur-3xl" />
 
-      <div className="mb-6 rounded-[1.25rem] border border-white/8 bg-[linear-gradient(180deg,rgba(10,17,30,0.76)_0%,rgba(8,13,23,0.92)_100%)] p-4 md:rounded-[1.5rem] md:p-5">
+      <div className="mb-6 border-b border-white/8 pb-6">
         <p className="section-kicker">Formulario</p>
-        <h2 className="mt-4 text-[1.85rem] font-semibold leading-[1.04] text-[var(--text-strong)] md:text-[3rem] md:leading-[0.96]">
+        <h2 className="mt-4 text-[1.85rem] font-semibold leading-[1.04] text-[var(--text-strong)] md:text-[2.55rem] md:leading-[0.98]">
           Contanos qué necesitás.
         </h2>
       </div>
 
-      <form className="space-y-4" onSubmit={handleSubmit} noValidate>
-        <div className="space-y-2">
-          <label
-            htmlFor="name"
-            className="text-[11px] font-semibold uppercase tracking-normal text-[var(--muted-soft)] md:tracking-[0.24em]"
-          >
-            {form.nameLabel}
-          </label>
-          <input
-            id="name"
-            name="name"
-            type="text"
-            placeholder={form.namePlaceholder}
-            value={values.name}
-            onChange={(event) =>
-              setValues((prev) => ({ ...prev, name: event.target.value }))
-            }
-            className={fieldClass(!!errors.name)}
-            aria-invalid={!!errors.name}
-            aria-describedby={errors.name ? "name-error" : undefined}
-          />
-          {errors.name ? (
-            <p id="name-error" className="text-xs text-[var(--accent)]">
-              {errors.name}
-            </p>
-          ) : null}
+      <form className="flex flex-1 flex-col" onSubmit={handleSubmit} noValidate>
+        <div className="flex-1 space-y-4">
+          <div className="space-y-2">
+            <label
+              htmlFor="name"
+              className="text-[11px] font-semibold uppercase tracking-normal text-[var(--muted-soft)] md:tracking-[0.24em]"
+            >
+              {form.nameLabel}
+            </label>
+            <input
+              id="name"
+              name="name"
+              type="text"
+              placeholder={form.namePlaceholder}
+              value={values.name}
+              onChange={(event) =>
+                setValues((prev) => ({ ...prev, name: event.target.value }))
+              }
+              className={fieldClass(!!errors.name)}
+              aria-invalid={!!errors.name}
+              aria-describedby={errors.name ? "name-error" : undefined}
+            />
+            {errors.name ? (
+              <p id="name-error" className="text-xs text-[var(--accent)]">
+                {errors.name}
+              </p>
+            ) : null}
+          </div>
+
+          <div className="space-y-2">
+            <label
+              htmlFor="email"
+              className="text-[11px] font-semibold uppercase tracking-normal text-[var(--muted-soft)] md:tracking-[0.24em]"
+            >
+              {form.emailLabel}
+            </label>
+            <input
+              id="email"
+              name="email"
+              type="email"
+              placeholder={form.emailPlaceholder}
+              value={values.email}
+              onChange={(event) =>
+                setValues((prev) => ({ ...prev, email: event.target.value }))
+              }
+              className={fieldClass(!!errors.email)}
+              aria-invalid={!!errors.email}
+              aria-describedby={errors.email ? "email-error" : undefined}
+            />
+            {errors.email ? (
+              <p id="email-error" className="text-xs text-[var(--accent)]">
+                {errors.email}
+              </p>
+            ) : null}
+          </div>
+
+          <div className="space-y-2">
+            <label
+              htmlFor="message"
+              className="text-[11px] font-semibold uppercase tracking-normal text-[var(--muted-soft)] md:tracking-[0.24em]"
+            >
+              {form.messageLabel}
+            </label>
+            <textarea
+              id="message"
+              name="message"
+              rows={7}
+              placeholder={form.messagePlaceholder}
+              value={values.message}
+              onChange={(event) =>
+                setValues((prev) => ({ ...prev, message: event.target.value }))
+              }
+              className={`${fieldClass(!!errors.message)} min-h-[178px] resize-y`}
+              aria-invalid={!!errors.message}
+              aria-describedby={errors.message ? "message-error" : undefined}
+            />
+            {errors.message ? (
+              <p id="message-error" className="text-xs text-[var(--accent)]">
+                {errors.message}
+              </p>
+            ) : null}
+          </div>
         </div>
 
-        <div className="space-y-2">
-          <label
-            htmlFor="email"
-            className="text-[11px] font-semibold uppercase tracking-normal text-[var(--muted-soft)] md:tracking-[0.24em]"
-          >
-            {form.emailLabel}
-          </label>
-          <input
-            id="email"
-            name="email"
-            type="email"
-            placeholder={form.emailPlaceholder}
-            value={values.email}
-            onChange={(event) =>
-              setValues((prev) => ({ ...prev, email: event.target.value }))
-            }
-            className={fieldClass(!!errors.email)}
-            aria-invalid={!!errors.email}
-            aria-describedby={errors.email ? "email-error" : undefined}
-          />
-          {errors.email ? (
-            <p id="email-error" className="text-xs text-[var(--accent)]">
-              {errors.email}
-            </p>
-          ) : null}
-        </div>
-
-        <div className="space-y-2">
-          <label
-            htmlFor="message"
-            className="text-[11px] font-semibold uppercase tracking-normal text-[var(--muted-soft)] md:tracking-[0.24em]"
-          >
-            {form.messageLabel}
-          </label>
-          <textarea
-            id="message"
-            name="message"
-            rows={6}
-            placeholder={form.messagePlaceholder}
-            value={values.message}
-            onChange={(event) =>
-              setValues((prev) => ({ ...prev, message: event.target.value }))
-            }
-            className={fieldClass(!!errors.message)}
-            aria-invalid={!!errors.message}
-            aria-describedby={errors.message ? "message-error" : undefined}
-          />
-          {errors.message ? (
-            <p id="message-error" className="text-xs text-[var(--accent)]">
-              {errors.message}
-            </p>
-          ) : null}
-        </div>
-
-        <div className="flex flex-col gap-4 pt-3">
+        <div className="flex flex-col gap-4 pt-5">
           <div className="flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
             <Button type="submit" disabled={isSubmitting} size="lg" className="w-full md:w-auto">
               {isSubmitting ? form.submittingLabel : form.submitLabel}

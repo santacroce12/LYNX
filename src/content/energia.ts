@@ -8,40 +8,40 @@ export const energia = {
     badge: "Vertical Energía",
     title: "Energía confiable para operaciones críticas",
     subtitle:
-      "Diseñamos infraestructura resiliente y sistemas de monitoreo avanzado (WAMS) para industrias que no pueden detenerse.",
-    claim: "Control, eficiencia y continuidad con foco en performance.",
+      "Infraestructura eléctrica, monitoreo avanzado y soporte para activos críticos.",
+    claim: "Control, eficiencia y cumplimiento normativo.",
   },
   sections: {
     featuresTitle: "Capacidades clave",
     featuresSubtitle:
-      "Combinamos ingeniería de potencia y cumplimiento normativo para optimizar cada operación.",
+      "Ingeniería de potencia, control y cumplimiento normativo.",
     servicesTitle: "Servicios Especializados",
     servicesSubtitle:
-      "Desde la integración de sincrofasores (PMU) hasta el control de subestaciones.",
+      "Sincrofasores, subestaciones, control y protecciones.",
     useCasesTitle: "Experiencia Aplicada",
     useCasesSubtitle: "Soluciones diseñadas para entornos críticos y exigentes.",
     galleryTitle: "Infraestructura en imágenes",
     gallerySubtitle:
-      "Un vistazo a nuestras soluciones, operaciones y proyectos en energía.",
+      "Proyectos, equipos y operaciones en terreno.",
     faqTitle: "Preguntas frecuentes de energía",
   },
   features: [
     {
       title: "Cumplimiento CEN",
       description:
-        "Garantizamos la observabilidad y cumplimiento de la Norma Técnica de Seguridad y Calidad.",
+        "Observabilidad y cumplimiento de la Norma Técnica de Seguridad y Calidad.",
       icon: "shield",
     },
     {
       title: "Optimización de consumo",
       description:
-        "Modelos predictivos y ajustes finos para reducir costos energéticos.",
+        "Modelos y ajustes para reducir costos energéticos.",
       icon: "bolt",
     },
     {
       title: "Gestión de redes",
       description:
-        "Monitoreo centralizado con alertas y decisiones en tiempo real.",
+        "Monitoreo centralizado con alertas en tiempo real.",
       icon: "grid",
     },
     {
@@ -57,7 +57,7 @@ export const energia = {
     {
       title: "Auditorías Técnicas",
       description:
-        "Revisión de instalaciones, informes y planes de mejora para cumplimiento normativo.",
+        "Revisión de instalaciones, informes y planes de mejora.",
       icon: "clipboard",
     },
   ],
@@ -65,37 +65,37 @@ export const energia = {
     {
       title: "Sistemas WAMS y PMU",
       description:
-        "Implementación de Unidades de Medición Fasorial (PMU) y PDCs. Monitoreo dinámico de la red en cumplimiento con los anexos técnicos del CEN.",
+        "Implementación de PMU/PDC y monitoreo dinámico de red según anexos técnicos del CEN.",
       icon: "activity",
     },
     {
       title: "Subestaciones",
       description:
-        "Diseño, montaje y puesta en servicio de patios de alta y media tensión.",
+        "Diseño, montaje y puesta en servicio en alta y media tensión.",
       icon: "zap",
     },
     {
       title: "Sistemas de Control",
       description:
-        "Integración de SCADA, RTUs y HMIs para operación remota eficiente.",
+        "SCADA, RTUs y HMIs para operación remota.",
       icon: "monitor",
     },
     {
       title: "Protecciones",
       description:
-        "Configuración, pruebas y puesta en servicio de esquemas de protección.",
+        "Configuración, pruebas y puesta en servicio.",
       icon: "shield",
     },
     {
       title: "Telecomunicaciones",
       description:
-        "Redes industriales robustas (FO, radio, PLC) para entornos críticos.",
+        "FO, radio y PLC para entornos críticos.",
       icon: "radio",
     },
     {
       title: "Ciberseguridad OT",
       description:
-        "Hardenización de redes y cumplimiento de normativas CIP/NUE.",
+        "Hardenización de redes y cumplimiento CIP/NUE.",
       icon: "lock",
     },
   ],
@@ -104,51 +104,51 @@ export const energia = {
       step: "01",
       title: "Diagnóstico & Factibilidad",
       description:
-        "Levantamiento técnico en terreno y análisis de normativas (IEC/IEEE) para validar la viabilidad del proyecto.",
+        "Levantamiento en terreno y revisión normativa para validar viabilidad.",
     },
     {
       step: "02",
       title: "Ingeniería de Detalle",
       description:
-        "Diseño de planos unilineales, control y protecciones. Simulaciones de flujo de carga y selectividad.",
+        "Planos, control, protecciones y simulaciones técnicas.",
     },
     {
       step: "03",
       title: "Ejecución & Montaje",
       description:
-        "Despliegue bajo estrictos protocolos HSE (Reglamento Especial de Contratistas) y supervisión en tiempo real.",
+        "Despliegue con protocolos HSE y supervisión en sitio.",
     },
     {
       step: "04",
       title: "Commissioning (FAT/SAT)",
       description:
-        "Pruebas de aceptación en fábrica y sitio. Validación de señales ante el Coordinador Eléctrico Nacional (CEN).",
+        "Pruebas FAT/SAT y validación de señales ante el CEN.",
     },
     {
       step: "05",
       title: "Monitoreo y Mantenimiento",
       description:
-        "Supervisión continua y mantenimiento preventivo para asegurar disponibilidad y evitar detenciones.",
+        "Supervisión y mantenimiento preventivo para asegurar disponibilidad.",
     },
   ],
   useCases: [
     {
       title: "Sistema de Monitoreo Fasorial",
       description:
-        "Implementación de solución WAMS con PMUs para observabilidad en tiempo real de oscilaciones de potencia, cumpliendo exigencias del Coordinador.",
+        "Solución WAMS con PMUs para observar oscilaciones de potencia en tiempo real.",
       image:
         "https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?auto=format&fit=crop&q=80",
     },
     {
       title: "Centro de Control SCADA",
       description:
-        "Implementación de un sistema centralizado redundante que permite la operación remota de 15 subestaciones distribuidas geográficamente.",
+        "Sistema centralizado redundante para operación remota de subestaciones.",
       image: "/images/energia/control-scada.png",
     },
     {
       title: "Cumplimiento Normativo SITR",
       description:
-        "Diseño, instalación, puesta en marcha y mantenimiento de infraestructura para la integración al Sistema de Información en Tiempo Real (SITR) en Central Yungay y proyectos Barrick.",
+        "Infraestructura para integración al SITR en Central Yungay y proyectos Barrick.",
       image: "/images/energia/cumplimiento-normativo-sitr.png",
     },
   ],
@@ -184,8 +184,8 @@ export const energia = {
     "Modbus TCP",
   ],
   cta: {
-    title: "Llevemos tu operación a un nuevo nivel",
-    text: "Contanos tu desafío energético y diseñemos un plan a medida.",
+    title: "Hablemos de tu desafío energético",
+    text: "Revisamos el contexto y definimos el próximo paso técnico.",
     buttonLabel: "Ir a contacto",
   },
 };

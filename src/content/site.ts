@@ -40,7 +40,7 @@
   homeHero: {
     badge: "Soluciones integradas",
     description:
-      "Unimos ingeniería energética y tecnología aplicada para desplegar soluciones premium con impacto medible.",
+      "Ingeniería, software y soporte para activos que no pueden frenar.",
   },
   homeCards: [
     {
@@ -182,28 +182,28 @@
   homeSection: {
     title: "¿Qué hace LYNX?",
     subtitle:
-      "Activamos proyectos con foco en eficiencia, continuidad y crecimiento sostenible.",
+      "Diagnóstico, ejecución y soporte para energía e infraestructura tecnológica.",
   },
   homeBullets: [
     {
       title: "Diagnóstico experto",
       icon: "search",
-      description: "Levantamos requisitos críticos y un plan claro en semanas.",
+      description: "Relevamos requisitos y priorizamos el plan de acción.",
     },
     {
       title: "Ejecución integral",
       icon: "monitor",
-      description: "Integramos energía, software e infraestructura sin fricciones.",
+      description: "Coordinamos ingeniería, software e infraestructura.",
     },
     {
       title: "Escalabilidad real",
       icon: "ladder",
-      description: "Arquitecturas preparadas para crecer sin deuda técnica.",
+      description: "Diseñamos soluciones mantenibles y preparadas para crecer.",
     },
   ],
   homeCta: {
-    title: "¿Listo para despegar con LYNX?",
-    text: "Conversemos sobre tu desafío y diseñemos la solución ideal.",
+    title: "Hablemos de tu operación",
+    text: "Contanos qué necesitás resolver y armamos el próximo paso.",
     buttonLabel: "Hablemos",
     href: "/contacto",
   },

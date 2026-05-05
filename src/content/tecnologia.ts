@@ -2,73 +2,73 @@ export const tecnologia = {
   meta: {
     title: "Integración Tecnológica y Operación Continua",
     description:
-      "Integramos, implementamos y mantenemos sistemas, datos, infraestructura y procesos para operaciones con mayor visibilidad, eficiencia y continuidad.",
+      "Integramos sistemas, datos e infraestructura para operaciones más visibles, eficientes y sostenibles.",
   },
   hero: {
-    badge: "Integración Tecnológica y Operación Continua",
-    title: "Tecnología conectada, implementada y mantenida para operaciones exigentes",
+    badge: "Vertical Tecnología",
+    title: "Tecnología operativa para sistemas conectados",
     subtitle:
-      "Integramos sistemas, datos, infraestructura y procesos para que las organizaciones puedan operar con mayor visibilidad, eficiencia y control.",
+      "Conectamos plataformas, datos y equipos para que la operación sea visible y controlable.",
     body: [
       "No solo implementamos soluciones tecnológicas: las acompañamos en operación, mantenimiento y mejora continua para asegurar estabilidad, continuidad y evolución en el tiempo.",
       "Construimos, operamos y mantenemos ecosistemas tecnológicos integrados.",
     ],
     claim:
-      "No hacemos tecnología aislada. Construimos, operamos y mantenemos ecosistemas tecnológicos integrados.",
+      "Implementación, soporte y mejora continua.",
     cta: "Explorar soluciones",
     image: "/images/tecnologia/tecnologia-abstracto.jpg",
   },
   sections: {
-    featuresTitle: "Integración, ejecución y mantenimiento con foco operativo",
+    featuresTitle: "Capacidades tecnológicas",
     featuresSubtitle:
-      "Convertimos sistemas aislados, procesos manuales e información dispersa en operaciones conectadas, medibles, escalables y sostenibles en el tiempo.",
+      "De sistemas aislados a información disponible para operar y decidir.",
     servicesTitle: "Soluciones tecnológicas de punta a punta",
     servicesSubtitle:
-      "No solo proponemos tecnología. La diseñamos, la integramos, la implementamos, la ponemos en marcha y la mantenemos en operación.",
+      "Diseño, integración, puesta en marcha y soporte.",
     processKicker: "Cómo trabajamos",
     processTitle: "De la necesidad del negocio a la operación mantenida",
     processSubtitle:
-      "Ordenamos cada iniciativa desde el diagnóstico hasta la adopción, asegurando ejecución técnica, continuidad operativa y soporte posterior.",
+      "Un recorrido claro desde diagnóstico hasta adopción y soporte.",
     useCasesTitle: "Casos de uso",
     useCasesSubtitle:
-      "Aplicaciones concretas para conectar sistemas, sedes, datos y equipos, asegurando continuidad operativa en el tiempo.",
+      "Aplicaciones concretas para sistemas, sedes, datos y equipos.",
     faqTitle: "Preguntas frecuentes de integración tecnológica",
   },
   features: [
     {
       title: "Integración de sistemas",
       description:
-        "Conectamos ERP, CRM, bases de datos, sistemas legacy, plataformas digitales y herramientas operativas.",
+        "Conectamos ERP, CRM, bases de datos y sistemas legacy.",
       icon: "link",
     },
     {
       title: "Automatización de procesos",
       description:
-        "Digitalizamos tareas repetitivas, aprobaciones, alertas, reportes, controles y circuitos operativos.",
+        "Digitalizamos aprobaciones, alertas, reportes y controles.",
       icon: "cpu",
     },
     {
       title: "Gestión centralizada",
       description:
-        "Unificamos información, sedes, sistemas y procesos en entornos de control claros y monitoreables.",
+        "Unificamos información y sedes en entornos monitoreables.",
       icon: "grid",
     },
     {
       title: "Despliegue en terreno",
       description:
-        "Coordinamos instalación, configuración, pruebas, capacitación y puesta en marcha multisede.",
+        "Coordinamos instalación, configuración, pruebas y capacitación.",
       icon: "rocket",
     },
     {
       title: "Continuidad operativa",
       description:
-        "Aplicamos buenas prácticas para reducir interrupciones, proteger datos críticos y sostener la disponibilidad de las soluciones.",
+        "Reducimos interrupciones y protegemos datos críticos.",
       icon: "shield",
     },
     {
       title: "Mantenimiento y evolución",
       description:
-        "Acompañamos la operación con soporte técnico, mantenimiento preventivo, atención correctiva, monitoreo y mejoras continuas.",
+        "Soporte técnico, mantenimiento preventivo y mejoras continuas.",
       icon: "life-buoy",
     },
   ],
@@ -76,37 +76,37 @@ export const tecnologia = {
     {
       title: "Consultoría tecnológica",
       description:
-        "Levantamos sistemas, procesos, datos e infraestructura para definir oportunidades concretas de integración, automatización y mejora.",
+        "Relevamos sistemas, procesos y datos para definir prioridades.",
       icon: "clipboard-check",
     },
     {
       title: "Arquitectura de solución",
       description:
-        "Definimos componentes, integraciones, flujos de información, herramientas y etapas de implementación.",
+        "Definimos componentes, integraciones y etapas de implementación.",
       icon: "layers",
     },
     {
       title: "Integración de plataformas",
       description:
-        "Conectamos herramientas nuevas y existentes para unificar la operación y evitar sistemas aislados.",
+        "Conectamos herramientas nuevas y existentes.",
       icon: "network",
     },
     {
       title: "Desarrollo e implementación",
       description:
-        "Construimos automatizaciones, tableros, APIs, conectores, aplicaciones y soluciones digitales a medida.",
+        "Construimos automatizaciones, tableros, APIs y conectores.",
       icon: "code",
     },
     {
       title: "Logística y despliegue operativo",
       description:
-        "Gestionamos hardware, instalación, configuración, pruebas, capacitación y puesta en marcha en campo.",
+        "Gestionamos hardware, instalación, pruebas y puesta en marcha.",
       icon: "truck",
     },
     {
       title: "Mantenimiento y soporte continuo",
       description:
-        "Operamos y acompañamos las soluciones implementadas mediante soporte especializado, mantenimiento preventivo y correctivo, monitoreo, gestión de incidencias y mejoras evolutivas.",
+        "Soporte especializado, mantenimiento, monitoreo e incidencias.",
       icon: "life-buoy",
     },
   ],
@@ -115,79 +115,79 @@ export const tecnologia = {
       step: "01",
       title: "Diagnóstico As-Is",
       description:
-        "Mapeamos problema, sistemas, procesos, infraestructura y madurez tecnológica.",
+        "Mapeamos problema, sistemas y madurez tecnológica.",
     },
     {
       step: "02",
       title: "Diseño To-Be",
       description:
-        "Definimos qué integrar, automatizar, desarrollar, mejorar o mantener.",
+        "Definimos qué integrar, automatizar o desarrollar.",
     },
     {
       step: "03",
       title: "Roadmap de implementación",
       description:
-        "Priorizamos iniciativas por impacto, urgencia, complejidad y sostenibilidad operativa.",
+        "Priorizamos iniciativas por impacto, urgencia y complejidad.",
     },
     {
       step: "04",
       title: "Ejecución ágil",
       description:
-        "Implementamos con equipos técnicos, entregas iterativas, pruebas y seguimiento.",
+        "Implementamos con entregas iterativas, pruebas y seguimiento.",
     },
     {
       step: "05",
       title: "Puesta en marcha",
       description:
-        "Validamos en operación real, capacitamos usuarios y acompañamos la adopción.",
+        "Validamos en operación real y capacitamos usuarios.",
     },
     {
       step: "06",
       title: "Operación y mantenimiento",
       description:
-        "Monitoreamos, damos soporte, resolvemos incidencias, ejecutamos mantenimiento preventivo y evolucionamos la solución según nuevas necesidades.",
+        "Monitoreamos, damos soporte y evolucionamos la solución.",
     },
   ],
   useCases: [
     {
       title: "Operaciones conectadas",
       description:
-        "Sistemas de campo, plataformas internas y áreas de negocio integradas en una visión centralizada.",
+        "Sistemas de campo y áreas de negocio en una vista centralizada.",
       icon: "network",
       image: "/images/tecnologia/generated/caso-operaciones-conectadas.png",
     },
     {
       title: "Automatización administrativa y operativa",
       description:
-        "Flujos digitales, reglas de negocio, alertas, aprobaciones y reportes automáticos.",
+        "Flujos digitales, alertas, aprobaciones y reportes.",
       icon: "workflow",
       image: "/images/tecnologia/generated/caso-automatizacion.png",
     },
     {
       title: "Tecnología en campo",
       description:
-        "Hardware, conectividad, sensores, cámaras, monitoreo y software para operación real.",
+        "Hardware, conectividad, sensores y software en sitio.",
       icon: "radio",
       image: "/images/tecnologia/generated/caso-tecnologia-campo.png",
     },
     {
       title: "Integración multisede",
       description:
-        "Plantas, sucursales, oficinas o centros operativos gestionados como una red coordinada.",
+        "Plantas, sucursales y centros operativos conectados.",
       icon: "map",
       image: "/images/tecnologia/generated/caso-integracion-multisede.png",
     },
     {
       title: "Tableros de gestión",
       description:
-        "Datos de distintas fuentes convertidos en indicadores claros para decidir mejor.",
+        "Datos de distintas fuentes convertidos en indicadores claros.",
       icon: "chart",
       image: "/images/tecnologia/generated/caso-tableros-gestion.png",
     },
     {
       title: "Mantenimiento tecnológico operativo",
       description:
-        "Soporte continuo, monitoreo, atención de incidencias, mantenimiento preventivo y mejoras evolutivas para sostener la operación tecnológica del cliente.",
+        "Soporte, monitoreo e incidencias para sostener la operación.",
       icon: "refresh",
       image: "/images/tecnologia/generated/caso-modernizacion-sistemas.png",
     },
@@ -195,9 +195,9 @@ export const tecnologia = {
   industries: {
     title: "LYNX en tu industria",
     subtitle:
-      "Integramos, desplegamos y mantenemos tecnología para operaciones reales.",
+      "Tecnología aplicada a operaciones reales.",
     support:
-      "Aplicamos soluciones tecnológicas en distintos sectores, conectando sistemas, datos, infraestructura y procesos críticos.",
+      "Sectores donde conectamos sistemas, datos e infraestructura.",
     items: [
       {
         title: "Energía e infraestructura crítica",
@@ -315,7 +315,7 @@ export const tecnologia = {
   ],
   cta: {
     title: "Conectemos tu operación",
-    text: "Contanos qué sistemas, procesos o sedes necesitás integrar y armamos un plan claro de implementación, operación y mantenimiento.",
+    text: "Contanos qué sistemas, procesos o sedes necesitás integrar.",
     buttonLabel: "Hablar con LYNX",
   },
 };

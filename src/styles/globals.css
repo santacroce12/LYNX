@@ -60,8 +60,8 @@ body {
     font-family: var(--font-sans);
     font-feature-settings: "rlig" 1, "calt" 1;
     background:
-      radial-gradient(circle at 12% 10%, rgba(255, 122, 26, 0.11), transparent 20%),
-      radial-gradient(circle at 86% 8%, rgba(125, 168, 255, 0.12), transparent 18%),
+      radial-gradient(circle at 12% 10%, rgba(255, 122, 26, 0.065), transparent 24%),
+      radial-gradient(circle at 86% 8%, rgba(125, 168, 255, 0.075), transparent 22%),
       linear-gradient(135deg, #09111f 0%, #040915 42%, #040915 100%);
   }
 
@@ -87,10 +87,10 @@ body {
     z-index: -1;
     pointer-events: none;
     background:
-      radial-gradient(circle at 14% 18%, rgba(255, 122, 26, 0.12), transparent 26%),
-      radial-gradient(circle at 78% 24%, rgba(125, 168, 255, 0.11), transparent 24%),
-      radial-gradient(circle at 56% 92%, rgba(255, 122, 26, 0.05), transparent 28%);
-    opacity: 0.7;
+      radial-gradient(circle at 14% 18%, rgba(255, 122, 26, 0.07), transparent 30%),
+      radial-gradient(circle at 78% 24%, rgba(125, 168, 255, 0.07), transparent 30%),
+      radial-gradient(circle at 56% 92%, rgba(255, 122, 26, 0.035), transparent 34%);
+    opacity: 0.48;
   }
 
   p {
@@ -257,7 +257,7 @@ body {
 
   .timeline-connector {
     background:
-      linear-gradient(90deg, rgba(255, 122, 26, 0.38) 0%, rgba(255, 194, 131, 0.22) 55%, rgba(255, 194, 131, 0) 100%);
+      linear-gradient(90deg, rgba(125, 168, 255, 0.2) 0%, rgba(255, 194, 131, 0.14) 55%, rgba(255, 194, 131, 0) 100%);
     transform-origin: left center;
     animation: timeline-connector-scan 4.8s ease-in-out infinite;
     animation-delay: var(--timeline-delay, 0s);
@@ -272,8 +272,8 @@ body {
     position: absolute;
     inset: 0;
     background:
-      linear-gradient(90deg, rgba(255, 122, 26, 0.04) 0%, rgba(255, 122, 26, 0.34) 34%, rgba(255, 194, 131, 0.42) 52%, rgba(255, 122, 26, 0.34) 68%, rgba(255, 122, 26, 0.04) 100%);
-    box-shadow: 0 0 12px rgba(255, 122, 26, 0.12);
+      linear-gradient(90deg, rgba(125, 168, 255, 0.025) 0%, rgba(125, 168, 255, 0.16) 36%, rgba(255, 194, 131, 0.18) 52%, rgba(125, 168, 255, 0.14) 68%, rgba(125, 168, 255, 0.025) 100%);
+    box-shadow: 0 0 12px rgba(125, 168, 255, 0.08);
     transform: translateX(-120%);
     animation: timeline-scan 4.8s ease-in-out infinite;
     animation-delay: var(--timeline-delay, 0s);
@@ -328,14 +328,14 @@ body {
   0%,
   100% {
     transform: scale(1);
-    box-shadow: 0 10px 24px rgba(255, 122, 26, 0.08);
+    box-shadow: 0 10px 24px rgba(3, 8, 20, 0.18);
   }
 
   45% {
     transform: scale(1.02);
     box-shadow:
-      0 12px 28px rgba(255, 122, 26, 0.14),
-      0 0 0 1px rgba(255, 194, 131, 0.12);
+      0 12px 28px rgba(125, 168, 255, 0.08),
+      0 0 0 1px rgba(255, 194, 131, 0.09);
   }
 }
 

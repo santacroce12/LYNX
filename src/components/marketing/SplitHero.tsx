@@ -44,7 +44,7 @@ export default function SplitHero() {
 
             <Reveal delay={0.12}>
               <p className="mt-4 max-w-2xl text-[0.95rem] leading-7 text-[var(--text-secondary)] md:text-[1.05rem] md:leading-8">
-                {site.tagline}. Diseñamos operaciones más observables, resilientes y rápidas para compañías que no pueden frenar.
+                Energía, automatización y software para operaciones críticas.
               </p>
             </Reveal>
 

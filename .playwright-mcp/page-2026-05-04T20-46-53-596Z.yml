@@ -1,0 +1,161 @@
+- generic [active] [ref=e1]:
+  - banner [ref=e2]:
+    - generic [ref=e4]:
+      - link "LYNX logo" [ref=e5] [cursor=pointer]:
+        - /url: /
+        - img "LYNX logo" [ref=e6]
+      - button "Abrir menu" [ref=e8] [cursor=pointer]:
+        - img [ref=e9]
+    - generic:
+      - button
+      - generic:
+        - generic:
+          - generic:
+            - generic:
+              - generic: Recursos
+              - paragraph: Energía y Tecnología para soluciones modernas
+            - navigation:
+              - link:
+                - /url: /
+                - generic: Inicio
+                - generic: "01"
+              - link:
+                - /url: /energia
+                - generic: Energía
+                - generic: "02"
+              - link:
+                - /url: /tecnologia
+                - generic: Tecnología
+                - generic: "03"
+              - link:
+                - /url: /recursos
+                - generic: Recursos
+                - generic: "04"
+              - link:
+                - /url: /contacto
+                - generic: Contacto
+                - generic: "05"
+            - generic:
+              - link:
+                - /url: /contacto
+                - text: Agendar diagnostico
+  - main [ref=e10]:
+    - generic [ref=e14]:
+      - img "Paneles solares en operacion" [ref=e15]
+      - generic [ref=e20]:
+        - generic [ref=e22]: Casos de Éxito
+        - heading "Proyectos Destacados" [level=1] [ref=e25]
+        - paragraph [ref=e27]: Explorá nuestra experiencia real desarrollando soluciones críticas para el sector energético e industrial.
+    - generic [ref=e38]:
+      - generic [ref=e39]:
+        - heading "Portafolio de Proyectos" [level=2] [ref=e41]
+        - paragraph [ref=e43]: Conoce en detalle las soluciones implementadas y los resultados obtenidos en cada desafío.
+      - generic [ref=e44]:
+        - link "Leer caso ET Villa Hipódromo" [ref=e46] [cursor=pointer]:
+          - /url: /recursos?id=villa-hipodromo
+          - generic [ref=e48]:
+            - img "ET Villa Hipódromo" [ref=e50]
+            - generic [ref=e52]:
+              - generic [ref=e53]:
+                - generic [ref=e54]: Control
+                - generic [ref=e55]: Alta Tensión
+                - generic [ref=e56]: PLC
+                - generic [ref=e57]: Subestación
+              - generic [ref=e58]:
+                - heading "ET Villa Hipódromo" [level=3] [ref=e59]
+                - paragraph [ref=e60]: Ingeniería de detalle y sistema de control basado en PLC para dos líneas y dos transformadores de 132/33/13 kV.
+              - generic [ref=e61]: Leer caso completo
+        - link "Leer caso Agencia Espacial Europea (ESA)" [ref=e64] [cursor=pointer]:
+          - /url: /recursos?id=antena-esa
+          - generic [ref=e66]:
+            - img "Agencia Espacial Europea (ESA)" [ref=e68]
+            - generic [ref=e70]:
+              - generic [ref=e71]:
+                - generic [ref=e72]: Alimentación Crítica
+                - generic [ref=e73]: UPS
+                - generic [ref=e74]: Generación
+                - generic [ref=e75]: SCADA
+              - generic [ref=e76]:
+                - heading "Agencia Espacial Europea (ESA)" [level=3] [ref=e77]
+                - paragraph [ref=e78]: Consultoría, ingeniería y provisión llave en mano del sistema eléctrico y control de alimentación asegurada.
+              - generic [ref=e79]: Leer caso completo
+        - link "Leer caso Central Hidroeléctrica Nihuil 2" [ref=e82] [cursor=pointer]:
+          - /url: /recursos?id=nihuil-2
+          - generic [ref=e84]:
+            - img "Central Hidroeléctrica Nihuil 2" [ref=e86]
+            - generic [ref=e88]:
+              - generic [ref=e89]:
+                - generic [ref=e90]: Protecciones
+                - generic [ref=e91]: Hidroeléctrica
+                - generic [ref=e92]: Generación
+              - generic [ref=e93]:
+                - heading "Central Hidroeléctrica Nihuil 2" [level=3] [ref=e94]
+                - paragraph [ref=e95]: Ingeniería de detalle para el recambio y modernización de los paneles de protección del complejo hidroeléctrico.
+              - generic [ref=e96]: Leer caso completo
+    - generic [ref=e100]:
+      - generic [ref=e101]:
+        - generic [ref=e102]:
+          - heading "¿Querés ver más detalles?" [level=2] [ref=e104]
+          - paragraph [ref=e106]: Contanos tu desafío y armamos un caso a medida para tu operación.
+        - link "Hablar con LYNX" [ref=e109] [cursor=pointer]:
+          - /url: /contacto
+      - generic [ref=e110]:
+        - generic [ref=e111]:
+          - generic [ref=e112]:
+            - generic [ref=e113]: Infraestructura crítica
+            - generic [ref=e114]:
+              - link "LYNX" [ref=e116] [cursor=pointer]:
+                - /url: /
+                - img "LYNX" [ref=e117]
+              - generic [ref=e118]:
+                - paragraph [ref=e119]: "Redes:"
+                - link "LinkedIn" [ref=e121] [cursor=pointer]:
+                  - /url: https://linkedin.com/company/lynxenergia
+                  - img [ref=e122]
+          - generic [ref=e126]:
+            - heading "Navegación" [level=3] [ref=e127]
+            - generic [ref=e128]:
+              - link "Inicio 01" [ref=e129] [cursor=pointer]:
+                - /url: /
+                - generic [ref=e130]: Inicio
+                - generic [ref=e131]: "01"
+              - link "Energía 02" [ref=e132] [cursor=pointer]:
+                - /url: /energia
+                - generic [ref=e133]: Energía
+                - generic [ref=e134]: "02"
+              - link "Tecnología 03" [ref=e135] [cursor=pointer]:
+                - /url: /tecnologia
+                - generic [ref=e136]: Tecnología
+                - generic [ref=e137]: "03"
+              - link "Recursos 04" [ref=e138] [cursor=pointer]:
+                - /url: /recursos
+                - generic [ref=e139]: Recursos
+                - generic [ref=e140]: "04"
+              - link "Contacto 05" [ref=e141] [cursor=pointer]:
+                - /url: /contacto
+                - generic [ref=e142]: Contacto
+                - generic [ref=e143]: "05"
+          - generic [ref=e144]:
+            - heading "Contacto" [level=3] [ref=e145]
+            - generic [ref=e146]:
+              - generic [ref=e148]:
+                - img [ref=e149]
+                - generic [ref=e152]:
+                  - paragraph [ref=e153]: Santiago, Chile
+                  - paragraph [ref=e154]: Operación en Chile y Argentina
+              - link "soporte@lynx.cl" [ref=e155] [cursor=pointer]:
+                - /url: mailto:soporte@lynx.cl
+                - img [ref=e156]
+                - generic [ref=e159]: soporte@lynx.cl
+              - generic [ref=e160]:
+                - link "+56 9 9219 1328" [ref=e161] [cursor=pointer]:
+                  - /url: tel:+56992191328
+                  - img [ref=e162]
+                  - generic [ref=e164]: +56 9 9219 1328
+                - link "+56 9 9216 2573" [ref=e165] [cursor=pointer]:
+                  - /url: https://wa.me/56992162573
+                  - img [ref=e166]
+                  - generic [ref=e168]: +56 9 9216 2573
+        - generic [ref=e169]:
+          - paragraph [ref=e170]: © 2026 LYNX. Todos los derechos reservados.
+          - paragraph [ref=e171]: Energía y Tecnología para soluciones modernas

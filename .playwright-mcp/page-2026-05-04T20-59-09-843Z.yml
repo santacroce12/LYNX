@@ -1,0 +1,481 @@
+- generic [active] [ref=e1]:
+  - banner [ref=e2]:
+    - generic [ref=e4]:
+      - link "LYNX logo" [ref=e5] [cursor=pointer]:
+        - /url: /
+        - img "LYNX logo" [ref=e6]
+      - navigation "Navegación principal" [ref=e7]:
+        - link "Inicio" [ref=e8] [cursor=pointer]:
+          - /url: /
+          - text: Inicio
+        - link "Energía" [ref=e9] [cursor=pointer]:
+          - /url: /energia
+          - text: Energía
+        - link "Tecnología" [ref=e10] [cursor=pointer]:
+          - /url: /tecnologia
+          - text: Tecnología
+        - link "Recursos" [ref=e11] [cursor=pointer]:
+          - /url: /recursos
+          - text: Recursos
+        - link "Contacto" [ref=e12] [cursor=pointer]:
+          - /url: /contacto
+          - text: Contacto
+  - main [ref=e13]:
+    - generic [ref=e15]:
+      - generic [ref=e17]:
+        - img "Tecnología conectada, implementada y mantenida para operaciones exigentes" [ref=e18]
+        - generic:
+          - img
+          - generic:
+            - generic:
+              - img
+          - generic:
+            - generic:
+              - img
+          - generic:
+            - generic:
+              - img
+        - generic [ref=e23]:
+          - generic [ref=e25]: Integración Tecnológica y Operación Continua
+          - heading "Tecnología conectada, implementada y mantenida para operaciones exigentes" [level=1] [ref=e28]
+          - paragraph [ref=e30]: Integramos sistemas, datos, infraestructura y procesos para que las organizaciones puedan operar con mayor visibilidad, eficiencia y control.
+          - paragraph [ref=e32]: No hacemos tecnología aislada. Construimos, operamos y mantenemos ecosistemas tecnológicos integrados.
+      - generic [ref=e43]:
+        - generic [ref=e44]:
+          - generic [ref=e45]:
+            - generic [ref=e46]: Capacidades
+            - heading "Integración, ejecución y mantenimiento con foco operativo" [level=2] [ref=e47]
+          - paragraph [ref=e48]: Convertimos sistemas aislados, procesos manuales e información dispersa en operaciones conectadas, medibles, escalables y sostenibles en el tiempo.
+        - generic [ref=e49]:
+          - generic [ref=e53]:
+            - generic [ref=e54]:
+              - img [ref=e56]
+              - generic [ref=e58]: "01"
+            - generic [ref=e59]:
+              - heading "Integración de sistemas" [level=3] [ref=e60]
+              - paragraph [ref=e61]: Conectamos ERP, CRM, bases de datos, sistemas legacy, plataformas digitales y herramientas operativas.
+          - generic [ref=e65]:
+            - generic [ref=e66]:
+              - img [ref=e68]
+              - generic [ref=e70]: "02"
+            - generic [ref=e71]:
+              - heading "Automatización de procesos" [level=3] [ref=e72]
+              - paragraph [ref=e73]: Digitalizamos tareas repetitivas, aprobaciones, alertas, reportes, controles y circuitos operativos.
+          - generic [ref=e77]:
+            - generic [ref=e78]:
+              - img [ref=e80]
+              - generic [ref=e82]: "03"
+            - generic [ref=e83]:
+              - heading "Gestión centralizada" [level=3] [ref=e84]
+              - paragraph [ref=e85]: Unificamos información, sedes, sistemas y procesos en entornos de control claros y monitoreables.
+          - generic [ref=e89]:
+            - generic [ref=e90]:
+              - img [ref=e92]
+              - generic [ref=e94]: "04"
+            - generic [ref=e95]:
+              - heading "Despliegue en terreno" [level=3] [ref=e96]
+              - paragraph [ref=e97]: Coordinamos instalación, configuración, pruebas, capacitación y puesta en marcha multisede.
+          - generic [ref=e101]:
+            - generic [ref=e102]:
+              - img [ref=e104]
+              - generic [ref=e106]: "05"
+            - generic [ref=e107]:
+              - heading "Continuidad operativa" [level=3] [ref=e108]
+              - paragraph [ref=e109]: Aplicamos buenas prácticas para reducir interrupciones, proteger datos críticos y sostener la disponibilidad de las soluciones.
+          - generic [ref=e113]:
+            - generic [ref=e114]:
+              - img [ref=e116]
+              - generic [ref=e120]: "06"
+            - generic [ref=e121]:
+              - heading "Mantenimiento y evolución" [level=3] [ref=e122]
+              - paragraph [ref=e123]: Acompañamos la operación con soporte técnico, mantenimiento preventivo, atención correctiva, monitoreo y mejoras continuas.
+    - generic [ref=e125]:
+      - generic [ref=e126]:
+        - heading "LYNX en tu industria" [level=2] [ref=e128]
+        - paragraph [ref=e130]: Integramos, desplegamos y mantenemos tecnología para operaciones reales.
+        - paragraph [ref=e132]: Aplicamos soluciones tecnológicas en distintos sectores, conectando sistemas, datos, infraestructura y procesos críticos.
+      - generic [ref=e133]:
+        - article [ref=e135]:
+          - generic [ref=e136]:
+            - img "Energía e infraestructura crítica" [ref=e138]
+            - generic [ref=e140]:
+              - generic [ref=e141]:
+                - generic [ref=e142]:
+                  - heading "Energía e infraestructura crítica" [level=3] [ref=e143]
+                  - paragraph [ref=e144]: Continuidad para operaciones exigentes.
+                - generic [ref=e145]: "01"
+              - list [ref=e146]:
+                - listitem [ref=e147]:
+                  - img [ref=e148]
+                  - generic [ref=e151]: Integración de sistemas críticos
+                - listitem [ref=e152]:
+                  - img [ref=e153]
+                  - generic [ref=e156]: Monitoreo y soporte operativo
+                - listitem [ref=e157]:
+                  - img [ref=e158]
+                  - generic [ref=e161]: Mantenimiento preventivo
+              - link "Ver soluciones" [ref=e163] [cursor=pointer]:
+                - /url: /energia
+                - generic [ref=e164]: Ver soluciones
+                - img [ref=e165]
+        - article [ref=e169]:
+          - generic [ref=e170]:
+            - img "Industria y manufactura" [ref=e172]
+            - generic [ref=e174]:
+              - generic [ref=e175]:
+                - generic [ref=e176]:
+                  - heading "Industria y manufactura" [level=3] [ref=e177]
+                  - paragraph [ref=e178]: Tecnología para plantas y procesos.
+                - generic [ref=e179]: "02"
+              - list [ref=e180]:
+                - listitem [ref=e181]:
+                  - img [ref=e182]
+                  - generic [ref=e185]: Automatización operativa
+                - listitem [ref=e186]:
+                  - img [ref=e187]
+                  - generic [ref=e190]: Datos y tableros de control
+                - listitem [ref=e191]:
+                  - img [ref=e192]
+                  - generic [ref=e195]: Soporte en planta
+              - link "Ver soluciones" [ref=e197] [cursor=pointer]:
+                - /url: /contacto
+                - generic [ref=e198]: Ver soluciones
+                - img [ref=e199]
+        - article [ref=e203]:
+          - generic [ref=e204]:
+            - img "Seguridad y monitoreo" [ref=e206]
+            - generic [ref=e208]:
+              - generic [ref=e209]:
+                - generic [ref=e210]:
+                  - heading "Seguridad y monitoreo" [level=3] [ref=e211]
+                  - paragraph [ref=e212]: Sistemas conectados y operación centralizada.
+                - generic [ref=e213]: "03"
+              - list [ref=e214]:
+                - listitem [ref=e215]:
+                  - img [ref=e216]
+                  - generic [ref=e219]: Cámaras, VMS y control de acceso
+                - listitem [ref=e220]:
+                  - img [ref=e221]
+                  - generic [ref=e224]: Monitoreo multisede
+                - listitem [ref=e225]:
+                  - img [ref=e226]
+                  - generic [ref=e229]: Mantenimiento y diagnóstico
+              - link "Ver soluciones" [ref=e231] [cursor=pointer]:
+                - /url: /contacto
+                - generic [ref=e232]: Ver soluciones
+                - img [ref=e233]
+        - article [ref=e237]:
+          - generic [ref=e238]:
+            - img "Retail y multisede" [ref=e240]
+            - generic [ref=e242]:
+              - generic [ref=e243]:
+                - generic [ref=e244]:
+                  - heading "Retail y multisede" [level=3] [ref=e245]
+                  - paragraph [ref=e246]: Sucursales conectadas y soporte continuo.
+                - generic [ref=e247]: "04"
+              - list [ref=e248]:
+                - listitem [ref=e249]:
+                  - img [ref=e250]
+                  - generic [ref=e253]: Despliegue en campo
+                - listitem [ref=e254]:
+                  - img [ref=e255]
+                  - generic [ref=e258]: Gestión centralizada
+                - listitem [ref=e259]:
+                  - img [ref=e260]
+                  - generic [ref=e263]: Soporte técnico recurrente
+              - link "Ver soluciones" [ref=e265] [cursor=pointer]:
+                - /url: /contacto
+                - generic [ref=e266]: Ver soluciones
+                - img [ref=e267]
+        - article [ref=e271]:
+          - generic [ref=e272]:
+            - img "Servicios corporativos" [ref=e274]
+            - generic [ref=e276]:
+              - generic [ref=e277]:
+                - generic [ref=e278]:
+                  - heading "Servicios corporativos" [level=3] [ref=e279]
+                  - paragraph [ref=e280]: Procesos internos más integrados.
+                - generic [ref=e281]: "05"
+              - list [ref=e282]:
+                - listitem [ref=e283]:
+                  - img [ref=e284]
+                  - generic [ref=e287]: ERP, CRM y sistemas internos
+                - listitem [ref=e288]:
+                  - img [ref=e289]
+                  - generic [ref=e292]: Automatización de tareas
+                - listitem [ref=e293]:
+                  - img [ref=e294]
+                  - generic [ref=e297]: Tableros de gestión
+              - link "Ver soluciones" [ref=e299] [cursor=pointer]:
+                - /url: /contacto
+                - generic [ref=e300]: Ver soluciones
+                - img [ref=e301]
+        - article [ref=e305]:
+          - generic [ref=e306]:
+            - img "Instituciones y organizaciones" [ref=e308]
+            - generic [ref=e310]:
+              - generic [ref=e311]:
+                - generic [ref=e312]:
+                  - heading "Instituciones y organizaciones" [level=3] [ref=e313]
+                  - paragraph [ref=e314]: Digitalización con trazabilidad.
+                - generic [ref=e315]: "06"
+              - list [ref=e316]:
+                - listitem [ref=e317]:
+                  - img [ref=e318]
+                  - generic [ref=e321]: Procesos digitales
+                - listitem [ref=e322]:
+                  - img [ref=e323]
+                  - generic [ref=e326]: Información centralizada
+                - listitem [ref=e327]:
+                  - img [ref=e328]
+                  - generic [ref=e331]: Acompañamiento operativo
+              - link "Ver soluciones" [ref=e333] [cursor=pointer]:
+                - /url: /contacto
+                - generic [ref=e334]: Ver soluciones
+                - img [ref=e335]
+    - generic [ref=e339]:
+      - generic [ref=e340]:
+        - generic [ref=e341]:
+          - generic [ref=e343]: Servicios
+          - heading "Soluciones tecnológicas de punta a punta" [level=2] [ref=e345]
+        - paragraph [ref=e347]: No solo proponemos tecnología. La diseñamos, la integramos, la implementamos, la ponemos en marcha y la mantenemos en operación.
+      - generic [ref=e348]:
+        - generic [ref=e351]:
+          - img "Arquitectura de integración tecnológica con soporte operativo" [ref=e352]
+          - generic [ref=e355]:
+            - generic [ref=e356]: Punta a punta
+            - heading "Arquitectura de integración tecnológica con soporte operativo." [level=3] [ref=e357]
+            - generic [ref=e358]:
+              - generic [ref=e359]: Diseñar
+              - generic [ref=e361]: Integrar
+              - generic [ref=e363]: Implementar
+              - generic [ref=e365]: Operar
+              - generic [ref=e367]: Mantener
+              - generic [ref=e369]: Evolucionar
+        - generic [ref=e371]:
+          - article [ref=e373]:
+            - generic [ref=e374]:
+              - img [ref=e376]
+              - generic [ref=e380]: "01"
+            - heading "Consultoría tecnológica" [level=3] [ref=e381]
+            - paragraph [ref=e382]: Levantamos sistemas, procesos, datos e infraestructura para definir oportunidades concretas de integración, automatización y mejora.
+          - article [ref=e384]:
+            - generic [ref=e385]:
+              - img [ref=e387]
+              - generic [ref=e391]: "02"
+            - heading "Arquitectura de solución" [level=3] [ref=e392]
+            - paragraph [ref=e393]: Definimos componentes, integraciones, flujos de información, herramientas y etapas de implementación.
+          - article [ref=e395]:
+            - generic [ref=e396]:
+              - img [ref=e398]
+              - generic [ref=e403]: "03"
+            - heading "Integración de plataformas" [level=3] [ref=e404]
+            - paragraph [ref=e405]: Conectamos herramientas nuevas y existentes para unificar la operación y evitar sistemas aislados.
+          - article [ref=e407]:
+            - generic [ref=e408]:
+              - img [ref=e410]
+              - generic [ref=e413]: "04"
+            - heading "Desarrollo e implementación" [level=3] [ref=e414]
+            - paragraph [ref=e415]: Construimos automatizaciones, tableros, APIs, conectores, aplicaciones y soluciones digitales a medida.
+          - article [ref=e417]:
+            - generic [ref=e418]:
+              - img [ref=e420]
+              - generic [ref=e425]: "05"
+            - heading "Logística y despliegue operativo" [level=3] [ref=e426]
+            - paragraph [ref=e427]: Gestionamos hardware, instalación, configuración, pruebas, capacitación y puesta en marcha en campo.
+          - article [ref=e429]:
+            - generic [ref=e430]:
+              - img [ref=e432]
+              - generic [ref=e439]: "06"
+            - heading "Mantenimiento y soporte continuo" [level=3] [ref=e440]
+            - paragraph [ref=e441]: Operamos y acompañamos las soluciones implementadas mediante soporte especializado, mantenimiento preventivo y correctivo, monitoreo, gestión de incidencias y mejoras evolutivas.
+    - generic [ref=e443]:
+      - generic [ref=e444]:
+        - generic [ref=e445]:
+          - generic [ref=e447]: Cómo trabajamos
+          - heading "De la necesidad del negocio a la operación mantenida" [level=2] [ref=e449]
+        - paragraph [ref=e451]: Ordenamos cada iniciativa desde el diagnóstico hasta la adopción, asegurando ejecución técnica, continuidad operativa y soporte posterior.
+      - generic [ref=e452]:
+        - generic [ref=e454]:
+          - img "Recorrido de implementación tecnológica por etapas" [ref=e456]
+          - generic [ref=e458]:
+            - paragraph [ref=e459]: As-Is / To-Be / Implementación / Operación / Mantenimiento
+            - heading "Un recorrido claro, sin transformar todo a la vez y con acompañamiento posterior a la puesta en marcha." [level=3] [ref=e460]
+        - generic [ref=e461]:
+          - article [ref=e463]:
+            - generic [ref=e464]:
+              - img [ref=e466]
+              - generic [ref=e469]: "01"
+            - heading "Diagnóstico As-Is" [level=3] [ref=e470]
+            - paragraph [ref=e471]: Mapeamos problema, sistemas, procesos, infraestructura y madurez tecnológica.
+          - article [ref=e473]:
+            - generic [ref=e474]:
+              - img [ref=e476]
+              - generic [ref=e480]: "02"
+            - heading "Diseño To-Be" [level=3] [ref=e481]
+            - paragraph [ref=e482]: Definimos qué integrar, automatizar, desarrollar, mejorar o mantener.
+          - article [ref=e484]:
+            - generic [ref=e485]:
+              - img [ref=e487]
+              - generic [ref=e491]: "03"
+            - heading "Roadmap de implementación" [level=3] [ref=e492]
+            - paragraph [ref=e493]: Priorizamos iniciativas por impacto, urgencia, complejidad y sostenibilidad operativa.
+          - article [ref=e495]:
+            - generic [ref=e496]:
+              - img [ref=e498]
+              - generic [ref=e501]: "04"
+            - heading "Ejecución ágil" [level=3] [ref=e502]
+            - paragraph [ref=e503]: Implementamos con equipos técnicos, entregas iterativas, pruebas y seguimiento.
+          - article [ref=e505]:
+            - generic [ref=e506]:
+              - img [ref=e508]
+              - generic [ref=e513]: "05"
+            - heading "Puesta en marcha" [level=3] [ref=e514]
+            - paragraph [ref=e515]: Validamos en operación real, capacitamos usuarios y acompañamos la adopción.
+          - article [ref=e517]:
+            - generic [ref=e518]:
+              - img [ref=e520]
+              - generic [ref=e523]: "06"
+            - heading "Operación y mantenimiento" [level=3] [ref=e524]
+            - paragraph [ref=e525]: Monitoreamos, damos soporte, resolvemos incidencias, ejecutamos mantenimiento preventivo y evolucionamos la solución según nuevas necesidades.
+    - generic [ref=e527]:
+      - generic [ref=e528]:
+        - generic [ref=e530]: Aplicaciones
+        - heading "Casos de uso" [level=2] [ref=e532]
+        - paragraph [ref=e534]: Aplicaciones concretas para conectar sistemas, sedes, datos y equipos, asegurando continuidad operativa en el tiempo.
+      - generic [ref=e535]:
+        - generic [ref=e536]:
+          - img "Operaciones conectadas" [ref=e540]
+          - generic [ref=e543]:
+            - generic [ref=e544]:
+              - img [ref=e546]
+              - generic [ref=e551]: Caso 01
+            - heading "Operaciones conectadas" [level=3] [ref=e552]
+            - paragraph [ref=e553]: Sistemas de campo, plataformas internas y áreas de negocio integradas en una visión centralizada.
+        - generic [ref=e554]:
+          - img "Automatización administrativa y operativa" [ref=e558]
+          - generic [ref=e561]:
+            - generic [ref=e562]:
+              - img [ref=e564]
+              - generic [ref=e568]: Caso 02
+            - heading "Automatización administrativa y operativa" [level=3] [ref=e569]
+            - paragraph [ref=e570]: Flujos digitales, reglas de negocio, alertas, aprobaciones y reportes automáticos.
+        - generic [ref=e571]:
+          - img "Tecnología en campo" [ref=e575]
+          - generic [ref=e578]:
+            - generic [ref=e579]:
+              - img [ref=e581]
+              - generic [ref=e588]: Caso 03
+            - heading "Tecnología en campo" [level=3] [ref=e589]
+            - paragraph [ref=e590]: Hardware, conectividad, sensores, cámaras, monitoreo y software para operación real.
+        - generic [ref=e591]:
+          - img "Integración multisede" [ref=e595]
+          - generic [ref=e598]:
+            - generic [ref=e599]:
+              - img [ref=e601]
+              - generic [ref=e605]: Caso 04
+            - heading "Integración multisede" [level=3] [ref=e606]
+            - paragraph [ref=e607]: Plantas, sucursales, oficinas o centros operativos gestionados como una red coordinada.
+        - generic [ref=e608]:
+          - img "Tableros de gestión" [ref=e612]
+          - generic [ref=e615]:
+            - generic [ref=e616]:
+              - img [ref=e618]
+              - generic [ref=e620]: Caso 05
+            - heading "Tableros de gestión" [level=3] [ref=e621]
+            - paragraph [ref=e622]: Datos de distintas fuentes convertidos en indicadores claros para decidir mejor.
+        - generic [ref=e623]:
+          - img "Mantenimiento tecnológico operativo" [ref=e627]
+          - generic [ref=e630]:
+            - generic [ref=e631]:
+              - img [ref=e633]
+              - generic [ref=e638]: Caso 06
+            - heading "Mantenimiento tecnológico operativo" [level=3] [ref=e639]
+            - paragraph [ref=e640]: Soporte continuo, monitoreo, atención de incidencias, mantenimiento preventivo y mejoras evolutivas para sostener la operación tecnológica del cliente.
+    - generic [ref=e643]:
+      - generic [ref=e645]: FAQ
+      - heading "Preguntas frecuentes de integración tecnológica" [level=2] [ref=e647]
+      - generic [ref=e648]:
+        - group [ref=e650]:
+          - generic "¿Pueden integrarse con sistemas que ya usamos? +" [ref=e651] [cursor=pointer]:
+            - generic [ref=e652]: ¿Pueden integrarse con sistemas que ya usamos?
+            - generic [ref=e653]: +
+        - group [ref=e655]:
+          - generic "¿Trabajan solo con software o también con despliegue físico? +" [ref=e656] [cursor=pointer]:
+            - generic [ref=e657]: ¿Trabajan solo con software o también con despliegue físico?
+            - generic [ref=e658]: +
+        - group [ref=e660]:
+          - generic "¿Cómo sostienen la operación después de implementar? +" [ref=e661] [cursor=pointer]:
+            - generic [ref=e662]: ¿Cómo sostienen la operación después de implementar?
+            - generic [ref=e663]: +
+        - group [ref=e665]:
+          - generic "¿Pueden sumar especialistas al equipo del cliente? +" [ref=e666] [cursor=pointer]:
+            - generic [ref=e667]: ¿Pueden sumar especialistas al equipo del cliente?
+            - generic [ref=e668]: +
+    - generic [ref=e671]:
+      - generic [ref=e672]:
+        - generic [ref=e673]:
+          - heading "Conectemos tu operación" [level=2] [ref=e675]
+          - paragraph [ref=e677]: Contanos qué sistemas, procesos o sedes necesitás integrar y armamos un plan claro de implementación, operación y mantenimiento.
+        - link "Hablar con LYNX" [ref=e680] [cursor=pointer]:
+          - /url: /contacto
+      - generic [ref=e681]:
+        - generic [ref=e682]:
+          - generic [ref=e683]:
+            - generic [ref=e684]: Infraestructura crítica
+            - generic [ref=e685]:
+              - link "LYNX" [ref=e687] [cursor=pointer]:
+                - /url: /
+                - img "LYNX" [ref=e688]
+              - generic [ref=e689]:
+                - paragraph [ref=e690]: "Redes:"
+                - link "LinkedIn" [ref=e692] [cursor=pointer]:
+                  - /url: https://linkedin.com/company/lynxenergia
+                  - img [ref=e693]
+          - generic [ref=e697]:
+            - heading "Navegación" [level=3] [ref=e698]
+            - generic [ref=e699]:
+              - link "Inicio 01" [ref=e700] [cursor=pointer]:
+                - /url: /
+                - generic [ref=e701]: Inicio
+                - generic [ref=e702]: "01"
+              - link "Energía 02" [ref=e703] [cursor=pointer]:
+                - /url: /energia
+                - generic [ref=e704]: Energía
+                - generic [ref=e705]: "02"
+              - link "Tecnología 03" [ref=e706] [cursor=pointer]:
+                - /url: /tecnologia
+                - generic [ref=e707]: Tecnología
+                - generic [ref=e708]: "03"
+              - link "Recursos 04" [ref=e709] [cursor=pointer]:
+                - /url: /recursos
+                - generic [ref=e710]: Recursos
+                - generic [ref=e711]: "04"
+              - link "Contacto 05" [ref=e712] [cursor=pointer]:
+                - /url: /contacto
+                - generic [ref=e713]: Contacto
+                - generic [ref=e714]: "05"
+          - generic [ref=e715]:
+            - heading "Contacto" [level=3] [ref=e716]
+            - generic [ref=e717]:
+              - generic [ref=e719]:
+                - img [ref=e720]
+                - generic [ref=e723]:
+                  - paragraph [ref=e724]: Santiago, Chile
+                  - paragraph [ref=e725]: Operación en Chile y Argentina
+              - link "soporte@lynx.cl" [ref=e726] [cursor=pointer]:
+                - /url: mailto:soporte@lynx.cl
+                - img [ref=e727]
+                - generic [ref=e730]: soporte@lynx.cl
+              - generic [ref=e731]:
+                - link "+56 9 9219 1328" [ref=e732] [cursor=pointer]:
+                  - /url: tel:+56992191328
+                  - img [ref=e733]
+                  - generic [ref=e735]: +56 9 9219 1328
+                - link "+56 9 9216 2573" [ref=e736] [cursor=pointer]:
+                  - /url: https://wa.me/56992162573
+                  - img [ref=e737]
+                  - generic [ref=e739]: +56 9 9216 2573
+        - generic [ref=e740]:
+          - paragraph [ref=e741]: © 2026 LYNX. Todos los derechos reservados.
+          - paragraph [ref=e742]: Energía y Tecnología para soluciones modernas

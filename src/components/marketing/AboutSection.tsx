@@ -41,15 +41,13 @@ export default function AboutSection() {
           <Reveal delay={0.1}>
             <p className="max-w-2xl text-base leading-7 text-[var(--text-secondary)] md:text-lg md:leading-8">
               Desde 1993 conectamos ingeniería, automatización y software para
-              que las operaciones energéticas e industriales ganen velocidad,
-              visibilidad y control.
+              operaciones energéticas e industriales.
             </p>
           </Reveal>
           <Reveal delay={0.14}>
             <p className="section-copy">
-              No vendemos piezas sueltas: diseñamos soluciones completas,
-              integrando hardware crítico, supervisión, datos y ejecución en
-              terreno con una lógica de continuidad operativa.
+              Diseñamos, implementamos y mantenemos soluciones completas:
+              hardware crítico, supervisión, datos y ejecución en terreno.
             </p>
           </Reveal>
         </div>

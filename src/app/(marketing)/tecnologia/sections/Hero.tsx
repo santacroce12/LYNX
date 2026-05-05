@@ -9,29 +9,29 @@ import { tecnologia } from "@/content/tecnologia";
 
 export default function TecnologiaHero() {
   return (
-    <Section className="pt-6 md:pt-16">
-      <div className="panel-shell overflow-hidden rounded-[2rem] p-2 md:p-4">
-        <div className="relative overflow-hidden rounded-[1.65rem] border border-white/8 px-4 pb-16 pt-5 md:min-h-[430px] md:px-8 md:pb-24 md:pt-8">
-          <Image
-            src={tecnologia.hero.image}
-            alt={tecnologia.hero.title}
-            fill
-            priority
-            sizes="100vw"
-            className="object-cover opacity-68"
-          />
-          <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(3,7,15,0.46)_0%,rgba(3,7,15,0.58)_34%,rgba(3,7,15,0.8)_100%)]" />
-          <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(3,7,15,0.68)_0%,rgba(3,7,15,0.34)_42%,rgba(3,7,15,0.52)_100%)]" />
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_18%_18%,rgba(125,168,255,0.14),transparent_24%),radial-gradient(circle_at_82%_20%,rgba(255,122,26,0.08),transparent_16%)]" />
-          <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(255,255,255,0.04)_0%,transparent_34%,transparent_100%)]" />
-          <TechSignal />
+    <>
+      <section className="relative isolate -mt-3 overflow-hidden border-b border-white/8 md:-mt-[34px]">
+        <Image
+          src={tecnologia.hero.image}
+          alt={tecnologia.hero.title}
+          fill
+          priority
+          sizes="100vw"
+          className="-z-10 object-cover opacity-68"
+        />
+        <div className="absolute inset-0 -z-10 bg-[linear-gradient(180deg,rgba(3,7,15,0.34)_0%,rgba(3,7,15,0.56)_45%,rgba(3,7,15,0.9)_100%)]" />
+        <div className="absolute inset-0 -z-10 bg-[linear-gradient(90deg,rgba(3,7,15,0.82)_0%,rgba(3,7,15,0.5)_46%,rgba(3,7,15,0.62)_100%)]" />
+        <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_18%_18%,rgba(125,168,255,0.12),transparent_26%),radial-gradient(circle_at_82%_22%,rgba(94,234,212,0.055),transparent_18%)]" />
+        <div className="absolute inset-x-0 bottom-0 -z-10 h-40 bg-gradient-to-t from-[var(--bg)] to-transparent" />
+        <TechSignal variant="tech" />
 
-          <div className="relative z-10 max-w-3xl">
+        <div className="mx-auto flex min-h-[560px] w-full max-w-[1320px] flex-col justify-center px-4 py-16 sm:px-6 md:min-h-[740px] md:px-8 md:py-20">
+          <div className="relative z-10 max-w-4xl">
             <Reveal>
               <Badge>{tecnologia.hero.badge}</Badge>
             </Reveal>
             <Reveal delay={0.05}>
-              <h1 className="mt-4 max-w-3xl text-[2.05rem] font-semibold leading-[1.02] text-white [text-shadow:0_10px_28px_rgba(0,0,0,0.38)] md:mt-5 md:text-[3.7rem] md:leading-[0.92] lg:text-[4rem]">
+              <h1 className="mt-4 max-w-4xl text-[2.05rem] font-semibold leading-[1.02] text-white [text-shadow:0_10px_28px_rgba(0,0,0,0.38)] md:mt-5 md:text-[3.9rem] md:leading-[0.92] lg:text-[4.35rem]">
                 {tecnologia.hero.title}
               </h1>
             </Reveal>
@@ -47,20 +47,20 @@ export default function TecnologiaHero() {
             </Reveal>
           </div>
 
-          <div className="absolute inset-x-4 bottom-5 z-10 md:inset-x-8 md:bottom-6">
-            <EnergyFlow className="h-10 opacity-45" />
+          <div className="relative z-10 mt-14 md:mt-20">
+            <EnergyFlow variant="tech" className="h-10 opacity-55" />
           </div>
         </div>
-      </div>
+      </section>
 
-      <div className="mt-8">
+      <Section className="pt-8">
         <FeatureGrid
           title={tecnologia.sections.featuresTitle}
           subtitle={tecnologia.sections.featuresSubtitle}
           items={tecnologia.features}
           columns={3}
         />
-      </div>
-    </Section>
+      </Section>
+    </>
   );
 }

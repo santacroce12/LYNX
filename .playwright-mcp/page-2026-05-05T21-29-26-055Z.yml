@@ -1,0 +1,165 @@
+- generic [active] [ref=e1]:
+  - banner [ref=e2]:
+    - generic [ref=e4]:
+      - link "LYNX logo" [ref=e5] [cursor=pointer]:
+        - /url: /
+        - img "LYNX logo" [ref=e6]
+      - button "Abrir menu" [ref=e8] [cursor=pointer]:
+        - img [ref=e9]
+    - generic:
+      - button
+      - generic:
+        - generic:
+          - generic:
+            - generic:
+              - generic: Contacto
+              - paragraph: Energía y Tecnología para soluciones modernas
+            - navigation:
+              - link:
+                - /url: /
+                - generic: Inicio
+                - generic: "01"
+              - link:
+                - /url: /energia
+                - generic: Energía
+                - generic: "02"
+              - link:
+                - /url: /tecnologia
+                - generic: Tecnología
+                - generic: "03"
+              - link:
+                - /url: /recursos
+                - generic: Recursos
+                - generic: "04"
+              - link:
+                - /url: /contacto
+                - generic: Contacto
+                - generic: "05"
+            - generic:
+              - link:
+                - /url: /contacto
+                - text: Agendar diagnostico
+  - main [ref=e10]:
+    - generic [ref=e12]:
+      - generic [ref=e13]:
+        - generic [ref=e14]:
+          - generic [ref=e15]:
+            - generic [ref=e17]: Contacto
+            - heading "Hablemos de tu próximo proyecto" [level=1] [ref=e19]
+            - paragraph [ref=e21]: Completa el formulario y nuestro equipo te responde con una propuesta clara.
+          - generic [ref=e23]:
+            - link "Email soporte@lynx.cl" [ref=e24] [cursor=pointer]:
+              - /url: mailto:soporte@lynx.cl
+              - generic [ref=e25]:
+                - paragraph [ref=e26]: Email
+                - img [ref=e27]
+              - paragraph [ref=e30]: soporte@lynx.cl
+            - link "WhatsApp +56 9 9219 1328" [ref=e31] [cursor=pointer]:
+              - /url: https://wa.me/56992191328
+              - generic [ref=e32]:
+                - paragraph [ref=e33]: WhatsApp
+                - img [ref=e34]
+              - paragraph [ref=e36]: +56 9 9219 1328
+            - link "Teléfono +56 9 9216 2573" [ref=e37] [cursor=pointer]:
+              - /url: tel:+56992162573
+              - generic [ref=e38]:
+                - paragraph [ref=e39]: Teléfono
+                - img [ref=e40]
+              - paragraph [ref=e42]: +56 9 9216 2573
+            - generic [ref=e43]:
+              - generic [ref=e44]:
+                - paragraph [ref=e45]: Presencia
+                - img [ref=e46]
+              - generic [ref=e49]:
+                - paragraph [ref=e50]: Santiago, Chile
+                - paragraph [ref=e51]: Operación en Chile y Argentina
+        - generic [ref=e53]:
+          - generic [ref=e54]:
+            - paragraph [ref=e55]: Formulario
+            - heading "Contanos qué necesitás." [level=2] [ref=e56]
+          - generic [ref=e57]:
+            - generic [ref=e58]:
+              - generic [ref=e59]:
+                - text: Nombre
+                - textbox "Nombre" [ref=e60]:
+                  - /placeholder: Tu nombre
+              - generic [ref=e61]:
+                - text: Email
+                - textbox "Email" [ref=e62]:
+                  - /placeholder: tu@email.com
+              - generic [ref=e63]:
+                - text: Mensaje
+                - textbox "Mensaje" [ref=e64]:
+                  - /placeholder: Contanos sobre tu proyecto
+            - generic [ref=e66]:
+              - button "Enviar mensaje" [ref=e67] [cursor=pointer]
+              - paragraph
+      - generic [ref=e70]:
+        - iframe [ref=e71]:
+          - link "Abrir en Maps (se abre en una nueva pestaña)" [ref=f9e4] [cursor=pointer]:
+            - /url: about:invalid#zClosurez
+            - text: Abrir en Maps
+            - img [ref=f9e6]
+        - generic [ref=e72]:
+          - paragraph [ref=e73]: Santiago, Chile
+          - paragraph [ref=e74]: Operación en Chile y Argentina
+    - generic [ref=e77]:
+      - generic [ref=e78]:
+        - generic [ref=e79]:
+          - generic [ref=e80]: Infraestructura crítica
+          - generic [ref=e81]:
+            - link "LYNX" [ref=e83] [cursor=pointer]:
+              - /url: /
+              - img "LYNX" [ref=e84]
+            - generic [ref=e85]:
+              - paragraph [ref=e86]: "Redes:"
+              - link "LinkedIn" [ref=e88] [cursor=pointer]:
+                - /url: https://linkedin.com/company/lynxenergia
+                - img [ref=e89]
+        - generic [ref=e93]:
+          - heading "Navegación" [level=3] [ref=e94]
+          - generic [ref=e95]:
+            - link "Inicio 01" [ref=e96] [cursor=pointer]:
+              - /url: /
+              - generic [ref=e97]: Inicio
+              - generic [ref=e98]: "01"
+            - link "Energía 02" [ref=e99] [cursor=pointer]:
+              - /url: /energia
+              - generic [ref=e100]: Energía
+              - generic [ref=e101]: "02"
+            - link "Tecnología 03" [ref=e102] [cursor=pointer]:
+              - /url: /tecnologia
+              - generic [ref=e103]: Tecnología
+              - generic [ref=e104]: "03"
+            - link "Recursos 04" [ref=e105] [cursor=pointer]:
+              - /url: /recursos
+              - generic [ref=e106]: Recursos
+              - generic [ref=e107]: "04"
+            - link "Contacto 05" [ref=e108] [cursor=pointer]:
+              - /url: /contacto
+              - generic [ref=e109]: Contacto
+              - generic [ref=e110]: "05"
+        - generic [ref=e111]:
+          - heading "Contacto" [level=3] [ref=e112]
+          - generic [ref=e113]:
+            - generic [ref=e115]:
+              - img [ref=e116]
+              - generic [ref=e119]:
+                - paragraph [ref=e120]: Santiago, Chile
+                - paragraph [ref=e121]: Operación en Chile y Argentina
+            - link "soporte@lynx.cl" [ref=e122] [cursor=pointer]:
+              - /url: mailto:soporte@lynx.cl
+              - img [ref=e123]
+              - generic [ref=e126]: soporte@lynx.cl
+            - generic [ref=e127]:
+              - link "+56 9 9219 1328" [ref=e128] [cursor=pointer]:
+                - /url: tel:+56992191328
+                - img [ref=e129]
+                - generic [ref=e131]: +56 9 9219 1328
+              - link "+56 9 9216 2573" [ref=e132] [cursor=pointer]:
+                - /url: https://wa.me/56992162573
+                - img [ref=e133]
+                - generic [ref=e135]: +56 9 9216 2573
+      - generic [ref=e136]:
+        - paragraph [ref=e137]: © 2026 LYNX. Todos los derechos reservados.
+        - paragraph [ref=e138]: Energía y Tecnología para soluciones modernas

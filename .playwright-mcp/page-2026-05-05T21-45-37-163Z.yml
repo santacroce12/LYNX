@@ -1,0 +1,32 @@
+- main [ref=e2]:
+  - region "Página temporal de LYNX" [ref=e3]:
+    - generic [ref=e4]:
+      - generic [ref=e5]:
+        - generic "LYNX" [ref=e6]:
+          - text: LYN
+          - generic [ref=e7]: X
+        - generic [ref=e8]: Sitio en renovación
+        - heading "Hola, estamos cambiando nuestra página." [level=1] [ref=e9]
+        - paragraph [ref=e10]: Estamos preparando una nueva experiencia digital para comunicar mejor nuestras soluciones de energía, tecnología y soporte operativo. Mientras tanto, seguimos disponibles por nuestros canales habituales.
+        - generic "Estado del sitio" [ref=e11]:
+          - generic [ref=e12]: Nueva web en desarrollo
+          - generic [ref=e14]: LYNX SpA
+        - generic "Datos de contacto" [ref=e15]:
+          - link "Correo soporte@lynx.cl" [ref=e16] [cursor=pointer]:
+            - /url: mailto:soporte@lynx.cl
+            - paragraph [ref=e17]: Correo
+            - paragraph [ref=e18]: soporte@lynx.cl
+          - link "WhatsApp +56 9 9219 1328" [ref=e19] [cursor=pointer]:
+            - /url: https://wa.me/56992191328
+            - paragraph [ref=e20]: WhatsApp
+            - paragraph [ref=e21]: +56 9 9219 1328
+          - link "Teléfono +56 9 9216 2573" [ref=e22] [cursor=pointer]:
+            - /url: tel:+56992162573
+            - paragraph [ref=e23]: Teléfono
+            - paragraph [ref=e24]: +56 9 9216 2573
+          - generic [ref=e25]:
+            - paragraph [ref=e26]: Ubicación
+            - paragraph [ref=e27]:
+              - text: Santiago, Chile
+              - generic [ref=e28]: Operación en Chile y Argentina
+      - img [ref=e30]
