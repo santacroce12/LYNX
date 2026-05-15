@@ -1,0 +1,56 @@
+- main [ref=e2]:
+  - region "Página temporal de LYNX" [ref=e3]:
+    - generic [ref=e4]:
+      - generic [ref=e5]:
+        - generic "LYNX" [ref=e6]:
+          - img "LYNX" [ref=e7]
+        - generic [ref=e8]: Sitio en renovación
+        - heading "Hola, estamos cambiando nuestra página." [level=1] [ref=e9]
+        - paragraph [ref=e10]: Estamos preparando una nueva experiencia digital para comunicar mejor nuestras soluciones de energía, tecnología y soporte operativo. Mientras tanto, seguimos disponibles por nuestros canales habituales.
+        - generic "Estado del sitio" [ref=e11]:
+          - generic [ref=e12]: Nueva web en desarrollo
+          - generic [ref=e14]: LYNX SpA
+        - generic "Datos de contacto" [ref=e15]:
+          - link "Correo soporte@lynx.cl" [ref=e16] [cursor=pointer]:
+            - /url: mailto:soporte@lynx.cl
+            - generic [ref=e17]:
+              - img [ref=e19]
+              - paragraph [ref=e22]: Correo
+            - paragraph [ref=e23]: soporte@lynx.cl
+          - link "WhatsApp +56 9 9219 1328" [ref=e24] [cursor=pointer]:
+            - /url: https://wa.me/56992191328
+            - generic [ref=e25]:
+              - img [ref=e27]
+              - paragraph [ref=e30]: WhatsApp
+            - paragraph [ref=e31]: +56 9 9219 1328
+          - link "WhatsApp +56 9 9216 2573" [ref=e32] [cursor=pointer]:
+            - /url: https://wa.me/56992162573
+            - generic [ref=e33]:
+              - img [ref=e35]
+              - paragraph [ref=e38]: WhatsApp
+            - paragraph [ref=e39]: +56 9 9216 2573
+          - link "Ubicación Antonio Varas 91, Providencia Abrir en Google Maps" [ref=e40] [cursor=pointer]:
+            - /url: https://www.google.com/maps/search/?api=1&query=Antonio%20Varas%2091%2C%20Providencia%2C%20Regi%C3%B3n%20Metropolitana%2C%20Chile
+            - generic [ref=e41]:
+              - img [ref=e43]
+              - paragraph [ref=e46]: Ubicación
+            - paragraph [ref=e47]:
+              - text: Antonio Varas 91, Providencia
+              - generic [ref=e48]: Abrir en Google Maps
+          - generic [ref=e50]:
+            - iframe [ref=e51]:
+              - link "Abrir en Maps (se abre en una nueva pestaña)" [ref=f1e4] [cursor=pointer]:
+                - /url: about:invalid#zClosurez
+                - text: Abrir en Maps
+                - img [ref=f1e6]
+            - link "Ubicación Antonio Varas 91, Providencia Operación en Chile y Argentina" [ref=e52] [cursor=pointer]:
+              - /url: https://www.google.com/maps/search/?api=1&query=Antonio%20Varas%2091%2C%20Providencia%2C%20Regi%C3%B3n%20Metropolitana%2C%20Chile
+              - generic [ref=e53]:
+                - img [ref=e55]
+                - paragraph [ref=e58]: Ubicación
+              - paragraph [ref=e59]:
+                - text: Antonio Varas 91, Providencia
+                - generic [ref=e60]: Operación en Chile y Argentina
+            - link "Abrir Google Maps" [ref=e61] [cursor=pointer]:
+              - /url: https://www.google.com/maps/search/?api=1&query=Antonio%20Varas%2091%2C%20Providencia%2C%20Regi%C3%B3n%20Metropolitana%2C%20Chile
+      - generic [ref=e65]: Estamos trabajando en la nueva web

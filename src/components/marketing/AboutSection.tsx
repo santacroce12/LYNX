@@ -12,6 +12,7 @@ import {
 } from "lucide-react";
 import Section from "@/components/layout/Section";
 import Reveal from "@/components/motion/Reveal";
+import GlobeBars from "@/components/ui/cobe-globe-bars";
 import { site } from "@/content/site";
 
 const iconMap = {
@@ -54,39 +55,30 @@ export default function AboutSection() {
 
         <Reveal delay={0.18}>
           <div className="panel-shell overflow-hidden rounded-[1.8rem] p-3 md:p-4">
-            <div className="relative overflow-hidden rounded-[1.35rem] border border-white/8">
-              <video
-                className="pointer-events-none h-[300px] w-full select-none object-cover md:h-[380px]"
-                src="/images/brand/about.mp4"
-                poster={about.cover.image}
-                autoPlay
-                loop
-                muted
-                playsInline
-                disablePictureInPicture
-                controls={false}
-                controlsList="nodownload nofullscreen noremoteplayback"
-                aria-label={about.cover.alt}
-                onContextMenu={(event) => event.preventDefault()}
-              >
-                Tu navegador no soporta videos HTML5.
-              </video>
-              <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(4,8,16,0.04)_0%,rgba(4,8,16,0.24)_34%,rgba(4,8,16,0.86)_100%)]" />
+            <div className="relative overflow-hidden rounded-[1.35rem] border border-white/8 bg-[#030711]">
+              <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_52%_42%,rgba(255,122,26,0.16),transparent_35%),radial-gradient(circle_at_18%_18%,rgba(255,194,131,0.08),transparent_24%),linear-gradient(180deg,rgba(5,10,19,0.2)_0%,rgba(3,7,17,0.9)_100%)]" />
+              <div className="panel-decoration pointer-events-none absolute inset-0 panel-grid opacity-15 [mask-image:radial-gradient(circle_at_center,#000_24%,transparent_78%)]" />
 
-            <div className="absolute bottom-0 left-0 right-0 flex flex-wrap items-end justify-between gap-3 px-4 py-4 md:gap-4 md:px-6 md:py-6">
+              <div className="relative mx-auto flex min-h-[310px] max-w-[460px] items-center justify-center px-3 pb-2 pt-5 sm:min-h-[360px] sm:pt-6 md:min-h-[380px] md:px-6 md:pt-8">
+                <GlobeBars className="w-full max-w-[390px] md:max-w-[430px]" speed={0} />
+              </div>
+
+              <div className="relative z-20 flex flex-wrap items-end justify-between gap-3 border-t border-white/8 bg-[rgba(3,7,17,0.96)] px-4 pb-4 pt-4 md:gap-4 md:px-6 md:pb-6">
                 <div>
-                  <p className="section-kicker">Capacidad instalada</p>
+                  <p className="section-kicker">Cobertura regional</p>
                   <h3 className="mt-3 max-w-sm text-[1.25rem] font-semibold leading-[1.06] text-[var(--text-strong)] md:text-2xl md:leading-[1.02]">
-                    Ingeniería aplicada para sistemas donde fallar no es opción.
+                    Presencia operativa en Chile y Argentina.
                   </h3>
                 </div>
 
-                <div className="rounded-[1.1rem] border border-[rgba(255,194,131,0.2)] bg-black/25 px-3.5 py-3 backdrop-blur-md md:rounded-[1.35rem] md:px-4">
+                <div className="rounded-[1.1rem] border border-[rgba(255,194,131,0.2)] bg-black/30 px-3.5 py-3 backdrop-blur-md md:rounded-[1.35rem] md:px-4">
                   <p className="text-[11px] uppercase tracking-normal text-[var(--muted-soft)] md:tracking-[0.24em]">
-                    Operación
+                    Ubicaciones
                   </p>
-                  <p className="mt-2 text-sm text-[var(--text-secondary)]">
-                    Chile + Argentina
+                  <p className="mt-2 text-sm leading-6 text-[var(--text-secondary)]">
+                    Chile: Santiago
+                    <br />
+                    Argentina: Mendoza
                   </p>
                 </div>
               </div>

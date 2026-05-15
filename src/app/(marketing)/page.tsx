@@ -6,6 +6,7 @@ import Partners from "@/components/marketing/Partners";
 import SplitHero from "@/components/marketing/SplitHero";
 import Section from "@/components/layout/Section";
 import EnergyFlow from "@/components/ui/EnergyFlow";
+import TubesBackground from "@/components/ui/neon-flow";
 import { site } from "@/content/site";
 import { buildMetadata } from "@/lib/seo";
 
@@ -17,7 +18,12 @@ export const metadata = buildMetadata({
 
 export default function HomePage() {
   return (
-    <>
+    <TubesBackground
+      className="isolate min-h-0"
+      canvasClassName="pointer-events-none opacity-70 mix-blend-screen [mask-image:linear-gradient(180deg,transparent_0%,black_7%,black_92%,transparent_100%)]"
+      fixedCanvas
+      intensity="low"
+    >
       <HomeBrandIntro />
       <SplitHero />
       <AboutSection />
@@ -39,6 +45,6 @@ export default function HomePage() {
         buttonLabel={site.homeCta.buttonLabel}
         href={site.homeCta.href}
       />
-    </>
+    </TubesBackground>
   );
 }

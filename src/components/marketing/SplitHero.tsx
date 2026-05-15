@@ -18,7 +18,10 @@ export default function SplitHero() {
   return (
     <section className="relative overflow-hidden">
       <div className="absolute inset-0 bg-radial-accent opacity-60" aria-hidden="true" />
-      <div className="absolute inset-0 bg-radial-accent-2 opacity-55" aria-hidden="true" />
+      <div
+        className="absolute inset-0 bg-[radial-gradient(620px_circle_at_84%_20%,rgba(255,194,131,0.11),transparent_62%)] opacity-70"
+        aria-hidden="true"
+      />
 
       <Section className="pt-5 pb-6 md:pt-14 md:pb-8">
         <div className="grid gap-3 lg:grid-cols-[minmax(0,1fr)_minmax(0,1fr)] lg:items-stretch">

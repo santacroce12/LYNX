@@ -11,9 +11,34 @@ type FAQProps = {
   items: FAQItem[];
 };
 
+function toJsonLd(value: unknown) {
+  return JSON.stringify(value).replace(/</g, "\\u003c");
+}
+
+function buildFaqSchema(items: FAQItem[]) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: items.map((item) => ({
+      "@type": "Question",
+      name: item.question,
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: item.answer,
+      },
+    })),
+  };
+}
+
 export default function FAQ({ title, items }: FAQProps) {
+  const faqSchema = buildFaqSchema(items);
+
   return (
     <Section>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: toJsonLd(faqSchema) }}
+      />
       <div className="mx-auto max-w-3xl">
         <Reveal>
           <span className="section-kicker">FAQ</span>
