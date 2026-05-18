@@ -1,0 +1,129 @@
+- generic [active] [ref=e1]:
+  - banner [ref=e2]:
+    - generic [ref=e4]:
+      - link "LYNX logo" [ref=e5] [cursor=pointer]:
+        - /url: /
+        - img "LYNX logo" [ref=e6]
+      - button "Abrir menu" [ref=e8] [cursor=pointer]:
+        - img [ref=e9]
+  - main [ref=e10]:
+    - generic [ref=e12]:
+      - generic [ref=e14]:
+        - link "Volver a FAQs" [ref=e16] [cursor=pointer]:
+          - /url: /faqs
+          - img [ref=e17]
+          - text: Volver a FAQs
+        - generic [ref=e21]:
+          - generic [ref=e22]:
+            - generic [ref=e24]: FAQs – Tecnología
+            - heading "Preguntas frecuentes de tecnología" [level=1] [ref=e26]
+            - paragraph [ref=e28]: Integración OT/IT, IoT industrial, arquitectura de datos, transformación digital y soporte técnico.
+          - img [ref=e31]
+      - generic [ref=e36]:
+        - group [ref=e38]:
+          - generic "¿Qué servicios tecnológicos desarrolla Lynx? +" [ref=e39] [cursor=pointer]:
+            - generic [ref=e40]: ¿Qué servicios tecnológicos desarrolla Lynx?
+            - generic [ref=e41]: +
+        - group [ref=e43]:
+          - generic "¿Trabajan con integración entre sistemas OT e IT? +" [ref=e44] [cursor=pointer]:
+            - generic [ref=e45]: ¿Trabajan con integración entre sistemas OT e IT?
+            - generic [ref=e46]: +
+        - group [ref=e48]:
+          - generic "¿Implementan soluciones IoT industriales? +" [ref=e49] [cursor=pointer]:
+            - generic [ref=e50]: ¿Implementan soluciones IoT industriales?
+            - generic [ref=e51]: +
+        - group [ref=e53]:
+          - generic "¿Qué tipo de hardware industrial integran? +" [ref=e54] [cursor=pointer]:
+            - generic [ref=e55]: ¿Qué tipo de hardware industrial integran?
+            - generic [ref=e56]: +
+        - group [ref=e58]:
+          - generic "¿Desarrollan arquitectura de datos y monitoreo operacional? +" [ref=e59] [cursor=pointer]:
+            - generic [ref=e60]: ¿Desarrollan arquitectura de datos y monitoreo operacional?
+            - generic [ref=e61]: +
+        - group [ref=e63]:
+          - generic "¿Cómo abordan proyectos de transformación digital? +" [ref=e64] [cursor=pointer]:
+            - generic [ref=e65]: ¿Cómo abordan proyectos de transformación digital?
+            - generic [ref=e66]: +
+        - group [ref=e68]:
+          - generic "¿Pueden ayudar a aprovechar mejor los datos de una empresa? +" [ref=e69] [cursor=pointer]:
+            - generic [ref=e70]: ¿Pueden ayudar a aprovechar mejor los datos de una empresa?
+            - generic [ref=e71]: +
+        - group [ref=e73]:
+          - generic "¿Trabajan con equipos remotos o en terreno? +" [ref=e74] [cursor=pointer]:
+            - generic [ref=e75]: ¿Trabajan con equipos remotos o en terreno?
+            - generic [ref=e76]: +
+        - group [ref=e78]:
+          - generic "¿Cómo gestionan confidencialidad y propiedad intelectual? +" [ref=e79] [cursor=pointer]:
+            - generic [ref=e80]: ¿Cómo gestionan confidencialidad y propiedad intelectual?
+            - generic [ref=e81]: +
+      - generic [ref=e93]:
+        - generic [ref=e94]:
+          - generic [ref=e95]:
+            - heading "¿Necesitás una respuesta más específica?" [level=2] [ref=e97]
+            - paragraph [ref=e99]: Contanos el contexto y orientamos el próximo paso técnico.
+          - link "Ir a contacto" [ref=e102] [cursor=pointer]:
+            - /url: /contacto
+        - generic [ref=e103]:
+          - generic [ref=e104]:
+            - generic [ref=e105]:
+              - generic [ref=e106]: Infraestructura crítica
+              - generic [ref=e107]:
+                - link "LYNX" [ref=e109] [cursor=pointer]:
+                  - /url: /
+                  - img "LYNX" [ref=e110]
+                - generic [ref=e111]:
+                  - paragraph [ref=e112]: "Redes:"
+                  - link "LinkedIn" [ref=e114] [cursor=pointer]:
+                    - /url: https://linkedin.com/company/lynxenergia
+                    - img [ref=e115]
+            - generic [ref=e119]:
+              - heading "Navegación" [level=3] [ref=e120]
+              - generic [ref=e121]:
+                - link "Inicio 01" [ref=e122] [cursor=pointer]:
+                  - /url: /
+                  - generic [ref=e123]: Inicio
+                  - generic [ref=e124]: "01"
+                - link "Energía 02" [ref=e125] [cursor=pointer]:
+                  - /url: /energia
+                  - generic [ref=e126]: Energía
+                  - generic [ref=e127]: "02"
+                - link "Tecnología 03" [ref=e128] [cursor=pointer]:
+                  - /url: /tecnologia
+                  - generic [ref=e129]: Tecnología
+                  - generic [ref=e130]: "03"
+                - link "Recursos 04" [ref=e131] [cursor=pointer]:
+                  - /url: /recursos
+                  - generic [ref=e132]: Recursos
+                  - generic [ref=e133]: "04"
+                - link "FAQs 05" [ref=e134] [cursor=pointer]:
+                  - /url: /faqs
+                  - generic [ref=e135]: FAQs
+                  - generic [ref=e136]: "05"
+                - link "Contacto 06" [ref=e137] [cursor=pointer]:
+                  - /url: /contacto
+                  - generic [ref=e138]: Contacto
+                  - generic [ref=e139]: "06"
+            - generic [ref=e140]:
+              - heading "Contacto" [level=3] [ref=e141]
+              - generic [ref=e142]:
+                - generic [ref=e144]:
+                  - img [ref=e145]
+                  - generic [ref=e148]:
+                    - paragraph [ref=e149]: Santiago, Chile
+                    - paragraph [ref=e150]: Operación en Chile y Argentina
+                - link "soporte@lynx.cl" [ref=e151] [cursor=pointer]:
+                  - /url: mailto:soporte@lynx.cl
+                  - img [ref=e152]
+                  - generic [ref=e155]: soporte@lynx.cl
+                - generic [ref=e156]:
+                  - link "+56 9 9219 1328" [ref=e157] [cursor=pointer]:
+                    - /url: tel:+56992191328
+                    - img [ref=e158]
+                    - generic [ref=e160]: +56 9 9219 1328
+                  - link "+56 9 9216 2573" [ref=e161] [cursor=pointer]:
+                    - /url: https://wa.me/56992162573
+                    - img [ref=e162]
+                    - generic [ref=e164]: +56 9 9216 2573
+          - generic [ref=e165]:
+            - paragraph [ref=e166]: © 2026 LYNX. Todos los derechos reservados.
+            - paragraph [ref=e167]: Energía y Tecnología para soluciones modernas

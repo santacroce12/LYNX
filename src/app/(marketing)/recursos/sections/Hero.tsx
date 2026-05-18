@@ -12,7 +12,7 @@ export default function RecursosHero() {
       <div className="panel-shell overflow-hidden rounded-[2rem] p-2 md:p-4">
         <div className="relative overflow-hidden rounded-[1.65rem] border border-white/8 px-4 pb-16 pt-5 md:min-h-[430px] md:px-8 md:pb-24 md:pt-8">
           <Image
-            src="/images/energia/panel%20solar.jpg"
+            src="/images/energia/panel-solar.optimized.webp"
             alt="Paneles solares en operacion"
             fill
             priority

@@ -1,8 +1,8 @@
 ﻿import CTA from "@/components/marketing/CTA";
-import FAQ from "@/components/marketing/FAQ";
 import FeaturedProjects from "@/components/marketing/FeaturedProjects";
 import ImpactStats from "@/components/marketing/ImpactStats";
 import ProcessSteps from "@/components/marketing/ProcessSteps";
+import TubesBackground from "@/components/ui/neon-flow";
 import { energia } from "@/content/energia";
 import { buildMetadata } from "@/lib/seo";
 import EnergiaHero from "./sections/Hero";
@@ -19,7 +19,12 @@ export const metadata = buildMetadata({
 
 export default function EnergiaPage() {
   return (
-    <>
+    <TubesBackground
+      className="isolate min-h-0"
+      canvasClassName="pointer-events-none opacity-[0.36]"
+      fixedCanvas
+      intensity="low"
+    >
       <EnergiaHero />
       <ImpactStats
         stats={energia.stats}
@@ -35,7 +40,6 @@ export default function EnergiaPage() {
         subtitle="Garantizamos cumplimiento normativo desde el diseño hasta la energización."
       />
       <EnergiaUseCases />
-      <FAQ title={energia.sections.faqTitle} items={energia.faqs} />
       <FeaturedProjects filterCategory="Energía" />
       <div className="mx-auto w-full max-w-6xl px-4 sm:px-6">
         <EnergyFlow className="mb-12 opacity-80" />
@@ -46,6 +50,6 @@ export default function EnergiaPage() {
         buttonLabel={energia.cta.buttonLabel}
         href="/contacto"
       />
-    </>
+    </TubesBackground>
   );
 }

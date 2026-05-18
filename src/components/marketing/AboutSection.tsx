@@ -60,7 +60,7 @@ export default function AboutSection() {
               <div className="panel-decoration pointer-events-none absolute inset-0 panel-grid opacity-15 [mask-image:radial-gradient(circle_at_center,#000_24%,transparent_78%)]" />
 
               <div className="relative mx-auto flex min-h-[310px] max-w-[460px] items-center justify-center px-3 pb-2 pt-5 sm:min-h-[360px] sm:pt-6 md:min-h-[380px] md:px-6 md:pt-8">
-                <GlobeBars className="w-full max-w-[390px] md:max-w-[430px]" speed={0} />
+                <GlobeBars className="w-full max-w-[390px] md:max-w-[430px]" speed={0.0014} />
               </div>
 
               <div className="relative z-20 flex flex-wrap items-end justify-between gap-3 border-t border-white/8 bg-[rgba(3,7,17,0.96)] px-4 pb-4 pt-4 md:gap-4 md:px-6 md:pb-6">

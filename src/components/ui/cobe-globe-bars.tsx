@@ -26,24 +26,24 @@ type GlobeBarsProps = {
 
 const defaultMarkers: GlobeBarMarker[] = [
   {
-    id: "chile",
+    id: "santiago",
     location: [-33.4489, -70.6693],
     label: "Chile",
     detail: "Santiago",
     value: 96,
-    offset: { x: -58, y: -12 },
+    offset: { x: -34, y: -10 },
   },
   {
-    id: "argentina",
+    id: "mendoza",
     location: [-32.8895, -68.8458],
     label: "Argentina",
     detail: "Mendoza",
     value: 88,
-    offset: { x: 20, y: 20 },
+    offset: { x: 34, y: 8 },
   },
 ];
 
-const INITIAL_PHI = 0.2;
+const INITIAL_PHI = -0.35;
 const INITIAL_THETA = 0.12;
 
 export function GlobeBars({
@@ -62,7 +62,7 @@ export function GlobeBars({
     () =>
       markers.map((marker) => ({
         location: marker.location,
-        size: marker.id === "mendoza" ? 0.055 : 0.07,
+        size: marker.id === "santiago" ? 0.032 : 0.028,
         id: marker.id,
       })),
     [markers],
@@ -114,6 +114,7 @@ export function GlobeBars({
     let phi = 0;
     let resizeObserver: ResizeObserver | undefined;
     let resizeTimeout = 0;
+    const shouldAutoRotate = Math.abs(speed) > 0.00001;
 
     const destroyGlobe = () => {
       if (animationId) window.cancelAnimationFrame(animationId);
@@ -135,27 +136,34 @@ export function GlobeBars({
         phi: INITIAL_PHI,
         theta: INITIAL_THETA,
         dark: 1,
-        diffuse: 1.35,
-        mapSamples: 18000,
-        mapBrightness: 4.8,
-        baseColor: [0.78, 0.82, 0.9],
+        diffuse: 1.25,
+        mapSamples: 22000,
+        mapBrightness: 7.6,
+        mapBaseBrightness: 0.015,
+        baseColor: [0.96, 0.91, 0.84],
         markerColor: [1, 0.48, 0.1],
-        glowColor: [1, 0.42, 0.08],
-        markerElevation: 0.035,
+        glowColor: [1, 0.36, 0.06],
+        markerElevation: 0.025,
         markers: cobeMarkers as never,
         opacity: 0.96,
       });
 
-      const animate = () => {
+      const updateGlobe = () => {
         if (!globe) return;
-        if (!isPausedRef.current) phi += speed;
+        if (shouldAutoRotate && !isPausedRef.current) phi += speed;
 
         globe.update({
           phi: INITIAL_PHI + phi + phiOffsetRef.current + dragOffset.current.phi,
           theta: INITIAL_THETA + thetaOffsetRef.current + dragOffset.current.theta,
         });
+      };
 
-        animationId = window.requestAnimationFrame(animate);
+      const animate = () => {
+        updateGlobe();
+
+        if (shouldAutoRotate) {
+          animationId = window.requestAnimationFrame(animate);
+        }
       };
 
       animate();
@@ -210,16 +218,16 @@ export function GlobeBars({
         return (
           <div
             key={marker.id}
-            className="pointer-events-none z-20 hidden min-w-[5.8rem] rounded-[0.85rem] border border-[rgba(255,194,131,0.28)] bg-[rgba(5,10,20,0.82)] px-2.5 py-2 text-center shadow-[0_14px_36px_rgba(0,0,0,0.32),0_0_24px_rgba(255,122,26,0.1)] backdrop-blur-md transition-[opacity,filter] duration-500 sm:block"
+            className="pointer-events-none z-20 min-w-[3.9rem] rounded-[0.6rem] border border-[rgba(255,194,131,0.28)] bg-[rgba(5,10,20,0.86)] px-1.5 py-1.5 text-center shadow-[0_10px_26px_rgba(0,0,0,0.28),0_0_18px_rgba(255,122,26,0.1)] backdrop-blur-md transition-[opacity,filter] duration-500 sm:min-w-[4.65rem] sm:rounded-[0.65rem] sm:px-2"
             style={labelStyle}
           >
-            <span className="block text-[0.58rem] font-semibold uppercase leading-none tracking-[0.22em] text-[var(--accent-soft)]">
+            <span className="block text-[0.42rem] font-semibold uppercase leading-none tracking-[0.16em] text-[var(--accent-soft)] sm:text-[0.48rem] sm:tracking-[0.18em]">
               {marker.label}
             </span>
-            <span className="mt-1.5 block text-[0.68rem] font-medium leading-none text-[var(--text-secondary)]">
+            <span className="mt-1 block text-[0.5rem] font-medium leading-none text-[var(--text-secondary)] sm:text-[0.58rem]">
               {marker.detail}
             </span>
-            <span className="mt-2 block h-1 overflow-hidden rounded-full bg-white/10">
+            <span className="mt-1.5 block h-[3px] overflow-hidden rounded-full bg-white/10">
               <span className="block h-full w-[var(--value)] rounded-full bg-[linear-gradient(90deg,var(--accent),var(--accent-soft))]" />
             </span>
           </div>

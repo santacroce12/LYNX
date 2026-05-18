@@ -20,7 +20,7 @@ export default function HomePage() {
   return (
     <TubesBackground
       className="isolate min-h-0"
-      canvasClassName="pointer-events-none opacity-70 mix-blend-screen [mask-image:linear-gradient(180deg,transparent_0%,black_7%,black_92%,transparent_100%)]"
+      canvasClassName="pointer-events-none opacity-[0.42]"
       fixedCanvas
       intensity="low"
     >

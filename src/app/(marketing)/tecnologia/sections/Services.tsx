@@ -46,7 +46,7 @@ export default function TecnologiaServices() {
         <div className="panel-shell mb-4 overflow-hidden rounded-[1.55rem] p-2.5">
           <div className="relative min-h-[260px] overflow-hidden rounded-[1.15rem] border border-white/8 px-4 py-4 md:min-h-[300px] md:px-6 md:py-6 lg:min-h-[320px]">
             <Image
-              src="/images/tecnologia/generated/integracion-servicios.png"
+              src="/images/tecnologia/generated/integracion-servicios.optimized.webp"
               alt="Arquitectura de integración tecnológica con soporte operativo"
               fill
               sizes="(min-width: 1280px) 1120px, 100vw"

@@ -1,6 +1,6 @@
 ﻿import CTA from "@/components/marketing/CTA";
-import FAQ from "@/components/marketing/FAQ";
 import FeaturedProjects from "@/components/marketing/FeaturedProjects";
+import TubesBackground from "@/components/ui/neon-flow";
 import { tecnologia } from "@/content/tecnologia";
 import { buildMetadata } from "@/lib/seo";
 import TecnologiaHero from "./sections/Hero";
@@ -17,13 +17,17 @@ export const metadata = buildMetadata({
 
 export default function TecnologiaPage() {
   return (
-    <>
+    <TubesBackground
+      className="isolate min-h-0"
+      canvasClassName="pointer-events-none opacity-[0.36]"
+      fixedCanvas
+      intensity="low"
+    >
       <TecnologiaHero />
       <TecnologiaIndustries />
       <TecnologiaServices />
       <TecnologiaProcess />
       <TecnologiaUseCases />
-      <FAQ title={tecnologia.sections.faqTitle} items={tecnologia.faqs} />
       <FeaturedProjects filterCategory="Tecnología" />
       <CTA
         title={tecnologia.cta.title}
@@ -31,6 +35,6 @@ export default function TecnologiaPage() {
         buttonLabel={tecnologia.cta.buttonLabel}
         href="/contacto"
       />
-    </>
+    </TubesBackground>
   );
 }

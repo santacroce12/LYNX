@@ -5,27 +5,27 @@ import { energia } from "@/content/energia";
 
 const images = [
   {
-    src: "/images/energia/energia-subestacion.jpg",
+    src: "/images/energia/energia-subestacion.optimized.webp",
     alt: "Subestación eléctrica",
   },
   {
-    src: "/images/energia/energia-ingeniero.jpg",
+    src: "/images/energia/energia-ingeniero.optimized.webp",
     alt: "Ingeniero en campo",
   },
   {
-    src: "/images/energia/1.jpg",
+    src: "/images/energia/1.optimized.webp",
     alt: "Proyecto energía 1",
   },
   {
-    src: "/images/energia/6.jpg",
+    src: "/images/energia/6.optimized.webp",
     alt: "Proyecto energía 2",
   },
   {
-    src: "/images/energia/9.jpg",
+    src: "/images/energia/9.optimized.webp",
     alt: "Proyecto energía 3",
   },
   {
-    src: "/images/energia/slide-2.jpg",
+    src: "/images/energia/slide-2.optimized.webp",
     alt: "Proyecto energía 4",
   },
 ];
@@ -49,7 +49,6 @@ export default function EnergiaGallery() {
                   src={image.src}
                   alt={image.alt}
                   fill
-                  priority
                   sizes="(min-width: 1280px) 33vw, (min-width: 640px) 50vw, 100vw"
                   className="object-cover transition-transform duration-500 ease-out group-hover:scale-105"
                 />

@@ -118,7 +118,7 @@ export default function BotLynx() {
                 </div>
                 <div className="rounded-2xl rounded-tl-none bg-[var(--surface)] p-3 text-sm shadow-sm">
                   <p>
-                    ¡Hola! Soy el asistente virtual de LYNX SpA. ¿En qué puedo
+                    ¡Hola! Soy el asistente virtual de LYNX. ¿En qué puedo
                     ayudarte hoy con tus proyectos de energía y automatización?
                   </p>
                 </div>

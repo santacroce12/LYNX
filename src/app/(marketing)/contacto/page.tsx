@@ -3,6 +3,7 @@ import Section from "@/components/layout/Section";
 import Reveal from "@/components/motion/Reveal";
 import EnergyFlow from "@/components/ui/EnergyFlow";
 import LocationMap from "@/components/ui/LocationMap";
+import TubesBackground from "@/components/ui/neon-flow";
 import { site } from "@/content/site";
 import { buildMetadata } from "@/lib/seo";
 import { Mail, MapPin, MessageCircle, Phone } from "lucide-react";
@@ -16,7 +17,12 @@ export const metadata = buildMetadata({
 
 export default function ContactPage() {
   return (
-    <>
+    <TubesBackground
+      className="isolate min-h-0"
+      canvasClassName="pointer-events-none opacity-[0.32]"
+      fixedCanvas
+      intensity="low"
+    >
       <Section className="overflow-hidden pt-6 md:pt-14">
         <div className="pointer-events-none absolute inset-x-0 top-0 h-80 bg-[radial-gradient(circle_at_18%_26%,rgba(125,168,255,0.045),transparent_28%),radial-gradient(circle_at_78%_18%,rgba(255,122,26,0.035),transparent_30%)] [mask-image:linear-gradient(180deg,#000_0%,transparent_100%)]" />
 
@@ -120,6 +126,6 @@ export default function ContactPage() {
         </div>
       </Section>
       <Footer />
-    </>
+    </TubesBackground>
   );
 }

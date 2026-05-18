@@ -136,37 +136,61 @@ export const energia = {
       title: "Sistema de Monitoreo Fasorial",
       description:
         "Solución WAMS con PMUs para observar oscilaciones de potencia en tiempo real.",
-      image:
-        "https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?auto=format&fit=crop&q=80",
+      image: "/images/energia/electrico.optimized.webp",
     },
     {
       title: "Centro de Control SCADA",
       description:
         "Sistema centralizado redundante para operación remota de subestaciones.",
-      image: "/images/energia/control-scada.png",
+      image: "/images/energia/control-scada.optimized.webp",
     },
     {
       title: "Cumplimiento Normativo SITR",
       description:
         "Infraestructura para integración al SITR en Central Yungay y proyectos Barrick.",
-      image: "/images/energia/cumplimiento-normativo-sitr.png",
+      image: "/images/energia/cumplimiento-normativo-sitr.optimized.webp",
     },
   ],
   faqs: [
     {
-      question: "¿Realizan estudios de conexión al CEN?",
+      question: "¿Qué servicios de automatización y monitoreo eléctrico ofrece Lynx?",
       answer:
-        "Sí. Desarrollamos la ingeniería y gestionamos la validación de señales y pruebas punto a punto con el Coordinador.",
+        "Desarrollamos proyectos de automatización, monitoreo y control para sistemas eléctricos. Implementamos plataformas SCADA, RTU, PMU y soluciones de monitoreo para generación, transmisión y almacenamiento de energía.",
     },
     {
-      question: "¿Qué protocolos manejan?",
+      question: "¿Realizan integración y cumplimiento técnico con el CEN?",
       answer:
-        "Especialistas en IEC 61850, DNP3, Modbus y C37.118 (sincrofasores) para transmisión de datos en tiempo real.",
+        "Sí. Participamos en proyectos asociados al Coordinador Eléctrico Nacional (CEN), incluyendo integración SITR, validación de señales, pruebas FAT/SAT y configuración de sistemas SCADA para instalaciones eléctricas en Chile.",
     },
     {
-      question: "¿Pueden acompañar la implementación?",
+      question: "¿Qué protocolos industriales integran en proyectos OT?",
       answer:
-        "Incluimos gestión de proyecto, puesta en marcha y monitoreo continuo.",
+        "Trabajamos con protocolos como IEC 61850, DNP3, Modbus e IEEE C37.118 para automatización eléctrica, integración SCADA y monitoreo fasorial en entornos OT.",
+    },
+    {
+      question: "¿Tienen experiencia implementando sistemas PMU?",
+      answer:
+        "Sí. Implementamos sistemas PMU y monitoreo fasorial bajo estándar IEEE C37.118 para observabilidad, análisis dinámico y monitoreo en tiempo real del sistema eléctrico.",
+    },
+    {
+      question: "¿Pueden integrar PMU con plataformas SCADA?",
+      answer:
+        "Sí. Integramos PMU con plataformas SCADA y centros de control existentes, considerando interoperabilidad, sincronización temporal y disponibilidad de información operativa.",
+    },
+    {
+      question: "¿Qué servicios realizan en subestaciones eléctricas?",
+      answer:
+        "Desarrollamos ingeniería, automatización, telecomunicaciones industriales, protecciones y puesta en servicio para subestaciones de alta y media tensión.",
+    },
+    {
+      question: "¿Realizan commissioning y pruebas FAT/SAT?",
+      answer:
+        "Sí. Ejecutamos pruebas FAT/SAT, validación de señales, pruebas punto a punto y commissioning para proyectos eléctricos y sistemas de automatización.",
+    },
+    {
+      question: "¿Ofrecen servicios de ciberseguridad OT?",
+      answer:
+        "Sí. Implementamos medidas de ciberseguridad OT orientadas a segmentación de redes, control de accesos, trazabilidad y protección de infraestructura tecnológica.",
     },
   ],
   stats: [

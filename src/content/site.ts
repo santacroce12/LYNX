@@ -1,7 +1,7 @@
 ﻿export const site = {
   name: "LYNX",
   company: {
-    legalName: "LYNX SpA",
+    legalName: "LYNX",
     group: "Grupo Oeste",
   },
   tagline: "Energía y Tecnología para soluciones modernas",
@@ -12,6 +12,7 @@
     { label: "Energía", href: "/energia" },
     { label: "Tecnología", href: "/tecnologia" },
     { label: "Recursos", href: "/recursos" },
+    { label: "FAQs", href: "/faqs" },
     { label: "Contacto", href: "/contacto" },
   ],
   aria: {
@@ -50,7 +51,7 @@
         "Optimización de consumo, continuidad operativa y control en tiempo real.",
       cta: "Explorar Energía",
       href: "/energia",
-      image: "/images/energia/electrico.jpg",
+      image: "/images/energia/electrico.optimized.webp",
     },
     {
       label: "Tecnología",
@@ -59,12 +60,12 @@
         "Apps, automatización e integraciones seguras para decisiones rápidas.",
       cta: "Explorar Tecnología",
       href: "/tecnologia",
-      image: "/images/tecnologia/tecnologico.jpg",
+      image: "/images/tecnologia/tecnologico.optimized.webp",
     },
   ],
   about: {
     title: "Nosotros",
-    subtitle: "LYNX SpA",
+    subtitle: "LYNX",
     cover: {
       image: "/images/brand/about.svg",
       alt: "Equipo LYNX en operaciones de energía",

@@ -2,17 +2,37 @@
 
 import { useEffect, useState } from "react";
 import Image from "next/image";
+import { createPortal } from "react-dom";
 import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
 import logo4k from "../../../Logo_4k.jpg";
 
 const INTRO_DURATION_MS = 2200;
 const REDUCED_DURATION_MS = 900;
+const INTRO_SESSION_KEY = "lynx-home-intro-seen";
 
 export default function HomeBrandIntro() {
   const reduceMotion = useReducedMotion();
-  const [visible, setVisible] = useState(true);
+  const [mounted, setMounted] = useState(false);
+  const [visible, setVisible] = useState(false);
 
   useEffect(() => {
+    setMounted(true);
+
+    try {
+      const alreadySeen = window.sessionStorage.getItem(INTRO_SESSION_KEY) === "1";
+
+      if (!alreadySeen) {
+        window.sessionStorage.setItem(INTRO_SESSION_KEY, "1");
+        setVisible(true);
+      }
+    } catch {
+      setVisible(true);
+    }
+  }, []);
+
+  useEffect(() => {
+    if (!visible) return;
+
     const previousOverflow = document.body.style.overflow;
     document.body.style.overflow = "hidden";
 
@@ -25,7 +45,7 @@ export default function HomeBrandIntro() {
       window.clearTimeout(timeout);
       document.body.style.overflow = previousOverflow;
     };
-  }, [reduceMotion]);
+  }, [reduceMotion, visible]);
 
   useEffect(() => {
     if (!visible) {
@@ -33,11 +53,14 @@ export default function HomeBrandIntro() {
     }
   }, [visible]);
 
-  return (
+  if (!mounted) return null;
+
+  return createPortal(
     <AnimatePresence>
       {visible ? (
         <motion.div
-          className="pointer-events-none fixed inset-0 z-[120] overflow-hidden bg-[var(--bg)]"
+          data-lynx-intro="true"
+          className="pointer-events-none fixed inset-0 z-[9999] overflow-hidden bg-[var(--bg)]"
           initial={{ opacity: 1 }}
           animate={{ opacity: 1 }}
           exit={{
@@ -173,6 +196,7 @@ export default function HomeBrandIntro() {
           </div>
         </motion.div>
       ) : null}
-    </AnimatePresence>
+    </AnimatePresence>,
+    document.body,
   );
 }

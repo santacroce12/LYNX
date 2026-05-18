@@ -16,7 +16,7 @@ export const tecnologia = {
     claim:
       "Implementación, soporte y mejora continua.",
     cta: "Explorar soluciones",
-    image: "/images/tecnologia/tecnologia-abstracto.jpg",
+    image: "/images/tecnologia/tecnologia-abstracto.optimized.webp",
   },
   sections: {
     featuresTitle: "Capacidades tecnológicas",
@@ -154,42 +154,42 @@ export const tecnologia = {
       description:
         "Sistemas de campo y áreas de negocio en una vista centralizada.",
       icon: "network",
-      image: "/images/tecnologia/generated/caso-operaciones-conectadas.png",
+      image: "/images/tecnologia/generated/caso-operaciones-conectadas.optimized.webp",
     },
     {
       title: "Automatización administrativa y operativa",
       description:
         "Flujos digitales, alertas, aprobaciones y reportes.",
       icon: "workflow",
-      image: "/images/tecnologia/generated/caso-automatizacion.png",
+      image: "/images/tecnologia/generated/caso-automatizacion.optimized.webp",
     },
     {
       title: "Tecnología en campo",
       description:
         "Hardware, conectividad, sensores y software en sitio.",
       icon: "radio",
-      image: "/images/tecnologia/generated/caso-tecnologia-campo.png",
+      image: "/images/tecnologia/generated/caso-tecnologia-campo.optimized.webp",
     },
     {
       title: "Integración multisede",
       description:
         "Plantas, sucursales y centros operativos conectados.",
       icon: "map",
-      image: "/images/tecnologia/generated/caso-integracion-multisede.png",
+      image: "/images/tecnologia/generated/caso-integracion-multisede.optimized.webp",
     },
     {
       title: "Tableros de gestión",
       description:
         "Datos de distintas fuentes convertidos en indicadores claros.",
       icon: "chart",
-      image: "/images/tecnologia/generated/caso-tableros-gestion.png",
+      image: "/images/tecnologia/generated/caso-tableros-gestion.optimized.webp",
     },
     {
       title: "Mantenimiento tecnológico operativo",
       description:
         "Soporte, monitoreo e incidencias para sostener la operación.",
       icon: "refresh",
-      image: "/images/tecnologia/generated/caso-modernizacion-sistemas.png",
+      image: "/images/tecnologia/generated/caso-modernizacion-sistemas.optimized.webp",
     },
   ],
   industries: {
@@ -209,7 +209,7 @@ export const tecnologia = {
         ],
         buttonLabel: "Ver soluciones",
         href: "/energia",
-        image: "/images/tecnologia/industrias/energia-infraestructura.png",
+        image: "/images/tecnologia/industrias/energia-infraestructura.optimized.webp",
       },
       {
         title: "Industria y manufactura",
@@ -221,7 +221,7 @@ export const tecnologia = {
         ],
         buttonLabel: "Ver soluciones",
         href: "/contacto",
-        image: "/images/tecnologia/industrias/industria-manufactura.png",
+        image: "/images/tecnologia/industrias/industria-manufactura.optimized.webp",
       },
       {
         title: "Seguridad y monitoreo",
@@ -233,7 +233,7 @@ export const tecnologia = {
         ],
         buttonLabel: "Ver soluciones",
         href: "/contacto",
-        image: "/images/tecnologia/industrias/seguridad-monitoreo.png",
+        image: "/images/tecnologia/industrias/seguridad-monitoreo.optimized.webp",
       },
       {
         title: "Retail y multisede",
@@ -245,7 +245,7 @@ export const tecnologia = {
         ],
         buttonLabel: "Ver soluciones",
         href: "/contacto",
-        image: "/images/tecnologia/industrias/retail-multisede.png",
+        image: "/images/tecnologia/industrias/retail-multisede.optimized.webp",
       },
       {
         title: "Servicios corporativos",
@@ -257,7 +257,7 @@ export const tecnologia = {
         ],
         buttonLabel: "Ver soluciones",
         href: "/contacto",
-        image: "/images/tecnologia/industrias/finanzas-corporativo.png",
+        image: "/images/tecnologia/industrias/finanzas-corporativo.optimized.webp",
       },
       {
         title: "Instituciones y organizaciones",
@@ -269,30 +269,55 @@ export const tecnologia = {
         ],
         buttonLabel: "Ver soluciones",
         href: "/contacto",
-        image: "/images/tecnologia/industrias/gobierno-educacion.png",
+        image: "/images/tecnologia/industrias/gobierno-educacion.optimized.webp",
       },
     ],
   },
   faqs: [
     {
-      question: "¿Pueden integrarse con sistemas que ya usamos?",
+      question: "¿Qué servicios tecnológicos desarrolla Lynx?",
       answer:
-        "Sí. Relevamos el ecosistema actual y definimos conectores, APIs, flujos de datos o capas intermedias para integrar herramientas nuevas y existentes sin forzar reemplazos innecesarios.",
+        "Desarrollamos soluciones de integración tecnológica, automatización e infraestructura digital para empresas que necesitan integrar sistemas, mejorar procesos y utilizar mejor su información.",
     },
     {
-      question: "¿Trabajan solo con software o también con despliegue físico?",
+      question: "¿Trabajan con integración entre sistemas OT e IT?",
       answer:
-        "Cubrimos ambos frentes. Podemos desarrollar e integrar software, y también coordinar hardware, instalación, configuración, pruebas, capacitación y puesta en marcha en sitio.",
+        "Sí. Integramos infraestructura OT con plataformas IT para mejorar monitoreo, trazabilidad y utilización de información operativa en tiempo real.",
     },
     {
-      question: "¿Cómo sostienen la operación después de implementar?",
+      question: "¿Implementan soluciones IoT industriales?",
       answer:
-        "Acompañamos las soluciones con monitoreo, soporte técnico, mantenimiento preventivo y correctivo, gestión de incidencias y mejoras evolutivas para asegurar continuidad operativa.",
+        "Sí. Implementamos sensores IoT, gateways industriales y plataformas de adquisición de datos para monitoreo, automatización y análisis operativo.",
     },
     {
-      question: "¿Pueden sumar especialistas al equipo del cliente?",
+      question: "¿Qué tipo de hardware industrial integran?",
       answer:
-        "Sí. Podemos aportar desarrolladores, analistas, ingenieros, líderes técnicos o perfiles especializados para acelerar iniciativas internas del cliente cuando el proyecto lo requiera.",
+        "Trabajamos con sensores IoT, gateways, dispositivos de medición eléctrica y equipamiento para automatización y operación en terreno.",
+    },
+    {
+      question: "¿Desarrollan arquitectura de datos y monitoreo operacional?",
+      answer:
+        "Sí. Participamos en proyectos de integración, captura y visualización de datos operativos mediante plataformas de monitoreo y análisis.",
+    },
+    {
+      question: "¿Cómo abordan proyectos de transformación digital?",
+      answer:
+        "Participamos en proyectos de automatización, integración de sistemas y digitalización operativa para empresas que necesitan mejorar procesos y conectar información.",
+    },
+    {
+      question: "¿Pueden ayudar a aprovechar mejor los datos de una empresa?",
+      answer:
+        "Sí. Participamos en proyectos orientados a integración y utilización de datos operativos y comerciales para mejorar análisis, monitoreo y toma de decisiones.",
+    },
+    {
+      question: "¿Trabajan con equipos remotos o en terreno?",
+      answer:
+        "Sí. Contamos con equipos remotos para integración de sistemas y desarrollo tecnológico, además de despliegues técnicos en terreno para implementación, soporte y operación. También trabajamos bajo esquemas de outsourcing de personal y body shopping según las necesidades del proyecto.",
+    },
+    {
+      question: "¿Cómo gestionan confidencialidad y propiedad intelectual?",
+      answer:
+        "Trabajamos bajo acuerdos NDA y aseguramos trazabilidad sobre documentación, configuraciones y desarrollos técnicos generados en cada proyecto.",
     },
   ],
   stats: [

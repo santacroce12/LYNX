@@ -12,7 +12,7 @@ export default function EnergiaHero() {
     <>
       <section className="relative isolate -mt-3 overflow-hidden border-b border-white/8 md:-mt-[34px]">
         <Image
-          src="/images/energia/energia2.jpg"
+          src="/images/energia/energia2.optimized.webp"
           alt="Centro de control de energía"
           fill
           priority
