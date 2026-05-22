@@ -2,6 +2,7 @@
 
 import { m } from "framer-motion";
 import { Check, UserRound } from "lucide-react";
+import { cn } from "@/lib/utils";
 
 const nodes = [
   {
@@ -42,11 +43,18 @@ const pulses = [
   },
 ];
 
-export default function SuccessNetwork() {
+type SuccessNetworkProps = {
+  className?: string;
+};
+
+export default function SuccessNetwork({ className }: SuccessNetworkProps) {
   return (
     <div
       aria-hidden="true"
-      className="pointer-events-none absolute right-[3%] top-1/2 hidden aspect-[520/340] w-[42%] max-w-[520px] -translate-y-1/2 overflow-hidden md:block"
+      className={cn(
+        "pointer-events-none absolute right-[3%] top-1/2 hidden aspect-[520/340] w-[42%] max-w-[520px] -translate-y-1/2 overflow-hidden md:block",
+        className,
+      )}
     >
       <div className="absolute inset-0 rounded-[30px] bg-[radial-gradient(circle_at_70%_34%,rgba(255,122,26,0.12),transparent_26%),radial-gradient(circle_at_28%_72%,rgba(255,194,131,0.08),transparent_20%)]" />
       <div className="absolute inset-0 bg-[linear-gradient(to_right,rgba(148,163,184,0.08)_1px,transparent_1px),linear-gradient(to_bottom,rgba(148,163,184,0.08)_1px,transparent_1px)] bg-[size:32px_32px] opacity-25 [mask-image:radial-gradient(circle_at_center,#000_56%,transparent_96%)]" />

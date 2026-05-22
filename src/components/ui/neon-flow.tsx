@@ -10,6 +10,7 @@ type TubesBackgroundProps = {
   enablePointerInteraction?: boolean;
   fixedCanvas?: boolean;
   intensity?: "low" | "medium";
+  showLines?: boolean;
 };
 
 const flowLines = [
@@ -35,6 +36,7 @@ export function TubesBackground({
   canvasClassName,
   fixedCanvas = false,
   intensity = "low",
+  showLines = true,
 }: TubesBackgroundProps) {
   const alpha = intensity === "medium" ? "0.78" : "0.54";
 
@@ -49,23 +51,25 @@ export function TubesBackground({
         )}
       >
         <span className="lynx-flow-wash" />
-        {flowLines.map((line, index) => (
-          <span
-            key={`${line.top}-${line.rotate}`}
-            className="lynx-flow-line"
-            style={
-              {
-                "--flow-top": line.top,
-                "--flow-rotate": line.rotate,
-                "--flow-shift": line.shift,
-                "--flow-duration": line.duration,
-                "--flow-delay": line.delay,
-                "--flow-width": line.width,
-                "--flow-alpha": String(Number(alpha) - index * 0.055),
-              } as FlowStyle
-            }
-          />
-        ))}
+        {showLines
+          ? flowLines.map((line, index) => (
+              <span
+                key={`${line.top}-${line.rotate}`}
+                className="lynx-flow-line"
+                style={
+                  {
+                    "--flow-top": line.top,
+                    "--flow-rotate": line.rotate,
+                    "--flow-shift": line.shift,
+                    "--flow-duration": line.duration,
+                    "--flow-delay": line.delay,
+                    "--flow-width": line.width,
+                    "--flow-alpha": String(Number(alpha) - index * 0.055),
+                  } as FlowStyle
+                }
+              />
+            ))
+          : null}
       </div>
       {children ? <div className="relative z-10 h-full w-full">{children}</div> : null}
     </div>

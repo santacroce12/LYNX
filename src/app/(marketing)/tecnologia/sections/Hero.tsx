@@ -10,7 +10,7 @@ import { tecnologia } from "@/content/tecnologia";
 export default function TecnologiaHero() {
   return (
     <>
-      <section className="relative isolate -mt-3 overflow-hidden border-b border-white/8 md:-mt-[34px]">
+      <section className="relative isolate -mt-16 overflow-hidden border-b border-white/8 md:-mt-[78px]">
         <Image
           src={tecnologia.hero.image}
           alt={tecnologia.hero.title}

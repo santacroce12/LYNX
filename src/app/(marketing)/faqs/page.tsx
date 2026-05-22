@@ -73,9 +73,9 @@ function ChoiceGraphic({
       />
       <div className="panel-decoration pointer-events-none absolute inset-0 panel-grid opacity-25" />
 
-      <div className="absolute inset-x-6 top-1/2 h-px -translate-y-1/2 bg-white/10">
+      <div className="absolute left-[5.3rem] right-5 top-1/2 h-px -translate-y-1/2 bg-white/10 sm:left-[7.35rem] sm:right-6">
         <span
-          className={`absolute left-0 top-1/2 h-[3px] w-[62%] -translate-y-1/2 rounded-full ${
+          className={`absolute left-0 top-1/2 h-[3px] w-[68%] -translate-y-1/2 rounded-full ${
             isEnergy
               ? "bg-[linear-gradient(90deg,var(--accent),var(--accent-soft),transparent)] shadow-[0_0_18px_rgba(255,122,26,0.35)]"
               : "bg-[linear-gradient(90deg,var(--accent-cool),#b7d1ff,transparent)] shadow-[0_0_18px_rgba(125,168,255,0.32)]"
@@ -134,7 +134,7 @@ export default function FAQChoicePage() {
     >
       <Section className="flex min-h-[calc(100svh-4.75rem)] items-center py-3 md:py-6 lg:py-4">
         <div className="w-full">
-          <div className="mb-4 grid gap-4 lg:mb-5 lg:grid-cols-[0.9fr_0.6fr] lg:items-end">
+          <div className="mb-4 max-w-3xl lg:mb-5">
             <div className="max-w-3xl">
               <Reveal>
                 <span className="section-kicker">Preguntas frecuentes</span>
@@ -150,12 +150,6 @@ export default function FAQChoicePage() {
                 </p>
               </Reveal>
             </div>
-
-            <Reveal delay={0.14}>
-              <div className="hidden rounded-[1.2rem] border border-white/10 bg-white/[0.035] px-4 py-3 text-sm leading-6 text-[var(--muted)] lg:block">
-                Las respuestas completas se cargan en la página específica para que Google y las IA las lean correctamente.
-              </div>
-            </Reveal>
           </div>
 
           <div className="relative overflow-hidden rounded-[1.55rem] border border-[var(--border)] bg-[rgba(5,10,19,0.76)] p-2 shadow-[var(--shadow-panel)] md:p-3">

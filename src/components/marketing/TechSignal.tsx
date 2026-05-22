@@ -58,19 +58,6 @@ export default function TechSignal({ variant = "energy" }: TechSignalProps) {
   const isTech = variant === "tech";
   const nodes = isTech ? techNodes : energyNodes;
   const paths = isTech ? techPaths : energyPaths;
-  const particles = isTech
-    ? [
-        { left: "12%", top: "18%", x: 84, y: 18, delay: 0 },
-        { left: "34%", top: "16%", x: 72, y: 54, delay: 0.75 },
-        { left: "76%", top: "24%", x: -68, y: 42, delay: 1.35 },
-        { left: "20%", top: "78%", x: 110, y: -38, delay: 1.9 },
-        { left: "66%", top: "76%", x: -86, y: -26, delay: 2.4 },
-      ]
-    : [
-        { left: "10%", top: "54%", x: 152, y: -16, delay: 0 },
-        { left: "38%", top: "58%", x: 126, y: -38, delay: 0.9 },
-        { left: "64%", top: "47%", x: 112, y: -18, delay: 1.6 },
-      ];
   const gradientId = isTech ? "signal-gradient-tech" : "signal-gradient-energy";
   const glowId = isTech ? "signal-glow-tech" : "signal-glow-energy";
   const primary = isTech ? "rgba(125,168,255,0.86)" : "rgba(255,194,131,0.66)";
@@ -247,21 +234,6 @@ export default function TechSignal({ variant = "energy" }: TechSignalProps) {
                 delay: index * 0.34,
               }}
             />
-            {[0, 1].map((packetIndex) => (
-              <circle
-                key={`${path}-${packetIndex}`}
-                r={isTech ? 4 : 4.8}
-                fill={isTech ? "rgba(94,234,212,0.92)" : "rgba(255,194,131,0.9)"}
-                filter={`url(#${glowId})`}
-              >
-                <animateMotion
-                  begin={`${index * 0.42 + packetIndex * 1.6}s`}
-                  dur={isTech ? "3.2s" : "3.7s"}
-                  path={path}
-                  repeatCount="indefinite"
-                />
-              </circle>
-            ))}
           </g>
         ))}
       </svg>
@@ -325,37 +297,6 @@ export default function TechSignal({ variant = "energy" }: TechSignalProps) {
           />
           <Icon className="relative h-[18px] w-[18px]" />
         </m.div>
-      ))}
-
-      {particles.map((particle, index) => (
-        <m.span
-          key={`${particle.left}-${particle.top}`}
-          className={`absolute rounded-full ${
-            isTech ? "h-1.5 w-1.5" : "h-2 w-2"
-          }`}
-          style={{
-            left: particle.left,
-            top: particle.top,
-            background: isTech
-              ? "rgba(94,234,212,0.9)"
-              : "rgba(255,194,131,0.88)",
-            boxShadow: isTech
-              ? "0 0 18px rgba(94,234,212,0.48)"
-              : "0 0 18px rgba(255,122,26,0.45)",
-          }}
-          animate={{
-            x: [0, particle.x, particle.x * 1.12],
-            y: [0, particle.y, particle.y * 0.7],
-            opacity: [0, 0.95, 0],
-            scale: [0.7, 1.2, 0.7],
-          }}
-          transition={{
-            duration: isTech ? 3.1 : 3.6,
-            repeat: Number.POSITIVE_INFINITY,
-            ease: "easeInOut",
-            delay: particle.delay + index * 0.12,
-          }}
-        />
       ))}
 
       {isTech ? (

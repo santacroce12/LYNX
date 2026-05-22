@@ -62,7 +62,7 @@ export default function FaqVerticalPage({
         dangerouslySetInnerHTML={{ __html: toJsonLd(faqSchema) }}
       />
 
-      <Section className="pt-6 md:pt-16">
+      <Section className="pt-2 md:pt-5">
         <div className="mb-6">
           <Link
             href="/faqs"
@@ -131,19 +131,10 @@ export default function FaqVerticalPage({
         <div className="grid gap-3">
           {items.map((item, index) => (
             <Reveal key={item.question} delay={index * 0.03}>
-              <details className="panel-shell group overflow-hidden rounded-[1.35rem] p-4 md:p-5">
-                <summary className="flex cursor-pointer list-none items-center justify-between gap-4 text-left text-[0.95rem] font-semibold leading-6 text-[var(--text-strong)] md:text-base">
-                  <span>{item.question}</span>
-                  <span
-                    className={`inline-flex h-9 w-9 shrink-0 items-center justify-center rounded-full border bg-white/[0.04] text-lg transition-transform duration-300 group-open:rotate-45 ${
-                      isEnergy
-                        ? "border-[rgba(255,194,131,0.2)] text-[var(--accent-soft)]"
-                        : "border-[rgba(125,168,255,0.22)] text-[var(--accent-cool)]"
-                    }`}
-                  >
-                    +
-                  </span>
-                </summary>
+              <article className="panel-shell overflow-hidden rounded-[1.35rem] p-4 md:p-5">
+                <h2 className="text-left text-[0.95rem] font-semibold leading-6 text-[var(--text-strong)] md:text-base">
+                  {item.question}
+                </h2>
                 <div
                   className={`mt-4 h-px bg-gradient-to-r ${
                     isEnergy
@@ -154,7 +145,7 @@ export default function FaqVerticalPage({
                 <p className="mt-4 text-sm leading-7 text-[var(--muted)]">
                   {item.answer}
                 </p>
-              </details>
+              </article>
             </Reveal>
           ))}
         </div>

@@ -22,6 +22,7 @@ export default function TecnologiaPage() {
       canvasClassName="pointer-events-none opacity-[0.36]"
       fixedCanvas
       intensity="low"
+      showLines={false}
     >
       <TecnologiaHero />
       <TecnologiaIndustries />

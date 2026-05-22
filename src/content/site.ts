@@ -39,26 +39,36 @@
     rights: "Todos los derechos reservados.",
   },
   homeHero: {
-    badge: "Soluciones integradas",
+    badge: "Operaciones críticas",
+    title: "Energía y tecnología para operaciones críticas.",
     description:
-      "Ingeniería, software y soporte para activos que no pueden frenar.",
+      "Integramos infraestructura, automatización y software para que la operación sea visible, controlable y mantenible.",
+    signals: [
+      { label: "Cobertura", value: "Chile y Argentina" },
+      { label: "Despliegue", value: "Remoto y en terreno" },
+      { label: "Modelo", value: "Diagnóstico, ejecución y soporte" },
+    ],
   },
   homeCards: [
     {
-      label: "Energía",
-      title: "Infraestructura resiliente",
+      label: "Vertical energía",
+      title: "Energía",
+      headline: "Automatización y control eléctrico",
       description:
-        "Optimización de consumo, continuidad operativa y control en tiempo real.",
-      cta: "Explorar Energía",
+        "SCADA, PMU, protecciones, commissioning y monitoreo para infraestructura crítica.",
+      highlights: ["SCADA", "PMU", "Subestaciones"],
+      tone: "energy",
       href: "/energia",
       image: "/images/energia/electrico.optimized.webp",
     },
     {
-      label: "Tecnología",
-      title: "Plataformas inteligentes",
+      label: "Vertical tecnología",
+      title: "Tecnología",
+      headline: "Integración operativa y datos",
       description:
-        "Apps, automatización e integraciones seguras para decisiones rápidas.",
-      cta: "Explorar Tecnología",
+        "OT/IT, IoT industrial, automatización, datos y soporte para conectar procesos y equipos.",
+      highlights: ["OT / IT", "IoT", "Datos"],
+      tone: "tech",
       href: "/tecnologia",
       image: "/images/tecnologia/tecnologico.optimized.webp",
     },
@@ -217,13 +227,15 @@
     subtitle:
       "Completa el formulario y nuestro equipo te responde con una propuesta clara.",
     form: {
-      nameLabel: "Nombre",
+      nameLabel: "Nombre completo",
       namePlaceholder: "Tu nombre",
       nameErrorRequired: "Ingresa tu nombre.",
       emailLabel: "Email",
       emailPlaceholder: "tu@email.com",
       emailErrorRequired: "Ingresa un email válido.",
       emailErrorAt: "El email debe incluir un @.",
+      companyLabel: "Empresa",
+      companyPlaceholder: "Tu empresa",
       messageLabel: "Mensaje",
       messagePlaceholder: "Contanos sobre tu proyecto",
       messageErrorMin: "Contanos un poco más (mín. 10 caracteres).",

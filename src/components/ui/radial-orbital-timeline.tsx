@@ -276,13 +276,13 @@ export default function RadialOrbitalTimeline({
             } as OrbitalStyle
           }
         >
-          <div className="absolute left-1/2 top-1/2 h-[25rem] w-[25rem] -translate-x-1/2 -translate-y-1/2 rounded-full border border-[rgba(255,194,131,0.15)]" />
-          <div className="absolute left-1/2 top-1/2 h-[18.5rem] w-[18.5rem] -translate-x-1/2 -translate-y-1/2 rounded-full border border-dashed border-[rgba(182,205,238,0.13)]" />
-          <div className="absolute left-1/2 top-1/2 h-[29rem] w-[29rem] -translate-x-1/2 -translate-y-1/2 rounded-full border border-[rgba(125,168,255,0.07)]" />
+          <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(125,168,255,0.07),transparent_24%),radial-gradient(circle_at_50%_50%,rgba(20,184,255,0.04),transparent_42%)]" />
+          <div className="absolute left-1/2 top-1/2 h-[25.5rem] w-[25.5rem] -translate-x-1/2 -translate-y-1/2 rounded-full border border-[rgba(182,205,238,0.18)] shadow-[0_0_0_1px_rgba(125,168,255,0.05)]" />
 
-          <div className="absolute left-1/2 top-1/2 h-24 w-24 -translate-x-1/2 -translate-y-1/2 rounded-full border border-[rgba(255,194,131,0.22)] bg-[radial-gradient(circle_at_34%_28%,rgba(255,194,131,0.42),rgba(255,122,26,0.19)_38%,rgba(5,10,18,0.92)_100%)] shadow-[0_0_38px_rgba(255,122,26,0.16)]">
-            <span className="absolute left-1/2 top-1/2 h-12 w-12 -translate-x-1/2 -translate-y-1/2 rounded-full bg-[radial-gradient(circle_at_38%_32%,rgba(255,255,255,0.32),rgba(255,194,131,0.2)_38%,rgba(255,122,26,0.15)_100%)]" />
-            <span className="absolute left-1/2 top-1/2 h-36 w-36 -translate-x-1/2 -translate-y-1/2 rounded-full border border-[rgba(255,122,26,0.08)]" />
+          <div className="absolute left-1/2 top-1/2 h-[8.75rem] w-[8.75rem] -translate-x-1/2 -translate-y-1/2 rounded-full border border-[rgba(125,168,255,0.14)] bg-[radial-gradient(circle_at_50%_50%,rgba(7,12,24,0.18),rgba(7,12,24,0.96)_72%)]">
+            <span className="absolute left-1/2 top-1/2 h-[6.25rem] w-[6.25rem] -translate-x-1/2 -translate-y-1/2 rounded-full border border-[rgba(125,168,255,0.2)] bg-[radial-gradient(circle_at_50%_35%,rgba(222,236,255,0.92),rgba(113,151,255,0.9)_24%,rgba(58,119,255,0.75)_55%,rgba(18,196,255,0.55)_100%)] shadow-[0_0_34px_rgba(56,129,255,0.28)]" />
+            <span className="absolute left-1/2 top-1/2 h-[2.15rem] w-[2.15rem] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[radial-gradient(circle,rgba(255,255,255,0.96),rgba(216,232,255,0.78)_56%,rgba(255,255,255,0)_100%)]" />
+            <span className="absolute left-1/2 top-1/2 h-[10.5rem] w-[10.5rem] -translate-x-1/2 -translate-y-1/2 rounded-full border border-[rgba(125,168,255,0.09)]" />
           </div>
 
           {timelineData.map((item, index) => {
@@ -294,7 +294,7 @@ export default function RadialOrbitalTimeline({
             return (
               <div
                 key={item.id}
-                className="lynx-orbit-node absolute left-1/2 top-1/2 z-10 flex -translate-x-1/2 -translate-y-1/2 flex-col items-center text-center"
+                className="lynx-orbit-node absolute left-1/2 top-1/2 z-10 h-0 w-0"
                 style={
                   {
                     "--node-angle": `${nodeAngle}deg`,
@@ -304,112 +304,114 @@ export default function RadialOrbitalTimeline({
                   } as OrbitalStyle
                 }
               >
-                <button
-                  type="button"
-                  className="group flex flex-col items-center gap-2 outline-none"
-                  aria-expanded={isActive}
-                  onBlur={() => {
-                    if (activeNodeId === null) {
-                      setIsPointerPaused(false);
-                    }
-                  }}
-                  onFocus={() => setIsPointerPaused(true)}
-                  onClick={(event) => selectNode(event, item.id, index)}
-                  onPointerEnter={() => setIsPointerPaused(true)}
-                  onPointerLeave={() => {
-                    if (activeNodeId === null) {
-                      setIsPointerPaused(false);
-                    }
-                  }}
-                >
-                  <span
-                    className={cn(
-                       "relative flex h-11 w-11 items-center justify-center rounded-full border bg-[rgba(7,13,24,0.95)] text-[var(--text-secondary)] shadow-[0_14px_30px_rgba(3,8,20,0.3)] transition-all duration-300",
-                      isActive &&
-                        "h-14 w-14 border-[rgba(255,194,131,0.78)] bg-[rgba(255,122,26,0.2)] text-[var(--accent-soft)] shadow-[0_0_26px_rgba(255,122,26,0.24)]",
-                      !isActive &&
-                        isRelated &&
-                        "border-[rgba(255,194,131,0.48)] text-[var(--accent-soft)]",
-                      !isActive &&
-                        !isRelated &&
-                        "border-[rgba(182,205,238,0.22)] group-hover:border-[rgba(255,194,131,0.38)] group-hover:text-[var(--accent-soft)]",
-                    )}
+                <div className="relative flex w-[9.75rem] -translate-x-1/2 -translate-y-1/2 flex-col items-center text-center">
+                  <button
+                    type="button"
+                    className="group flex w-full flex-col items-center gap-2 outline-none"
+                    aria-expanded={isActive}
+                    onBlur={() => {
+                      if (activeNodeId === null) {
+                        setIsPointerPaused(false);
+                      }
+                    }}
+                    onFocus={() => setIsPointerPaused(true)}
+                    onClick={(event) => selectNode(event, item.id, index)}
+                    onPointerEnter={() => setIsPointerPaused(true)}
+                    onPointerLeave={() => {
+                      if (activeNodeId === null) {
+                        setIsPointerPaused(false);
+                      }
+                    }}
                   >
                     <span
                       className={cn(
-                        "absolute -inset-2.5 rounded-full bg-[radial-gradient(circle,rgba(255,122,26,0.18),transparent_72%)] opacity-0 transition duration-300",
-                        (isActive || isRelated) && "opacity-100",
+                        "relative flex h-11 w-11 items-center justify-center rounded-full border bg-[rgba(7,13,24,0.95)] text-[var(--text-secondary)] shadow-[0_14px_30px_rgba(3,8,20,0.3)] transition-all duration-300",
+                        isActive &&
+                          "h-14 w-14 border-[rgba(125,168,255,0.72)] bg-[rgba(42,112,255,0.18)] text-[#dceaff] shadow-[0_0_26px_rgba(56,129,255,0.24)]",
+                        !isActive &&
+                          isRelated &&
+                          "border-[rgba(125,168,255,0.42)] text-[var(--accent-cool)]",
+                        !isActive &&
+                          !isRelated &&
+                          "border-[rgba(182,205,238,0.22)] group-hover:border-[rgba(125,168,255,0.38)] group-hover:text-[var(--accent-cool)]",
                       )}
-                    />
-                    <Icon className="relative h-5 w-5" aria-hidden="true" />
-                  </span>
-                  <span
-                    className={cn(
-                      "max-w-[8.75rem] text-[0.72rem] font-semibold leading-[1.1] text-[var(--muted)] transition duration-300",
-                      isActive && "text-[var(--text-strong)]",
-                    )}
-                  >
-                    {item.title}
-                  </span>
-                </button>
-
-                {isActive ? (
-                  <div
-                    className="absolute left-1/2 top-[calc(100%+0.7rem)] w-[18rem] -translate-x-1/2 rounded-[0.9rem] border border-[rgba(255,194,131,0.28)] bg-[rgba(4,8,15,0.94)] p-3 text-left shadow-[0_18px_52px_rgba(0,0,0,0.38),0_0_28px_rgba(255,122,26,0.08)] backdrop-blur-xl"
-                    onClick={(event) => event.stopPropagation()}
-                  >
-                    <div className="absolute -top-3 left-1/2 h-3 w-px -translate-x-1/2 bg-[rgba(255,194,131,0.42)]" />
-                    <div className="flex items-center justify-between gap-3">
-                      <span className="rounded-full border border-[rgba(255,194,131,0.28)] px-2.5 py-1 text-[0.58rem] font-semibold uppercase tracking-[0.16em] text-[var(--accent-soft)]">
-                        {item.step}
-                      </span>
-                      <span className="text-[0.58rem] font-semibold uppercase tracking-[0.16em] text-[var(--muted-soft)]">
-                        Etapa
-                      </span>
-                    </div>
-                    <h4 className="mt-3 text-[0.98rem] leading-[1.08] text-[var(--text-strong)]">
+                    >
+                      <span
+                        className={cn(
+                          "absolute -inset-2.5 rounded-full bg-[radial-gradient(circle,rgba(56,129,255,0.2),transparent_72%)] opacity-0 transition duration-300",
+                          (isActive || isRelated) && "opacity-100",
+                        )}
+                      />
+                      <Icon className="relative h-5 w-5" aria-hidden="true" />
+                    </span>
+                    <span
+                      className={cn(
+                        "flex min-h-[2.25rem] w-full items-start justify-center px-1 text-center text-[0.72rem] font-semibold leading-[1.1] text-[var(--muted)] transition duration-300",
+                        isActive && "text-[var(--text-strong)]",
+                      )}
+                    >
                       {item.title}
-                    </h4>
-                    <p className="mt-2 text-xs leading-5 text-[var(--muted)]">
-                      {item.content}
-                    </p>
+                    </span>
+                  </button>
 
-                    {(item.relatedIds?.length ?? 0) > 0 ? (
-                      <div className="mt-3 border-t border-[rgba(182,205,238,0.12)] pt-3">
-                        <div className="mb-2 flex items-center gap-2 text-[0.58rem] font-semibold uppercase tracking-[0.16em] text-[var(--muted-soft)]">
-                          <Link2 className="h-3 w-3 text-[var(--accent-soft)]" />
-                          Etapas conectadas
-                        </div>
-                        <div className="flex flex-wrap gap-1.5">
-                          {item.relatedIds?.map((relatedId) => {
-                            const relatedIndex = timelineData.findIndex(
-                              (timelineItem) => timelineItem.id === relatedId,
-                            );
-                            const relatedItem = timelineData[relatedIndex];
-
-                            if (!relatedItem) {
-                              return null;
-                            }
-
-                            return (
-                              <button
-                                key={relatedId}
-                                type="button"
-                                className="group inline-flex items-center gap-1.5 rounded-[0.55rem] border border-[rgba(182,205,238,0.14)] bg-[rgba(255,255,255,0.025)] px-2.5 py-1.5 text-[0.68rem] font-semibold text-[var(--text-secondary)] transition duration-300 hover:border-[rgba(255,194,131,0.32)] hover:text-[var(--text-strong)]"
-                                onClick={(event) =>
-                                  selectNode(event, relatedId, relatedIndex)
-                                }
-                              >
-                                {relatedItem.title}
-                                <ArrowRight className="h-3 w-3 text-[var(--accent-soft)] transition duration-300 group-hover:translate-x-0.5" />
-                              </button>
-                            );
-                          })}
-                        </div>
+                  {isActive ? (
+                    <div
+                      className="absolute left-1/2 top-[calc(100%+0.7rem)] w-[18rem] -translate-x-1/2 rounded-[0.9rem] border border-[rgba(125,168,255,0.24)] bg-[rgba(4,8,15,0.94)] p-3 text-left shadow-[0_18px_52px_rgba(0,0,0,0.38),0_0_28px_rgba(56,129,255,0.08)] backdrop-blur-xl"
+                      onClick={(event) => event.stopPropagation()}
+                    >
+                      <div className="absolute -top-3 left-1/2 h-3 w-px -translate-x-1/2 bg-[rgba(125,168,255,0.42)]" />
+                      <div className="flex items-center justify-between gap-3">
+                        <span className="rounded-full border border-[rgba(125,168,255,0.28)] px-2.5 py-1 text-[0.58rem] font-semibold uppercase tracking-[0.16em] text-[var(--accent-cool)]">
+                          {item.step}
+                        </span>
+                        <span className="text-[0.58rem] font-semibold uppercase tracking-[0.16em] text-[var(--muted-soft)]">
+                          Etapa
+                        </span>
                       </div>
-                    ) : null}
-                  </div>
-                ) : null}
+                      <h4 className="mt-3 text-[0.98rem] leading-[1.08] text-[var(--text-strong)]">
+                        {item.title}
+                      </h4>
+                      <p className="mt-2 text-xs leading-5 text-[var(--muted)]">
+                        {item.content}
+                      </p>
+
+                      {(item.relatedIds?.length ?? 0) > 0 ? (
+                        <div className="mt-3 border-t border-[rgba(182,205,238,0.12)] pt-3">
+                          <div className="mb-2 flex items-center gap-2 text-[0.58rem] font-semibold uppercase tracking-[0.16em] text-[var(--muted-soft)]">
+                            <Link2 className="h-3 w-3 text-[var(--accent-soft)]" />
+                            Etapas conectadas
+                          </div>
+                          <div className="flex flex-wrap gap-1.5">
+                            {item.relatedIds?.map((relatedId) => {
+                              const relatedIndex = timelineData.findIndex(
+                                (timelineItem) => timelineItem.id === relatedId,
+                              );
+                              const relatedItem = timelineData[relatedIndex];
+
+                              if (!relatedItem) {
+                                return null;
+                              }
+
+                              return (
+                                <button
+                                  key={relatedId}
+                                  type="button"
+                                  className="group inline-flex items-center gap-1.5 rounded-[0.55rem] border border-[rgba(182,205,238,0.14)] bg-[rgba(255,255,255,0.025)] px-2.5 py-1.5 text-[0.68rem] font-semibold text-[var(--text-secondary)] transition duration-300 hover:border-[rgba(125,168,255,0.32)] hover:text-[var(--text-strong)]"
+                                  onClick={(event) =>
+                                    selectNode(event, relatedId, relatedIndex)
+                                  }
+                                >
+                                  {relatedItem.title}
+                                  <ArrowRight className="h-3 w-3 text-[var(--accent-cool)] transition duration-300 group-hover:translate-x-0.5" />
+                                </button>
+                              );
+                            })}
+                          </div>
+                        </div>
+                      ) : null}
+                    </div>
+                  ) : null}
+                </div>
               </div>
             );
           })}

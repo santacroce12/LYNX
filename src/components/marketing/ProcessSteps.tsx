@@ -25,8 +25,6 @@ export default function ProcessSteps({
 }: ProcessStepsProps) {
   return (
     <Section className="relative overflow-hidden">
-      <div className="pointer-events-none absolute inset-x-0 -top-24 h-72 bg-[radial-gradient(circle_at_24%_36%,rgba(255,122,26,0.035),transparent_30%),radial-gradient(circle_at_78%_36%,rgba(125,168,255,0.045),transparent_32%)] opacity-70 [mask-image:linear-gradient(180deg,transparent_0%,#000_30%,transparent_100%)]" />
-
       <div className="mb-7 text-left md:mb-10 md:text-center">
         <Reveal>
           <span className="section-kicker">{kicker}</span>

@@ -8,8 +8,6 @@ import { tecnologia } from "@/content/tecnologia";
 export default function TecnologiaIndustries() {
   return (
     <Section id="industrias" className="relative overflow-hidden pt-6 md:pt-10">
-      <div className="pointer-events-none absolute inset-x-0 top-0 h-28 bg-[linear-gradient(180deg,rgba(125,168,255,0.035),transparent_78%)]" />
-
       <div className="mb-7 max-w-4xl text-left md:mx-auto md:mb-10 md:text-center">
         <Reveal>
           <h2 className="section-heading mt-4">

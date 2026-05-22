@@ -8,6 +8,7 @@ import { site } from "@/content/site";
 const initialValues = {
   name: "",
   email: "",
+  company: "",
   message: "",
 };
 
@@ -73,8 +74,10 @@ export default function ContactForm() {
   };
 
   const fieldClass = (hasError?: boolean) =>
-    `field-shell px-4 py-3.5 text-base text-[var(--text-secondary)] placeholder:text-[var(--muted-soft)] focus:outline-none focus:ring-2 focus:ring-[var(--accent)] ${
-      hasError ? "border-[var(--accent)]" : ""
+    `field-shell px-4 py-3.5 text-base text-[var(--text-secondary)] placeholder:text-[var(--muted-soft)] focus:outline-none focus:ring-2 ${
+      hasError
+        ? "border-[var(--accent)] focus:ring-[var(--accent)]"
+        : "focus:border-[rgba(125,168,255,0.32)] focus:ring-[rgba(125,168,255,0.22)]"
     }`;
 
   const statusClass =
@@ -85,23 +88,24 @@ export default function ContactForm() {
         : "text-[var(--muted)]";
 
   return (
-    <div className="panel-shell flex h-full min-h-[640px] flex-col overflow-hidden rounded-[2rem] p-4 md:p-6 lg:min-h-[700px]">
+    <div className="panel-shell flex h-full min-h-[680px] flex-col overflow-hidden rounded-[2rem] px-5 py-6 md:px-8 md:py-8 lg:min-h-[720px]">
       <div className="panel-decoration pointer-events-none absolute -right-12 top-0 h-40 w-40 rounded-full bg-[var(--accent-cool)]/10 blur-3xl" />
+      <div className="panel-decoration pointer-events-none absolute inset-x-10 top-0 h-px bg-gradient-to-r from-transparent via-[rgba(125,168,255,0.36)] to-transparent" />
 
-      <div className="mb-6 border-b border-white/8 pb-6">
-        <p className="section-kicker">Formulario</p>
-        <h2 className="mt-4 text-[1.85rem] font-semibold leading-[1.04] text-[var(--text-strong)] md:text-[2.55rem] md:leading-[0.98]">
-          Contanos qué necesitás.
+      <div className="max-w-md border-b border-white/8 pb-6">
+        <p className="section-kicker text-[var(--accent-cool)]">Formulario</p>
+        <h2 className="mt-4 text-[1.8rem] font-semibold leading-[1.02] text-[var(--text-strong)] md:text-[2.35rem]">
+          Contanos que necesitas.
         </h2>
+        <p className="mt-4 text-sm leading-7 text-[var(--muted)] md:text-[0.98rem]">
+          Dejanos el contexto y te respondemos con un siguiente paso claro.
+        </p>
       </div>
 
-      <form className="flex flex-1 flex-col" onSubmit={handleSubmit} noValidate>
+      <form className="mt-8 flex flex-1 flex-col" onSubmit={handleSubmit} noValidate>
         <div className="flex-1 space-y-4">
           <div className="space-y-2">
-            <label
-              htmlFor="name"
-              className="text-[11px] font-semibold uppercase tracking-normal text-[var(--muted-soft)] md:tracking-[0.24em]"
-            >
+            <label htmlFor="name" className="text-sm font-medium text-[var(--text)]/82">
               {form.nameLabel}
             </label>
             <input
@@ -125,10 +129,7 @@ export default function ContactForm() {
           </div>
 
           <div className="space-y-2">
-            <label
-              htmlFor="email"
-              className="text-[11px] font-semibold uppercase tracking-normal text-[var(--muted-soft)] md:tracking-[0.24em]"
-            >
+            <label htmlFor="email" className="text-sm font-medium text-[var(--text)]/82">
               {form.emailLabel}
             </label>
             <input
@@ -152,10 +153,24 @@ export default function ContactForm() {
           </div>
 
           <div className="space-y-2">
-            <label
-              htmlFor="message"
-              className="text-[11px] font-semibold uppercase tracking-normal text-[var(--muted-soft)] md:tracking-[0.24em]"
-            >
+            <label htmlFor="company" className="text-sm font-medium text-[var(--text)]/82">
+              {form.companyLabel}
+            </label>
+            <input
+              id="company"
+              name="company"
+              type="text"
+              placeholder={form.companyPlaceholder}
+              value={values.company}
+              onChange={(event) =>
+                setValues((prev) => ({ ...prev, company: event.target.value }))
+              }
+              className={fieldClass()}
+            />
+          </div>
+
+          <div className="space-y-2">
+            <label htmlFor="message" className="text-sm font-medium text-[var(--text)]/82">
               {form.messageLabel}
             </label>
             <textarea
@@ -179,15 +194,13 @@ export default function ContactForm() {
           </div>
         </div>
 
-        <div className="flex flex-col gap-4 pt-5">
-          <div className="flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
-            <Button type="submit" disabled={isSubmitting} size="lg" className="w-full md:w-auto">
-              {isSubmitting ? form.submittingLabel : form.submitLabel}
-            </Button>
-            <p className={`text-xs ${statusClass}`} aria-live="polite">
-              {status.message}
-            </p>
-          </div>
+        <div className="flex flex-col gap-4 pt-6">
+          <Button type="submit" disabled={isSubmitting} size="lg" className="w-full">
+            {isSubmitting ? form.submittingLabel : form.submitLabel}
+          </Button>
+          <p className={`text-xs ${statusClass}`} aria-live="polite">
+            {status.message}
+          </p>
         </div>
       </form>
     </div>

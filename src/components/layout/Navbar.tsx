@@ -129,62 +129,69 @@ export default function Navbar() {
         </div>
       </div>
 
-      {menuOpen ? (
+      <div
+        id="mobile-nav"
+        aria-hidden={!menuOpen}
+        className={`fixed inset-0 z-40 lg:hidden ${
+          menuOpen ? "pointer-events-auto" : "pointer-events-none"
+        }`}
+      >
+        <button
+          type="button"
+          className={`absolute inset-0 bg-[rgba(2,6,16,0.62)] backdrop-blur-md transition duration-300 ${
+            menuOpen ? "opacity-100" : "opacity-0"
+          }`}
+          onClick={() => setMenuOpen(false)}
+          aria-label="Cerrar menu"
+        />
+
         <div
-          id="mobile-nav"
-          className="fixed inset-0 z-40 overflow-hidden lg:hidden"
+          className={`absolute inset-0 bg-[rgba(4,9,18,0.94)] transition duration-500 ease-out-expo ${
+            menuOpen ? "translate-y-0 opacity-100" : "-translate-y-3 opacity-0"
+          }`}
         >
-          <button
-            type="button"
-            className="absolute inset-0 bg-[rgba(2,6,16,0.62)] opacity-100 backdrop-blur-md transition duration-300"
-            onClick={() => setMenuOpen(false)}
-            aria-label="Cerrar menu"
-          />
+          <div className="mx-auto flex min-h-screen w-full max-w-6xl flex-col px-4 pb-6 pt-20 sm:px-6 md:pb-8 md:pt-24">
+            <div className="panel-shell flex min-h-[calc(100dvh-7rem)] flex-1 flex-col rounded-[2rem] px-4 py-5 md:min-h-[calc(100dvh-8rem)] md:px-8 md:py-8">
+              <div className="border-b border-white/8 pb-5">
+                <span className="section-kicker">{activeNavItem.label}</span>
+                <p className="mt-4 max-w-md text-sm leading-7 text-[var(--text)]/76">
+                  {site.tagline}
+                </p>
+              </div>
 
-          <div className="absolute inset-0 translate-y-0 bg-[rgba(4,9,18,0.94)] opacity-100 transition duration-500 ease-out-expo">
-            <div className="mx-auto flex min-h-screen w-full max-w-6xl flex-col px-4 pb-6 pt-20 sm:px-6 md:pb-8 md:pt-24">
-              <div className="panel-shell flex min-h-[calc(100dvh-7rem)] flex-1 flex-col rounded-[2rem] px-4 py-5 md:min-h-[calc(100dvh-8rem)] md:px-8 md:py-8">
-                <div className="border-b border-white/8 pb-5">
-                  <span className="section-kicker">{activeNavItem.label}</span>
-                  <p className="mt-4 max-w-md text-sm leading-7 text-[var(--text)]/76">
-                    {site.tagline}
-                  </p>
-                </div>
-
-                <nav className="flex flex-1 flex-col justify-start gap-2 py-7 md:justify-center">
-                  {site.nav.map((item, index) => (
-                    <Link
-                      key={item.href}
-                      href={item.href}
-                      className={`group flex items-center justify-between rounded-[1.15rem] border px-4 py-3.5 transition md:rounded-[1.4rem] md:px-5 md:py-4 ${
-                        isActive(item.href)
-                          ? "border-[rgba(255,194,131,0.24)] bg-[rgba(255,122,26,0.1)] text-[var(--text-strong)]"
-                          : "border-transparent bg-transparent text-[var(--muted)] hover:border-white/8 hover:bg-white/[0.03] hover:text-[var(--text-strong)]"
-                      }`}
-                    >
-                      <span className="text-[1.35rem] font-semibold leading-none md:text-[1.6rem]">
-                        {item.label}
-                      </span>
-                      <span className="text-[11px] uppercase tracking-normal text-[var(--muted-soft)] transition group-hover:text-[var(--accent-soft)] md:tracking-[0.24em]">
-                        0{index + 1}
-                      </span>
-                    </Link>
-                  ))}
-                </nav>
-
-                <div className="pt-4">
+              <nav className="flex flex-1 flex-col justify-start gap-2 py-7 md:justify-center">
+                {site.nav.map((item, index) => (
                   <Link
-                    href="/contacto"
-                    className="inline-flex w-full items-center justify-center rounded-full border border-[rgba(255,194,131,0.2)] bg-[rgba(255,122,26,0.12)] px-5 py-3 text-[10px] font-semibold uppercase tracking-normal text-[var(--text-strong)] transition hover:border-[rgba(255,194,131,0.34)] hover:bg-[rgba(255,122,26,0.18)] sm:w-auto md:tracking-[0.18em]"
+                    key={item.href}
+                    href={item.href}
+                    className={`group flex items-center justify-between rounded-[1.15rem] border px-4 py-3.5 transition md:rounded-[1.4rem] md:px-5 md:py-4 ${
+                      isActive(item.href)
+                        ? "border-[rgba(255,194,131,0.24)] bg-[rgba(255,122,26,0.1)] text-[var(--text-strong)]"
+                        : "border-transparent bg-transparent text-[var(--muted)] hover:border-white/8 hover:bg-white/[0.03] hover:text-[var(--text-strong)]"
+                    }`}
                   >
-                    Agendar diagnostico
+                    <span className="text-[1.35rem] font-semibold leading-none md:text-[1.6rem]">
+                      {item.label}
+                    </span>
+                    <span className="text-[11px] uppercase tracking-normal text-[var(--muted-soft)] transition group-hover:text-[var(--accent-soft)] md:tracking-[0.24em]">
+                      0{index + 1}
+                    </span>
                   </Link>
-                </div>
+                ))}
+              </nav>
+
+              <div className="pt-4">
+                <Link
+                  href="/contacto"
+                  className="inline-flex w-full items-center justify-center rounded-full border border-[rgba(255,194,131,0.2)] bg-[rgba(255,122,26,0.12)] px-5 py-3 text-[10px] font-semibold uppercase tracking-normal text-[var(--text-strong)] transition hover:border-[rgba(255,194,131,0.34)] hover:bg-[rgba(255,122,26,0.18)] sm:w-auto md:tracking-[0.18em]"
+                >
+                  Agendar diagnostico
+                </Link>
               </div>
             </div>
           </div>
         </div>
-      ) : null}
+      </div>
     </header>
   );
 }

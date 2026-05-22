@@ -36,8 +36,6 @@ const processTimeline: OrbitalTimelineItem[] = tecnologia.process.map(
 export default function TecnologiaProcess() {
   return (
     <Section id="proceso" className="relative overflow-hidden">
-      <div className="pointer-events-none absolute inset-x-0 top-0 h-28 bg-[linear-gradient(180deg,rgba(125,168,255,0.03),transparent_80%)]" />
-
       <div className="mb-7 grid gap-4 lg:grid-cols-[0.78fr_1.22fr] lg:items-end">
         <div>
           <Reveal>
