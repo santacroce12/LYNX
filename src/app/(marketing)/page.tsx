@@ -26,8 +26,8 @@ export default function HomePage() {
     >
       <HomeBrandIntro />
       <SplitHero />
-      <AboutSection />
       <Partners />
+      <AboutSection />
       <Section id="que-hace">
         <FeatureGrid
           title={site.homeSection.title}

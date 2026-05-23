@@ -70,17 +70,6 @@ export default function AboutSection() {
                     Presencia operativa en Chile y Argentina.
                   </h3>
                 </div>
-
-                <div className="rounded-[1.1rem] border border-[rgba(255,194,131,0.2)] bg-black/30 px-3.5 py-3 backdrop-blur-md md:rounded-[1.35rem] md:px-4">
-                  <p className="text-[11px] uppercase tracking-normal text-[var(--muted-soft)] md:tracking-[0.24em]">
-                    Ubicaciones
-                  </p>
-                  <p className="mt-2 text-sm leading-6 text-[var(--text-secondary)]">
-                    Chile: Santiago
-                    <br />
-                    Argentina: Mendoza
-                  </p>
-                </div>
               </div>
             </div>
           </div>
