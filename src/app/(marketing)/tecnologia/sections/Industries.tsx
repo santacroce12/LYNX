@@ -26,12 +26,12 @@ export default function TecnologiaIndustries() {
         </Reveal>
       </div>
 
-      <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-3">
+      <div className="mx-auto grid max-w-5xl gap-3 md:grid-cols-2 xl:grid-cols-3">
         {tecnologia.industries.items.map((industry, index) => (
           <Reveal key={industry.title} delay={index * 0.04}>
-            <article className="panel-shell group h-full rounded-[1.55rem] p-2 transition duration-300 hover:-translate-y-1 hover:border-[rgba(125,168,255,0.18)] md:p-2.5">
-              <div className="flex h-full flex-col overflow-hidden rounded-[1.2rem] border border-white/8 bg-[linear-gradient(180deg,rgba(10,17,32,0.72)_0%,rgba(8,14,28,0.96)_100%)] shadow-[0_20px_60px_rgba(2,6,23,0.16)]">
-                <div className="relative aspect-[16/10] overflow-hidden border-b border-white/8 bg-[linear-gradient(180deg,rgba(5,12,24,0.55)_0%,rgba(5,12,24,0.12)_100%)]">
+            <article className="panel-shell group h-full rounded-[1.25rem] p-1.5 transition duration-300 hover:-translate-y-0.5 hover:border-[rgba(125,168,255,0.18)]">
+              <div className="flex h-full flex-col overflow-hidden rounded-[1rem] border border-white/8 bg-[linear-gradient(180deg,rgba(10,17,32,0.72)_0%,rgba(8,14,28,0.96)_100%)] shadow-[0_16px_42px_rgba(2,6,23,0.14)]">
+                <div className="relative aspect-[16/7.5] overflow-hidden border-b border-white/8 bg-[linear-gradient(180deg,rgba(5,12,24,0.55)_0%,rgba(5,12,24,0.12)_100%)]">
                   <Image
                     src={industry.image}
                     alt={industry.title}
@@ -42,13 +42,13 @@ export default function TecnologiaIndustries() {
                   <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(3,7,15,0)_0%,rgba(3,7,15,0.2)_60%,rgba(3,7,15,0.46)_100%)]" />
                 </div>
 
-                <div className="flex flex-1 flex-col p-4 md:p-5">
+                <div className="flex flex-1 flex-col p-3.5 md:p-3.5">
                   <div className="flex items-start justify-between gap-3">
                     <div>
-                      <h3 className="text-[1.18rem] font-semibold leading-[1.08] text-[var(--text-strong)]">
+                      <h3 className="text-[1.03rem] font-semibold leading-[1.06] text-[var(--text-strong)] md:text-[1.08rem]">
                         {industry.title}
                       </h3>
-                      <p className="mt-2 text-sm leading-6 text-[var(--accent-soft)]">
+                      <p className="mt-1.5 text-[13px] leading-5 text-[var(--accent-soft)]">
                         {industry.description}
                       </p>
                     </div>
@@ -57,24 +57,24 @@ export default function TecnologiaIndustries() {
                     </span>
                   </div>
 
-                  <ul className="mt-5 space-y-3">
+                  <ul className="mt-3.5 space-y-2">
                     {industry.bullets.map((bullet) => (
                       <li
                         key={bullet}
-                        className="flex items-start gap-2.5 text-sm leading-6 text-[var(--text)]/78"
+                        className="flex items-start gap-2 text-[13px] leading-5 text-[var(--text)]/78"
                       >
-                        <CheckCircle2 className="mt-0.5 h-4 w-4 shrink-0 text-[#64d9a7]" />
+                        <CheckCircle2 className="mt-0.5 h-3.5 w-3.5 shrink-0 text-[#64d9a7]" />
                         <span>{bullet}</span>
                       </li>
                     ))}
                   </ul>
 
-                  <div className="mt-6">
+                  <div className="mt-3.5">
                     <Button
                       href={industry.href}
                       variant="outline"
                       size="sm"
-                      className="w-full justify-between rounded-[0.95rem] px-4 py-3 text-[10px] hover:border-[rgba(100,217,167,0.4)] hover:text-[var(--text-strong)] md:tracking-[0.18em]"
+                      className="w-full justify-between rounded-[0.8rem] px-3.5 py-2.5 text-[10px] hover:border-[rgba(100,217,167,0.4)] hover:text-[var(--text-strong)] md:tracking-[0.16em]"
                     >
                       <span>{industry.buttonLabel}</span>
                       <ArrowUpRight className="h-4 w-4" />

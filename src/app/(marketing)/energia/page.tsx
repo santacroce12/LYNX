@@ -1,12 +1,12 @@
 ﻿import CTA from "@/components/marketing/CTA";
 import FeaturedProjects from "@/components/marketing/FeaturedProjects";
 import ImpactStats from "@/components/marketing/ImpactStats";
-import ProcessSteps from "@/components/marketing/ProcessSteps";
 import TubesBackground from "@/components/ui/neon-flow";
 import { energia } from "@/content/energia";
 import { buildMetadata } from "@/lib/seo";
 import EnergiaHero from "./sections/Hero";
 import EnergiaGallery from "./sections/Gallery";
+import EnergiaProcess from "./sections/Process";
 import EnergiaServices from "./sections/Services";
 import EnergiaUseCases from "./sections/UseCases";
 import EnergyFlow from "@/components/ui/EnergyFlow";
@@ -34,11 +34,7 @@ export default function EnergiaPage() {
       />
       <EnergiaGallery />
       <EnergiaServices />
-      <ProcessSteps
-        steps={energia.process}
-        title="Ciclo de Proyecto Certificado"
-        subtitle="Garantizamos cumplimiento normativo desde el diseño hasta la energización."
-      />
+      <EnergiaProcess />
       <EnergiaUseCases />
       <FeaturedProjects filterCategory="Energía" />
       <div className="mx-auto w-full max-w-6xl px-4 sm:px-6">

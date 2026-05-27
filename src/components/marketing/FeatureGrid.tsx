@@ -192,7 +192,7 @@ export default function FeatureGrid({
             <h2 className="section-heading max-w-xl">{title}</h2>
           </div>
           {subtitle ? (
-            <p className="section-copy lg:justify-self-end">{subtitle}</p>
+            <p className="hidden section-copy md:block lg:justify-self-end">{subtitle}</p>
           ) : null}
         </div>
       ) : null}

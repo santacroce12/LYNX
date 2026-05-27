@@ -46,7 +46,7 @@ export default function AboutSection() {
             </p>
           </Reveal>
           <Reveal delay={0.14}>
-            <p className="section-copy">
+            <p className="hidden section-copy md:block">
               Diseñamos, implementamos y mantenemos soluciones completas:
               hardware crítico, supervisión, datos y ejecución en terreno.
             </p>
@@ -82,7 +82,11 @@ export default function AboutSection() {
 
           return (
             <Reveal key={item.title} delay={0.08 + index * 0.04}>
-              <div className="panel-shell group h-full rounded-[1.45rem] p-5 transition duration-300 hover:-translate-y-0.5">
+              <div
+                className={`panel-shell group h-full rounded-[1.45rem] p-5 transition duration-300 hover:-translate-y-0.5 ${
+                  index > 2 ? "hidden sm:block" : ""
+                }`}
+              >
                 <div className="flex items-center justify-between gap-4">
                   <div className="flex h-12 w-12 items-center justify-center rounded-2xl border border-[rgba(255,194,131,0.18)] bg-[rgba(255,122,26,0.08)] text-[var(--accent)] transition duration-500 group-hover:scale-110 group-hover:bg-[var(--accent)] group-hover:text-[var(--bg)]">
                     {Icon ? <Icon className="h-5 w-5" /> : null}

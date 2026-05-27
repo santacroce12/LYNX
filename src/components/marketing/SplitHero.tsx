@@ -48,22 +48,22 @@ function HomeRouteCard({
               </span>
             </div>
 
-            <p className="mt-3 text-[0.98rem] font-medium leading-6 text-[var(--text-secondary)]">
+            <p className="mt-3 text-[0.95rem] font-medium leading-6 text-[var(--text-secondary)] md:text-[0.98rem]">
               {card.headline}
             </p>
-            <p className="mt-2 text-sm leading-7 text-[var(--muted)]">
+            <p className="mt-2 hidden text-sm leading-7 text-[var(--muted)] md:block">
               {card.description}
             </p>
 
             <div className="mt-4 flex flex-wrap gap-2">
-              {card.highlights.map((item) => (
+              {card.highlights.map((item, chipIndex) => (
                 <span
                   key={item}
-                  className={`inline-flex items-center rounded-full border px-3 py-1.5 text-[10px] font-semibold uppercase tracking-normal md:tracking-[0.16em] ${
+                  className={`items-center rounded-full border px-3 py-1.5 text-[10px] font-semibold uppercase tracking-normal md:tracking-[0.16em] ${
                     isEnergy
                       ? "border-[rgba(255,194,131,0.16)] bg-[rgba(255,122,26,0.08)] text-[var(--accent-soft)]"
                       : "border-[rgba(125,168,255,0.16)] bg-[rgba(125,168,255,0.08)] text-[var(--accent-cool)]"
-                  }`}
+                  } ${chipIndex > 1 ? "hidden md:inline-flex" : "inline-flex"}`}
                 >
                   {item}
                 </span>
@@ -71,7 +71,7 @@ function HomeRouteCard({
             </div>
           </div>
 
-          <div className="relative h-[178px] overflow-hidden rounded-[1.1rem] border border-white/8 md:h-[188px]">
+          <div className="relative h-[156px] overflow-hidden rounded-[1.1rem] border border-white/8 md:h-[188px]">
             <Image
               src={card.image}
               alt={card.title}
@@ -113,7 +113,7 @@ export default function SplitHero() {
       <div className="pointer-events-none absolute -left-[8%] top-[2%] h-[24rem] w-[24rem] rotate-[18deg] rounded-full border border-[rgba(255,122,26,0.12)] opacity-55 blur-[1px]" />
       <div className="pointer-events-none absolute left-[18%] top-[12%] h-[32rem] w-[32rem] rotate-[28deg] rounded-full border border-[rgba(125,168,255,0.1)] opacity-35 blur-[1px]" />
 
-      <div className="mx-auto flex min-h-[740px] w-full max-w-[1320px] flex-col px-4 py-10 sm:px-6 md:px-8 md:py-14">
+      <div className="mx-auto flex min-h-[680px] w-full max-w-[1320px] flex-col px-4 py-8 sm:px-6 sm:py-10 md:min-h-[740px] md:px-8 md:py-14">
         <div className="grid gap-8 lg:grid-cols-[minmax(0,0.94fr)_minmax(0,1.06fr)] lg:items-center">
           <div className="relative z-10 min-w-0">
             <Reveal>
@@ -121,23 +121,28 @@ export default function SplitHero() {
             </Reveal>
 
             <Reveal delay={0.05}>
-              <h1 className="mt-5 max-w-3xl text-[2.45rem] font-semibold leading-[0.94] text-white [text-shadow:0_10px_28px_rgba(0,0,0,0.28)] md:text-[4.2rem] md:leading-[0.9] xl:text-[4.6rem]">
+              <h1 className="mt-4 max-w-3xl text-[2.15rem] font-semibold leading-[0.94] text-white [text-shadow:0_10px_28px_rgba(0,0,0,0.28)] sm:mt-5 sm:text-[2.45rem] md:text-[4.2rem] md:leading-[0.9] xl:text-[4.6rem]">
                 {site.homeHero.title}
               </h1>
             </Reveal>
 
             <Reveal delay={0.1}>
-              <p className="mt-5 max-w-2xl text-[1.02rem] leading-8 text-white/82 md:text-[1.1rem] md:leading-8">
-                {site.homeHero.description}
+              <p className="mt-4 max-w-2xl text-[0.95rem] leading-7 text-white/82 sm:mt-5 sm:text-[1.02rem] sm:leading-8 md:text-[1.1rem] md:leading-8">
+                <span className="sm:hidden">
+                  Integramos infraestructura, automatización y software para operar con visibilidad y control.
+                </span>
+                <span className="hidden sm:inline">{site.homeHero.description}</span>
               </p>
             </Reveal>
 
             <Reveal delay={0.14}>
-              <div className="mt-6 grid gap-3 sm:grid-cols-3">
-                {site.homeHero.signals.map((item) => (
+              <div className="mt-5 grid grid-cols-2 gap-3 sm:mt-6 sm:grid-cols-3">
+                {site.homeHero.signals.map((item, signalIndex) => (
                   <div
                     key={item.label}
-                    className="rounded-[1rem] border border-white/10 bg-[rgba(255,255,255,0.03)] px-4 py-4 backdrop-blur-md"
+                    className={`rounded-[1rem] border border-white/10 bg-[rgba(255,255,255,0.03)] px-4 py-3.5 backdrop-blur-md md:py-4 ${
+                      signalIndex === 2 ? "hidden sm:block" : ""
+                    }`}
                   >
                     <p className="text-[10px] font-semibold uppercase tracking-normal text-[var(--muted-soft)] md:tracking-[0.18em]">
                       {item.label}
@@ -152,8 +157,8 @@ export default function SplitHero() {
           </div>
 
           <Reveal delay={0.16}>
-            <div className="relative min-h-[320px] md:min-h-[450px]">
-              <div className="absolute left-[5%] top-[15%] w-[31%] overflow-hidden rounded-[1.35rem] border border-[rgba(255,194,131,0.18)] bg-[rgba(5,9,18,0.68)] p-2 shadow-[0_30px_80px_rgba(2,6,23,0.34)] backdrop-blur-md">
+            <div className="relative min-h-[232px] md:min-h-[450px]">
+              <div className="absolute left-[5%] top-[15%] hidden w-[31%] overflow-hidden rounded-[1.35rem] border border-[rgba(255,194,131,0.18)] bg-[rgba(5,9,18,0.68)] p-2 shadow-[0_30px_80px_rgba(2,6,23,0.34)] backdrop-blur-md md:block">
                 <div className="relative aspect-[4/3] overflow-hidden rounded-[1rem]">
                   <Image
                     src="/images/energia/electrico.optimized.webp"
@@ -166,7 +171,7 @@ export default function SplitHero() {
                 </div>
               </div>
 
-              <div className="absolute right-0 top-0 w-[76%] overflow-hidden rounded-[1.85rem] border border-[rgba(125,168,255,0.18)] bg-[rgba(6,10,20,0.66)] p-3 shadow-[0_34px_100px_rgba(2,6,23,0.42)] backdrop-blur-md">
+              <div className="absolute right-0 top-0 w-full overflow-hidden rounded-[1.45rem] border border-[rgba(125,168,255,0.18)] bg-[rgba(6,10,20,0.66)] p-2.5 shadow-[0_34px_100px_rgba(2,6,23,0.42)] backdrop-blur-md md:w-[76%] md:rounded-[1.85rem] md:p-3">
                 <div className="relative aspect-[16/10] overflow-hidden rounded-[1.35rem]">
                   <Image
                     src="/images/tecnologia/tecnologico.optimized.webp"
@@ -179,7 +184,7 @@ export default function SplitHero() {
                 </div>
               </div>
 
-              <div className="absolute bottom-0 right-[8%] w-[64%] overflow-hidden rounded-[1.6rem] border border-white/12 bg-[rgba(6,10,20,0.78)] p-2.5 shadow-[0_30px_90px_rgba(2,6,23,0.4)] backdrop-blur-md">
+              <div className="absolute bottom-0 right-[8%] hidden w-[64%] overflow-hidden rounded-[1.6rem] border border-white/12 bg-[rgba(6,10,20,0.78)] p-2.5 shadow-[0_30px_90px_rgba(2,6,23,0.4)] backdrop-blur-md md:block">
                 <div className="relative aspect-[16/9] overflow-hidden rounded-[1.1rem]">
                   <Image
                     src="/images/tecnologia/generated/caso-tableros-gestion.optimized.webp"
@@ -206,7 +211,7 @@ export default function SplitHero() {
             <div className="mb-4 flex items-center justify-between gap-4">
               <div>
                 <span className="section-kicker">Elegí una vertical</span>
-                <p className="mt-2 max-w-2xl text-sm leading-7 text-[var(--muted)] md:text-[0.98rem]">
+                <p className="mt-2 hidden max-w-2xl text-sm leading-7 text-[var(--muted)] md:block md:text-[0.98rem]">
                   Dos caminos claros para entrar a LYNX: energía para infraestructura crítica y tecnología para integración operativa.
                 </p>
               </div>

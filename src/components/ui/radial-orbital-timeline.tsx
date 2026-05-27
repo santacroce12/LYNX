@@ -40,6 +40,8 @@ export type OrbitalTimelineItem = {
 type RadialOrbitalTimelineProps = {
   timelineData: OrbitalTimelineItem[];
   className?: string;
+  mobileKicker?: string;
+  mobileTitle?: string;
 };
 
 type OrbitalStyle = CSSProperties & {
@@ -82,6 +84,8 @@ function normalizeDegrees(value: number) {
 export default function RadialOrbitalTimeline({
   timelineData,
   className,
+  mobileKicker = "Recorrido AS-IS / TO-BE",
+  mobileTitle = "Proceso tecnológico por etapas",
 }: RadialOrbitalTimelineProps) {
   const [activeNodeId, setActiveNodeId] = useState<number | null>(null);
   const [isPointerPaused, setIsPointerPaused] = useState(false);
@@ -156,8 +160,8 @@ export default function RadialOrbitalTimeline({
       }
 
       const delta = timestamp - lastTimestamp;
-      if (delta >= 28) {
-        setOrbitAngle(angleRef.current + delta * 0.0048);
+      if (delta >= 16) {
+        setOrbitAngle(angleRef.current + delta * 0.0064);
         lastTimestamp = timestamp;
       }
       frameId = window.requestAnimationFrame(animate);
@@ -218,19 +222,17 @@ export default function RadialOrbitalTimeline({
   return (
     <div
       className={cn(
-        "panel-shell relative mx-auto w-full max-w-[55rem] overflow-hidden rounded-[1.5rem]",
+        "relative mx-auto w-full max-w-[55rem] overflow-visible",
         className,
       )}
     >
-      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_50%_44%,rgba(255,122,26,0.1),transparent_30%),linear-gradient(135deg,rgba(255,122,26,0.045),transparent_24%,rgba(125,168,255,0.035)_100%)]" />
-
       <div className="grid gap-3 p-4 md:hidden">
         <div className="mb-1">
           <p className="section-kicker text-[var(--accent-soft)]">
-            Recorrido AS-IS / TO-BE
+            {mobileKicker}
           </p>
           <h3 className="mt-3 text-[1.45rem] leading-[1.05] text-[var(--text-strong)]">
-            Proceso tecnologico por etapas
+            {mobileTitle}
           </h3>
         </div>
 
@@ -263,10 +265,10 @@ export default function RadialOrbitalTimeline({
         })}
       </div>
 
-      <div className="hidden p-3 md:block lg:p-4">
+      <div className="hidden md:block">
         <div
           ref={orbitRef}
-          className="lynx-orbit panel-grid relative min-h-[535px] overflow-hidden rounded-[1.2rem] border border-[rgba(182,205,238,0.14)] bg-[radial-gradient(circle_at_50%_48%,rgba(255,122,26,0.07),transparent_22%),linear-gradient(180deg,rgba(5,10,18,0.7),rgba(5,10,18,0.95))]"
+          className="lynx-orbit relative mx-auto min-h-[545px] max-w-[46rem] overflow-visible rounded-full"
           data-mode="running"
           onClick={clearActiveNode}
           style={
@@ -276,13 +278,13 @@ export default function RadialOrbitalTimeline({
             } as OrbitalStyle
           }
         >
-          <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(125,168,255,0.07),transparent_24%),radial-gradient(circle_at_50%_50%,rgba(20,184,255,0.04),transparent_42%)]" />
-          <div className="absolute left-1/2 top-1/2 h-[25.5rem] w-[25.5rem] -translate-x-1/2 -translate-y-1/2 rounded-full border border-[rgba(182,205,238,0.18)] shadow-[0_0_0_1px_rgba(125,168,255,0.05)]" />
+          <div className="pointer-events-none absolute left-1/2 top-1/2 h-[38rem] w-[38rem] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[radial-gradient(circle,rgba(125,168,255,0.08)_0%,rgba(255,122,26,0.045)_27%,rgba(5,10,18,0)_68%)] blur-sm" />
+          <div className="pointer-events-none absolute left-1/2 top-1/2 h-[30.5rem] w-[30.5rem] -translate-x-1/2 -translate-y-1/2 rounded-full border border-[rgba(182,205,238,0.14)] shadow-[0_0_42px_rgba(125,168,255,0.05)]" />
+          <div className="pointer-events-none absolute left-1/2 top-1/2 h-[16rem] w-[16rem] -translate-x-1/2 -translate-y-1/2 rounded-full border border-[rgba(125,168,255,0.055)]" />
 
-          <div className="absolute left-1/2 top-1/2 h-[8.75rem] w-[8.75rem] -translate-x-1/2 -translate-y-1/2 rounded-full border border-[rgba(125,168,255,0.14)] bg-[radial-gradient(circle_at_50%_50%,rgba(7,12,24,0.18),rgba(7,12,24,0.96)_72%)]">
-            <span className="absolute left-1/2 top-1/2 h-[6.25rem] w-[6.25rem] -translate-x-1/2 -translate-y-1/2 rounded-full border border-[rgba(125,168,255,0.2)] bg-[radial-gradient(circle_at_50%_35%,rgba(222,236,255,0.92),rgba(113,151,255,0.9)_24%,rgba(58,119,255,0.75)_55%,rgba(18,196,255,0.55)_100%)] shadow-[0_0_34px_rgba(56,129,255,0.28)]" />
-            <span className="absolute left-1/2 top-1/2 h-[2.15rem] w-[2.15rem] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[radial-gradient(circle,rgba(255,255,255,0.96),rgba(216,232,255,0.78)_56%,rgba(255,255,255,0)_100%)]" />
-            <span className="absolute left-1/2 top-1/2 h-[10.5rem] w-[10.5rem] -translate-x-1/2 -translate-y-1/2 rounded-full border border-[rgba(125,168,255,0.09)]" />
+          <div className="absolute left-1/2 top-1/2 h-[8.8rem] w-[8.8rem] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[radial-gradient(circle_at_50%_50%,rgba(2,7,18,0.08),rgba(2,7,18,0.9)_70%)] shadow-[0_22px_58px_rgba(0,0,0,0.36)]">
+            <span className="lynx-orbit-core absolute left-1/2 top-1/2 h-[6.2rem] w-[6.2rem] -translate-x-1/2 -translate-y-1/2 rounded-full border border-[rgba(125,168,255,0.18)] bg-[radial-gradient(circle_at_50%_38%,rgba(238,246,255,0.96)_0%,rgba(190,214,255,0.9)_15%,rgba(89,126,255,0.86)_42%,rgba(18,169,255,0.72)_75%,rgba(255,122,26,0.42)_100%)] shadow-[0_0_38px_rgba(56,129,255,0.34),0_0_54px_rgba(255,122,26,0.08)]" />
+            <span className="absolute left-1/2 top-1/2 h-[2.35rem] w-[2.35rem] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[radial-gradient(circle,rgba(255,255,255,0.98),rgba(222,235,255,0.78)_58%,rgba(255,255,255,0)_100%)]" />
           </div>
 
           {timelineData.map((item, index) => {
@@ -299,12 +301,12 @@ export default function RadialOrbitalTimeline({
                   {
                     "--node-angle": `${nodeAngle}deg`,
                     "--node-angle-inverse": `${-nodeAngle}deg`,
-                    "--node-radius": "11.6rem",
+                    "--node-radius": "14.05rem",
                     zIndex: isActive ? 30 : 10,
                   } as OrbitalStyle
                 }
               >
-                <div className="relative flex w-[9.75rem] -translate-x-1/2 -translate-y-1/2 flex-col items-center text-center">
+                <div className="relative flex w-[10.25rem] -translate-x-1/2 -translate-y-1/2 flex-col items-center text-center">
                   <button
                     type="button"
                     className="group flex w-full flex-col items-center gap-2 outline-none"
@@ -325,28 +327,40 @@ export default function RadialOrbitalTimeline({
                   >
                     <span
                       className={cn(
-                        "relative flex h-11 w-11 items-center justify-center rounded-full border bg-[rgba(7,13,24,0.95)] text-[var(--text-secondary)] shadow-[0_14px_30px_rgba(3,8,20,0.3)] transition-all duration-300",
+                        "relative flex h-12 w-12 items-center justify-center rounded-full border bg-[rgba(2,6,14,0.92)] text-[var(--text-secondary)] shadow-[0_0_0_1px_rgba(255,255,255,0.02),0_16px_34px_rgba(0,0,0,0.32),0_0_24px_rgba(255,255,255,0.045)] transition-all duration-300",
                         isActive &&
-                          "h-14 w-14 border-[rgba(125,168,255,0.72)] bg-[rgba(42,112,255,0.18)] text-[#dceaff] shadow-[0_0_26px_rgba(56,129,255,0.24)]",
+                          "h-16 w-16 border-[rgba(255,255,255,0.82)] bg-[linear-gradient(180deg,rgba(250,252,255,0.98),rgba(233,239,248,0.96))] text-[#080b10] shadow-[0_0_0_4px_rgba(255,255,255,0.035),0_0_18px_rgba(255,255,255,0.12),0_14px_34px_rgba(0,0,0,0.28)]",
                         !isActive &&
                           isRelated &&
-                          "border-[rgba(125,168,255,0.42)] text-[var(--accent-cool)]",
+                          "border-[rgba(125,168,255,0.46)] text-[var(--accent-cool)] shadow-[0_0_32px_rgba(125,168,255,0.08)]",
                         !isActive &&
                           !isRelated &&
-                          "border-[rgba(182,205,238,0.22)] group-hover:border-[rgba(125,168,255,0.38)] group-hover:text-[var(--accent-cool)]",
+                          "border-[rgba(220,232,255,0.23)] group-hover:border-[rgba(255,255,255,0.52)] group-hover:text-[var(--text-strong)] group-hover:shadow-[0_0_32px_rgba(255,255,255,0.12)]",
                       )}
                     >
                       <span
                         className={cn(
-                          "absolute -inset-2.5 rounded-full bg-[radial-gradient(circle,rgba(56,129,255,0.2),transparent_72%)] opacity-0 transition duration-300",
-                          (isActive || isRelated) && "opacity-100",
+                          "absolute -inset-4 rounded-full opacity-0 transition duration-300",
+                          isActive &&
+                            "bg-[radial-gradient(circle,rgba(255,255,255,0.12),rgba(255,255,255,0.05)_38%,rgba(125,168,255,0.04)_56%,transparent_72%)] opacity-100",
+                          !isActive &&
+                            isRelated &&
+                            "bg-[radial-gradient(circle,rgba(255,255,255,0.08),rgba(125,168,255,0.08)_38%,rgba(255,122,26,0.04)_58%,transparent_74%)] opacity-100",
                         )}
                       />
-                      <Icon className="relative h-5 w-5" aria-hidden="true" />
+                      <Icon
+                        className={cn(
+                          "relative h-5 w-5",
+                          isActive &&
+                            "h-[1.42rem] w-[1.42rem] text-[#070a0f]",
+                        )}
+                        strokeWidth={isActive ? 2.55 : 2}
+                        aria-hidden="true"
+                      />
                     </span>
                     <span
                       className={cn(
-                        "flex min-h-[2.25rem] w-full items-start justify-center px-1 text-center text-[0.72rem] font-semibold leading-[1.1] text-[var(--muted)] transition duration-300",
+                        "flex min-h-[2.35rem] w-full items-start justify-center px-1 text-center text-[0.74rem] font-semibold leading-[1.1] text-[rgba(182,205,238,0.58)] transition duration-300",
                         isActive && "text-[var(--text-strong)]",
                       )}
                     >

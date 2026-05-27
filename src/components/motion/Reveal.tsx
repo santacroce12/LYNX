@@ -8,6 +8,7 @@ type RevealProps = {
   className?: string;
   delay?: number;
   y?: number;
+  amount?: number;
 };
 
 export default function Reveal({
@@ -15,6 +16,7 @@ export default function Reveal({
   className,
   delay = 0,
   y = 20,
+  amount = 0.18,
 }: RevealProps) {
   const reduceMotion = useReducedMotion();
 
@@ -31,9 +33,15 @@ export default function Reveal({
   return (
     <m.div
       className={className}
-      initial={{ opacity: 0, y: Math.min(y, 14) }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.46, delay, ease: [0.22, 1, 0.36, 1] }}
+      initial={{ opacity: 0, y: Math.min(y, 18), filter: "blur(6px)" }}
+      whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+      viewport={{ once: true, amount, margin: "0px 0px -8% 0px" }}
+      transition={{
+        duration: 0.62,
+        delay,
+        ease: [0.22, 1, 0.36, 1],
+      }}
+      style={{ willChange: "opacity, transform, filter" }}
     >
       {children}
     </m.div>

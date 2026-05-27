@@ -347,7 +347,11 @@ body {
   }
 
   .lynx-orbit[data-mode="targeting"] .lynx-orbit-node {
-    transition: transform 700ms cubic-bezier(0.22, 1, 0.36, 1);
+    transition: transform 900ms cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
+  .lynx-orbit-core {
+    animation: lynx-orbit-core-pulse 5.8s ease-in-out infinite;
   }
 
   @media (min-width: 768px) {
@@ -398,6 +402,29 @@ body {
     .lynx-orbit-node {
       transition: none !important;
     }
+
+    .lynx-orbit-core {
+      animation: none !important;
+    }
+  }
+}
+
+@keyframes lynx-orbit-core-pulse {
+  0%,
+  100% {
+    transform: translate(-50%, -50%) scale(1);
+    filter: saturate(1);
+    box-shadow:
+      0 0 38px rgba(56, 129, 255, 0.34),
+      0 0 54px rgba(255, 122, 26, 0.08);
+  }
+
+  48% {
+    transform: translate(-50%, -50%) scale(1.045);
+    filter: saturate(1.16);
+    box-shadow:
+      0 0 48px rgba(56, 129, 255, 0.46),
+      0 0 70px rgba(255, 122, 26, 0.14);
   }
 }
 

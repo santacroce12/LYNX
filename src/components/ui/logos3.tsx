@@ -89,7 +89,7 @@ export function Logos3({ heading, logos, className }: Logos3Props) {
         </div>
       ) : null}
 
-      <div className="relative overflow-hidden bg-[#02050b] py-3 md:py-4">
+      <div className="relative overflow-hidden bg-transparent py-3 md:py-4">
         <Carousel
           opts={{
             align: "start",

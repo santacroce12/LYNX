@@ -5,7 +5,6 @@ import { tecnologia } from "@/content/tecnologia";
 import { buildMetadata } from "@/lib/seo";
 import TecnologiaHero from "./sections/Hero";
 import TecnologiaIndustries from "./sections/Industries";
-import TecnologiaProcess from "./sections/Process";
 import TecnologiaServices from "./sections/Services";
 import TecnologiaUseCases from "./sections/UseCases";
 
@@ -22,12 +21,10 @@ export default function TecnologiaPage() {
       canvasClassName="pointer-events-none opacity-[0.36]"
       fixedCanvas
       intensity="low"
-      showLines={false}
     >
       <TecnologiaHero />
       <TecnologiaIndustries />
       <TecnologiaServices />
-      <TecnologiaProcess />
       <TecnologiaUseCases />
       <FeaturedProjects filterCategory="Tecnología" />
       <CTA

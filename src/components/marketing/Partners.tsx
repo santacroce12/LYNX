@@ -36,7 +36,7 @@ export default function Partners() {
           </Reveal>
         </div>
         <Reveal delay={0.1}>
-          <p className="section-copy">{partners.subtitle}</p>
+          <p className="hidden section-copy sm:block">{partners.subtitle}</p>
         </Reveal>
       </div>
 
