@@ -93,7 +93,7 @@ export default function TecnologiaServices() {
             <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(4,8,16,0.92)_0%,rgba(4,8,16,0.72)_42%,rgba(4,8,16,0.38)_100%)]" />
             <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(4,8,16,0.08)_0%,rgba(4,8,16,0.2)_44%,rgba(4,8,16,0.74)_100%)]" />
 
-            <div className="relative z-10 flex min-h-[228px] max-w-2xl flex-col justify-end md:min-h-[252px] lg:min-h-[268px]">
+            <div className="relative z-10 flex min-h-[208px] max-w-2xl flex-col justify-end md:min-h-[252px] lg:min-h-[268px]">
               <span className="section-kicker text-[var(--accent-cool)]">
                 Punta a punta
               </span>
@@ -108,10 +108,12 @@ export default function TecnologiaServices() {
                   "Operar",
                   "Mantener",
                   "Evolucionar",
-                ].map((item) => (
+                ].map((item, actionIndex) => (
                   <span
                     key={item}
-                    className="inline-flex min-h-9 min-w-0 items-center justify-center gap-2 rounded-full border border-white/10 bg-black/30 px-3 py-2 text-center text-[10px] font-semibold uppercase tracking-normal text-white/78 backdrop-blur-md md:tracking-[0.18em]"
+                    className={`min-h-9 min-w-0 items-center justify-center gap-2 rounded-full border border-white/10 bg-black/30 px-3 py-2 text-center text-[10px] font-semibold uppercase tracking-normal text-white/78 backdrop-blur-md md:tracking-[0.18em] ${
+                      actionIndex > 2 ? "hidden sm:inline-flex" : "inline-flex"
+                    }`}
                   >
                     <span className="h-1.5 w-1.5 rounded-full bg-[var(--accent)] shadow-[0_0_12px_rgba(255,122,26,0.6)]" />
                     {item}
@@ -129,7 +131,7 @@ export default function TecnologiaServices() {
           <div className="pointer-events-none absolute inset-x-6 top-1/2 h-px bg-gradient-to-r from-transparent via-[rgba(125,168,255,0.2)] to-transparent" />
 
           <div className="relative grid gap-5 lg:grid-cols-[minmax(0,0.92fr)_minmax(330px,0.68fr)] lg:items-stretch">
-            <div className="relative min-h-[390px] overflow-hidden rounded-[1.15rem] border border-white/8 bg-[rgba(4,9,18,0.58)] p-4 md:min-h-[430px] md:p-5">
+            <div className="relative min-h-[350px] overflow-hidden rounded-[1.15rem] border border-white/8 bg-[rgba(4,9,18,0.58)] p-3.5 md:min-h-[430px] md:p-5">
               <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(90deg,rgba(125,168,255,0.06)_1px,transparent_1px),linear-gradient(180deg,rgba(125,168,255,0.045)_1px,transparent_1px)] bg-[size:56px_56px] opacity-45 [mask-image:radial-gradient(circle_at_50%_44%,#000_12%,transparent_76%)]" />
 
               <div className="relative z-10 mb-6 flex flex-wrap items-center justify-between gap-3">
@@ -146,7 +148,7 @@ export default function TecnologiaServices() {
                 </span>
               </div>
 
-              <div className="relative z-10 mt-5 md:hidden">
+              <div className="relative z-10 mt-4 md:hidden">
                 <div className="absolute bottom-4 left-[1.1rem] top-4 w-px bg-[rgba(125,168,255,0.18)]" />
                 {tecnologia.services.map((service, index) => {
                   const Icon = icons[service.icon as string] || Layers;
@@ -158,7 +160,7 @@ export default function TecnologiaServices() {
                       type="button"
                       aria-pressed={isActive}
                       onClick={() => setActiveServiceIndex(index)}
-                      className={`group relative mb-3 flex w-full items-center gap-3 rounded-[0.95rem] px-2 py-2.5 text-left transition duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--accent)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--bg)] ${
+                      className={`group relative mb-2 flex w-full items-center gap-3 rounded-[0.95rem] px-2 py-2 text-left transition duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--accent)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--bg)] ${
                         isActive
                           ? "bg-[rgba(255,122,26,0.11)]"
                           : "bg-transparent hover:bg-[rgba(125,168,255,0.04)]"
@@ -253,6 +255,27 @@ export default function TecnologiaServices() {
                   const Icon = icons[service.icon as string] || Layers;
                   const isActive = activeServiceIndex === index;
                   const position = serviceNodePositions[index];
+                  
+                  const labelPosition =
+                    index === 0
+                      ? "bottom"
+                      : index === 1
+                      ? "top"
+                      : index === 2
+                      ? "top"
+                      : index === 3
+                      ? "left"
+                      : "bottom";
+
+                  let labelClasses =
+                    "absolute z-10 w-[9.7rem] text-[0.82rem] font-semibold leading-[1.08] transition duration-300 ";
+                  if (labelPosition === "bottom") {
+                    labelClasses += "left-1/2 -translate-x-1/2 top-full mt-4.5 text-center";
+                  } else if (labelPosition === "top") {
+                    labelClasses += "left-1/2 -translate-x-1/2 bottom-full mb-4.5 text-center";
+                  } else if (labelPosition === "left") {
+                    labelClasses += "right-full -translate-y-1/2 top-1/2 mr-4.5 text-right";
+                  }
 
                   return (
                     <button
@@ -260,11 +283,11 @@ export default function TecnologiaServices() {
                       type="button"
                       aria-pressed={isActive}
                       onClick={() => setActiveServiceIndex(index)}
-                      className="group absolute flex w-[9.7rem] -translate-x-1/2 -translate-y-1/2 flex-col items-center text-center outline-none"
+                      className="group absolute h-12 w-12 -translate-x-1/2 -translate-y-1/2 rounded-full outline-none"
                       style={position}
                     >
                       <span
-                        className={`relative flex h-12 w-12 items-center justify-center rounded-full border transition duration-300 ${
+                        className={`flex h-12 w-12 items-center justify-center rounded-full border transition duration-300 ${
                           isActive
                             ? "scale-110 border-[rgba(255,194,131,0.58)] bg-[var(--accent)] text-[var(--bg)] shadow-[0_0_0_8px_rgba(255,122,26,0.08),0_0_34px_rgba(255,122,26,0.32)]"
                             : "border-[rgba(182,205,238,0.2)] bg-[rgba(5,10,18,0.92)] text-[var(--accent-cool)] shadow-[0_16px_34px_rgba(0,0,0,0.24)] group-hover:border-[rgba(125,168,255,0.42)] group-hover:text-[var(--text-strong)]"
@@ -272,14 +295,16 @@ export default function TecnologiaServices() {
                       >
                         <Icon className="h-5 w-5" aria-hidden="true" />
                       </span>
-                      <span
-                        className={`mt-3 text-[0.82rem] font-semibold leading-[1.08] transition duration-300 ${
-                          isActive
-                            ? "text-[var(--text-strong)]"
-                            : "text-[rgba(182,205,238,0.64)]"
-                        }`}
-                      >
-                        {service.title}
+                      <span className={labelClasses}>
+                        <span
+                          className={`inline-flex max-w-full rounded-[0.95rem] border px-2.5 py-1.5 shadow-[0_10px_22px_rgba(2,6,23,0.22)] backdrop-blur-sm ${
+                            isActive
+                              ? "border-[rgba(255,194,131,0.14)] bg-[rgba(5,10,18,0.94)] text-[var(--text-strong)]"
+                              : "border-white/[0.06] bg-[rgba(5,10,18,0.92)] text-[rgba(182,205,238,0.72)]"
+                          }`}
+                        >
+                          {service.title}
+                        </span>
                       </span>
                     </button>
                   );
@@ -287,13 +312,13 @@ export default function TecnologiaServices() {
               </div>
             </div>
 
-            <aside className="relative overflow-hidden rounded-[1.15rem] border border-[rgba(255,194,131,0.14)] bg-[rgba(5,10,18,0.76)] p-5 shadow-[inset_0_1px_0_rgba(255,255,255,0.04)]">
+            <aside className="relative hidden overflow-hidden rounded-[1.15rem] border border-[rgba(255,194,131,0.14)] bg-[rgba(5,10,18,0.76)] p-5 shadow-[inset_0_1px_0_rgba(255,255,255,0.04)] md:block">
               <div className="pointer-events-none absolute -right-16 -top-20 h-48 w-48 rounded-full bg-[rgba(255,122,26,0.16)] blur-3xl" />
               <div className="pointer-events-none absolute -bottom-20 left-10 h-52 w-52 rounded-full bg-[rgba(125,168,255,0.14)] blur-3xl" />
 
-              <div className="relative z-10 flex h-full min-h-[320px] flex-col">
+              <div className="relative z-10 flex h-full min-h-[260px] flex-col md:min-h-[320px]">
                 <div className="flex items-center justify-between gap-4">
-                  <div className="inline-flex h-12 w-12 items-center justify-center rounded-[1rem] border border-[rgba(255,194,131,0.24)] bg-[rgba(255,122,26,0.12)] text-[var(--accent-soft)]">
+                  <div className="inline-flex h-10 w-10 items-center justify-center rounded-[0.9rem] border border-[rgba(255,194,131,0.24)] bg-[rgba(255,122,26,0.12)] text-[var(--accent-soft)] md:h-12 md:w-12 md:rounded-[1rem]">
                     <ActiveIcon className="h-6 w-6" aria-hidden="true" />
                   </div>
                   <span className="text-[10px] font-semibold uppercase tracking-[0.22em] text-[var(--muted-soft)]">
@@ -301,19 +326,19 @@ export default function TecnologiaServices() {
                   </span>
                 </div>
 
-                <div className="mt-8">
+                <div className="mt-5 md:mt-8">
                   <p className="text-[0.72rem] font-semibold uppercase tracking-[0.28em] text-[var(--accent-soft)]">
                     Etapa 0{activeServiceIndex + 1}
                   </p>
-                  <h3 className="mt-3 text-[1.55rem] font-semibold leading-[1.04] text-[var(--text-strong)] md:text-[2rem]">
+                  <h3 className="mt-3 text-[1.28rem] font-semibold leading-[1.04] text-[var(--text-strong)] md:text-[2rem]">
                     {activeService?.title}
                   </h3>
-                  <p className="mt-4 text-[0.98rem] leading-7 text-[var(--text-secondary)]">
+                  <p className="mt-3 text-[0.9rem] leading-6 text-[var(--text-secondary)] md:mt-4 md:text-[0.98rem] md:leading-7">
                     {activeService?.description}
                   </p>
                 </div>
 
-                <div className="mt-auto pt-7">
+                <div className="mt-auto pt-5 md:pt-7">
                   <div className="mb-3 flex items-center justify-between text-[10px] font-semibold uppercase tracking-[0.18em] text-[var(--muted-soft)]">
                     <span>Avance del ciclo</span>
                     <span>

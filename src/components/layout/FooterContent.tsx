@@ -25,7 +25,7 @@ export default function FooterContent() {
 
   return (
     <>
-      <div className="grid gap-10 lg:gap-12 xl:grid-cols-3 xl:gap-16">
+      <div className="grid gap-8 sm:gap-10 lg:gap-12 xl:grid-cols-3 xl:gap-16">
         <div className="w-full max-w-[360px] space-y-6">
           <span className="section-kicker">Infraestructura crítica</span>
 
@@ -65,7 +65,7 @@ export default function FooterContent() {
           </div>
         </div>
 
-        <div className="w-full xl:mx-auto xl:max-w-[380px] xl:justify-self-center">
+        <div className="hidden w-full sm:block xl:mx-auto xl:max-w-[380px] xl:justify-self-center">
           <h3 className="section-kicker">{site.footer.navTitle}</h3>
 
           <div className="mt-4 grid gap-2.5">

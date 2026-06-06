@@ -43,26 +43,26 @@ export default function EnergiaServices() {
         </Reveal>
       </div>
 
-      <div className="grid gap-3.5 sm:grid-cols-2 lg:grid-cols-3">
+      <div className="grid gap-2.5 sm:grid-cols-2 sm:gap-3.5 lg:grid-cols-3">
         {energia.services.map((service, index) => {
           const Icon = icons[service.icon as string] || Zap;
 
           return (
             <Reveal key={service.title} delay={index * 0.05}>
-              <div className="panel-shell group h-full rounded-[1.35rem] p-[1.125rem] transition duration-300 hover:-translate-y-0.5">
-                <div className="mb-4 flex items-center justify-between gap-4">
-                  <div className="inline-flex h-10 w-10 items-center justify-center rounded-[0.9rem] border border-[rgba(255,194,131,0.18)] bg-[rgba(255,122,26,0.08)] text-[var(--accent)] transition-all duration-300 group-hover:scale-105">
+              <div className="panel-shell group h-full rounded-[1.1rem] p-3.5 transition duration-300 hover:-translate-y-0.5 sm:rounded-[1.35rem] sm:p-[1.125rem]">
+                <div className="mb-3 flex items-center justify-between gap-4 sm:mb-4">
+                  <div className="inline-flex h-9 w-9 items-center justify-center rounded-[0.8rem] border border-[rgba(255,194,131,0.18)] bg-[rgba(255,122,26,0.08)] text-[var(--accent)] transition-all duration-300 group-hover:scale-105 sm:h-10 sm:w-10 sm:rounded-[0.9rem]">
                     <Icon className="h-5 w-5" />
                   </div>
-                <span className="text-[11px] uppercase tracking-normal text-[var(--muted-soft)] md:tracking-[0.24em]">
+                <span className="text-[10px] uppercase tracking-normal text-[var(--muted-soft)] sm:text-[11px] md:tracking-[0.24em]">
                     0{index + 1}
                   </span>
                 </div>
 
-                <h3 className="text-[1.2rem] font-semibold leading-[1.04] text-[var(--text-strong)]">
+                <h3 className="text-[1rem] font-semibold leading-[1.08] text-[var(--text-strong)] sm:text-[1.2rem] sm:leading-[1.04]">
                   {service.title}
                 </h3>
-                <p className="mt-2.5 text-sm leading-7 text-[var(--muted)]">
+                <p className="mt-2.5 hidden text-sm leading-7 text-[var(--muted)] sm:block">
                   {service.description}
                 </p>
               </div>

@@ -197,20 +197,28 @@ export default function FeatureGrid({
         </div>
       ) : null}
 
-      <div className={`grid gap-3.5 sm:grid-cols-2 md:gap-4 ${columnsClass}`}>
+      <div className={`grid grid-cols-2 gap-2.5 sm:grid-cols-2 md:gap-4 ${columnsClass}`}>
         {items.map((item, index) => (
-          <Reveal key={item.title} delay={index * 0.05}>
+          <Reveal
+            key={item.title}
+            delay={index * 0.05}
+            className={
+              items.length % 2 === 1 && index === items.length - 1
+                ? "col-span-2 sm:col-span-1"
+                : undefined
+            }
+          >
             <Card className="h-full p-0">
-              <div className="relative flex h-full flex-col px-4 py-4 md:px-5 md:py-5">
-                <div className="mb-4 flex items-center justify-between">
+              <div className="relative flex h-full flex-col px-3.5 py-3.5 md:px-5 md:py-5">
+                <div className="mb-3 flex items-center justify-between md:mb-4">
                   {item.icon && iconMap[item.icon] ? (
-                    <span className="inline-flex h-9 w-9 items-center justify-center rounded-[0.9rem] border border-[rgba(255,194,131,0.14)] bg-[rgba(255,122,26,0.07)] text-[var(--accent)]">
-                      <svg viewBox="0 0 24 24" aria-hidden="true" className="h-4 w-4">
+                    <span className="inline-flex h-8 w-8 items-center justify-center rounded-[0.75rem] border border-[rgba(255,194,131,0.14)] bg-[rgba(255,122,26,0.07)] text-[var(--accent)] md:h-9 md:w-9 md:rounded-[0.9rem]">
+                      <svg viewBox="0 0 24 24" aria-hidden="true" className="h-3.5 w-3.5 md:h-4 md:w-4">
                         {iconMap[item.icon]}
                       </svg>
                     </span>
                   ) : (
-                    <span className="inline-flex h-9 w-9 rounded-[0.9rem] border border-[var(--border)] bg-white/5" />
+                    <span className="inline-flex h-8 w-8 rounded-[0.75rem] border border-[var(--border)] bg-white/5 md:h-9 md:w-9 md:rounded-[0.9rem]" />
                   )}
                   <span className="text-[10px] uppercase tracking-normal text-[var(--muted-soft)] md:tracking-[0.18em]">
                     0{index + 1}
@@ -218,10 +226,10 @@ export default function FeatureGrid({
                 </div>
 
                 <div className="flex h-full flex-col">
-                  <h3 className="text-[1.12rem] font-semibold leading-[1.08] text-[var(--text-strong)] md:text-[1.28rem] md:leading-[1.04]">
+                  <h3 className="text-[1rem] font-semibold leading-[1.08] text-[var(--text-strong)] md:text-[1.28rem] md:leading-[1.04]">
                     {item.title}
                   </h3>
-                  <p className="mt-2.5 text-sm leading-[1.7] text-[var(--muted)]">
+                  <p className="mt-2.5 hidden text-sm leading-[1.7] text-[var(--muted)] sm:block">
                     {item.description}
                   </p>
                 </div>

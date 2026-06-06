@@ -25,7 +25,7 @@ export default function TecnologiaHero() {
         <div className="absolute inset-x-0 bottom-0 -z-10 h-40 bg-gradient-to-t from-[var(--bg)] to-transparent" />
         <TechSignal variant="tech" />
 
-        <div className="mx-auto flex min-h-[560px] w-full max-w-[1320px] flex-col justify-center px-4 py-16 sm:px-6 md:min-h-[740px] md:px-8 md:py-20">
+        <div className="mx-auto flex min-h-[500px] w-full max-w-[1320px] flex-col justify-center px-4 py-14 sm:px-6 md:min-h-[740px] md:px-8 md:py-20">
           <div className="relative z-10 max-w-4xl">
             <Reveal>
               <Badge>{tecnologia.hero.badge}</Badge>
@@ -41,13 +41,13 @@ export default function TecnologiaHero() {
               </p>
             </Reveal>
             <Reveal delay={0.14}>
-              <p className="mt-4 max-w-2xl text-sm leading-7 text-white/68 md:mt-5">
+              <p className="mt-4 hidden max-w-2xl text-sm leading-7 text-white/68 sm:block md:mt-5">
                 {tecnologia.hero.claim}
               </p>
             </Reveal>
           </div>
 
-          <div className="relative z-10 mt-14 md:mt-20">
+          <div className="relative z-10 mt-9 md:mt-20">
             <EnergyFlow variant="tech" className="h-10 opacity-55" />
           </div>
         </div>

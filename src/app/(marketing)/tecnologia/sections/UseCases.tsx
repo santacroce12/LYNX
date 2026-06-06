@@ -48,13 +48,13 @@ export default function TecnologiaUseCases() {
           return (
             <div
               key={useCase.title}
-              className={`grid gap-4 lg:grid-cols-[1.02fr_0.98fr] lg:items-center ${
+              className={`grid gap-0 overflow-hidden rounded-[1.45rem] lg:grid-cols-[1.02fr_0.98fr] lg:items-center lg:gap-4 lg:overflow-visible lg:rounded-none ${
                 !isEven ? "lg:[&>*:first-child]:order-2" : ""
               }`}
             >
               <Reveal y={20}>
-                <div className="panel-shell group overflow-hidden rounded-[1.55rem] p-2.5">
-                  <div className="relative aspect-video overflow-hidden rounded-[1.15rem] border border-white/8">
+                <div className="panel-shell group overflow-hidden rounded-b-none rounded-t-[1.45rem] p-1.5 lg:rounded-[1.55rem] lg:p-2.5">
+                  <div className="relative aspect-[16/8.6] overflow-hidden rounded-[1.05rem] border border-white/8 sm:aspect-video lg:rounded-[1.15rem]">
                     <Image
                       src={
                         useCase.image ??
@@ -72,17 +72,17 @@ export default function TecnologiaUseCases() {
               </Reveal>
 
               <Reveal y={20} delay={0.14}>
-                <div className="panel-shell flex h-full flex-col justify-center rounded-[1.55rem] p-4 md:p-6">
-                  <div className="mb-4 flex items-center gap-3">
+                <div className="panel-shell flex h-full flex-col justify-center rounded-b-[1.45rem] rounded-t-none border-t-0 p-3.5 md:p-6 lg:rounded-[1.55rem] lg:border-t">
+                  <div className="mb-3 flex items-center gap-3 md:mb-4">
                     <span className="inline-flex h-9 w-9 items-center justify-center rounded-[0.85rem] border border-[rgba(125,168,255,0.2)] bg-[rgba(125,168,255,0.08)] text-[var(--accent-cool)]">
                       <Icon className="h-[18px] w-[18px]" aria-hidden="true" />
                     </span>
                     <span className="section-kicker">Caso 0{index + 1}</span>
                   </div>
-                  <h3 className="text-[1.22rem] font-semibold leading-[1.08] text-[var(--text-strong)] md:text-[1.6rem] md:leading-[1]">
+                  <h3 className="text-[1.08rem] font-semibold leading-[1.08] text-[var(--text-strong)] md:text-[1.6rem] md:leading-[1]">
                     {useCase.title}
                   </h3>
-                  <p className="mt-3 text-[0.95rem] leading-7 text-[var(--text)]/76 md:mt-4 md:text-base md:leading-8">
+                  <p className="mt-2 text-[0.88rem] leading-6 text-[var(--text)]/76 md:mt-4 md:text-base md:leading-8">
                     {useCase.description}
                   </p>
                 </div>

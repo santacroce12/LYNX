@@ -20,18 +20,18 @@ export default function TecnologiaIndustries() {
           </p>
         </Reveal>
         <Reveal delay={0.14}>
-          <p className="mt-4 max-w-3xl text-sm leading-7 text-[var(--muted)] md:mx-auto md:text-[15px]">
+          <p className="mt-4 hidden max-w-3xl text-sm leading-7 text-[var(--muted)] sm:block md:mx-auto md:text-[15px]">
             {tecnologia.industries.support}
           </p>
         </Reveal>
       </div>
 
-      <div className="mx-auto grid max-w-5xl gap-3 md:grid-cols-2 xl:grid-cols-3">
+      <div className="scrollbar-hide mx-auto grid max-w-5xl auto-cols-[84%] grid-flow-col gap-3 overflow-x-auto snap-x snap-mandatory pb-2 pr-4 sm:auto-cols-auto sm:grid-flow-row sm:grid-cols-2 sm:overflow-visible sm:pb-0 sm:pr-0 xl:grid-cols-3">
         {tecnologia.industries.items.map((industry, index) => (
-          <Reveal key={industry.title} delay={index * 0.04}>
-            <article className="panel-shell group h-full rounded-[1.25rem] p-1.5 transition duration-300 hover:-translate-y-0.5 hover:border-[rgba(125,168,255,0.18)]">
+          <Reveal key={industry.title} delay={index * 0.04} className="snap-start">
+            <article className="panel-shell group h-full rounded-[1.1rem] p-1 transition duration-300 hover:-translate-y-0.5 hover:border-[rgba(125,168,255,0.18)] md:rounded-[1.25rem] md:p-1.5">
               <div className="flex h-full flex-col overflow-hidden rounded-[1rem] border border-white/8 bg-[linear-gradient(180deg,rgba(10,17,32,0.72)_0%,rgba(8,14,28,0.96)_100%)] shadow-[0_16px_42px_rgba(2,6,23,0.14)]">
-                <div className="relative aspect-[16/7.5] overflow-hidden border-b border-white/8 bg-[linear-gradient(180deg,rgba(5,12,24,0.55)_0%,rgba(5,12,24,0.12)_100%)]">
+                <div className="relative aspect-[16/6.8] overflow-hidden border-b border-white/8 bg-[linear-gradient(180deg,rgba(5,12,24,0.55)_0%,rgba(5,12,24,0.12)_100%)] md:aspect-[16/7.5]">
                   <Image
                     src={industry.image}
                     alt={industry.title}
@@ -42,13 +42,13 @@ export default function TecnologiaIndustries() {
                   <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(3,7,15,0)_0%,rgba(3,7,15,0.2)_60%,rgba(3,7,15,0.46)_100%)]" />
                 </div>
 
-                <div className="flex flex-1 flex-col p-3.5 md:p-3.5">
+                <div className="flex flex-1 flex-col p-3 md:p-3.5">
                   <div className="flex items-start justify-between gap-3">
                     <div>
-                      <h3 className="text-[1.03rem] font-semibold leading-[1.06] text-[var(--text-strong)] md:text-[1.08rem]">
+                      <h3 className="text-[0.98rem] font-semibold leading-[1.06] text-[var(--text-strong)] md:text-[1.08rem]">
                         {industry.title}
                       </h3>
-                      <p className="mt-1.5 text-[13px] leading-5 text-[var(--accent-soft)]">
+                      <p className="mt-1 text-[12px] leading-5 text-[var(--accent-soft)] md:mt-1.5 md:text-[13px]">
                         {industry.description}
                       </p>
                     </div>
@@ -57,11 +57,13 @@ export default function TecnologiaIndustries() {
                     </span>
                   </div>
 
-                  <ul className="mt-3.5 space-y-2">
-                    {industry.bullets.map((bullet) => (
+                  <ul className="mt-2.5 space-y-1.5 md:mt-3.5 md:space-y-2">
+                    {industry.bullets.map((bullet, bulletIndex) => (
                       <li
                         key={bullet}
-                        className="flex items-start gap-2 text-[13px] leading-5 text-[var(--text)]/78"
+                        className={`items-start gap-2 text-[12px] leading-5 text-[var(--text)]/78 md:text-[13px] ${
+                          bulletIndex > 1 ? "hidden sm:flex" : "flex"
+                        }`}
                       >
                         <CheckCircle2 className="mt-0.5 h-3.5 w-3.5 shrink-0 text-[#64d9a7]" />
                         <span>{bullet}</span>
@@ -69,7 +71,7 @@ export default function TecnologiaIndustries() {
                     ))}
                   </ul>
 
-                  <div className="mt-3.5">
+                  <div className="mt-3 md:mt-3.5">
                     <Button
                       href={industry.href}
                       variant="outline"

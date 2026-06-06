@@ -27,13 +27,13 @@ export default function EnergiaUseCases() {
           return (
             <div
               key={useCase.title}
-              className={`grid gap-4 lg:grid-cols-[1.02fr_0.98fr] lg:items-center ${
+              className={`grid gap-0 overflow-hidden rounded-[1.45rem] lg:grid-cols-[1.02fr_0.98fr] lg:items-center lg:gap-4 lg:overflow-visible lg:rounded-none ${
                 !isEven ? "lg:[&>*:first-child]:order-2" : ""
               }`}
             >
               <Reveal y={20}>
-                <div className="panel-shell overflow-hidden rounded-[1.55rem] p-2.5">
-                  <div className="relative aspect-[4/3] overflow-hidden rounded-[1.15rem] border border-white/8">
+                <div className="panel-shell overflow-hidden rounded-b-none rounded-t-[1.45rem] p-1.5 lg:rounded-[1.55rem] lg:p-2.5">
+                  <div className="relative aspect-[16/9] overflow-hidden rounded-[1.05rem] border border-white/8 md:aspect-[4/3] lg:rounded-[1.15rem]">
                     <Image
                       src={useCase.image || ""}
                       alt={useCase.title}
@@ -48,12 +48,12 @@ export default function EnergiaUseCases() {
               </Reveal>
 
               <Reveal y={20} delay={0.14}>
-                <div className="panel-shell flex h-full flex-col justify-center rounded-[1.55rem] p-4 md:p-6">
+                <div className="panel-shell flex h-full flex-col justify-center rounded-b-[1.45rem] rounded-t-none border-t-0 p-3.5 md:p-6 lg:rounded-[1.55rem] lg:border-t">
                   <span className="section-kicker">Caso {index + 1}</span>
-                  <h3 className="mt-4 text-[1.24rem] font-semibold leading-[1.08] text-[var(--text-strong)] md:text-[1.7rem] md:leading-[1]">
+                  <h3 className="mt-3 text-[1.08rem] font-semibold leading-[1.08] text-[var(--text-strong)] md:mt-4 md:text-[1.7rem] md:leading-[1]">
                     {useCase.title}
                   </h3>
-                  <p className="mt-3 text-[0.95rem] leading-7 text-[var(--text)]/76 md:mt-4 md:text-base md:leading-8">
+                  <p className="mt-2 text-[0.88rem] leading-6 text-[var(--text)]/76 md:mt-4 md:text-base md:leading-8">
                     {useCase.description}
                   </p>
                 </div>
