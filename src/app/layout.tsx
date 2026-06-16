@@ -1,20 +1,20 @@
 import type { Metadata, Viewport } from "next";
 import type { ReactNode } from "react";
-import { IBM_Plex_Sans, Oxanium } from "next/font/google";
+import { Inter, Sora } from "next/font/google";
 import Script from "next/script";
 import "@/styles/globals.css";
 import { site } from "@/content/site";
 
 const GTM_ID = "GTM-WCTH78XQ";
 
-const oxanium = Oxanium({
+const sora = Sora({
   subsets: ["latin"],
   variable: "--font-display",
-  weight: ["500", "600", "700"],
+  weight: ["300", "400", "500", "600", "700", "800"],
   display: "swap",
 });
 
-const ibmPlexSans = IBM_Plex_Sans({
+const inter = Inter({
   subsets: ["latin"],
   variable: "--font-sans",
   weight: ["300", "400", "500", "600", "700"],
@@ -25,8 +25,12 @@ export const metadata: Metadata = {
   title: site.name,
   description: site.description,
   icons: {
-    icon: [{ url: "/favicon.ico?v=2", type: "image/x-icon" }],
-    shortcut: "/favicon.ico?v=2",
+    icon: [
+      { url: "/favicon.ico?v=3", type: "image/x-icon" },
+      { url: "/favicon.png?v=3", type: "image/png" },
+    ],
+    shortcut: "/favicon.ico?v=3",
+    apple: [{ url: "/apple-icon.png?v=3", sizes: "180x180", type: "image/png" }],
   },
 };
 
@@ -44,7 +48,7 @@ export default function RootLayout({
   return (
     <html
       lang="es"
-      className={`${ibmPlexSans.variable} ${oxanium.variable}`}
+      className={`${inter.variable} ${sora.variable}`}
       data-theme="dark"
     >
       <head>

@@ -208,11 +208,15 @@ export default function FeatureGrid({
                 : undefined
             }
           >
-            <Card className="h-full p-0">
+            <Card className="h-full p-0 transition duration-300 ease-out hover:-translate-y-1 hover:border-[rgba(170,166,246,0.32)] hover:shadow-[0_24px_70px_rgba(89,89,201,0.18),inset_0_1px_0_rgba(255,255,255,0.07)]">
               <div className="relative flex h-full flex-col px-3.5 py-3.5 md:px-5 md:py-5">
+                <div className="panel-decoration pointer-events-none absolute inset-0 opacity-0 transition duration-300 group-hover:opacity-100">
+                  <div className="absolute -right-8 -top-10 h-24 w-24 rounded-full bg-[rgba(170,166,246,0.14)] blur-2xl" />
+                  <div className="absolute inset-x-6 bottom-0 h-px bg-[linear-gradient(90deg,transparent,rgba(247,208,163,0.42),transparent)]" />
+                </div>
                 <div className="mb-3 flex items-center justify-between md:mb-4">
                   {item.icon && iconMap[item.icon] ? (
-                    <span className="inline-flex h-8 w-8 items-center justify-center rounded-[0.75rem] border border-[rgba(255,194,131,0.14)] bg-[rgba(255,122,26,0.07)] text-[var(--accent)] md:h-9 md:w-9 md:rounded-[0.9rem]">
+                    <span className="inline-flex h-8 w-8 items-center justify-center rounded-[0.75rem] border border-[rgba(247,208,163,0.14)] bg-[rgba(239,130,57,0.07)] text-[var(--accent)] transition duration-300 group-hover:scale-105 group-hover:border-[rgba(247,208,163,0.32)] group-hover:bg-[rgba(89,89,201,0.16)] group-hover:text-[var(--accent-cool)] md:h-9 md:w-9 md:rounded-[0.9rem]">
                       <svg viewBox="0 0 24 24" aria-hidden="true" className="h-3.5 w-3.5 md:h-4 md:w-4">
                         {iconMap[item.icon]}
                       </svg>
@@ -220,13 +224,13 @@ export default function FeatureGrid({
                   ) : (
                     <span className="inline-flex h-8 w-8 rounded-[0.75rem] border border-[var(--border)] bg-white/5 md:h-9 md:w-9 md:rounded-[0.9rem]" />
                   )}
-                  <span className="text-[10px] uppercase tracking-normal text-[var(--muted-soft)] md:tracking-[0.18em]">
+                  <span className="text-[10px] uppercase tracking-normal text-[var(--muted-soft)] transition duration-300 group-hover:text-[var(--accent-cool)] md:tracking-[0.18em]">
                     0{index + 1}
                   </span>
                 </div>
 
                 <div className="flex h-full flex-col">
-                  <h3 className="text-[1rem] font-semibold leading-[1.08] text-[var(--text-strong)] md:text-[1.28rem] md:leading-[1.04]">
+                  <h3 className="text-[1rem] font-semibold leading-[1.08] text-[var(--text-strong)] transition duration-300 group-hover:text-white md:text-[1.28rem] md:leading-[1.04]">
                     {item.title}
                   </h3>
                   <p className="mt-2.5 hidden text-sm leading-[1.7] text-[var(--muted)] sm:block">

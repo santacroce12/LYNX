@@ -60,10 +60,10 @@ export default function TechSignal({ variant = "energy" }: TechSignalProps) {
   const paths = isTech ? techPaths : energyPaths;
   const gradientId = isTech ? "signal-gradient-tech" : "signal-gradient-energy";
   const glowId = isTech ? "signal-glow-tech" : "signal-glow-energy";
-  const primary = isTech ? "rgba(125,168,255,0.86)" : "rgba(255,194,131,0.66)";
-  const secondary = isTech ? "rgba(94,234,212,0.54)" : "rgba(255,122,26,0.48)";
-  const soft = isTech ? "rgba(125,168,255,0.10)" : "rgba(255,122,26,0.075)";
-  const glow = isTech ? "rgba(94,234,212,0.16)" : "rgba(255,194,131,0.11)";
+  const primary = isTech ? "rgba(89,89,201,0.86)" : "rgba(247,208,163,0.66)";
+  const secondary = isTech ? "rgba(89,89,201,0.54)" : "rgba(239,130,57,0.48)";
+  const soft = isTech ? "rgba(89,89,201,0.10)" : "rgba(239,130,57,0.075)";
+  const glow = isTech ? "rgba(89,89,201,0.16)" : "rgba(247,208,163,0.11)";
 
   return (
     <div
@@ -134,7 +134,7 @@ export default function TechSignal({ variant = "energy" }: TechSignalProps) {
               cy="178"
               r="72"
               fill="none"
-              stroke="rgba(125,168,255,0.11)"
+              stroke="rgba(89,89,201,0.11)"
               strokeDasharray="10 18"
               strokeWidth="1.5"
             >
@@ -152,7 +152,7 @@ export default function TechSignal({ variant = "energy" }: TechSignalProps) {
               cy="178"
               r="44"
               fill="rgba(8,14,24,0.18)"
-              stroke="rgba(94,234,212,0.12)"
+              stroke="rgba(89,89,201,0.12)"
               strokeDasharray="18 12"
               strokeWidth="1"
             >
@@ -171,14 +171,14 @@ export default function TechSignal({ variant = "energy" }: TechSignalProps) {
             <path
               d="M40 166 C120 154, 178 164, 238 154 S366 112, 520 116"
               fill="none"
-              stroke="rgba(255,194,131,0.16)"
+              stroke="rgba(247,208,163,0.16)"
               strokeLinecap="round"
               strokeWidth="10"
             />
             <path
               d="M34 286 C134 286, 176 254, 260 260 S392 230, 520 228"
               fill="none"
-              stroke="rgba(255,122,26,0.11)"
+              stroke="rgba(239,130,57,0.11)"
               strokeLinecap="round"
               strokeWidth="8"
             />
@@ -190,7 +190,7 @@ export default function TechSignal({ variant = "energy" }: TechSignalProps) {
             <path
               d={path}
               fill="none"
-              stroke={isTech ? "rgba(125,168,255,0.12)" : "rgba(255,194,131,0.1)"}
+              stroke={isTech ? "rgba(89,89,201,0.12)" : "rgba(247,208,163,0.1)"}
               strokeLinecap="round"
               strokeLinejoin="round"
               strokeWidth={isTech ? 8 : 7}
@@ -217,7 +217,7 @@ export default function TechSignal({ variant = "energy" }: TechSignalProps) {
             <m.path
               d={path}
               fill="none"
-              stroke={isTech ? "rgba(94,234,212,0.78)" : "rgba(255,194,131,0.74)"}
+              stroke={isTech ? "rgba(89,89,201,0.78)" : "rgba(247,208,163,0.74)"}
               strokeDasharray={isTech ? "10 34" : "16 42"}
               strokeLinecap="round"
               strokeLinejoin="round"
@@ -246,12 +246,12 @@ export default function TechSignal({ variant = "energy" }: TechSignalProps) {
             left,
             top,
             borderColor: isTech
-              ? "rgba(125,168,255,0.28)"
-              : "rgba(255,194,131,0.18)",
-            color: isTech ? "rgba(180,216,255,0.92)" : "rgba(255,194,131,0.72)",
+              ? "rgba(89,89,201,0.28)"
+              : "rgba(247,208,163,0.18)",
+            color: isTech ? "rgba(170,166,246,0.92)" : "rgba(247,208,163,0.72)",
             boxShadow: isTech
-              ? "0 0 28px rgba(94,234,212,0.08)"
-              : "0 0 24px rgba(255,122,26,0.08)",
+              ? "0 0 28px rgba(89,89,201,0.08)"
+              : "0 0 24px rgba(239,130,57,0.08)",
           }}
           animate={{
             opacity: [0.72, 1, 0.72],
@@ -268,8 +268,8 @@ export default function TechSignal({ variant = "energy" }: TechSignalProps) {
             className="absolute inset-0 rounded-[inherit] border"
             style={{
               borderColor: isTech
-                ? "rgba(94,234,212,0.18)"
-                : "rgba(255,194,131,0.14)",
+                ? "rgba(89,89,201,0.18)"
+                : "rgba(247,208,163,0.14)",
             }}
             animate={{
               opacity: [0, 0.52, 0],
@@ -305,7 +305,7 @@ export default function TechSignal({ variant = "energy" }: TechSignalProps) {
             className="absolute left-[12%] top-[47%] h-px w-[68%] rounded-full"
             style={{
               background:
-                "linear-gradient(90deg, transparent, rgba(94,234,212,0.58), rgba(125,168,255,0.42), transparent)",
+                "linear-gradient(90deg, transparent, rgba(89,89,201,0.58), rgba(89,89,201,0.42), transparent)",
             }}
             animate={{ x: ["-18%", "18%", "-18%"], opacity: [0, 0.72, 0] }}
             transition={{
@@ -318,7 +318,7 @@ export default function TechSignal({ variant = "energy" }: TechSignalProps) {
             className="absolute left-[18%] top-[14%] h-[72%] w-px rounded-full"
             style={{
               background:
-                "linear-gradient(180deg, transparent, rgba(125,168,255,0.24), transparent)",
+                "linear-gradient(180deg, transparent, rgba(89,89,201,0.24), transparent)",
             }}
             animate={{ x: ["0%", "260%", "0%"], opacity: [0, 0.45, 0] }}
             transition={{

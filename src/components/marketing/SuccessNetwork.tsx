@@ -56,9 +56,9 @@ export default function SuccessNetwork({ className }: SuccessNetworkProps) {
         className,
       )}
     >
-      <div className="absolute inset-0 rounded-[30px] bg-[radial-gradient(circle_at_70%_34%,rgba(255,122,26,0.12),transparent_26%),radial-gradient(circle_at_28%_72%,rgba(255,194,131,0.08),transparent_20%)]" />
+      <div className="absolute inset-0 rounded-[30px] bg-[radial-gradient(circle_at_70%_34%,rgba(239,130,57,0.12),transparent_26%),radial-gradient(circle_at_28%_72%,rgba(247,208,163,0.08),transparent_20%)]" />
       <div className="absolute inset-0 bg-[linear-gradient(to_right,rgba(148,163,184,0.08)_1px,transparent_1px),linear-gradient(to_bottom,rgba(148,163,184,0.08)_1px,transparent_1px)] bg-[size:32px_32px] opacity-25 [mask-image:radial-gradient(circle_at_center,#000_56%,transparent_96%)]" />
-      <div className="absolute inset-0 rounded-full bg-[radial-gradient(circle_at_64%_46%,rgba(255,122,26,0.08),transparent_44%)] blur-3xl" />
+      <div className="absolute inset-0 rounded-full bg-[radial-gradient(circle_at_64%_46%,rgba(239,130,57,0.08),transparent_44%)] blur-3xl" />
 
       <svg
         viewBox="0 0 520 340"
@@ -73,9 +73,9 @@ export default function SuccessNetwork({ className }: SuccessNetworkProps) {
             y1="0%"
             y2="0%"
           >
-            <stop offset="0%" stopColor="rgba(255,122,26,0.08)" />
-            <stop offset="40%" stopColor="rgba(255,122,26,0.58)" />
-            <stop offset="100%" stopColor="rgba(255,194,131,0.14)" />
+            <stop offset="0%" stopColor="rgba(239,130,57,0.08)" />
+            <stop offset="40%" stopColor="rgba(239,130,57,0.58)" />
+            <stop offset="100%" stopColor="rgba(247,208,163,0.14)" />
           </linearGradient>
         </defs>
 
@@ -90,28 +90,28 @@ export default function SuccessNetwork({ className }: SuccessNetworkProps) {
         <path
           d="M180 124 C214 138, 248 178, 300 170"
           fill="none"
-          stroke="rgba(255,122,26,0.22)"
+          stroke="rgba(239,130,57,0.22)"
           strokeWidth="1.3"
           strokeLinecap="round"
         />
         <path
           d="M88 214 C138 222, 232 252, 300 170"
           fill="none"
-          stroke="rgba(255,122,26,0.16)"
+          stroke="rgba(239,130,57,0.16)"
           strokeWidth="1.1"
           strokeLinecap="round"
         />
 
-        <circle cx="88" cy="214" r="3.5" fill="rgba(255,122,26,0.9)" />
-        <circle cx="180" cy="124" r="3.5" fill="rgba(255,122,26,0.82)" />
-        <circle cx="300" cy="170" r="4.2" fill="rgba(255,194,131,0.92)" />
-        <circle cx="430" cy="100" r="3.5" fill="rgba(255,122,26,0.85)" />
+        <circle cx="88" cy="214" r="3.5" fill="rgba(239,130,57,0.9)" />
+        <circle cx="180" cy="124" r="3.5" fill="rgba(239,130,57,0.82)" />
+        <circle cx="300" cy="170" r="4.2" fill="rgba(247,208,163,0.92)" />
+        <circle cx="430" cy="100" r="3.5" fill="rgba(239,130,57,0.85)" />
       </svg>
 
       {pulses.map((pulse) => (
         <m.div
           key={pulse.className}
-          className={`absolute h-2.5 w-2.5 rounded-full bg-[var(--accent)] shadow-[0_0_20px_rgba(255,122,26,0.55)] ${pulse.className}`}
+          className={`absolute h-2.5 w-2.5 rounded-full bg-[var(--accent)] shadow-[0_0_20px_rgba(239,130,57,0.55)] ${pulse.className}`}
           animate={{
             x: pulse.x,
             y: pulse.y,
@@ -144,18 +144,18 @@ export default function SuccessNetwork({ className }: SuccessNetworkProps) {
         >
           <div className="relative">
             <m.div
-              className={`rounded-full border border-[rgba(255,194,131,0.22)] bg-[linear-gradient(180deg,rgba(15,23,42,0.94),rgba(15,23,42,0.68))] shadow-[0_20px_50px_rgba(2,6,23,0.34)] ${node.size}`}
+              className={`rounded-full border border-[rgba(247,208,163,0.22)] bg-[linear-gradient(180deg,rgba(15,23,42,0.94),rgba(15,23,42,0.68))] shadow-[0_20px_50px_rgba(2,6,23,0.34)] ${node.size}`}
               animate={{
                 borderColor: node.featured
                   ? [
-                      "rgba(255,194,131,0.2)",
-                      "rgba(255,122,26,0.48)",
-                      "rgba(255,194,131,0.2)",
+                      "rgba(247,208,163,0.2)",
+                      "rgba(239,130,57,0.48)",
+                      "rgba(247,208,163,0.2)",
                     ]
                   : [
-                      "rgba(255,194,131,0.16)",
-                      "rgba(255,122,26,0.28)",
-                      "rgba(255,194,131,0.16)",
+                      "rgba(247,208,163,0.16)",
+                      "rgba(239,130,57,0.28)",
+                      "rgba(247,208,163,0.16)",
                     ],
               }}
               transition={{
@@ -171,7 +171,7 @@ export default function SuccessNetwork({ className }: SuccessNetworkProps) {
             </div>
 
             <m.div
-              className="absolute -bottom-1 -right-1 flex h-6 w-6 items-center justify-center rounded-full border border-[rgba(255,194,131,0.22)] bg-[linear-gradient(180deg,rgba(255,122,26,0.92),rgba(255,122,26,0.72))] shadow-[0_0_16px_rgba(255,122,26,0.34)]"
+              className="absolute -bottom-1 -right-1 flex h-6 w-6 items-center justify-center rounded-full border border-[rgba(247,208,163,0.22)] bg-[linear-gradient(180deg,rgba(239,130,57,0.92),rgba(239,130,57,0.72))] shadow-[0_0_16px_rgba(239,130,57,0.34)]"
               animate={{
                 scale: [0.92, 1.08, 1],
                 opacity: [0.8, 1, 0.88],

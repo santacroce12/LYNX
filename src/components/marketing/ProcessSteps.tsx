@@ -51,7 +51,7 @@ export default function ProcessSteps({
                 <article className="relative grid gap-3 md:grid-cols-[84px_minmax(0,1fr)] md:items-center md:gap-5">
                   <div className="relative flex items-center md:h-full md:justify-center">
                     <div
-                      className="timeline-step-chip flex h-12 w-12 items-center justify-center rounded-[1.15rem] border border-[rgba(255,194,131,0.14)] bg-[linear-gradient(180deg,rgba(255,122,26,0.08)_0%,rgba(125,168,255,0.035)_100%)] text-[var(--accent-soft)] shadow-[0_10px_28px_rgba(3,8,20,0.18)]"
+                      className="timeline-step-chip flex h-12 w-12 items-center justify-center rounded-[1.15rem] border border-[rgba(247,208,163,0.14)] bg-[linear-gradient(180deg,rgba(239,130,57,0.08)_0%,rgba(89,89,201,0.035)_100%)] text-[var(--accent-soft)] shadow-[0_10px_28px_rgba(3,8,20,0.18)]"
                       style={{ "--timeline-delay": stepDelay } as CSSProperties}
                     >
                       <span className="text-sm font-semibold">{item.step}</span>

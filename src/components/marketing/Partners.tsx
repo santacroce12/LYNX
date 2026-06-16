@@ -20,7 +20,6 @@ export default function Partners() {
     id: partner.name.toLowerCase().replace(/\s+/g, "-"),
     description: partner.name,
     image: partner.image,
-    href: partner.href,
     className: logoSizeByName[partner.name],
   }));
 

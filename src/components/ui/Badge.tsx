@@ -1,4 +1,4 @@
-﻿import type { ReactNode } from "react";
+import type { ReactNode } from "react";
 
 type BadgeProps = {
   children: ReactNode;
@@ -12,7 +12,7 @@ export default function Badge({ children, className }: BadgeProps) {
         className ?? ""
       }`}
     >
-      <span className="h-1.5 w-1.5 rounded-full bg-[var(--accent)] shadow-[0_0_12px_rgba(255,122,26,0.55)]" />
+      <span className="h-1.5 w-1.5 rounded-full bg-[var(--accent)] shadow-[0_0_12px_rgba(239,130,57,0.55)]" />
       {children}
     </span>
   );

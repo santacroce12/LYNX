@@ -40,8 +40,8 @@ export default function TechCircuit() {
       className="pointer-events-none absolute right-[4%] top-1/2 hidden aspect-[520/340] w-[42%] max-w-[520px] -translate-y-1/2 overflow-hidden md:block"
     >
       <div className="absolute inset-0 rounded-[28px] bg-[linear-gradient(180deg,rgba(15,23,42,0.14),rgba(15,23,42,0.02))]" />
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_66%_36%,rgba(249,115,22,0.14),transparent_24%)]" />
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_34%_68%,rgba(251,146,60,0.08),transparent_18%)]" />
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_66%_36%,rgba(239,130,57,0.14),transparent_24%)]" />
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_34%_68%,rgba(247,208,163,0.08),transparent_18%)]" />
       <div className="absolute inset-0 bg-[linear-gradient(to_right,rgba(148,163,184,0.08)_1px,transparent_1px),linear-gradient(to_bottom,rgba(148,163,184,0.08)_1px,transparent_1px)] bg-[size:32px_32px] opacity-35 [mask-image:radial-gradient(circle_at_center,#000_62%,transparent_100%)]" />
 
       <svg
@@ -57,9 +57,9 @@ export default function TechCircuit() {
             y1="0%"
             y2="0%"
           >
-            <stop offset="0%" stopColor="rgba(249,115,22,0.08)" />
-            <stop offset="40%" stopColor="rgba(249,115,22,0.58)" />
-            <stop offset="100%" stopColor="rgba(251,146,60,0.12)" />
+            <stop offset="0%" stopColor="rgba(239,130,57,0.08)" />
+            <stop offset="40%" stopColor="rgba(239,130,57,0.58)" />
+            <stop offset="100%" stopColor="rgba(247,208,163,0.12)" />
           </linearGradient>
         </defs>
 
@@ -84,22 +84,22 @@ export default function TechCircuit() {
         <path
           d="M230 176 V252 H340"
           fill="none"
-          stroke="rgba(249,115,22,0.18)"
+          stroke="rgba(239,130,57,0.18)"
           strokeWidth="1.3"
           strokeLinecap="round"
           strokeLinejoin="round"
         />
 
-        <circle cx="136" cy="98" r="3.5" fill="rgba(249,115,22,0.9)" />
-        <circle cx="286" cy="176" r="4" fill="rgba(249,115,22,0.9)" />
-        <circle cx="446" cy="112" r="3.5" fill="rgba(251,146,60,0.88)" />
-        <circle cx="340" cy="252" r="2.6" fill="rgba(249,115,22,0.65)" />
+        <circle cx="136" cy="98" r="3.5" fill="rgba(239,130,57,0.9)" />
+        <circle cx="286" cy="176" r="4" fill="rgba(239,130,57,0.9)" />
+        <circle cx="446" cy="112" r="3.5" fill="rgba(247,208,163,0.88)" />
+        <circle cx="340" cy="252" r="2.6" fill="rgba(239,130,57,0.65)" />
       </svg>
 
       {pulses.map((pulse) => (
         <m.div
           key={pulse.className}
-          className={`absolute h-2.5 w-2.5 rounded-full bg-[var(--accent)] shadow-[0_0_18px_rgba(249,115,22,0.55)] ${pulse.className}`}
+          className={`absolute h-2.5 w-2.5 rounded-full bg-[var(--accent)] shadow-[0_0_18px_rgba(239,130,57,0.55)] ${pulse.className}`}
           animate={{
             x: pulse.x,
             y: pulse.y,
@@ -123,13 +123,13 @@ export default function TechCircuit() {
             y: [0, -3, 0],
             borderColor: card.featured
               ? [
-                  "rgba(251,146,60,0.18)",
-                  "rgba(249,115,22,0.42)",
-                  "rgba(251,146,60,0.18)",
+                  "rgba(247,208,163,0.18)",
+                  "rgba(239,130,57,0.42)",
+                  "rgba(247,208,163,0.18)",
                 ]
               : [
                   "rgba(255,255,255,0.08)",
-                  "rgba(249,115,22,0.24)",
+                  "rgba(239,130,57,0.24)",
                   "rgba(255,255,255,0.08)",
                 ],
           }}
@@ -142,7 +142,7 @@ export default function TechCircuit() {
         >
           <div className="mb-3 flex items-center justify-between">
             <div className="flex items-center gap-2">
-              <span className="h-2 w-2 rounded-full bg-[var(--accent)] shadow-[0_0_10px_rgba(249,115,22,0.5)]" />
+              <span className="h-2 w-2 rounded-full bg-[var(--accent)] shadow-[0_0_10px_rgba(239,130,57,0.5)]" />
               <span className="h-[1px] w-8 bg-white/10" />
             </div>
             <span className="h-[1px] w-6 bg-[var(--accent)]/28" />

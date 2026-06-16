@@ -29,7 +29,7 @@ export default function TecnologiaIndustries() {
       <div className="scrollbar-hide mx-auto grid max-w-5xl auto-cols-[84%] grid-flow-col gap-3 overflow-x-auto snap-x snap-mandatory pb-2 pr-4 sm:auto-cols-auto sm:grid-flow-row sm:grid-cols-2 sm:overflow-visible sm:pb-0 sm:pr-0 xl:grid-cols-3">
         {tecnologia.industries.items.map((industry, index) => (
           <Reveal key={industry.title} delay={index * 0.04} className="snap-start">
-            <article className="panel-shell group h-full rounded-[1.1rem] p-1 transition duration-300 hover:-translate-y-0.5 hover:border-[rgba(125,168,255,0.18)] md:rounded-[1.25rem] md:p-1.5">
+            <article className="panel-shell group h-full rounded-[1.1rem] p-1 transition duration-300 hover:-translate-y-0.5 hover:border-[rgba(89,89,201,0.18)] md:rounded-[1.25rem] md:p-1.5">
               <div className="flex h-full flex-col overflow-hidden rounded-[1rem] border border-white/8 bg-[linear-gradient(180deg,rgba(10,17,32,0.72)_0%,rgba(8,14,28,0.96)_100%)] shadow-[0_16px_42px_rgba(2,6,23,0.14)]">
                 <div className="relative aspect-[16/6.8] overflow-hidden border-b border-white/8 bg-[linear-gradient(180deg,rgba(5,12,24,0.55)_0%,rgba(5,12,24,0.12)_100%)] md:aspect-[16/7.5]">
                   <Image

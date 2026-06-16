@@ -77,7 +77,7 @@ export default function ContactForm() {
     `field-shell px-4 py-3.5 text-base text-[var(--text-secondary)] placeholder:text-[var(--muted-soft)] focus:outline-none focus:ring-2 ${
       hasError
         ? "border-[var(--accent)] focus:ring-[var(--accent)]"
-        : "focus:border-[rgba(125,168,255,0.32)] focus:ring-[rgba(125,168,255,0.22)]"
+        : "focus:border-[rgba(89,89,201,0.32)] focus:ring-[rgba(89,89,201,0.22)]"
     }`;
 
   const statusClass =
@@ -90,7 +90,7 @@ export default function ContactForm() {
   return (
     <div className="panel-shell flex h-full min-h-[680px] flex-col overflow-hidden rounded-[2rem] px-5 py-6 md:px-8 md:py-8 lg:min-h-[720px]">
       <div className="panel-decoration pointer-events-none absolute -right-12 top-0 h-40 w-40 rounded-full bg-[var(--accent-cool)]/10 blur-3xl" />
-      <div className="panel-decoration pointer-events-none absolute inset-x-10 top-0 h-px bg-gradient-to-r from-transparent via-[rgba(125,168,255,0.36)] to-transparent" />
+      <div className="panel-decoration pointer-events-none absolute inset-x-10 top-0 h-px bg-gradient-to-r from-transparent via-[rgba(89,89,201,0.36)] to-transparent" />
 
       <div className="max-w-md border-b border-white/8 pb-6">
         <p className="section-kicker text-[var(--accent-cool)]">Formulario</p>

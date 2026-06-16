@@ -1,4 +1,4 @@
-﻿import type { Config } from "tailwindcss";
+import type { Config } from "tailwindcss";
 
 const config: Config = {
   content: ["./src/**/*.{ts,tsx}"],
@@ -18,6 +18,7 @@ const config: Config = {
         "muted-soft": "var(--muted-soft)",
         accent: "var(--accent)",
         "accent-soft": "var(--accent-soft)",
+        "accent-warm": "var(--accent-warm)",
         "accent-cool": "var(--accent-cool)",
       },
       fontFamily: {
@@ -25,16 +26,16 @@ const config: Config = {
         display: ["var(--font-display)", "ui-sans-serif", "system-ui"],
       },
       boxShadow: {
-        glow: "0 28px 90px rgba(255, 122, 26, 0.22)",
-        "glow-soft": "0 18px 42px rgba(255, 178, 107, 0.18)",
+        glow: "0 28px 90px rgba(89, 89, 201, 0.24)",
+        "glow-soft": "0 18px 42px rgba(247, 208, 163, 0.16)",
         panel: "var(--shadow-panel)",
         floating: "0 26px 60px rgba(4, 10, 24, 0.42)",
       },
       backgroundImage: {
         "radial-accent":
-          "radial-gradient(720px circle at 12% 18%, rgba(255, 122, 26, 0.2), transparent 58%)",
+          "radial-gradient(720px circle at 12% 18%, rgba(89, 89, 201, 0.2), transparent 58%)",
         "radial-accent-2":
-          "radial-gradient(640px circle at 84% 20%, rgba(120, 167, 255, 0.16), transparent 62%)",
+          "radial-gradient(640px circle at 84% 20%, rgba(89, 89, 201, 0.16), transparent 62%)",
         "panel-grid":
           "linear-gradient(to_right,rgba(148,163,184,0.08)_1px,transparent_1px),linear-gradient(to_bottom,rgba(148,163,184,0.08)_1px,transparent_1px)",
       },

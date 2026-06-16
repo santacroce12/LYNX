@@ -136,7 +136,7 @@ export const energia = {
       title: "Sistema de Monitoreo Fasorial",
       description:
         "Solución WAMS con PMUs para observar oscilaciones de potencia en tiempo real.",
-      image: "/images/energia/electrico.optimized.webp",
+      image: "/images/energia/monitoreo-fasorial.optimized.webp",
     },
     {
       title: "Centro de Control SCADA",

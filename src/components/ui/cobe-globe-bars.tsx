@@ -138,11 +138,11 @@ export function GlobeBars({
         dark: 1,
         diffuse: 1.25,
         mapSamples: 22000,
-        mapBrightness: 7.6,
-        mapBaseBrightness: 0.015,
-        baseColor: [0.96, 0.91, 0.84],
-        markerColor: [1, 0.48, 0.1],
-        glowColor: [1, 0.36, 0.06],
+        mapBrightness: 7.2,
+        mapBaseBrightness: 0.018,
+        baseColor: [0.64, 0.62, 0.98],
+        markerColor: [0.67, 0.65, 0.96],
+        glowColor: [0.35, 0.35, 0.79],
         markerElevation: 0.025,
         markers: cobeMarkers as never,
         opacity: 0.96,
@@ -189,8 +189,8 @@ export function GlobeBars({
 
   return (
     <div className={cn("relative aspect-square select-none overflow-hidden", className)}>
-      <div className="pointer-events-none absolute inset-0 rounded-full bg-[radial-gradient(circle_at_50%_50%,rgba(255,122,26,0.16),transparent_56%)] blur-2xl" />
-      <div className="pointer-events-none absolute inset-[8%] rounded-full border border-[rgba(255,194,131,0.12)] bg-[radial-gradient(circle_at_50%_48%,rgba(255,122,26,0.08),rgba(4,9,21,0.08)_45%,transparent_70%)]" />
+      <div className="pointer-events-none absolute inset-0 rounded-full bg-[radial-gradient(circle_at_50%_50%,rgba(89,89,201,0.24),transparent_56%)] blur-2xl" />
+      <div className="pointer-events-none absolute inset-[8%] rounded-full border border-[rgba(170,166,246,0.14)] bg-[radial-gradient(circle_at_50%_48%,rgba(89,89,201,0.13),rgba(13,6,37,0.1)_45%,transparent_70%)]" />
 
       <canvas
         ref={canvasRef}
@@ -218,17 +218,17 @@ export function GlobeBars({
         return (
           <div
             key={marker.id}
-            className="pointer-events-none z-20 min-w-[3.9rem] rounded-[0.6rem] border border-[rgba(255,194,131,0.28)] bg-[rgba(5,10,20,0.86)] px-1.5 py-1.5 text-center shadow-[0_10px_26px_rgba(0,0,0,0.28),0_0_18px_rgba(255,122,26,0.1)] backdrop-blur-md transition-[opacity,filter] duration-500 sm:min-w-[4.65rem] sm:rounded-[0.65rem] sm:px-2"
+            className="pointer-events-none z-20 min-w-[3.9rem] rounded-[0.6rem] border border-[rgba(170,166,246,0.28)] bg-[rgba(13,6,37,0.86)] px-1.5 py-1.5 text-center shadow-[0_10px_26px_rgba(0,0,0,0.28),0_0_18px_rgba(89,89,201,0.16)] backdrop-blur-md transition-[opacity,filter] duration-500 sm:min-w-[4.65rem] sm:rounded-[0.65rem] sm:px-2"
             style={labelStyle}
           >
-            <span className="block text-[0.42rem] font-semibold uppercase leading-none tracking-[0.16em] text-[var(--accent-soft)] sm:text-[0.48rem] sm:tracking-[0.18em]">
+            <span className="block text-[0.42rem] font-semibold uppercase leading-none tracking-[0.16em] text-[var(--accent-cool)] sm:text-[0.48rem] sm:tracking-[0.18em]">
               {marker.label}
             </span>
             <span className="mt-1 block text-[0.5rem] font-medium leading-none text-[var(--text-secondary)] sm:text-[0.58rem]">
               {marker.detail}
             </span>
             <span className="mt-1.5 block h-[3px] overflow-hidden rounded-full bg-white/10">
-              <span className="block h-full w-[var(--value)] rounded-full bg-[linear-gradient(90deg,var(--accent),var(--accent-soft))]" />
+              <span className="block h-full w-[var(--value)] rounded-full bg-[linear-gradient(90deg,var(--accent),var(--accent-cool))]" />
             </span>
           </div>
         );

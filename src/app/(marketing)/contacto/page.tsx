@@ -23,7 +23,7 @@ export default function ContactPage() {
       href: `mailto:${site.contact.email}`,
       icon: Mail,
       accent: "text-[var(--accent-soft)]",
-      border: "hover:border-[rgba(255,194,131,0.28)]",
+      border: "hover:border-[rgba(247,208,163,0.28)]",
     },
     {
       label: "WhatsApp principal",
@@ -31,7 +31,7 @@ export default function ContactPage() {
       href: `https://wa.me/${site.contact.mobile.replace(/\D/g, "")}`,
       icon: MessageCircle,
       accent: "text-[var(--accent-cool)]",
-      border: "hover:border-[rgba(125,168,255,0.28)]",
+      border: "hover:border-[rgba(89,89,201,0.28)]",
     },
     {
       label: "WhatsApp alternativo",
@@ -39,7 +39,7 @@ export default function ContactPage() {
       href: `https://wa.me/${site.contact.phone.replace(/\D/g, "")}`,
       icon: MessageCircle,
       accent: "text-[var(--accent-cool)]",
-      border: "hover:border-[rgba(125,168,255,0.28)]",
+      border: "hover:border-[rgba(89,89,201,0.28)]",
     },
   ];
 
@@ -51,7 +51,7 @@ export default function ContactPage() {
       intensity="low"
     >
       <Section className="overflow-hidden pt-2 md:pt-5">
-        <div className="pointer-events-none absolute inset-x-0 top-0 h-80 bg-[radial-gradient(circle_at_18%_26%,rgba(125,168,255,0.045),transparent_28%),radial-gradient(circle_at_78%_18%,rgba(255,122,26,0.035),transparent_30%)] [mask-image:linear-gradient(180deg,#000_0%,transparent_100%)]" />
+        <div className="pointer-events-none absolute inset-x-0 top-0 h-80 bg-[radial-gradient(circle_at_18%_26%,rgba(89,89,201,0.045),transparent_28%),radial-gradient(circle_at_78%_18%,rgba(239,130,57,0.035),transparent_30%)] [mask-image:linear-gradient(180deg,#000_0%,transparent_100%)]" />
 
         <div className="grid gap-7 lg:grid-cols-[1.05fr_0.95fr] lg:items-start">
           <div className="flex min-h-[680px] flex-col justify-between">

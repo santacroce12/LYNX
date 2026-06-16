@@ -74,7 +74,7 @@ export default function TecnologiaUseCases() {
               <Reveal y={20} delay={0.14}>
                 <div className="panel-shell flex h-full flex-col justify-center rounded-b-[1.45rem] rounded-t-none border-t-0 p-3.5 md:p-6 lg:rounded-[1.55rem] lg:border-t">
                   <div className="mb-3 flex items-center gap-3 md:mb-4">
-                    <span className="inline-flex h-9 w-9 items-center justify-center rounded-[0.85rem] border border-[rgba(125,168,255,0.2)] bg-[rgba(125,168,255,0.08)] text-[var(--accent-cool)]">
+                    <span className="inline-flex h-9 w-9 items-center justify-center rounded-[0.85rem] border border-[rgba(89,89,201,0.2)] bg-[rgba(89,89,201,0.08)] text-[var(--accent-cool)]">
                       <Icon className="h-[18px] w-[18px]" aria-hidden="true" />
                     </span>
                     <span className="section-kicker">Caso 0{index + 1}</span>

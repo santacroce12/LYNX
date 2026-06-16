@@ -1,4 +1,4 @@
-﻿import Link from "next/link";
+import Link from "next/link";
 import type { ButtonHTMLAttributes, ReactNode } from "react";
 
 type ButtonProps = {
@@ -17,9 +17,9 @@ const sizeClasses = {
 
 const variantClasses = {
   primary:
-    "border border-[rgba(255,194,131,0.26)] bg-[linear-gradient(135deg,#ffd3a6_0%,var(--accent-soft)_34%,var(--accent)_100%)] text-[#0a1120] shadow-[0_18px_40px_rgba(255,122,26,0.22)] hover:-translate-y-0.5 hover:shadow-[0_24px_52px_rgba(255,122,26,0.3)]",
+    "border border-[rgba(247,208,163,0.22)] bg-[linear-gradient(135deg,var(--accent)_0%,#7771de_58%,rgba(247,208,163,0.92)_160%)] text-white shadow-[0_18px_40px_rgba(89,89,201,0.24)] hover:-translate-y-0.5 hover:shadow-[0_24px_52px_rgba(89,89,201,0.32)]",
   outline:
-    "border border-[var(--border-strong)] bg-[rgba(255,255,255,0.03)] text-[var(--text)] shadow-[inset_0_1px_0_rgba(255,255,255,0.04)] hover:-translate-y-0.5 hover:border-[rgba(255,194,131,0.42)] hover:bg-[rgba(255,255,255,0.05)] hover:text-[var(--text-strong)]",
+    "border border-[var(--border-strong)] bg-[rgba(255,255,255,0.03)] text-[var(--text)] shadow-[inset_0_1px_0_rgba(255,255,255,0.04)] hover:-translate-y-0.5 hover:border-[rgba(247,208,163,0.42)] hover:bg-[rgba(255,255,255,0.05)] hover:text-[var(--text-strong)]",
   ghost:
     "text-[var(--text)] hover:-translate-y-0.5 hover:text-[var(--accent-soft)]",
 };

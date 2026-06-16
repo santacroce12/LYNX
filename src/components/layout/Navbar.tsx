@@ -48,13 +48,13 @@ export default function Navbar() {
       <div
         className={`relative overflow-hidden border-b transition-all duration-500 ${
           compact
-            ? "border-white/10 bg-[rgba(7,12,22,0.58)] shadow-[0_14px_34px_rgba(3,8,20,0.2)] backdrop-blur-[20px]"
-            : "border-white/8 bg-[rgba(7,12,22,0.9)] backdrop-blur-[12px]"
+            ? "border-white/10 bg-[rgba(13,6,37,0.64)] shadow-[0_14px_34px_rgba(7,3,24,0.24)] backdrop-blur-[20px]"
+            : "border-white/8 bg-[rgba(13,6,37,0.9)] backdrop-blur-[12px]"
         }`}
       >
         <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(180deg,rgba(255,255,255,0.02),transparent_78%)]" />
         <div
-          className={`pointer-events-none absolute inset-x-0 top-0 h-20 bg-[radial-gradient(circle_at_24%_0%,rgba(255,122,26,0.12),transparent_28%)] transition-opacity duration-500 ${
+          className={`pointer-events-none absolute inset-x-0 top-0 h-20 bg-[radial-gradient(circle_at_24%_0%,rgba(239,130,57,0.12),transparent_28%)] transition-opacity duration-500 ${
             compact ? "opacity-55" : "opacity-85"
           }`}
         />
@@ -69,7 +69,7 @@ export default function Navbar() {
         >
           <Link href="/" className="flex min-w-0 items-center">
             <Image
-              src="/images/brand/logo-azul.png"
+              src="/images/brand/lynx-logo-negative.png"
               alt="LYNX logo"
               width={160}
               height={45}
@@ -116,7 +116,7 @@ export default function Navbar() {
             <button
               type="button"
               onClick={() => setMenuOpen((prev) => !prev)}
-              className={`inline-flex items-center justify-center rounded-full border border-[var(--border)] bg-white/[0.04] text-[var(--text)] transition-all duration-300 hover:border-[rgba(255,194,131,0.3)] hover:text-[var(--accent-soft)] lg:hidden ${
+              className={`inline-flex items-center justify-center rounded-full border border-[var(--border)] bg-white/[0.04] text-[var(--text)] transition-all duration-300 hover:border-[rgba(247,208,163,0.3)] hover:text-[var(--accent-soft)] lg:hidden ${
                 compact ? "h-9 w-9" : "h-9 w-9 md:h-10 md:w-10"
               }`}
               aria-label={menuOpen ? "Cerrar menu" : "Abrir menu"}
@@ -138,7 +138,7 @@ export default function Navbar() {
       >
         <button
           type="button"
-          className={`absolute inset-0 bg-[rgba(2,6,16,0.62)] backdrop-blur-md transition duration-300 ${
+          className={`absolute inset-0 bg-[rgba(7,3,24,0.68)] backdrop-blur-md transition duration-300 ${
             menuOpen ? "opacity-100" : "opacity-0"
           }`}
           onClick={() => setMenuOpen(false)}
@@ -146,7 +146,7 @@ export default function Navbar() {
         />
 
         <div
-          className={`absolute inset-0 bg-[rgba(4,9,18,0.94)] transition duration-500 ease-out-expo ${
+          className={`absolute inset-0 bg-[rgba(13,6,37,0.95)] transition duration-500 ease-out-expo ${
             menuOpen ? "translate-y-0 opacity-100" : "-translate-y-3 opacity-0"
           }`}
         >
@@ -166,7 +166,7 @@ export default function Navbar() {
                     href={item.href}
                     className={`group flex items-center justify-between rounded-[1.15rem] border px-4 py-3.5 transition md:rounded-[1.4rem] md:px-5 md:py-4 ${
                       isActive(item.href)
-                        ? "border-[rgba(255,194,131,0.24)] bg-[rgba(255,122,26,0.1)] text-[var(--text-strong)]"
+                        ? "border-[rgba(247,208,163,0.24)] bg-[rgba(239,130,57,0.1)] text-[var(--text-strong)]"
                         : "border-transparent bg-transparent text-[var(--muted)] hover:border-white/8 hover:bg-white/[0.03] hover:text-[var(--text-strong)]"
                     }`}
                   >
@@ -183,7 +183,7 @@ export default function Navbar() {
               <div className="pt-4">
                 <Link
                   href="/contacto"
-                  className="inline-flex w-full items-center justify-center rounded-full border border-[rgba(255,194,131,0.2)] bg-[rgba(255,122,26,0.12)] px-5 py-3 text-[10px] font-semibold uppercase tracking-normal text-[var(--text-strong)] transition hover:border-[rgba(255,194,131,0.34)] hover:bg-[rgba(255,122,26,0.18)] sm:w-auto md:tracking-[0.18em]"
+                  className="inline-flex w-full items-center justify-center rounded-full border border-[rgba(247,208,163,0.2)] bg-[rgba(239,130,57,0.12)] px-5 py-3 text-[10px] font-semibold uppercase tracking-normal text-[var(--text-strong)] transition hover:border-[rgba(247,208,163,0.34)] hover:bg-[rgba(239,130,57,0.18)] sm:w-auto md:tracking-[0.18em]"
                 >
                   Agendar diagnostico
                 </Link>

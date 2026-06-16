@@ -4,7 +4,6 @@ import { useEffect, useState } from "react";
 import Image from "next/image";
 import { createPortal } from "react-dom";
 import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
-import logo4k from "../../../Logo_4k.jpg";
 
 const INTRO_DURATION_MS = 2200;
 const REDUCED_DURATION_MS = 900;
@@ -71,11 +70,11 @@ export default function HomeBrandIntro() {
             },
           }}
         >
-          <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(8,12,22,0.96)_0%,rgba(8,12,22,0.72)_45%,rgba(8,12,22,0.96)_100%)]" />
-          <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(8,12,22,0.88)_0%,rgba(8,12,22,0.32)_50%,rgba(8,12,22,0.88)_100%)]" />
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(249,115,22,0.18),transparent_32%)]" />
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_15%_50%,rgba(249,115,22,0.14),transparent_24%)]" />
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_85%_50%,rgba(251,146,60,0.12),transparent_24%)]" />
+          <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(13,6,37,0.98)_0%,rgba(23,16,75,0.78)_45%,rgba(13,6,37,0.98)_100%)]" />
+          <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(13,6,37,0.92)_0%,rgba(13,6,37,0.34)_50%,rgba(13,6,37,0.92)_100%)]" />
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(89,89,201,0.24),transparent_32%)]" />
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_15%_50%,rgba(239,130,57,0.12),transparent_24%)]" />
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_85%_50%,rgba(247,208,163,0.1),transparent_24%)]" />
 
           <motion.div
             className="absolute inset-y-0 left-0 w-[18vw] min-w-16 bg-gradient-to-r from-[var(--accent)]/35 via-[var(--accent)]/12 to-transparent blur-2xl"
@@ -169,12 +168,12 @@ export default function HomeBrandIntro() {
                   }}
                 >
                   <Image
-                    src={logo4k}
+                    src="/images/brand/lynx-logo-negative.png"
                     alt="LYNX"
                     width={720}
                     height={216}
                     priority
-                    className="relative h-auto w-[155px] drop-shadow-[0_0_18px_rgba(255,255,255,0.14)] drop-shadow-[0_0_36px_rgba(249,115,22,0.12)] md:w-[220px]"
+                    className="relative h-auto w-[165px] drop-shadow-[0_0_18px_rgba(255,255,255,0.14)] drop-shadow-[0_0_38px_rgba(89,89,201,0.18)] md:w-[238px]"
                   />
                 </motion.div>
               </motion.div>

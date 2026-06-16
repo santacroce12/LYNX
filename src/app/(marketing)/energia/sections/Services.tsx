@@ -51,7 +51,7 @@ export default function EnergiaServices() {
             <Reveal key={service.title} delay={index * 0.05}>
               <div className="panel-shell group h-full rounded-[1.1rem] p-3.5 transition duration-300 hover:-translate-y-0.5 sm:rounded-[1.35rem] sm:p-[1.125rem]">
                 <div className="mb-3 flex items-center justify-between gap-4 sm:mb-4">
-                  <div className="inline-flex h-9 w-9 items-center justify-center rounded-[0.8rem] border border-[rgba(255,194,131,0.18)] bg-[rgba(255,122,26,0.08)] text-[var(--accent)] transition-all duration-300 group-hover:scale-105 sm:h-10 sm:w-10 sm:rounded-[0.9rem]">
+                  <div className="inline-flex h-9 w-9 items-center justify-center rounded-[0.8rem] border border-[rgba(247,208,163,0.18)] bg-[rgba(239,130,57,0.08)] text-[var(--accent)] transition-all duration-300 group-hover:scale-105 sm:h-10 sm:w-10 sm:rounded-[0.9rem]">
                     <Icon className="h-5 w-5" />
                   </div>
                 <span className="text-[10px] uppercase tracking-normal text-[var(--muted-soft)] sm:text-[11px] md:tracking-[0.24em]">

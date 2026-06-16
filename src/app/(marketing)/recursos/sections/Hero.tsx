@@ -18,7 +18,7 @@ export default function RecursosHero() {
       />
       <div className="absolute inset-0 -z-10 bg-[linear-gradient(180deg,rgba(3,7,15,0.34)_0%,rgba(3,7,15,0.56)_45%,rgba(3,7,15,0.9)_100%)]" />
       <div className="absolute inset-0 -z-10 bg-[linear-gradient(90deg,rgba(3,7,15,0.82)_0%,rgba(3,7,15,0.5)_46%,rgba(3,7,15,0.62)_100%)]" />
-      <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_14%_18%,rgba(255,122,26,0.14),transparent_24%),radial-gradient(circle_at_82%_22%,rgba(125,168,255,0.08),transparent_18%)]" />
+      <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_14%_18%,rgba(239,130,57,0.14),transparent_24%),radial-gradient(circle_at_82%_22%,rgba(89,89,201,0.08),transparent_18%)]" />
       <div className="absolute inset-x-0 bottom-0 -z-10 h-40 bg-gradient-to-t from-[var(--bg)] to-transparent" />
       <SuccessNetwork className="right-[9%] top-[48%] w-[37%] max-w-[470px] xl:right-[11%] xl:w-[35%]" />
 

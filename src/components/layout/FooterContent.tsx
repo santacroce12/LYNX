@@ -33,7 +33,7 @@ export default function FooterContent() {
             <div className="inline-flex rounded-[1.2rem] border border-white/8 bg-white/[0.03] px-4 py-3">
               <Link href="/" className="inline-flex">
                 <Image
-                  src="/images/brand/logo-azul.png"
+                  src="/images/brand/lynx-logo-negative.png"
                   alt={site.name}
                   width={188}
                   height={56}
@@ -54,7 +54,7 @@ export default function FooterContent() {
                     href={social.href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-[var(--border)] bg-white/[0.04] text-[var(--muted)] transition hover:-translate-y-0.5 hover:border-[rgba(255,194,131,0.34)] hover:bg-[rgba(255,122,26,0.06)] hover:text-[var(--accent-soft)]"
+                    className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-[var(--border)] bg-white/[0.04] text-[var(--muted)] transition hover:-translate-y-0.5 hover:border-[rgba(247,208,163,0.34)] hover:bg-[rgba(239,130,57,0.06)] hover:text-[var(--accent-soft)]"
                     aria-label={social.label}
                   >
                     {getSocialIcon(social.label)}
@@ -104,7 +104,7 @@ export default function FooterContent() {
 
             <a
               href={`mailto:${site.contact.email}`}
-              className="flex items-center gap-3 rounded-[1.4rem] border border-[var(--border)] bg-[rgba(255,255,255,0.03)] px-4 py-4 transition hover:border-[rgba(255,194,131,0.34)] hover:bg-[rgba(255,122,26,0.06)]"
+              className="flex items-center gap-3 rounded-[1.4rem] border border-[var(--border)] bg-[rgba(255,255,255,0.03)] px-4 py-4 transition hover:border-[rgba(247,208,163,0.34)] hover:bg-[rgba(239,130,57,0.06)]"
             >
               <Mail className="h-5 w-5 text-[var(--accent)]" />
               <span className="text-sm text-[var(--text-secondary)]">
@@ -115,7 +115,7 @@ export default function FooterContent() {
             <div className="grid gap-3">
               <a
                 href={`tel:${site.contact.mobile.replace(/\s/g, "")}`}
-                className="flex items-center gap-3 rounded-[1.4rem] border border-[var(--border)] bg-[rgba(255,255,255,0.03)] px-4 py-4 transition hover:border-[rgba(255,194,131,0.34)] hover:bg-[rgba(255,122,26,0.06)]"
+                className="flex items-center gap-3 rounded-[1.4rem] border border-[var(--border)] bg-[rgba(255,255,255,0.03)] px-4 py-4 transition hover:border-[rgba(247,208,163,0.34)] hover:bg-[rgba(239,130,57,0.06)]"
               >
                 <Phone className="h-5 w-5 text-[var(--accent)]" />
                   <span className="text-sm text-[var(--text-secondary)]">
@@ -127,7 +127,7 @@ export default function FooterContent() {
                 href={`https://wa.me/${site.contact.phone.replace(/\D/g, "")}`}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-3 rounded-[1.4rem] border border-[var(--border)] bg-[rgba(255,255,255,0.03)] px-4 py-4 transition hover:border-[rgba(255,194,131,0.34)] hover:bg-[rgba(255,122,26,0.06)]"
+                className="flex items-center gap-3 rounded-[1.4rem] border border-[var(--border)] bg-[rgba(255,255,255,0.03)] px-4 py-4 transition hover:border-[rgba(247,208,163,0.34)] hover:bg-[rgba(239,130,57,0.06)]"
               >
                 <Phone className="h-5 w-5 text-[var(--accent)]" />
                 <span className="text-sm text-[var(--text-secondary)]">

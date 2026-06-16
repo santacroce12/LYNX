@@ -6,11 +6,11 @@ type EnergyFlowProps = {
 export default function EnergyFlow({ className, variant = "energy" }: EnergyFlowProps) {
   const isTech = variant === "tech";
   const baseLine = isTech
-    ? "linear-gradient(90deg,rgba(125,168,255,0.05),rgba(94,234,212,0.24),rgba(125,168,255,0.2),rgba(125,168,255,0.05))"
-    : "linear-gradient(90deg,rgba(255,122,26,0.06),rgba(255,194,131,0.28),rgba(125,168,255,0.16),rgba(255,122,26,0.06))";
-  const primary = isTech ? "rgba(125,168,255,0.82)" : "var(--accent)";
-  const secondary = isTech ? "rgba(94,234,212,0.72)" : "var(--accent-soft)";
-  const shadow = isTech ? "0 0 12px rgba(94,234,212,0.45)" : "0 0 12px var(--accent)";
+    ? "linear-gradient(90deg,rgba(89,89,201,0.05),rgba(89,89,201,0.24),rgba(89,89,201,0.2),rgba(89,89,201,0.05))"
+    : "linear-gradient(90deg,rgba(239,130,57,0.06),rgba(247,208,163,0.28),rgba(89,89,201,0.16),rgba(239,130,57,0.06))";
+  const primary = isTech ? "rgba(89,89,201,0.82)" : "var(--accent)";
+  const secondary = isTech ? "rgba(89,89,201,0.72)" : "var(--accent-soft)";
+  const shadow = isTech ? "0 0 12px rgba(89,89,201,0.45)" : "0 0 12px var(--accent)";
 
   return (
     <div className={`relative h-8 w-full overflow-hidden ${className ?? ""}`}>

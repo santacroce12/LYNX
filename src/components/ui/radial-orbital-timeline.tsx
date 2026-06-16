@@ -245,7 +245,7 @@ export default function RadialOrbitalTimeline({
               className="relative overflow-hidden rounded-[1.1rem] border border-[rgba(182,205,238,0.16)] bg-[rgba(6,12,22,0.62)] p-4"
             >
               <div className="flex items-start gap-3">
-                <div className="mt-0.5 flex h-10 w-10 shrink-0 items-center justify-center rounded-[0.9rem] border border-[rgba(255,194,131,0.22)] bg-[rgba(255,122,26,0.1)] text-[var(--accent-soft)]">
+                <div className="mt-0.5 flex h-10 w-10 shrink-0 items-center justify-center rounded-[0.9rem] border border-[rgba(247,208,163,0.22)] bg-[rgba(239,130,57,0.1)] text-[var(--accent-soft)]">
                   <Icon className="h-4 w-4" aria-hidden="true" />
                 </div>
                 <div className="min-w-0">
@@ -278,12 +278,12 @@ export default function RadialOrbitalTimeline({
             } as OrbitalStyle
           }
         >
-          <div className="pointer-events-none absolute left-1/2 top-1/2 h-[38rem] w-[38rem] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[radial-gradient(circle,rgba(125,168,255,0.08)_0%,rgba(255,122,26,0.045)_27%,rgba(5,10,18,0)_68%)] blur-sm" />
-          <div className="pointer-events-none absolute left-1/2 top-1/2 h-[30.5rem] w-[30.5rem] -translate-x-1/2 -translate-y-1/2 rounded-full border border-[rgba(182,205,238,0.14)] shadow-[0_0_42px_rgba(125,168,255,0.05)]" />
-          <div className="pointer-events-none absolute left-1/2 top-1/2 h-[16rem] w-[16rem] -translate-x-1/2 -translate-y-1/2 rounded-full border border-[rgba(125,168,255,0.055)]" />
+          <div className="pointer-events-none absolute left-1/2 top-1/2 h-[38rem] w-[38rem] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[radial-gradient(circle,rgba(89,89,201,0.08)_0%,rgba(239,130,57,0.045)_27%,rgba(13,6,37,0)_68%)] blur-sm" />
+          <div className="pointer-events-none absolute left-1/2 top-1/2 h-[30.5rem] w-[30.5rem] -translate-x-1/2 -translate-y-1/2 rounded-full border border-[rgba(182,205,238,0.14)] shadow-[0_0_42px_rgba(89,89,201,0.05)]" />
+          <div className="pointer-events-none absolute left-1/2 top-1/2 h-[16rem] w-[16rem] -translate-x-1/2 -translate-y-1/2 rounded-full border border-[rgba(89,89,201,0.055)]" />
 
           <div className="absolute left-1/2 top-1/2 h-[8.8rem] w-[8.8rem] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[radial-gradient(circle_at_50%_50%,rgba(2,7,18,0.08),rgba(2,7,18,0.9)_70%)] shadow-[0_22px_58px_rgba(0,0,0,0.36)]">
-            <span className="lynx-orbit-core absolute left-1/2 top-1/2 h-[6.2rem] w-[6.2rem] -translate-x-1/2 -translate-y-1/2 rounded-full border border-[rgba(125,168,255,0.18)] bg-[radial-gradient(circle_at_50%_38%,rgba(238,246,255,0.96)_0%,rgba(190,214,255,0.9)_15%,rgba(89,126,255,0.86)_42%,rgba(18,169,255,0.72)_75%,rgba(255,122,26,0.42)_100%)] shadow-[0_0_38px_rgba(56,129,255,0.34),0_0_54px_rgba(255,122,26,0.08)]" />
+            <span className="lynx-orbit-core absolute left-1/2 top-1/2 h-[6.2rem] w-[6.2rem] -translate-x-1/2 -translate-y-1/2 rounded-full border border-[rgba(89,89,201,0.18)] bg-[radial-gradient(circle_at_50%_38%,rgba(245,243,255,0.96)_0%,rgba(170,166,246,0.9)_15%,rgba(89,89,201,0.86)_42%,rgba(170,166,246,0.72)_75%,rgba(239,130,57,0.42)_100%)] shadow-[0_0_38px_rgba(89,89,201,0.34),0_0_54px_rgba(239,130,57,0.08)]" />
             <span className="absolute left-1/2 top-1/2 h-[2.35rem] w-[2.35rem] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[radial-gradient(circle,rgba(255,255,255,0.98),rgba(222,235,255,0.78)_58%,rgba(255,255,255,0)_100%)]" />
           </div>
 
@@ -332,7 +332,7 @@ export default function RadialOrbitalTimeline({
                           "h-16 w-16 border-[rgba(255,255,255,0.82)] bg-[linear-gradient(180deg,rgba(250,252,255,0.98),rgba(233,239,248,0.96))] text-[#080b10] shadow-[0_0_0_4px_rgba(255,255,255,0.035),0_0_18px_rgba(255,255,255,0.12),0_14px_34px_rgba(0,0,0,0.28)]",
                         !isActive &&
                           isRelated &&
-                          "border-[rgba(125,168,255,0.46)] text-[var(--accent-cool)] shadow-[0_0_32px_rgba(125,168,255,0.08)]",
+                          "border-[rgba(89,89,201,0.46)] text-[var(--accent-cool)] shadow-[0_0_32px_rgba(89,89,201,0.08)]",
                         !isActive &&
                           !isRelated &&
                           "border-[rgba(220,232,255,0.23)] group-hover:border-[rgba(255,255,255,0.52)] group-hover:text-[var(--text-strong)] group-hover:shadow-[0_0_32px_rgba(255,255,255,0.12)]",
@@ -342,10 +342,10 @@ export default function RadialOrbitalTimeline({
                         className={cn(
                           "absolute -inset-4 rounded-full opacity-0 transition duration-300",
                           isActive &&
-                            "bg-[radial-gradient(circle,rgba(255,255,255,0.12),rgba(255,255,255,0.05)_38%,rgba(125,168,255,0.04)_56%,transparent_72%)] opacity-100",
+                            "bg-[radial-gradient(circle,rgba(255,255,255,0.12),rgba(255,255,255,0.05)_38%,rgba(89,89,201,0.04)_56%,transparent_72%)] opacity-100",
                           !isActive &&
                             isRelated &&
-                            "bg-[radial-gradient(circle,rgba(255,255,255,0.08),rgba(125,168,255,0.08)_38%,rgba(255,122,26,0.04)_58%,transparent_74%)] opacity-100",
+                            "bg-[radial-gradient(circle,rgba(255,255,255,0.08),rgba(89,89,201,0.08)_38%,rgba(239,130,57,0.04)_58%,transparent_74%)] opacity-100",
                         )}
                       />
                       <Icon
@@ -370,12 +370,12 @@ export default function RadialOrbitalTimeline({
 
                   {isActive ? (
                     <div
-                      className="absolute left-1/2 top-[calc(100%+0.7rem)] w-[18rem] -translate-x-1/2 rounded-[0.9rem] border border-[rgba(125,168,255,0.24)] bg-[rgba(4,8,15,0.94)] p-3 text-left shadow-[0_18px_52px_rgba(0,0,0,0.38),0_0_28px_rgba(56,129,255,0.08)] backdrop-blur-xl"
+                      className="absolute left-1/2 top-[calc(100%+0.7rem)] w-[18rem] -translate-x-1/2 rounded-[0.9rem] border border-[rgba(89,89,201,0.24)] bg-[rgba(4,8,15,0.94)] p-3 text-left shadow-[0_18px_52px_rgba(0,0,0,0.38),0_0_28px_rgba(89,89,201,0.08)] backdrop-blur-xl"
                       onClick={(event) => event.stopPropagation()}
                     >
-                      <div className="absolute -top-3 left-1/2 h-3 w-px -translate-x-1/2 bg-[rgba(125,168,255,0.42)]" />
+                      <div className="absolute -top-3 left-1/2 h-3 w-px -translate-x-1/2 bg-[rgba(89,89,201,0.42)]" />
                       <div className="flex items-center justify-between gap-3">
-                        <span className="rounded-full border border-[rgba(125,168,255,0.28)] px-2.5 py-1 text-[0.58rem] font-semibold uppercase tracking-[0.16em] text-[var(--accent-cool)]">
+                        <span className="rounded-full border border-[rgba(89,89,201,0.28)] px-2.5 py-1 text-[0.58rem] font-semibold uppercase tracking-[0.16em] text-[var(--accent-cool)]">
                           {item.step}
                         </span>
                         <span className="text-[0.58rem] font-semibold uppercase tracking-[0.16em] text-[var(--muted-soft)]">
@@ -410,7 +410,7 @@ export default function RadialOrbitalTimeline({
                                 <button
                                   key={relatedId}
                                   type="button"
-                                  className="group inline-flex items-center gap-1.5 rounded-[0.55rem] border border-[rgba(182,205,238,0.14)] bg-[rgba(255,255,255,0.025)] px-2.5 py-1.5 text-[0.68rem] font-semibold text-[var(--text-secondary)] transition duration-300 hover:border-[rgba(125,168,255,0.32)] hover:text-[var(--text-strong)]"
+                                  className="group inline-flex items-center gap-1.5 rounded-[0.55rem] border border-[rgba(182,205,238,0.14)] bg-[rgba(255,255,255,0.025)] px-2.5 py-1.5 text-[0.68rem] font-semibold text-[var(--text-secondary)] transition duration-300 hover:border-[rgba(89,89,201,0.32)] hover:text-[var(--text-strong)]"
                                   onClick={(event) =>
                                     selectNode(event, relatedId, relatedIndex)
                                   }

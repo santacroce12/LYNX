@@ -56,14 +56,14 @@ export default function AboutSection() {
         <Reveal delay={0.18}>
           <div className="panel-shell overflow-hidden rounded-[1.8rem] p-3 md:p-4">
             <div className="relative overflow-hidden rounded-[1.35rem] border border-white/8 bg-[#030711]">
-              <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_52%_42%,rgba(255,122,26,0.16),transparent_35%),radial-gradient(circle_at_18%_18%,rgba(255,194,131,0.08),transparent_24%),linear-gradient(180deg,rgba(5,10,19,0.2)_0%,rgba(3,7,17,0.9)_100%)]" />
+              <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_52%_42%,rgba(239,130,57,0.16),transparent_35%),radial-gradient(circle_at_18%_18%,rgba(247,208,163,0.08),transparent_24%),linear-gradient(180deg,rgba(13,6,37,0.2)_0%,rgba(7,3,24,0.9)_100%)]" />
               <div className="panel-decoration pointer-events-none absolute inset-0 panel-grid opacity-15 [mask-image:radial-gradient(circle_at_center,#000_24%,transparent_78%)]" />
 
               <div className="relative mx-auto flex min-h-[250px] max-w-[460px] items-center justify-center px-3 pb-2 pt-4 sm:min-h-[330px] sm:pt-6 md:min-h-[380px] md:px-6 md:pt-8">
                 <GlobeBars className="w-full max-w-[300px] sm:max-w-[390px] md:max-w-[430px]" speed={0.0014} />
               </div>
 
-              <div className="relative z-20 flex flex-wrap items-end justify-between gap-3 border-t border-white/8 bg-[rgba(3,7,17,0.96)] px-4 pb-4 pt-4 md:gap-4 md:px-6 md:pb-6">
+              <div className="relative z-20 flex flex-wrap items-end justify-between gap-3 border-t border-white/8 bg-[rgba(7,3,24,0.96)] px-4 pb-4 pt-4 md:gap-4 md:px-6 md:pb-6">
                 <div>
                   <p className="section-kicker">Cobertura regional</p>
                   <h3 className="mt-2 max-w-sm text-[1.05rem] font-semibold leading-[1.08] text-[var(--text-strong)] md:mt-3 md:text-2xl md:leading-[1.02]">
@@ -88,7 +88,7 @@ export default function AboutSection() {
                 }`}
               >
                 <div className="flex items-center justify-between gap-4">
-                  <div className="flex h-9 w-9 items-center justify-center rounded-[0.9rem] border border-[rgba(255,194,131,0.18)] bg-[rgba(255,122,26,0.08)] text-[var(--accent)] transition duration-500 group-hover:scale-110 group-hover:bg-[var(--accent)] group-hover:text-[var(--bg)] sm:h-12 sm:w-12 sm:rounded-2xl">
+                  <div className="flex h-9 w-9 items-center justify-center rounded-[0.9rem] border border-[rgba(247,208,163,0.18)] bg-[rgba(239,130,57,0.08)] text-[var(--accent)] transition duration-500 group-hover:scale-110 group-hover:bg-[var(--accent)] group-hover:text-[var(--bg)] sm:h-12 sm:w-12 sm:rounded-2xl">
                     {Icon ? <Icon className="h-5 w-5" /> : null}
                   </div>
                   <span className="text-[10px] uppercase tracking-normal text-[var(--muted-soft)] sm:text-[11px] sm:tracking-[0.24em]">

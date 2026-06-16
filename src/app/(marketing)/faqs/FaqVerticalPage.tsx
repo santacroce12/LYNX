@@ -66,7 +66,7 @@ export default function FaqVerticalPage({
         <div className="mb-6">
           <Link
             href="/faqs"
-            className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/[0.035] px-4 py-2 text-[10px] font-semibold uppercase tracking-[0.18em] text-[var(--muted)] transition hover:border-[rgba(255,194,131,0.24)] hover:text-[var(--text-strong)]"
+            className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/[0.035] px-4 py-2 text-[10px] font-semibold uppercase tracking-[0.18em] text-[var(--muted)] transition hover:border-[rgba(247,208,163,0.24)] hover:text-[var(--text-strong)]"
           >
             <ArrowLeft className="h-3.5 w-3.5" aria-hidden="true" />
             Volver a FAQs
@@ -76,18 +76,18 @@ export default function FaqVerticalPage({
         <div
           className={`relative overflow-hidden rounded-[2rem] border p-3 shadow-[var(--shadow-panel)] md:p-4 ${
             isEnergy
-              ? "border-[rgba(255,194,131,0.2)] bg-[rgba(255,122,26,0.045)]"
-              : "border-[rgba(125,168,255,0.2)] bg-[rgba(125,168,255,0.045)]"
+              ? "border-[rgba(247,208,163,0.2)] bg-[rgba(239,130,57,0.045)]"
+              : "border-[rgba(89,89,201,0.2)] bg-[rgba(89,89,201,0.045)]"
           }`}
         >
           <div
             className={`pointer-events-none absolute inset-0 ${
               isEnergy
-                ? "bg-[radial-gradient(circle_at_18%_18%,rgba(255,122,26,0.15),transparent_30%)]"
-                : "bg-[radial-gradient(circle_at_78%_18%,rgba(125,168,255,0.14),transparent_30%)]"
+                ? "bg-[radial-gradient(circle_at_18%_18%,rgba(239,130,57,0.15),transparent_30%)]"
+                : "bg-[radial-gradient(circle_at_78%_18%,rgba(89,89,201,0.14),transparent_30%)]"
             }`}
           />
-          <div className="relative overflow-hidden rounded-[1.55rem] border border-white/8 bg-[rgba(4,9,18,0.72)] px-5 py-8 md:px-8 md:py-10">
+          <div className="relative overflow-hidden rounded-[1.55rem] border border-white/8 bg-[rgba(13,6,37,0.72)] px-5 py-8 md:px-8 md:py-10">
             <div className="flex flex-col gap-7 md:flex-row md:items-end md:justify-between">
               <div className="max-w-3xl">
                 <Reveal>
@@ -115,8 +115,8 @@ export default function FaqVerticalPage({
                 <span
                   className={`inline-flex h-16 w-16 items-center justify-center rounded-[1.35rem] border ${
                     isEnergy
-                      ? "border-[rgba(255,194,131,0.24)] bg-[rgba(255,122,26,0.12)] text-[var(--accent-soft)]"
-                      : "border-[rgba(125,168,255,0.25)] bg-[rgba(125,168,255,0.1)] text-[var(--accent-cool)]"
+                      ? "border-[rgba(247,208,163,0.24)] bg-[rgba(239,130,57,0.12)] text-[var(--accent-soft)]"
+                      : "border-[rgba(89,89,201,0.25)] bg-[rgba(89,89,201,0.1)] text-[var(--accent-cool)]"
                   }`}
                 >
                   <Icon className="h-7 w-7" aria-hidden="true" />

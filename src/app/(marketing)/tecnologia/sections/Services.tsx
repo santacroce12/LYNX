@@ -34,12 +34,12 @@ const serviceActions = [
 ];
 
 const serviceNodePositions = [
-  { left: "12%", top: "36%" },
-  { left: "30%", top: "16%" },
-  { left: "55%", top: "29%" },
-  { left: "27%", top: "75%" },
+  { left: "13%", top: "38%" },
+  { left: "31%", top: "16%" },
+  { left: "56%", top: "30%" },
+  { left: "31%", top: "72%" },
   { left: "55%", top: "84%" },
-  { left: "81%", top: "54%" },
+  { left: "84%", top: "42%" },
 ];
 
 const serviceFlowPath =
@@ -115,7 +115,7 @@ export default function TecnologiaServices() {
                       actionIndex > 2 ? "hidden sm:inline-flex" : "inline-flex"
                     }`}
                   >
-                    <span className="h-1.5 w-1.5 rounded-full bg-[var(--accent)] shadow-[0_0_12px_rgba(255,122,26,0.6)]" />
+                    <span className="h-1.5 w-1.5 rounded-full bg-[var(--accent)] shadow-[0_0_12px_rgba(239,130,57,0.6)]" />
                     {item}
                   </span>
                 ))}
@@ -127,12 +127,12 @@ export default function TecnologiaServices() {
 
       <Reveal delay={0.08}>
         <div className="panel-shell relative overflow-hidden rounded-[1.45rem] p-4 md:p-5">
-          <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_18%_16%,rgba(255,122,26,0.12),transparent_28%),radial-gradient(circle_at_84%_20%,rgba(125,168,255,0.1),transparent_26%),linear-gradient(180deg,rgba(255,255,255,0.025),transparent_54%)]" />
-          <div className="pointer-events-none absolute inset-x-6 top-1/2 h-px bg-gradient-to-r from-transparent via-[rgba(125,168,255,0.2)] to-transparent" />
+          <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_18%_16%,rgba(239,130,57,0.12),transparent_28%),radial-gradient(circle_at_84%_20%,rgba(89,89,201,0.1),transparent_26%),linear-gradient(180deg,rgba(255,255,255,0.025),transparent_54%)]" />
+          <div className="pointer-events-none absolute inset-x-6 top-1/2 h-px bg-gradient-to-r from-transparent via-[rgba(89,89,201,0.2)] to-transparent" />
 
           <div className="relative grid gap-5 lg:grid-cols-[minmax(0,0.92fr)_minmax(330px,0.68fr)] lg:items-stretch">
-            <div className="relative min-h-[350px] overflow-hidden rounded-[1.15rem] border border-white/8 bg-[rgba(4,9,18,0.58)] p-3.5 md:min-h-[430px] md:p-5">
-              <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(90deg,rgba(125,168,255,0.06)_1px,transparent_1px),linear-gradient(180deg,rgba(125,168,255,0.045)_1px,transparent_1px)] bg-[size:56px_56px] opacity-45 [mask-image:radial-gradient(circle_at_50%_44%,#000_12%,transparent_76%)]" />
+            <div className="relative min-h-[350px] overflow-hidden rounded-[1.15rem] border border-white/8 bg-[rgba(13,6,37,0.58)] p-3.5 md:min-h-[430px] md:p-5">
+              <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(90deg,rgba(89,89,201,0.06)_1px,transparent_1px),linear-gradient(180deg,rgba(89,89,201,0.045)_1px,transparent_1px)] bg-[size:56px_56px] opacity-45 [mask-image:radial-gradient(circle_at_50%_44%,#000_12%,transparent_76%)]" />
 
               <div className="relative z-10 mb-6 flex flex-wrap items-center justify-between gap-3">
                 <div>
@@ -143,13 +143,13 @@ export default function TecnologiaServices() {
                     De la consulta al soporte continuo.
                   </h3>
                 </div>
-                <span className="rounded-full border border-[rgba(125,168,255,0.18)] bg-[rgba(125,168,255,0.08)] px-3 py-1.5 text-[10px] font-semibold uppercase tracking-[0.18em] text-[var(--accent-cool)]">
+                <span className="rounded-full border border-[rgba(89,89,201,0.18)] bg-[rgba(89,89,201,0.08)] px-3 py-1.5 text-[10px] font-semibold uppercase tracking-[0.18em] text-[var(--accent-cool)]">
                   0{activeServiceIndex + 1} / 06
                 </span>
               </div>
 
               <div className="relative z-10 mt-4 md:hidden">
-                <div className="absolute bottom-4 left-[1.1rem] top-4 w-px bg-[rgba(125,168,255,0.18)]" />
+                <div className="absolute bottom-4 left-[1.1rem] top-4 w-px bg-[rgba(89,89,201,0.18)]" />
                 {tecnologia.services.map((service, index) => {
                   const Icon = icons[service.icon as string] || Layers;
                   const isActive = activeServiceIndex === index;
@@ -162,15 +162,15 @@ export default function TecnologiaServices() {
                       onClick={() => setActiveServiceIndex(index)}
                       className={`group relative mb-2 flex w-full items-center gap-3 rounded-[0.95rem] px-2 py-2 text-left transition duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--accent)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--bg)] ${
                         isActive
-                          ? "bg-[rgba(255,122,26,0.11)]"
-                          : "bg-transparent hover:bg-[rgba(125,168,255,0.04)]"
+                          ? "bg-[rgba(239,130,57,0.11)]"
+                          : "bg-transparent hover:bg-[rgba(89,89,201,0.04)]"
                       }`}
                     >
                       <span
                         className={`relative z-10 inline-flex h-9 w-9 shrink-0 items-center justify-center rounded-full border transition duration-300 ${
                           isActive
-                            ? "border-[rgba(255,194,131,0.44)] bg-[var(--accent)] text-[var(--bg)] shadow-[0_0_24px_rgba(255,122,26,0.28)]"
-                            : "border-[rgba(125,168,255,0.2)] bg-[rgba(5,10,18,0.9)] text-[var(--accent-cool)]"
+                            ? "border-[rgba(247,208,163,0.44)] bg-[var(--accent)] text-[var(--bg)] shadow-[0_0_24px_rgba(239,130,57,0.28)]"
+                            : "border-[rgba(89,89,201,0.2)] bg-[rgba(13,6,37,0.9)] text-[var(--accent-cool)]"
                         }`}
                       >
                         <Icon className="h-4 w-4" aria-hidden="true" />
@@ -203,7 +203,7 @@ export default function TecnologiaServices() {
                   <path
                     d={serviceFlowPath}
                     fill="none"
-                    stroke="rgba(125,168,255,0.18)"
+                    stroke="rgba(89,89,201,0.18)"
                     strokeWidth="1.4"
                   />
                   <path
@@ -221,7 +221,7 @@ export default function TecnologiaServices() {
                       repeatCount="indefinite"
                     />
                   </circle>
-                  <circle r="2.5" fill="rgba(238,246,255,0.92)">
+                  <circle r="2.5" fill="rgba(245,243,255,0.92)">
                     <animateMotion
                       begin="0.18s"
                       dur="3.6s"
@@ -231,9 +231,9 @@ export default function TecnologiaServices() {
                   </circle>
                   <defs>
                     <linearGradient id="service-flow-gradient" x1="0" x2="1">
-                      <stop offset="0%" stopColor="rgba(255,122,26,0.05)" />
-                      <stop offset="52%" stopColor="rgba(255,122,26,0.9)" />
-                      <stop offset="100%" stopColor="rgba(125,168,255,0.65)" />
+                      <stop offset="0%" stopColor="rgba(239,130,57,0.05)" />
+                      <stop offset="52%" stopColor="rgba(239,130,57,0.9)" />
+                      <stop offset="100%" stopColor="rgba(89,89,201,0.65)" />
                     </linearGradient>
                     <filter
                       id="service-flow-glow"
@@ -259,22 +259,26 @@ export default function TecnologiaServices() {
                   const labelPosition =
                     index === 0
                       ? "bottom"
-                      : index === 1
+                    : index === 1
                       ? "top"
                       : index === 2
                       ? "top"
-                      : index === 3
-                      ? "left"
+                    : index === 3
+                      ? "bottom"
+                      : index === 4
+                      ? "top"
+                      : index === 5
+                      ? "top"
                       : "bottom";
 
                   let labelClasses =
                     "absolute z-10 w-[9.7rem] text-[0.82rem] font-semibold leading-[1.08] transition duration-300 ";
                   if (labelPosition === "bottom") {
-                    labelClasses += "left-1/2 -translate-x-1/2 top-full mt-4.5 text-center";
+                    labelClasses += "left-1/2 -translate-x-1/2 top-full mt-[1.15rem] text-center";
                   } else if (labelPosition === "top") {
-                    labelClasses += "left-1/2 -translate-x-1/2 bottom-full mb-4.5 text-center";
+                    labelClasses += "left-1/2 -translate-x-1/2 bottom-full mb-[1.15rem] text-center";
                   } else if (labelPosition === "left") {
-                    labelClasses += "right-full -translate-y-1/2 top-1/2 mr-4.5 text-right";
+                    labelClasses += "right-full -translate-y-1/2 top-1/2 mr-[1.15rem] text-right";
                   }
 
                   return (
@@ -289,8 +293,8 @@ export default function TecnologiaServices() {
                       <span
                         className={`flex h-12 w-12 items-center justify-center rounded-full border transition duration-300 ${
                           isActive
-                            ? "scale-110 border-[rgba(255,194,131,0.58)] bg-[var(--accent)] text-[var(--bg)] shadow-[0_0_0_8px_rgba(255,122,26,0.08),0_0_34px_rgba(255,122,26,0.32)]"
-                            : "border-[rgba(182,205,238,0.2)] bg-[rgba(5,10,18,0.92)] text-[var(--accent-cool)] shadow-[0_16px_34px_rgba(0,0,0,0.24)] group-hover:border-[rgba(125,168,255,0.42)] group-hover:text-[var(--text-strong)]"
+                            ? "scale-110 border-[rgba(247,208,163,0.58)] bg-[var(--accent)] text-[var(--bg)] shadow-[0_0_0_8px_rgba(239,130,57,0.08),0_0_34px_rgba(239,130,57,0.32)]"
+                            : "border-[rgba(182,205,238,0.2)] bg-[rgba(13,6,37,0.92)] text-[var(--accent-cool)] shadow-[0_16px_34px_rgba(0,0,0,0.24)] group-hover:border-[rgba(89,89,201,0.42)] group-hover:text-[var(--text-strong)]"
                         }`}
                       >
                         <Icon className="h-5 w-5" aria-hidden="true" />
@@ -299,8 +303,8 @@ export default function TecnologiaServices() {
                         <span
                           className={`inline-flex max-w-full rounded-[0.95rem] border px-2.5 py-1.5 shadow-[0_10px_22px_rgba(2,6,23,0.22)] backdrop-blur-sm ${
                             isActive
-                              ? "border-[rgba(255,194,131,0.14)] bg-[rgba(5,10,18,0.94)] text-[var(--text-strong)]"
-                              : "border-white/[0.06] bg-[rgba(5,10,18,0.92)] text-[rgba(182,205,238,0.72)]"
+                              ? "border-[rgba(247,208,163,0.14)] bg-[rgba(13,6,37,0.94)] text-[var(--text-strong)]"
+                              : "border-white/[0.06] bg-[rgba(13,6,37,0.92)] text-[rgba(182,205,238,0.72)]"
                           }`}
                         >
                           {service.title}
@@ -312,13 +316,13 @@ export default function TecnologiaServices() {
               </div>
             </div>
 
-            <aside className="relative hidden overflow-hidden rounded-[1.15rem] border border-[rgba(255,194,131,0.14)] bg-[rgba(5,10,18,0.76)] p-5 shadow-[inset_0_1px_0_rgba(255,255,255,0.04)] md:block">
-              <div className="pointer-events-none absolute -right-16 -top-20 h-48 w-48 rounded-full bg-[rgba(255,122,26,0.16)] blur-3xl" />
-              <div className="pointer-events-none absolute -bottom-20 left-10 h-52 w-52 rounded-full bg-[rgba(125,168,255,0.14)] blur-3xl" />
+            <aside className="relative hidden overflow-hidden rounded-[1.15rem] border border-[rgba(247,208,163,0.14)] bg-[rgba(13,6,37,0.76)] p-5 shadow-[inset_0_1px_0_rgba(255,255,255,0.04)] md:block">
+              <div className="pointer-events-none absolute -right-16 -top-20 h-48 w-48 rounded-full bg-[rgba(239,130,57,0.16)] blur-3xl" />
+              <div className="pointer-events-none absolute -bottom-20 left-10 h-52 w-52 rounded-full bg-[rgba(89,89,201,0.14)] blur-3xl" />
 
               <div className="relative z-10 flex h-full min-h-[260px] flex-col md:min-h-[320px]">
                 <div className="flex items-center justify-between gap-4">
-                  <div className="inline-flex h-10 w-10 items-center justify-center rounded-[0.9rem] border border-[rgba(255,194,131,0.24)] bg-[rgba(255,122,26,0.12)] text-[var(--accent-soft)] md:h-12 md:w-12 md:rounded-[1rem]">
+                  <div className="inline-flex h-10 w-10 items-center justify-center rounded-[0.9rem] border border-[rgba(247,208,163,0.24)] bg-[rgba(239,130,57,0.12)] text-[var(--accent-soft)] md:h-12 md:w-12 md:rounded-[1rem]">
                     <ActiveIcon className="h-6 w-6" aria-hidden="true" />
                   </div>
                   <span className="text-[10px] font-semibold uppercase tracking-[0.22em] text-[var(--muted-soft)]">

@@ -148,7 +148,7 @@ function RecursosGridContent() {
                   sizes="100vw"
                   className="object-cover"
                 />
-                <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(7,12,22,0.18)_0%,rgba(7,12,22,0.34)_38%,rgba(7,12,22,0.96)_100%)]" />
+                <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(13,6,37,0.18)_0%,rgba(13,6,37,0.34)_38%,rgba(13,6,37,0.96)_100%)]" />
 
                 <button
                   type="button"
@@ -172,12 +172,12 @@ function RecursosGridContent() {
                 </button>
 
                 <div className="absolute bottom-4 left-4 right-4 md:bottom-6 md:left-6 md:right-6">
-                  <div className="inline-block rounded-[1.15rem] border border-white/10 bg-[rgba(7,12,22,0.68)] px-3 py-3 backdrop-blur-md md:rounded-[1.4rem] md:px-4 md:py-4">
+                  <div className="inline-block rounded-[1.15rem] border border-white/10 bg-[rgba(13,6,37,0.68)] px-3 py-3 backdrop-blur-md md:rounded-[1.4rem] md:px-4 md:py-4">
                     <div className="mb-3 flex flex-wrap gap-2">
                       {activeCase.tags.map((tag) => (
                         <span
                           key={tag}
-                          className="rounded-full border border-[rgba(255,194,131,0.24)] bg-[rgba(255,122,26,0.18)] px-3 py-1 text-[10px] font-bold uppercase tracking-normal text-white md:tracking-[0.22em]"
+                          className="rounded-full border border-[rgba(247,208,163,0.24)] bg-[rgba(239,130,57,0.18)] px-3 py-1 text-[10px] font-bold uppercase tracking-normal text-white md:tracking-[0.22em]"
                         >
                           {tag}
                         </span>

@@ -21,7 +21,7 @@ export default function EnergiaHero() {
         />
         <div className="absolute inset-0 -z-10 bg-[linear-gradient(180deg,rgba(3,7,15,0.34)_0%,rgba(3,7,15,0.56)_45%,rgba(3,7,15,0.9)_100%)]" />
         <div className="absolute inset-0 -z-10 bg-[linear-gradient(90deg,rgba(3,7,15,0.82)_0%,rgba(3,7,15,0.5)_46%,rgba(3,7,15,0.62)_100%)]" />
-        <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_14%_18%,rgba(255,122,26,0.14),transparent_24%),radial-gradient(circle_at_84%_24%,rgba(255,194,131,0.1),transparent_18%)]" />
+        <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_14%_18%,rgba(239,130,57,0.14),transparent_24%),radial-gradient(circle_at_84%_24%,rgba(247,208,163,0.1),transparent_18%)]" />
         <div className="absolute inset-x-0 bottom-0 -z-10 h-40 bg-gradient-to-t from-[var(--bg)] to-transparent" />
         <TechSignal variant="energy" />
 

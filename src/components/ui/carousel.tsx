@@ -197,7 +197,7 @@ const CarouselPrevious = React.forwardRef<
       ref={ref}
       type="button"
       className={cn(
-        "absolute z-20 flex h-9 w-9 items-center justify-center rounded-full border border-[var(--border)] bg-[rgba(5,10,20,0.82)] text-[var(--text)] transition duration-300 hover:border-[rgba(255,194,131,0.35)] hover:text-[var(--accent-soft)] disabled:pointer-events-none disabled:opacity-35",
+        "absolute z-20 flex h-9 w-9 items-center justify-center rounded-full border border-[var(--border)] bg-[rgba(5,10,20,0.82)] text-[var(--text)] transition duration-300 hover:border-[rgba(247,208,163,0.35)] hover:text-[var(--accent-soft)] disabled:pointer-events-none disabled:opacity-35",
         orientation === "horizontal"
           ? "-left-4 top-1/2 -translate-y-1/2"
           : "-top-4 left-1/2 -translate-x-1/2 rotate-90",
@@ -225,7 +225,7 @@ const CarouselNext = React.forwardRef<
       ref={ref}
       type="button"
       className={cn(
-        "absolute z-20 flex h-9 w-9 items-center justify-center rounded-full border border-[var(--border)] bg-[rgba(5,10,20,0.82)] text-[var(--text)] transition duration-300 hover:border-[rgba(255,194,131,0.35)] hover:text-[var(--accent-soft)] disabled:pointer-events-none disabled:opacity-35",
+        "absolute z-20 flex h-9 w-9 items-center justify-center rounded-full border border-[var(--border)] bg-[rgba(5,10,20,0.82)] text-[var(--text)] transition duration-300 hover:border-[rgba(247,208,163,0.35)] hover:text-[var(--accent-soft)] disabled:pointer-events-none disabled:opacity-35",
         orientation === "horizontal"
           ? "-right-4 top-1/2 -translate-y-1/2"
           : "-bottom-4 left-1/2 -translate-x-1/2 rotate-90",
