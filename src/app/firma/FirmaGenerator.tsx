@@ -187,12 +187,13 @@ function fallbackCopy(text: string) {
 export default function FirmaGenerator() {
   const [fields, setFields] = useState(initialFields);
   const [status, setStatus] = useState<Status>(defaultStatus);
+  const absoluteLogoUrl =
+    typeof window === "undefined"
+      ? "/images/brand/lynx-logo-positive.png"
+      : new URL("/images/brand/lynx-logo-positive.png", window.location.origin).toString();
 
   const previewHtml = buildSignatureHtml(fields, "/images/brand/lynx-logo-positive.png");
-  const exportHtml = buildSignatureHtml(
-    fields,
-    "https://lynx.cl/images/brand/lynx-logo-positive.png",
-  );
+  const exportHtml = buildSignatureHtml(fields, absoluteLogoUrl);
   const plainText = buildPlainText(fields);
 
   const statusClass =
