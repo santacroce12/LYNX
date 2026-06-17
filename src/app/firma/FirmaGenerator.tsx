@@ -122,9 +122,7 @@ function buildSignatureHtml(fields: SignatureFields, logoUrl: string) {
             </table>
           </td>
           <td style="width:20px; min-width:20px; font-size:0; line-height:0;">&nbsp;</td>
-          <td width="2" bgcolor="#5959c9" style="width:2px; min-width:2px; font-size:0; line-height:0;" valign="middle">&nbsp;</td>
-          <td style="width:20px; min-width:20px; font-size:0; line-height:0;">&nbsp;</td>
-          <td style="padding:0; vertical-align:middle;">
+          <td style="padding:0 0 0 20px; border-left:2px solid #5959c9; mso-border-left-alt:solid #5959c9 2px; vertical-align:middle;">
             <table cellpadding="0" cellspacing="0" border="0" role="presentation" style="border-collapse:collapse;">
               <tr>
                 <td style="padding:0; font-family:'Segoe UI', Arial, Helvetica, sans-serif; font-size:24px; line-height:28px; font-weight:700; color:#0d0625;">
