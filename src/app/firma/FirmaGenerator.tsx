@@ -27,6 +27,8 @@ const initialFields: SignatureFields = {
 
 const fixedWebsite = "lynx.cl";
 const fixedAddress = "Antonio Varas 91, Providencia, Chile";
+const signatureLogoPath = "/images/brand/lynx-logo-positive.png";
+const productionLogoOrigin = "https://lynx-henna.vercel.app";
 
 const defaultStatus: Status = {
   tone: "idle",
@@ -184,15 +186,24 @@ function fallbackCopy(text: string) {
   return success;
 }
 
+function buildAbsoluteLogoUrl() {
+  if (typeof window === "undefined") {
+    return new URL(signatureLogoPath, productionLogoOrigin).toString();
+  }
+
+  const currentOrigin = new URL(window.location.origin);
+  const isLocalOrigin = ["localhost", "127.0.0.1", "[::1]"].includes(currentOrigin.hostname);
+  const assetOrigin = isLocalOrigin ? productionLogoOrigin : currentOrigin.origin;
+
+  return new URL(signatureLogoPath, assetOrigin).toString();
+}
+
 export default function FirmaGenerator() {
   const [fields, setFields] = useState(initialFields);
   const [status, setStatus] = useState<Status>(defaultStatus);
-  const absoluteLogoUrl =
-    typeof window === "undefined"
-      ? "/images/brand/lynx-logo-positive.png"
-      : new URL("/images/brand/lynx-logo-positive.png", window.location.origin).toString();
+  const absoluteLogoUrl = buildAbsoluteLogoUrl();
 
-  const previewHtml = buildSignatureHtml(fields, "/images/brand/lynx-logo-positive.png");
+  const previewHtml = buildSignatureHtml(fields, signatureLogoPath);
   const exportHtml = buildSignatureHtml(fields, absoluteLogoUrl);
   const plainText = buildPlainText(fields);
 
