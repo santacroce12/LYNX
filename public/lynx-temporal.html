@@ -10,17 +10,18 @@
     />
     <style>
       :root {
-        --bg: #040915;
-        --surface: rgba(12, 20, 35, 0.78);
-        --border: rgba(138, 160, 191, 0.18);
-        --text: #edf4ff;
+        --bg: #0d0625;
+        --surface: rgba(18, 10, 48, 0.78);
+        --border: rgba(167, 163, 243, 0.18);
+        --text: #f1efff;
         --text-strong: #ffffff;
-        --muted: #9fb1ca;
-        --muted-soft: #72839f;
-        --accent: #ff7a1a;
-        --accent-soft: #ffc283;
-        --accent-cool: #7da8ff;
-        --cyan: #5eead4;
+        --muted: #b7b1d4;
+        --muted-soft: #827aa6;
+        --accent: #5959c9;
+        --accent-soft: #f7d0a3;
+        --accent-warm: #ef8239;
+        --accent-cool: #aaa6f6;
+        --cyan: #aaa6f6;
       }
 
       * {
@@ -40,9 +41,9 @@
       body {
         overflow-x: hidden;
         background:
-          radial-gradient(circle at 15% 10%, rgba(255, 122, 26, 0.08), transparent 24%),
-          radial-gradient(circle at 86% 18%, rgba(125, 168, 255, 0.1), transparent 24%),
-          linear-gradient(135deg, #09111f 0%, var(--bg) 46%, var(--bg) 100%);
+          radial-gradient(circle at 15% 10%, rgba(239, 130, 57, 0.08), transparent 24%),
+          radial-gradient(circle at 86% 18%, rgba(89, 89, 201, 0.1), transparent 24%),
+          linear-gradient(135deg, #17104b 0%, var(--bg) 46%, var(--bg) 100%);
         color: var(--text);
         font-family:
           Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
@@ -96,8 +97,8 @@
         inset: 0;
         pointer-events: none;
         background:
-          radial-gradient(circle at 16% 16%, rgba(255, 122, 26, 0.08), transparent 28%),
-          radial-gradient(circle at 76% 24%, rgba(125, 168, 255, 0.11), transparent 30%);
+          radial-gradient(circle at 16% 16%, rgba(239, 130, 57, 0.08), transparent 28%),
+          radial-gradient(circle at 76% 24%, rgba(89, 89, 201, 0.11), transparent 30%);
       }
 
       .shell::after {
@@ -109,11 +110,11 @@
           conic-gradient(
             from 180deg,
             transparent 0deg,
-            rgba(94, 234, 212, 0.08) 54deg,
+            rgba(89, 89, 201, 0.08) 54deg,
             transparent 118deg,
-            rgba(255, 122, 26, 0.08) 186deg,
+            rgba(239, 130, 57, 0.08) 186deg,
             transparent 260deg,
-            rgba(125, 168, 255, 0.08) 322deg,
+            rgba(89, 89, 201, 0.08) 322deg,
             transparent 360deg
           );
         mix-blend-mode: screen;
@@ -170,7 +171,7 @@
         height: 8px;
         border-radius: 999px;
         background: linear-gradient(135deg, var(--accent-soft), var(--accent));
-        box-shadow: 0 0 18px rgba(255, 122, 26, 0.36);
+        box-shadow: 0 0 18px rgba(239, 130, 57, 0.36);
       }
 
       h1 {
@@ -218,7 +219,7 @@
         height: 8px;
         border-radius: 999px;
         background: var(--cyan);
-        box-shadow: 0 0 18px rgba(94, 234, 212, 0.58);
+        box-shadow: 0 0 18px rgba(89, 89, 201, 0.58);
         animation: pulse 1.8s ease-in-out infinite;
       }
 
@@ -231,8 +232,8 @@
         border: 1px solid rgba(138, 160, 191, 0.17);
         border-radius: 24px;
         background:
-          radial-gradient(circle at 50% 42%, rgba(255, 122, 26, 0.055), transparent 34%),
-          radial-gradient(circle at 78% 22%, rgba(125, 168, 255, 0.045), transparent 28%),
+          radial-gradient(circle at 50% 42%, rgba(239, 130, 57, 0.055), transparent 34%),
+          radial-gradient(circle at 78% 22%, rgba(89, 89, 201, 0.045), transparent 28%),
           rgba(5, 11, 22, 0.78);
         padding: clamp(14px, 2.3vw, 22px);
       }
@@ -256,7 +257,7 @@
         inset: 18%;
         pointer-events: none;
         border-radius: 999px;
-        background: radial-gradient(circle, rgba(255, 122, 26, 0.07), transparent 68%);
+        background: radial-gradient(circle, rgba(239, 130, 57, 0.07), transparent 68%);
         filter: blur(22px);
         opacity: 0.28;
         animation: sceneGlow 10s ease-in-out infinite;
@@ -277,7 +278,7 @@
         right: 10%;
         height: 1px;
         border-radius: 999px;
-        background: linear-gradient(90deg, transparent, rgba(255, 122, 26, 0.44), transparent);
+        background: linear-gradient(90deg, transparent, rgba(239, 130, 57, 0.44), transparent);
         opacity: 0.58;
       }
 
@@ -312,7 +313,7 @@
         pointer-events: none;
         background:
           linear-gradient(180deg, rgba(255, 255, 255, 0.035), transparent 28%),
-          radial-gradient(circle at 78% 16%, rgba(255, 122, 26, 0.12), transparent 24%),
+          radial-gradient(circle at 78% 16%, rgba(239, 130, 57, 0.12), transparent 24%),
           linear-gradient(90deg, rgba(4, 9, 18, 0.1), transparent 22%, transparent 78%, rgba(4, 9, 18, 0.22));
       }
 
@@ -409,8 +410,8 @@
         background:
           linear-gradient(to right, rgba(138, 160, 191, 0.055) 1px, transparent 1px),
           linear-gradient(to bottom, rgba(138, 160, 191, 0.045) 1px, transparent 1px),
-          radial-gradient(circle at 68% 32%, rgba(125, 168, 255, 0.12), transparent 30%),
-          radial-gradient(circle at 28% 72%, rgba(255, 122, 26, 0.08), transparent 32%),
+          radial-gradient(circle at 68% 32%, rgba(89, 89, 201, 0.12), transparent 30%),
+          radial-gradient(circle at 28% 72%, rgba(239, 130, 57, 0.08), transparent 32%),
           rgba(5, 11, 22, 0.72);
         background-size: 54px 54px, 54px 54px, auto, auto, auto;
       }
@@ -449,7 +450,7 @@
         bottom: 12px;
         right: 12px;
         z-index: 2;
-        border: 1px solid rgba(255, 194, 131, 0.16);
+        border: 1px solid rgba(247, 208, 163, 0.16);
         border-radius: 999px;
         background: rgba(8, 14, 24, 0.78);
         padding: 8px 11px;
@@ -705,7 +706,7 @@
         <div class="content">
           <div>
             <div class="brand" aria-label="LYNX">
-              <img src="images/brand/logo-azul.png" alt="LYNX" />
+              <img src="images/brand/lynx-logo-negative.png" alt="LYNX" />
             </div>
             <div class="kicker">Sitio en renovaci&oacute;n</div>
             <h1>Hola, estamos cambiando nuestra p&aacute;gina.</h1>

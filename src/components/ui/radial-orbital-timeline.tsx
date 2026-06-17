@@ -42,6 +42,7 @@ type RadialOrbitalTimelineProps = {
   className?: string;
   mobileKicker?: string;
   mobileTitle?: string;
+  showMobileHeader?: boolean;
 };
 
 type OrbitalStyle = CSSProperties & {
@@ -86,6 +87,7 @@ export default function RadialOrbitalTimeline({
   className,
   mobileKicker = "Recorrido AS-IS / TO-BE",
   mobileTitle = "Proceso tecnológico por etapas",
+  showMobileHeader = true,
 }: RadialOrbitalTimelineProps) {
   const [activeNodeId, setActiveNodeId] = useState<number | null>(null);
   const [isPointerPaused, setIsPointerPaused] = useState(false);
@@ -227,14 +229,16 @@ export default function RadialOrbitalTimeline({
       )}
     >
       <div className="grid gap-3 p-4 md:hidden">
-        <div className="mb-1">
-          <p className="section-kicker text-[var(--accent-soft)]">
-            {mobileKicker}
-          </p>
-          <h3 className="mt-3 text-[1.45rem] leading-[1.05] text-[var(--text-strong)]">
-            {mobileTitle}
-          </h3>
-        </div>
+        {showMobileHeader ? (
+          <div className="mb-1">
+            <p className="section-kicker text-[var(--accent-soft)]">
+              {mobileKicker}
+            </p>
+            <h3 className="mt-3 text-[1.45rem] leading-[1.05] text-[var(--text-strong)]">
+              {mobileTitle}
+            </h3>
+          </div>
+        ) : null}
 
         {timelineData.map((item) => {
           const Icon = iconsByKey[item.icon];

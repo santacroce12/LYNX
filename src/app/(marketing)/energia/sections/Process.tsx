@@ -59,6 +59,7 @@ export default function EnergiaProcess() {
           timelineData={processTimeline}
           mobileKicker="Ciclo certificado"
           mobileTitle="Proyecto energético por etapas"
+          showMobileHeader={false}
         />
       </Reveal>
     </Section>

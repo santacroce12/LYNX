@@ -7,8 +7,8 @@ import {
   Linkedin,
   Mail,
   MapPin,
-  Phone,
 } from "lucide-react";
+import { FaWhatsapp } from "react-icons/fa6";
 import { site } from "@/content/site";
 
 export default function FooterContent() {
@@ -114,11 +114,13 @@ export default function FooterContent() {
 
             <div className="grid gap-3">
               <a
-                href={`tel:${site.contact.mobile.replace(/\s/g, "")}`}
-                className="flex items-center gap-3 rounded-[1.4rem] border border-[var(--border)] bg-[rgba(255,255,255,0.03)] px-4 py-4 transition hover:border-[rgba(247,208,163,0.34)] hover:bg-[rgba(239,130,57,0.06)]"
+                href={`https://wa.me/${site.contact.mobile.replace(/\D/g, "")}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-3 rounded-[1.4rem] border border-[var(--border)] bg-[rgba(255,255,255,0.03)] px-4 py-4 transition hover:border-[rgba(37,211,102,0.34)] hover:bg-[rgba(37,211,102,0.08)]"
               >
-                <Phone className="h-5 w-5 text-[var(--accent)]" />
-                  <span className="text-sm text-[var(--text-secondary)]">
+                <FaWhatsapp className="h-5 w-5 text-[#25D366]" />
+                <span className="text-sm text-[var(--text-secondary)]">
                   {site.contact.mobile}
                 </span>
               </a>
@@ -127,9 +129,9 @@ export default function FooterContent() {
                 href={`https://wa.me/${site.contact.phone.replace(/\D/g, "")}`}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-3 rounded-[1.4rem] border border-[var(--border)] bg-[rgba(255,255,255,0.03)] px-4 py-4 transition hover:border-[rgba(247,208,163,0.34)] hover:bg-[rgba(239,130,57,0.06)]"
+                className="flex items-center gap-3 rounded-[1.4rem] border border-[var(--border)] bg-[rgba(255,255,255,0.03)] px-4 py-4 transition hover:border-[rgba(37,211,102,0.34)] hover:bg-[rgba(37,211,102,0.08)]"
               >
-                <Phone className="h-5 w-5 text-[var(--accent)]" />
+                <FaWhatsapp className="h-5 w-5 text-[#25D366]" />
                 <span className="text-sm text-[var(--text-secondary)]">
                   {site.contact.phone}
                 </span>

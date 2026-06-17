@@ -6,7 +6,8 @@ import LocationMap from "@/components/ui/LocationMap";
 import TubesBackground from "@/components/ui/neon-flow";
 import { site } from "@/content/site";
 import { buildMetadata } from "@/lib/seo";
-import { ArrowUpRight, Mail, MapPin, MessageCircle } from "lucide-react";
+import { ArrowUpRight, Mail, MapPin } from "lucide-react";
+import { FaWhatsapp } from "react-icons/fa6";
 import ContactForm from "./ContactForm";
 
 export const metadata = buildMetadata({
@@ -26,20 +27,20 @@ export default function ContactPage() {
       border: "hover:border-[rgba(247,208,163,0.28)]",
     },
     {
-      label: "WhatsApp principal",
+      label: "WhatsApp",
       value: site.contact.mobile,
       href: `https://wa.me/${site.contact.mobile.replace(/\D/g, "")}`,
-      icon: MessageCircle,
-      accent: "text-[var(--accent-cool)]",
-      border: "hover:border-[rgba(89,89,201,0.28)]",
+      icon: FaWhatsapp,
+      accent: "text-[#25D366]",
+      border: "hover:border-[rgba(37,211,102,0.34)]",
     },
     {
-      label: "WhatsApp alternativo",
+      label: "WhatsApp",
       value: site.contact.phone,
       href: `https://wa.me/${site.contact.phone.replace(/\D/g, "")}`,
-      icon: MessageCircle,
-      accent: "text-[var(--accent-cool)]",
-      border: "hover:border-[rgba(89,89,201,0.28)]",
+      icon: FaWhatsapp,
+      accent: "text-[#25D366]",
+      border: "hover:border-[rgba(37,211,102,0.34)]",
     },
   ];
 
@@ -84,7 +85,7 @@ export default function ContactPage() {
 
                     return (
                       <a
-                        key={item.label}
+                        key={item.value}
                         href={item.href}
                         target={item.href.startsWith("https://") ? "_blank" : undefined}
                         rel={

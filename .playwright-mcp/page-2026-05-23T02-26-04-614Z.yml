@@ -1,0 +1,288 @@
+- generic [active] [ref=e1]:
+  - banner [ref=e2]:
+    - generic [ref=e4]:
+      - link "LYNX logo" [ref=e5] [cursor=pointer]:
+        - /url: /
+        - img "LYNX logo" [ref=e6]
+      - navigation "Navegación principal" [ref=e7]:
+        - link "Inicio" [ref=e8] [cursor=pointer]:
+          - /url: /
+          - text: Inicio
+        - link "Energía" [ref=e9] [cursor=pointer]:
+          - /url: /energia
+          - text: Energía
+        - link "Tecnología" [ref=e10] [cursor=pointer]:
+          - /url: /tecnologia
+          - text: Tecnología
+        - link "Recursos" [ref=e11] [cursor=pointer]:
+          - /url: /recursos
+          - text: Recursos
+        - link "FAQs" [ref=e12] [cursor=pointer]:
+          - /url: /faqs
+          - text: FAQs
+        - link "Contacto" [ref=e13] [cursor=pointer]:
+          - /url: /contacto
+          - text: Contacto
+  - main [ref=e14]:
+    - generic [ref=e16]:
+      - generic [ref=e17]:
+        - img "Infraestructura digital de LYNX" [ref=e18]
+        - generic [ref=e21]:
+          - generic [ref=e22]:
+            - generic [ref=e23]:
+              - generic [ref=e25]: Operaciones críticas
+              - heading "Energía y tecnología para operaciones críticas." [level=1] [ref=e28]
+              - paragraph [ref=e30]: Integramos infraestructura, automatización y software para que la operación sea visible, controlable y mantenible.
+              - generic [ref=e32]:
+                - generic [ref=e33]:
+                  - paragraph [ref=e34]: Cobertura
+                  - paragraph [ref=e35]: Chile y Argentina
+                - generic [ref=e36]:
+                  - paragraph [ref=e37]: Despliegue
+                  - paragraph [ref=e38]: Remoto y en terreno
+                - generic [ref=e39]:
+                  - paragraph [ref=e40]: Modelo
+                  - paragraph [ref=e41]: Diagnóstico, ejecución y soporte
+            - generic [ref=e43]:
+              - img "Infraestructura energética" [ref=e46]
+              - img "Centro de control tecnológico" [ref=e50]
+              - img "Tableros y monitoreo operativo" [ref=e54]
+          - generic [ref=e66]:
+            - generic [ref=e69]:
+              - generic [ref=e70]: Elegí una vertical
+              - paragraph [ref=e71]: "Dos caminos claros para entrar a LYNX: energía para infraestructura crítica y tecnología para integración operativa."
+            - generic [ref=e72]:
+              - link "Ir a Energía" [ref=e74] [cursor=pointer]:
+                - /url: /energia
+                - generic [ref=e75]:
+                  - generic [ref=e76]:
+                    - generic [ref=e77]:
+                      - generic [ref=e78]:
+                        - generic [ref=e79]: Vertical energía
+                        - heading "Energía" [level=2] [ref=e80]
+                      - generic [ref=e81]: "01"
+                    - paragraph [ref=e82]: Automatización y control eléctrico
+                    - paragraph [ref=e83]: SCADA, PMU, protecciones, commissioning y monitoreo para infraestructura crítica.
+                    - generic [ref=e84]:
+                      - generic [ref=e85]: SCADA
+                      - generic [ref=e86]: PMU
+                      - generic [ref=e87]: Subestaciones
+                  - generic [ref=e88]:
+                    - img "Energía" [ref=e89]
+                    - img [ref=e92]
+              - link "Ir a Tecnología" [ref=e96] [cursor=pointer]:
+                - /url: /tecnologia
+                - generic [ref=e97]:
+                  - generic [ref=e98]:
+                    - generic [ref=e99]:
+                      - generic [ref=e100]:
+                        - generic [ref=e101]: Vertical tecnología
+                        - heading "Tecnología" [level=2] [ref=e102]
+                      - generic [ref=e103]: "02"
+                    - paragraph [ref=e104]: Integración operativa y datos
+                    - paragraph [ref=e105]: OT/IT, IoT industrial, automatización, datos y soporte para conectar procesos y equipos.
+                    - generic [ref=e106]:
+                      - generic [ref=e107]: OT / IT
+                      - generic [ref=e108]: IoT
+                      - generic [ref=e109]: Datos
+                  - generic [ref=e110]:
+                    - img "Tecnología" [ref=e111]
+                    - img [ref=e114]
+      - generic [ref=e118]:
+        - generic [ref=e119]:
+          - generic [ref=e120]:
+            - generic [ref=e122]: Partners
+            - heading "Nuestros aliados tecnológicos" [level=2] [ref=e124]
+          - paragraph [ref=e126]: Trabajamos con fabricantes globales y software especializado para entregar soluciones robustas y seguras.
+        - region "Aliados tecnologicos" [ref=e130]:
+          - generic [ref=e132]:
+            - group [ref=e133]:
+              - link "SEL" [ref=e134] [cursor=pointer]:
+                - /url: https://selinc.com
+                - img "SEL" [ref=e136]
+            - group [ref=e137]:
+              - link "Survalent" [ref=e138] [cursor=pointer]:
+                - /url: https://www.survalent.com/
+                - img "Survalent" [ref=e140]
+            - group [ref=e141]:
+              - link "Systems With Intelligence" [ref=e142] [cursor=pointer]:
+                - /url: https://systemswithintelligence.com
+                - img "Systems With Intelligence" [ref=e144]
+            - group [ref=e145]:
+              - link "N3uron" [ref=e146] [cursor=pointer]:
+                - /url: https://n3uron.com
+                - img "N3uron" [ref=e148]
+            - group [ref=e149]:
+              - link "Lexa" [ref=e150] [cursor=pointer]:
+                - /url: "#"
+                - img "Lexa" [ref=e152]
+            - group [ref=e153]:
+              - link "Cisco" [ref=e154] [cursor=pointer]:
+                - /url: https://www.cisco.com/
+                - img "Cisco" [ref=e156]
+            - group [ref=e157]:
+              - link "Sisco" [ref=e158] [cursor=pointer]:
+                - /url: https://sisconet.com/
+                - img "Sisco" [ref=e160]
+      - generic [ref=e162]:
+        - generic [ref=e163]:
+          - generic [ref=e164]:
+            - generic [ref=e166]: Nosotros
+            - heading "LYNX" [level=2] [ref=e168]
+            - paragraph [ref=e170]: Desde 1993 conectamos ingeniería, automatización y software para operaciones energéticas e industriales.
+            - paragraph [ref=e172]: "Diseñamos, implementamos y mantenemos soluciones completas: hardware crítico, supervisión, datos y ejecución en terreno."
+          - generic [ref=e175]:
+            - generic [ref=e177]:
+              - generic "Cobertura LYNX en Chile y Argentina" [ref=e179]
+              - generic:
+                - generic: Chile
+                - generic: Santiago
+              - generic:
+                - generic: Argentina
+                - generic: Mendoza
+            - generic [ref=e181]:
+              - paragraph [ref=e182]: Cobertura regional
+              - heading "Presencia operativa en Chile y Argentina." [level=3] [ref=e183]
+        - generic [ref=e184]:
+          - generic [ref=e186]:
+            - generic [ref=e187]:
+              - img [ref=e189]
+              - generic [ref=e192]: "01"
+            - heading "Trayectoria y Alcance" [level=3] [ref=e193]
+            - paragraph [ref=e194]: Desde 1993, integramos tecnologías de automatización con implementaciones exitosas en Argentina y el exterior.
+          - generic [ref=e196]:
+            - generic [ref=e197]:
+              - img [ref=e199]
+              - generic [ref=e201]: "02"
+            - heading "Foco en Energía" [level=3] [ref=e202]
+            - paragraph [ref=e203]: Especialistas en control, medición y protección de sistemas eléctricos con tecnología de vanguardia.
+          - generic [ref=e205]:
+            - generic [ref=e206]:
+              - img [ref=e208]
+              - generic [ref=e212]: "03"
+            - heading "Soluciones Integrales" [level=3] [ref=e213]
+            - paragraph [ref=e214]: Combinamos innovación, ingeniería y provisión de equipamiento para superar los resultados esperados.
+          - generic [ref=e216]:
+            - generic [ref=e217]:
+              - img [ref=e219]
+              - generic [ref=e221]: "04"
+            - heading "Ciclo de Proyecto 360°" [level=3] [ref=e222]
+            - paragraph [ref=e223]: "Acompañamos de punta a punta: desde la ingeniería conceptual hasta el montaje, pruebas y puesta en servicio."
+          - generic [ref=e225]:
+            - generic [ref=e226]:
+              - img [ref=e228]
+              - generic [ref=e231]: "05"
+            - heading "Partners Globales" [level=3] [ref=e232]
+            - paragraph [ref=e233]: Trabajamos con socios estratégicos cuyo respaldo tecnológico fortalece la calidad de nuestras soluciones.
+          - generic [ref=e235]:
+            - generic [ref=e236]:
+              - img [ref=e238]
+              - generic [ref=e240]: "06"
+            - heading "Equipo Experto" [level=3] [ref=e241]
+            - paragraph [ref=e242]: Profesionales con sólida formación en automatismos avanzados para asumir desafíos con confianza y solidez.
+      - generic [ref=e245]:
+        - generic [ref=e246]:
+          - generic [ref=e247]:
+            - generic [ref=e248]: Capacidades
+            - heading "¿Qué hace LYNX?" [level=2] [ref=e249]
+          - paragraph [ref=e250]: Diagnóstico, ejecución y soporte para energía e infraestructura tecnológica.
+        - generic [ref=e251]:
+          - generic [ref=e255]:
+            - generic [ref=e256]:
+              - img [ref=e258]
+              - generic [ref=e260]: "01"
+            - generic [ref=e261]:
+              - heading "Diagnóstico experto" [level=3] [ref=e262]
+              - paragraph [ref=e263]: Relevamos requisitos y priorizamos el plan de acción.
+          - generic [ref=e267]:
+            - generic [ref=e268]:
+              - img [ref=e270]
+              - generic [ref=e272]: "02"
+            - generic [ref=e273]:
+              - heading "Ejecución integral" [level=3] [ref=e274]
+              - paragraph [ref=e275]: Coordinamos ingeniería, software e infraestructura.
+          - generic [ref=e279]:
+            - generic [ref=e280]:
+              - img [ref=e282]
+              - generic [ref=e284]: "03"
+            - generic [ref=e285]:
+              - heading "Escalabilidad real" [level=3] [ref=e286]
+              - paragraph [ref=e287]: Diseñamos soluciones mantenibles y preparadas para crecer.
+      - generic [ref=e299]:
+        - generic [ref=e300]:
+          - generic [ref=e301]:
+            - heading "Hablemos de tu operación" [level=2] [ref=e303]
+            - paragraph [ref=e305]: Contanos qué necesitás resolver y armamos el próximo paso.
+          - link "Hablemos" [ref=e308] [cursor=pointer]:
+            - /url: /contacto
+        - generic [ref=e309]:
+          - generic [ref=e310]:
+            - generic [ref=e311]:
+              - generic [ref=e312]: Infraestructura crítica
+              - generic [ref=e313]:
+                - link "LYNX" [ref=e315] [cursor=pointer]:
+                  - /url: /
+                  - img "LYNX" [ref=e316]
+                - generic [ref=e317]:
+                  - paragraph [ref=e318]: "Redes:"
+                  - link "LinkedIn" [ref=e320] [cursor=pointer]:
+                    - /url: https://linkedin.com/company/lynxenergia
+                    - img [ref=e321]
+            - generic [ref=e325]:
+              - heading "Navegación" [level=3] [ref=e326]
+              - generic [ref=e327]:
+                - link "Inicio 01" [ref=e328] [cursor=pointer]:
+                  - /url: /
+                  - generic [ref=e329]: Inicio
+                  - generic [ref=e330]: "01"
+                - link "Energía 02" [ref=e331] [cursor=pointer]:
+                  - /url: /energia
+                  - generic [ref=e332]: Energía
+                  - generic [ref=e333]: "02"
+                - link "Tecnología 03" [ref=e334] [cursor=pointer]:
+                  - /url: /tecnologia
+                  - generic [ref=e335]: Tecnología
+                  - generic [ref=e336]: "03"
+                - link "Recursos 04" [ref=e337] [cursor=pointer]:
+                  - /url: /recursos
+                  - generic [ref=e338]: Recursos
+                  - generic [ref=e339]: "04"
+                - link "FAQs 05" [ref=e340] [cursor=pointer]:
+                  - /url: /faqs
+                  - generic [ref=e341]: FAQs
+                  - generic [ref=e342]: "05"
+                - link "Contacto 06" [ref=e343] [cursor=pointer]:
+                  - /url: /contacto
+                  - generic [ref=e344]: Contacto
+                  - generic [ref=e345]: "06"
+            - generic [ref=e346]:
+              - heading "Contacto" [level=3] [ref=e347]
+              - generic [ref=e348]:
+                - generic [ref=e350]:
+                  - img [ref=e351]
+                  - generic [ref=e354]:
+                    - paragraph [ref=e355]: Santiago, Chile
+                    - paragraph [ref=e356]: Operación en Chile y Argentina
+                - link "soporte@lynx.cl" [ref=e357] [cursor=pointer]:
+                  - /url: mailto:soporte@lynx.cl
+                  - img [ref=e358]
+                  - generic [ref=e361]: soporte@lynx.cl
+                - generic [ref=e362]:
+                  - link "+56 9 9219 1328" [ref=e363] [cursor=pointer]:
+                    - /url: tel:+56992191328
+                    - img [ref=e364]
+                    - generic [ref=e366]: +56 9 9219 1328
+                  - link "+56 9 9216 2573" [ref=e367] [cursor=pointer]:
+                    - /url: https://wa.me/56992162573
+                    - img [ref=e368]
+                    - generic [ref=e370]: +56 9 9216 2573
+          - generic [ref=e371]:
+            - paragraph [ref=e372]: © 2026 LYNX. Todos los derechos reservados.
+            - paragraph [ref=e373]: Energía y Tecnología para soluciones modernas
+  - alert [ref=e374]
+  - generic:
+    - generic:
+      - generic:
+        - generic:
+          - generic:
+            - img "LYNX"

@@ -53,6 +53,12 @@ export default function RootLayout({
     >
       <head>
         <link
+          rel="preload"
+          as="image"
+          href="/images/brand/lynx-logo-negative.png"
+          fetchPriority="high"
+        />
+        <link
           rel="alternate"
           type="application/rss+xml"
           title="RSS Feed de LYNX"

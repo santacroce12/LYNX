@@ -1,0 +1,52 @@
+- generic [active] [ref=e1]:
+  - banner [ref=e2]:
+    - generic [ref=e4]:
+      - link "LYNX logo" [ref=e5] [cursor=pointer]:
+        - /url: /
+        - img "LYNX logo" [ref=e6]
+      - navigation "Navegación principal" [ref=e7]:
+        - link "Inicio" [ref=e8] [cursor=pointer]:
+          - /url: /
+          - text: Inicio
+        - link "Energía" [ref=e9] [cursor=pointer]:
+          - /url: /energia
+          - text: Energía
+        - link "Tecnología" [ref=e10] [cursor=pointer]:
+          - /url: /tecnologia
+          - text: Tecnología
+        - link "Recursos" [ref=e11] [cursor=pointer]:
+          - /url: /recursos
+          - text: Recursos
+        - link "FAQs" [ref=e12] [cursor=pointer]:
+          - /url: /faqs
+          - text: FAQs
+        - link "Contacto" [ref=e13] [cursor=pointer]:
+          - /url: /contacto
+          - text: Contacto
+  - main [ref=e14]:
+    - generic [ref=e18]:
+      - generic [ref=e19]:
+        - generic [ref=e21]: Preguntas frecuentes
+        - heading "Elegí una vertical" [level=1] [ref=e23]
+        - paragraph [ref=e25]: Seleccioná el área que querés consultar.
+      - generic [ref=e26]:
+        - link "Energía Energía Automatización eléctrica, SCADA, PMU y commissioning." [ref=e28] [cursor=pointer]:
+          - /url: /faqs/energia
+          - generic [ref=e29]:
+            - generic [ref=e30]:
+              - img [ref=e32]
+              - img [ref=e36]
+            - generic [ref=e38]:
+              - paragraph [ref=e39]: Energía
+              - heading "Energía" [level=2] [ref=e40]
+              - paragraph [ref=e41]: Automatización eléctrica, SCADA, PMU y commissioning.
+        - link "Tecnología Tecnología Integración OT/IT, datos, hardware y soporte técnico." [ref=e43] [cursor=pointer]:
+          - /url: /faqs/tecnologia
+          - generic [ref=e44]:
+            - generic [ref=e45]:
+              - img [ref=e47]
+              - img [ref=e51]
+            - generic [ref=e53]:
+              - paragraph [ref=e54]: Tecnología
+              - heading "Tecnología" [level=2] [ref=e55]
+              - paragraph [ref=e56]: Integración OT/IT, datos, hardware y soporte técnico.

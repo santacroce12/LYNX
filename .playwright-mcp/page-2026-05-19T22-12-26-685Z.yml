@@ -1,0 +1,357 @@
+- generic [active] [ref=e1]:
+  - banner [ref=e2]:
+    - navigation "Navegación principal" [ref=e6]:
+      - link "LYNX logo" [ref=e7] [cursor=pointer]:
+        - /url: /
+        - img "LYNX logo" [ref=e8]
+      - generic [ref=e9]:
+        - generic [ref=e10]:
+          - link "Inicio" [ref=e11] [cursor=pointer]:
+            - /url: /
+          - link "Energía" [ref=e12] [cursor=pointer]:
+            - /url: /energia
+          - link "Tecnología" [ref=e13] [cursor=pointer]:
+            - /url: /tecnologia
+          - link "Recursos" [ref=e14] [cursor=pointer]:
+            - /url: /recursos
+          - link "FAQs" [ref=e15] [cursor=pointer]:
+            - /url: /faqs
+          - link "Contacto" [ref=e16] [cursor=pointer]:
+            - /url: /contacto
+        - link "Agendar diagnostico" [ref=e17] [cursor=pointer]:
+          - /url: /contacto
+  - main [ref=e18]:
+    - generic [ref=e20]:
+      - generic [ref=e21]:
+        - img "Centro de control de energía" [ref=e22]
+        - generic:
+          - img
+          - generic:
+            - img
+          - generic:
+            - img
+          - generic:
+            - img
+        - generic [ref=e28]:
+          - generic [ref=e30]: Vertical Energía
+          - heading "Energía confiable para operaciones críticas" [level=1] [ref=e33]
+          - paragraph [ref=e35]: Infraestructura eléctrica, monitoreo avanzado y soporte para activos críticos.
+          - paragraph [ref=e37]: Control, eficiencia y cumplimiento normativo.
+      - generic [ref=e49]:
+        - generic [ref=e50]:
+          - generic [ref=e51]:
+            - generic [ref=e52]: Capacidades
+            - heading "Capacidades clave" [level=2] [ref=e53]
+          - paragraph [ref=e54]: Ingeniería de potencia, control y cumplimiento normativo.
+        - generic [ref=e55]:
+          - generic [ref=e59]:
+            - generic [ref=e60]:
+              - img [ref=e62]
+              - generic [ref=e64]: "01"
+            - generic [ref=e65]:
+              - heading "Cumplimiento CEN" [level=3] [ref=e66]
+              - paragraph [ref=e67]: Observabilidad y cumplimiento de la Norma Técnica de Seguridad y Calidad.
+          - generic [ref=e71]:
+            - generic [ref=e72]:
+              - img [ref=e74]
+              - generic [ref=e76]: "02"
+            - generic [ref=e77]:
+              - heading "Optimización de consumo" [level=3] [ref=e78]
+              - paragraph [ref=e79]: Modelos y ajustes para reducir costos energéticos.
+          - generic [ref=e83]:
+            - generic [ref=e84]:
+              - img [ref=e86]
+              - generic [ref=e88]: "03"
+            - generic [ref=e89]:
+              - heading "Gestión de redes" [level=3] [ref=e90]
+              - paragraph [ref=e91]: Monitoreo centralizado con alertas en tiempo real.
+          - generic [ref=e95]:
+            - generic [ref=e96]:
+              - img [ref=e98]
+              - generic [ref=e100]: "04"
+            - generic [ref=e101]:
+              - heading "Medición inteligente" [level=3] [ref=e102]
+              - paragraph [ref=e103]: Telemetría avanzada con paneles listos para auditorías.
+          - generic [ref=e107]:
+            - generic [ref=e108]:
+              - img [ref=e110]
+              - generic [ref=e112]: "05"
+            - generic [ref=e113]:
+              - heading "Integración OT/IT" [level=3] [ref=e114]
+              - paragraph [ref=e115]: Conectamos activos industriales con plataformas digitales.
+          - generic [ref=e119]:
+            - generic [ref=e120]:
+              - img [ref=e122]
+              - generic [ref=e124]: "06"
+            - generic [ref=e125]:
+              - heading "Auditorías Técnicas" [level=3] [ref=e126]
+              - paragraph [ref=e127]: Revisión de instalaciones, informes y planes de mejora.
+      - generic [ref=e130]:
+        - generic [ref=e131]:
+          - generic [ref=e133]: Respaldo
+          - heading "Ingeniería Certificada" [level=2] [ref=e135]
+        - generic [ref=e136]:
+          - generic [ref=e138]:
+            - generic [ref=e139]: +30 Años
+            - generic [ref=e140]: Experiencia en Argentina
+          - generic [ref=e142]:
+            - generic [ref=e143]: +10 Años
+            - generic [ref=e144]: Experiencia en Chile
+          - generic [ref=e146]:
+            - generic [ref=e147]: 100%
+            - generic [ref=e148]: Compromiso HSE
+          - generic [ref=e150]:
+            - generic [ref=e151]: 24/7
+            - generic [ref=e152]: Disponibilidad
+        - generic [ref=e154]:
+          - paragraph [ref=e155]: Normativas & Protocolos Industriales
+          - generic [ref=e156]:
+            - generic [ref=e157]:
+              - img [ref=e158]
+              - generic [ref=e160]: IEC 61850
+            - generic [ref=e161]:
+              - img [ref=e162]
+              - generic [ref=e164]: IEEE C37
+            - generic [ref=e165]:
+              - img [ref=e166]
+              - generic [ref=e169]: NFPA 70E
+            - generic [ref=e170]:
+              - img [ref=e171]
+              - generic [ref=e174]: ISO 9001
+            - generic [ref=e175]:
+              - img [ref=e176]
+              - generic [ref=e182]: DNP3
+            - generic [ref=e183]:
+              - img [ref=e184]
+              - generic [ref=e189]: Modbus TCP
+      - generic [ref=e191]:
+        - generic [ref=e192]:
+          - heading "Infraestructura en imágenes" [level=2] [ref=e193]
+          - paragraph [ref=e194]: Proyectos, equipos y operaciones en terreno.
+        - generic [ref=e195]:
+          - img "Subestación eléctrica" [ref=e199]
+          - img "Ingeniero en campo" [ref=e204]
+          - img "Proyecto energía 1" [ref=e209]
+          - img "Proyecto energía 2" [ref=e214]
+          - img "Proyecto energía 3" [ref=e219]
+          - img "Proyecto energía 4" [ref=e224]
+      - generic [ref=e227]:
+        - generic [ref=e228]:
+          - generic [ref=e230]: Servicios
+          - heading "Servicios Especializados" [level=2] [ref=e232]
+          - paragraph [ref=e234]: Sincrofasores, subestaciones, control y protecciones.
+        - generic [ref=e235]:
+          - generic [ref=e237]:
+            - generic [ref=e238]:
+              - img [ref=e240]
+              - generic [ref=e242]: "01"
+            - heading "Sistemas WAMS y PMU" [level=3] [ref=e243]
+            - paragraph [ref=e244]: Implementación de PMU/PDC y monitoreo dinámico de red según anexos técnicos del CEN.
+          - generic [ref=e246]:
+            - generic [ref=e247]:
+              - img [ref=e249]
+              - generic [ref=e251]: "02"
+            - heading "Subestaciones" [level=3] [ref=e252]
+            - paragraph [ref=e253]: Diseño, montaje y puesta en servicio en alta y media tensión.
+          - generic [ref=e255]:
+            - generic [ref=e256]:
+              - img [ref=e258]
+              - generic [ref=e260]: "03"
+            - heading "Sistemas de Control" [level=3] [ref=e261]
+            - paragraph [ref=e262]: SCADA, RTUs y HMIs para operación remota.
+          - generic [ref=e264]:
+            - generic [ref=e265]:
+              - img [ref=e267]
+              - generic [ref=e270]: "04"
+            - heading "Protecciones" [level=3] [ref=e271]
+            - paragraph [ref=e272]: Configuración, pruebas y puesta en servicio.
+          - generic [ref=e274]:
+            - generic [ref=e275]:
+              - img [ref=e277]
+              - generic [ref=e283]: "05"
+            - heading "Telecomunicaciones" [level=3] [ref=e284]
+            - paragraph [ref=e285]: FO, radio y PLC para entornos críticos.
+          - generic [ref=e287]:
+            - generic [ref=e288]:
+              - img [ref=e290]
+              - generic [ref=e293]: "06"
+            - heading "Ciberseguridad OT" [level=3] [ref=e294]
+            - paragraph [ref=e295]: Hardenización de redes y cumplimiento CIP/NUE.
+      - generic [ref=e297]:
+        - generic [ref=e298]:
+          - generic [ref=e300]: Framework
+          - heading "Ciclo de Proyecto Certificado" [level=2] [ref=e302]
+          - paragraph [ref=e304]: Garantizamos cumplimiento normativo desde el diseño hasta la energización.
+        - generic [ref=e307]:
+          - article [ref=e309]:
+            - generic [ref=e312]: "01"
+            - generic [ref=e314]:
+              - heading "Diagnóstico & Factibilidad" [level=3] [ref=e317]
+              - paragraph [ref=e319]: Levantamiento en terreno y revisión normativa para validar viabilidad.
+          - article [ref=e321]:
+            - generic [ref=e324]: "02"
+            - generic [ref=e326]:
+              - heading "Ingeniería de Detalle" [level=3] [ref=e329]
+              - paragraph [ref=e331]: Planos, control, protecciones y simulaciones técnicas.
+          - article [ref=e333]:
+            - generic [ref=e336]: "03"
+            - generic [ref=e338]:
+              - heading "Ejecución & Montaje" [level=3] [ref=e341]
+              - paragraph [ref=e343]: Despliegue con protocolos HSE y supervisión en sitio.
+          - article [ref=e345]:
+            - generic [ref=e348]: "04"
+            - generic [ref=e350]:
+              - heading "Commissioning (FAT/SAT)" [level=3] [ref=e353]
+              - paragraph [ref=e355]: Pruebas FAT/SAT y validación de señales ante el CEN.
+          - article [ref=e357]:
+            - generic [ref=e360]: "05"
+            - generic [ref=e362]:
+              - heading "Monitoreo y Mantenimiento" [level=3] [ref=e365]
+              - paragraph [ref=e367]: Supervisión y mantenimiento preventivo para asegurar disponibilidad.
+      - generic [ref=e369]:
+        - generic [ref=e370]:
+          - generic [ref=e372]: Aplicaciones
+          - heading "Experiencia Aplicada" [level=2] [ref=e374]
+          - paragraph [ref=e376]: Soluciones diseñadas para entornos críticos y exigentes.
+        - generic [ref=e377]:
+          - generic [ref=e379]:
+            - img "Sistema de Monitoreo Fasorial" [ref=e383]
+            - article [ref=e386]:
+              - generic [ref=e387]:
+                - generic [ref=e388]:
+                  - generic [ref=e390]: Caso 1
+                  - generic [ref=e391]: "01"
+                - heading "Sistema de Monitoreo Fasorial" [level=3] [ref=e392]
+                - paragraph [ref=e393]: Solución WAMS con PMUs para observar oscilaciones de potencia en tiempo real.
+          - generic [ref=e395]:
+            - img "Centro de Control SCADA" [ref=e399]
+            - article [ref=e402]:
+              - generic [ref=e403]:
+                - generic [ref=e404]:
+                  - generic [ref=e406]: Caso 2
+                  - generic [ref=e407]: "02"
+                - heading "Centro de Control SCADA" [level=3] [ref=e408]
+                - paragraph [ref=e409]: Sistema centralizado redundante para operación remota de subestaciones.
+          - generic [ref=e411]:
+            - img "Cumplimiento Normativo SITR" [ref=e415]
+            - article [ref=e418]:
+              - generic [ref=e419]:
+                - generic [ref=e420]:
+                  - generic [ref=e422]: Caso 3
+                  - generic [ref=e423]: "03"
+                - heading "Cumplimiento Normativo SITR" [level=3] [ref=e424]
+                - paragraph [ref=e425]: Infraestructura para integración al SITR en Central Yungay y proyectos Barrick.
+      - generic [ref=e427]:
+        - generic [ref=e428]:
+          - generic [ref=e430]: Proyectos
+          - heading "Proyectos destacados de Energía" [level=2] [ref=e432]
+          - paragraph [ref=e434]: Explorá casos reales y abrí el detalle completo en nuestra sección de recursos.
+        - generic [ref=e435]:
+          - link "Ver caso ET Villa Hipódromo" [ref=e437] [cursor=pointer]:
+            - /url: /recursos?id=villa-hipodromo
+            - generic [ref=e439]:
+              - img "ET Villa Hipódromo" [ref=e441]
+              - generic [ref=e443]:
+                - generic [ref=e444]:
+                  - generic [ref=e445]: Control
+                  - generic [ref=e446]: Alta Tensión
+                - generic [ref=e447]:
+                  - heading "ET Villa Hipódromo" [level=3] [ref=e448]
+                  - paragraph [ref=e449]: Ingeniería de detalle y sistema de control basado en PLC para dos líneas y dos transformadores de 132/33/13 kV.
+                - generic [ref=e450]: Ver detalle
+          - link "Ver caso Agencia Espacial Europea (ESA)" [ref=e453] [cursor=pointer]:
+            - /url: /recursos?id=antena-esa
+            - generic [ref=e455]:
+              - img "Agencia Espacial Europea (ESA)" [ref=e457]
+              - generic [ref=e459]:
+                - generic [ref=e460]:
+                  - generic [ref=e461]: Alimentación Crítica
+                  - generic [ref=e462]: UPS
+                - generic [ref=e463]:
+                  - heading "Agencia Espacial Europea (ESA)" [level=3] [ref=e464]
+                  - paragraph [ref=e465]: Consultoría, ingeniería y provisión llave en mano del sistema eléctrico y control de alimentación asegurada.
+                - generic [ref=e466]: Ver detalle
+          - link "Ver caso Central Hidroeléctrica Nihuil 2" [ref=e469] [cursor=pointer]:
+            - /url: /recursos?id=nihuil-2
+            - generic [ref=e471]:
+              - img "Central Hidroeléctrica Nihuil 2" [ref=e473]
+              - generic [ref=e475]:
+                - generic [ref=e476]:
+                  - generic [ref=e477]: Protecciones
+                  - generic [ref=e478]: Hidroeléctrica
+                - generic [ref=e479]:
+                  - heading "Central Hidroeléctrica Nihuil 2" [level=3] [ref=e480]
+                  - paragraph [ref=e481]: Ingeniería de detalle para el recambio y modernización de los paneles de protección del complejo hidroeléctrico.
+                - generic [ref=e482]: Ver detalle
+      - generic [ref=e495]:
+        - generic [ref=e496]:
+          - generic [ref=e497]:
+            - heading "Hablemos de tu desafío energético" [level=2] [ref=e499]
+            - paragraph [ref=e501]: Revisamos el contexto y definimos el próximo paso técnico.
+          - link "Ir a contacto" [ref=e504] [cursor=pointer]:
+            - /url: /contacto
+        - generic [ref=e505]:
+          - generic [ref=e506]:
+            - generic [ref=e507]:
+              - generic [ref=e508]: Infraestructura crítica
+              - generic [ref=e509]:
+                - link "LYNX" [ref=e511] [cursor=pointer]:
+                  - /url: /
+                  - img "LYNX" [ref=e512]
+                - generic [ref=e513]:
+                  - paragraph [ref=e514]: "Redes:"
+                  - link "LinkedIn" [ref=e516] [cursor=pointer]:
+                    - /url: https://linkedin.com/company/lynxenergia
+                    - img [ref=e517]
+            - generic [ref=e521]:
+              - heading "Navegación" [level=3] [ref=e522]
+              - generic [ref=e523]:
+                - link "Inicio 01" [ref=e524] [cursor=pointer]:
+                  - /url: /
+                  - generic [ref=e525]: Inicio
+                  - generic [ref=e526]: "01"
+                - link "Energía 02" [ref=e527] [cursor=pointer]:
+                  - /url: /energia
+                  - generic [ref=e528]: Energía
+                  - generic [ref=e529]: "02"
+                - link "Tecnología 03" [ref=e530] [cursor=pointer]:
+                  - /url: /tecnologia
+                  - generic [ref=e531]: Tecnología
+                  - generic [ref=e532]: "03"
+                - link "Recursos 04" [ref=e533] [cursor=pointer]:
+                  - /url: /recursos
+                  - generic [ref=e534]: Recursos
+                  - generic [ref=e535]: "04"
+                - link "FAQs 05" [ref=e536] [cursor=pointer]:
+                  - /url: /faqs
+                  - generic [ref=e537]: FAQs
+                  - generic [ref=e538]: "05"
+                - link "Contacto 06" [ref=e539] [cursor=pointer]:
+                  - /url: /contacto
+                  - generic [ref=e540]: Contacto
+                  - generic [ref=e541]: "06"
+            - generic [ref=e542]:
+              - heading "Contacto" [level=3] [ref=e543]
+              - generic [ref=e544]:
+                - generic [ref=e546]:
+                  - img [ref=e547]
+                  - generic [ref=e550]:
+                    - paragraph [ref=e551]: Santiago, Chile
+                    - paragraph [ref=e552]: Operación en Chile y Argentina
+                - link "soporte@lynx.cl" [ref=e553] [cursor=pointer]:
+                  - /url: mailto:soporte@lynx.cl
+                  - img [ref=e554]
+                  - generic [ref=e557]: soporte@lynx.cl
+                - generic [ref=e558]:
+                  - link "+56 9 9219 1328" [ref=e559] [cursor=pointer]:
+                    - /url: tel:+56992191328
+                    - img [ref=e560]
+                    - generic [ref=e562]: +56 9 9219 1328
+                  - link "+56 9 9216 2573" [ref=e563] [cursor=pointer]:
+                    - /url: https://wa.me/56992162573
+                    - img [ref=e564]
+                    - generic [ref=e566]: +56 9 9216 2573
+          - generic [ref=e567]:
+            - paragraph [ref=e568]: © 2026 LYNX. Todos los derechos reservados.
+            - paragraph [ref=e569]: Energía y Tecnología para soluciones modernas
+  - alert [ref=e570]
