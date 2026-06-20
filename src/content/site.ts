@@ -4,9 +4,9 @@
     legalName: "LYNX",
     group: "Grupo Oeste",
   },
-  tagline: "Energía y Tecnología para soluciones modernas",
+  tagline: "Energía y tecnología para operaciones críticas.",
   description:
-    "LYNX integra energía e innovación tecnológica para acelerar operaciones críticas con foco en performance y confiabilidad.",
+    "LYNX integra energía, tecnología y soporte para operaciones críticas.",
   nav: [
     { label: "Inicio", href: "/" },
     { label: "Energía", href: "/energia" },
@@ -42,7 +42,7 @@
     badge: "Operaciones críticas",
     title: "Energía y tecnología para operaciones críticas.",
     description:
-      "Integramos infraestructura, automatización y software para que la operación sea visible, controlable y mantenible.",
+      "Integramos, desplegamos y mantenemos sistemas críticos.",
     signals: [
       { label: "Cobertura", value: "Chile y Argentina" },
       { label: "Despliegue", value: "Remoto y en terreno" },
@@ -130,7 +130,7 @@
         href: "https://selinc.com",
         description:
           "Schweitzer Engineering Laboratories. Líderes en protección, automatización y control.",
-        image: "/images/partners/SEL.jpeg",
+        image: "/images/partners/sel-transparent.png",
       },
       {
         name: "Survalent",
@@ -144,7 +144,7 @@
         href: "https://systemswithintelligence.com",
         description:
           "Monitoreo y vigilancia para activos críticos en tiempo real.",
-        image: "/images/partners/SWI.jpg",
+        image: "/images/partners/swi-transparent.png",
       },
       {
         name: "N3uron",
@@ -156,13 +156,13 @@
         name: "Lexa",
         href: "#",
         description: "Partner tecnológico para soluciones industriales.",
-        image: "/images/partners/lexa.jpeg",
+        image: "/images/partners/lexa-transparent.png",
       },
       {
         name: "Cisco",
         href: "https://www.cisco.com/",
         description: "Infraestructura y networking empresarial.",
-        image: "/images/partners/logo-open-graph.avif",
+        image: "/images/partners/cisco-transparent.png",
       },
       {
         name: "Sisco",

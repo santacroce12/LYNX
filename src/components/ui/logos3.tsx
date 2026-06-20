@@ -34,7 +34,10 @@ export function Logos3({ heading, logos, className }: Logos3Props) {
       AutoScroll({
         direction: "forward",
         playOnInit: true,
-        speed: 0.52,
+        speed: 0.64,
+        breakpoints: {
+          "(max-width: 639px)": { speed: 1.15 },
+        },
         startDelay: 0,
         stopOnFocusIn: true,
         stopOnInteraction: false,
@@ -89,7 +92,9 @@ export function Logos3({ heading, logos, className }: Logos3Props) {
         </div>
       ) : null}
 
-      <div className="relative overflow-hidden bg-transparent py-3 md:py-4">
+      <div className="partners-logo-track relative overflow-hidden bg-transparent py-3 md:py-4">
+        <div className="partners-logo-glow pointer-events-none absolute inset-y-0 left-[-22%] w-[36%] bg-[linear-gradient(90deg,transparent,rgba(170,166,246,0.2),rgba(247,208,163,0.14),transparent)] blur-2xl" />
+        <div className="pointer-events-none absolute inset-x-0 top-1/2 h-px -translate-y-1/2 bg-[linear-gradient(90deg,transparent,rgba(170,166,246,0.16),rgba(247,208,163,0.14),transparent)]" />
         <Carousel
           opts={{
             align: "start",
@@ -105,15 +110,16 @@ export function Logos3({ heading, logos, className }: Logos3Props) {
           <CarouselContent className="ml-0">
             {logos.map((logo) => {
               const logoContent = (
-                <span className="group/logo flex h-[80px] w-full items-center justify-center px-6 transition duration-300 md:h-[94px] md:px-8">
+                <span className="group/logo flex h-[76px] w-full items-center justify-center transition duration-300 md:h-[94px] md:px-1">
                   <img
                     src={logo.image}
                     alt={logo.description}
                     className={cn(
-                      "h-auto w-auto max-h-12 max-w-[10rem] object-contain brightness-110 contrast-125 opacity-90 transition duration-300 group-hover/logo:scale-[1.035] group-hover/logo:opacity-100 md:max-h-14 md:max-w-[11.5rem]",
+                      "h-12 w-full max-w-[12rem] object-contain opacity-[0.96] transition duration-300 group-hover/logo:-translate-y-0.5 group-hover/logo:scale-[1.04] group-hover/logo:opacity-100 md:h-14 md:max-w-[15rem]",
                       logo.className,
                     )}
                     loading="lazy"
+                    decoding="async"
                     draggable={false}
                   />
                 </span>
@@ -122,7 +128,7 @@ export function Logos3({ heading, logos, className }: Logos3Props) {
               return (
                 <CarouselItem
                   key={logo.id}
-                  className="basis-[48%] pl-0 sm:basis-1/3 md:basis-1/4 lg:basis-1/5"
+                  className="basis-[44%] pl-0 sm:basis-1/3 md:basis-1/4 lg:basis-1/5"
                 >
                   {logo.href ? (
                     <a

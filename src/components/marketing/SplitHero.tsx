@@ -137,10 +137,10 @@ export default function SplitHero() {
 
             <Reveal delay={0.1}>
               <p className="mt-4 max-w-2xl text-[0.95rem] leading-7 text-white/82 sm:mt-5 sm:text-[1.02rem] sm:leading-8 md:text-[1.1rem] md:leading-8">
-                <span className="sm:hidden">
+                <span className="hidden">
                   Integramos infraestructura, automatización y software para operar con visibilidad y control.
                 </span>
-                <span className="hidden sm:inline">{site.homeHero.description}</span>
+                <span>{site.homeHero.description}</span>
               </p>
             </Reveal>
 

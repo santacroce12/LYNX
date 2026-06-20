@@ -3,15 +3,12 @@ import Reveal from "@/components/motion/Reveal";
 import { site } from "@/content/site";
 import { Logos3, type Logo } from "@/components/ui/logos3";
 
-const logoSizeByName: Record<string, string> = {
-  SEL: "!max-h-14 !max-w-[10rem] md:!max-h-16 md:!max-w-[11rem]",
-  Survalent: "!max-h-9 !max-w-[12.5rem] md:!max-h-10 md:!max-w-[14rem]",
-  "Systems With Intelligence":
-    "!max-h-[4.6rem] !max-w-[6.5rem] md:!max-h-[5rem] md:!max-w-[7rem]",
-  N3uron: "!max-h-14 !max-w-[11rem] md:!max-h-16 md:!max-w-[12rem]",
-  Lexa: "!max-h-11 !max-w-[9rem] md:!max-h-12 md:!max-w-[10rem]",
-  Cisco: "!max-h-11 !max-w-[9rem] md:!max-h-12 md:!max-w-[10rem]",
-  Sisco: "!max-h-14 !max-w-[12rem] md:!max-h-[4.5rem] md:!max-w-[14rem]",
+const logoTreatmentByName: Record<string, string> = {
+  "Systems With Intelligence": "!h-[3.25rem] md:!h-[3.75rem]",
+  N3uron: "!h-11 md:!h-12",
+  Cisco:
+    "brightness-[3] saturate-[1.25] drop-shadow-[0_0_12px_rgba(49,154,222,0.16)]",
+  Sisco: "!h-11 brightness-125 md:!h-12",
 };
 
 export default function Partners() {
@@ -20,7 +17,7 @@ export default function Partners() {
     id: partner.name.toLowerCase().replace(/\s+/g, "-"),
     description: partner.name,
     image: partner.image,
-    className: logoSizeByName[partner.name],
+    className: logoTreatmentByName[partner.name],
   }));
 
   return (
