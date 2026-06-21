@@ -11,6 +11,7 @@
     { label: "Inicio", href: "/" },
     { label: "Energía", href: "/energia" },
     { label: "Tecnología", href: "/tecnologia" },
+    { label: "Partners", href: "/partners" },
     { label: "Recursos", href: "/recursos" },
     { label: "FAQs", href: "/faqs" },
     { label: "Contacto", href: "/contacto" },
@@ -40,7 +41,7 @@
   },
   homeHero: {
     badge: "Operaciones críticas",
-    title: "Energía y tecnología para operaciones críticas.",
+    title: "Ingeniería para lo crítico.",
     description:
       "Integramos, desplegamos y mantenemos sistemas críticos.",
     signals: [
@@ -123,51 +124,85 @@
   partners: {
     title: "Nuestros aliados tecnológicos",
     subtitle:
-      "Trabajamos con fabricantes globales y software especializado para entregar soluciones robustas y seguras.",
+      "Tecnología global, integrada por LYNX para responder a operaciones críticas en energía e industria.",
     items: [
       {
         name: "SEL",
         href: "https://selinc.com",
+        role: "Protección y automatización eléctrica",
         description:
-          "Schweitzer Engineering Laboratories. Líderes en protección, automatización y control.",
+          "Schweitzer Engineering Laboratories desarrolla sistemas de protección, automatización, control y comunicaciones para infraestructura eléctrica.",
+        contribution:
+          "Aporta relés, automatización y concentración de datos para proteger activos, controlar bahías y elevar la confiabilidad de subestaciones y sistemas de potencia.",
+        capabilities: ["Protecciones", "Control de bahía", "WAMS / PDC"],
         image: "/images/partners/sel-transparent.png",
       },
       {
         name: "Survalent",
         href: "https://www.survalent.com/",
+        role: "SCADA y gestión avanzada de redes",
         description:
-          "Survalent Technology. SCADA avanzado para energía, minería, agua y distribución.",
+          "Survalent desarrolla plataformas SCADA, OMS y DMS para supervisar y operar redes eléctricas e infraestructura distribuida en tiempo real.",
+        contribution:
+          "Proporciona el núcleo operacional para centros de control, unificando telemetría, alarmas, maniobras y evolución hacia arquitecturas ADMS.",
+        capabilities: ["SCADA", "ADMS", "Centro de control"],
         image: "/images/partners/survalent.png",
       },
       {
         name: "Systems With Intelligence",
         href: "https://systemswithintelligence.com",
+        role: "Monitoreo de condición",
         description:
-          "Monitoreo y vigilancia para activos críticos en tiempo real.",
+          "Systems With Intelligence desarrolla monitoreo térmico y visual continuo para subestaciones, instalaciones remotas y activos críticos.",
+        contribution:
+          "Suma detección temprana de anomalías y evidencia visual para anticipar fallas, reducir inspecciones de riesgo y habilitar mantenimiento basado en condición.",
+        capabilities: ["Termografía", "Visión remota", "Mantenimiento predictivo"],
         image: "/images/partners/swi-transparent.png",
+        focusImage: "/images/partners/SWI.jpg",
+        focusImageFit: "cover" as const,
       },
       {
         name: "N3uron",
         href: "https://n3uron.com",
-        description: "Conectividad industrial IoT y gestión de datos.",
+        role: "IIoT y datos industriales",
+        description:
+          "N3uron es una plataforma modular de IIoT y DataOps para conectar, contextualizar, historizar y visualizar información industrial.",
+        contribution:
+          "Aporta la capa Edge que conecta OT e IT, normaliza múltiples protocolos y convierte datos de campo en información disponible para operar y decidir.",
+        capabilities: ["Edge", "OT / IT", "DataOps"],
         image: "/images/partners/n3uron.svg",
       },
       {
-        name: "Lexa",
-        href: "#",
-        description: "Partner tecnológico para soluciones industriales.",
+        name: "LEXA",
+        href: "https://www.lexa.global/",
+        role: "Riesgo y cumplimiento",
+        description:
+          "LEXA integra gestión de riesgos, activos, amenazas, controles y evidencias en una plataforma GRC/RiskOps con trazabilidad continua.",
+        contribution:
+          "Transforma hallazgos técnicos en planes de acción, responsables y reportes ejecutivos, sumando gobierno y cumplimiento a la propuesta de ciberseguridad de LYNX.",
+        capabilities: ["GRC / RiskOps", "Cumplimiento", "Trazabilidad"],
         image: "/images/partners/lexa-transparent.png",
       },
       {
         name: "Cisco",
         href: "https://www.cisco.com/",
-        description: "Infraestructura y networking empresarial.",
+        role: "Redes industriales y seguridad OT",
+        description:
+          "Cisco proporciona switching, routing, visibilidad y seguridad para conectar activos industriales, sedes y centros de operación.",
+        contribution:
+          "Proporciona la infraestructura robusta sobre la que LYNX segmenta, protege y opera comunicaciones entre IED, PLC, RTU, servidores y plataformas corporativas.",
+        capabilities: ["Networking OT", "Segmentación", "Acceso seguro"],
         image: "/images/partners/cisco-transparent.png",
       },
       {
-        name: "Sisco",
+        name: "SISCO",
         href: "https://sisconet.com/",
-        description: "Integraciones y conectividad industrial.",
+        role: "Interoperabilidad eléctrica",
+        description:
+          "SISCO se especializa en comunicaciones en tiempo real e integración de sistemas eléctricos mediante estándares abiertos.",
+        contribution:
+          "Reduce el riesgo de integración entre IED, SCADA, EMS y centros de control con herramientas para IEC 61850, ICCP/TASE.2, CIM y OPC.",
+        capabilities: ["IEC 61850", "ICCP / TASE.2", "CIM / OPC"],
         image: "/images/partners/sisco-logo-color.svg",
       },
     ],
