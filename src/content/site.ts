@@ -4,7 +4,7 @@
     legalName: "LYNX",
     group: "Grupo Oeste",
   },
-  tagline: "Energía y tecnología para operaciones críticas.",
+  tagline: "Ingeniería para lo crítico.",
   description:
     "LYNX integra energía, tecnología y soporte para operaciones críticas.",
   nav: [
