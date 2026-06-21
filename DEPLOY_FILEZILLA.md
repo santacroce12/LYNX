@@ -1,0 +1,41 @@
+# Publicación por FileZilla
+
+El sitio se exporta como archivos estáticos compatibles con un hosting que resuelve `index.html`.
+
+## Generar la versión publicable
+
+```powershell
+npm install
+npm run build
+```
+
+El resultado queda en la carpeta `out`. Hay que subir **el contenido de `out`**, no la carpeta `out`, directamente a `/public_html/`.
+
+Las rutas se exportan con esta estructura:
+
+```text
+out/
+  index.html
+  energia/index.html
+  tecnologia/index.html
+  partners/index.html
+  recursos/index.html
+  contacto/index.html
+  faqs/index.html
+  firma/index.html
+  _next/
+  images/
+```
+
+## Limpieza segura de `/public_html/`
+
+Antes de publicar, descargar una copia de respaldo del contenido actual.
+
+- Conservar `.well-known`: puede contener verificaciones de dominio o certificados SSL.
+- Conservar `20260511` como respaldo hasta comprobar que el sitio nuevo funciona.
+- Reemplazar el `index.html` anterior.
+- Eliminar la carpeta `images` anterior antes de subir la nueva para evitar archivos obsoletos.
+- Conservar `lynx.cl` hasta confirmar desde el panel del hosting que no sea la raíz de otro dominio o subdominio. Si solo pertenece al sitio anterior y no está asociada a ningún dominio, se puede eliminar después de verificar la publicación.
+- En publicaciones futuras, eliminar también las carpetas antiguas `_next`, `energia`, `tecnologia`, `partners`, `recursos`, `contacto`, `faqs` y `firma` antes de subir la exportación nueva.
+
+En FileZilla, activar la visualización de archivos ocultos para no borrar accidentalmente `.well-known`.

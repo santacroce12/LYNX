@@ -9,18 +9,18 @@ export default function RecursosHero() {
   return (
     <section className="relative isolate -mt-16 overflow-hidden border-b border-white/8 md:-mt-[78px]">
       <Image
-        src="/images/energia/panel-solar.optimized.webp"
-        alt="Paneles solares en operacion"
+        src="/images/recursos/hero-recursos-lynx.webp"
+        alt="Ingenieria y control de infraestructura electrica critica"
         fill
         priority
         sizes="100vw"
-        className="-z-10 object-cover opacity-68"
+        className="-z-10 object-cover object-center"
       />
-      <div className="absolute inset-0 -z-10 bg-[linear-gradient(180deg,rgba(3,7,15,0.34)_0%,rgba(3,7,15,0.56)_45%,rgba(3,7,15,0.9)_100%)]" />
-      <div className="absolute inset-0 -z-10 bg-[linear-gradient(90deg,rgba(3,7,15,0.82)_0%,rgba(3,7,15,0.5)_46%,rgba(3,7,15,0.62)_100%)]" />
+      <div className="absolute inset-0 -z-10 bg-[linear-gradient(180deg,rgba(3,7,15,0.1)_0%,rgba(3,7,15,0.24)_48%,rgba(3,7,15,0.8)_100%)]" />
+      <div className="absolute inset-0 -z-10 bg-[linear-gradient(90deg,rgba(3,7,15,0.72)_0%,rgba(3,7,15,0.34)_44%,rgba(3,7,15,0.1)_78%,rgba(3,7,15,0.2)_100%)]" />
       <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_14%_18%,rgba(239,130,57,0.14),transparent_24%),radial-gradient(circle_at_82%_22%,rgba(89,89,201,0.08),transparent_18%)]" />
       <div className="absolute inset-x-0 bottom-0 -z-10 h-40 bg-gradient-to-t from-[var(--bg)] to-transparent" />
-      <SuccessNetwork className="right-[9%] top-[48%] w-[37%] max-w-[470px] xl:right-[11%] xl:w-[35%]" />
+      <SuccessNetwork className="right-[9%] top-[48%] w-[37%] max-w-[470px] opacity-35 xl:right-[11%] xl:w-[35%]" />
 
       <div className="mx-auto flex min-h-[560px] w-full max-w-[1320px] flex-col justify-center px-4 py-16 sm:px-6 md:min-h-[740px] md:px-8 md:py-20">
         <div className="relative z-10 max-w-4xl">

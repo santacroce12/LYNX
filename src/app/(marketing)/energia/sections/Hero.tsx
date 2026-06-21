@@ -12,15 +12,15 @@ export default function EnergiaHero() {
     <>
       <section className="relative isolate -mt-16 overflow-hidden border-b border-white/8 md:-mt-[78px]">
         <Image
-          src="/images/energia/energia2.optimized.webp"
-          alt="Centro de control de energía"
+          src="/images/energia/hero-energia-lynx.webp"
+          alt="Subestacion electrica de alta tension al atardecer"
           fill
           priority
           sizes="100vw"
-          className="-z-10 object-cover opacity-68"
+          className="-z-10 object-cover object-center"
         />
-        <div className="absolute inset-0 -z-10 bg-[linear-gradient(180deg,rgba(3,7,15,0.34)_0%,rgba(3,7,15,0.56)_45%,rgba(3,7,15,0.9)_100%)]" />
-        <div className="absolute inset-0 -z-10 bg-[linear-gradient(90deg,rgba(3,7,15,0.82)_0%,rgba(3,7,15,0.5)_46%,rgba(3,7,15,0.62)_100%)]" />
+        <div className="absolute inset-0 -z-10 bg-[linear-gradient(180deg,rgba(3,7,15,0.12)_0%,rgba(3,7,15,0.26)_48%,rgba(3,7,15,0.78)_100%)]" />
+        <div className="absolute inset-0 -z-10 bg-[linear-gradient(90deg,rgba(3,7,15,0.7)_0%,rgba(3,7,15,0.3)_42%,rgba(3,7,15,0.12)_78%,rgba(3,7,15,0.24)_100%)]" />
         <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_14%_18%,rgba(239,130,57,0.14),transparent_24%),radial-gradient(circle_at_84%_24%,rgba(247,208,163,0.1),transparent_18%)]" />
         <div className="absolute inset-x-0 bottom-0 -z-10 h-40 bg-gradient-to-t from-[var(--bg)] to-transparent" />
         <TechSignal variant="energy" />
