@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
@@ -10,6 +10,7 @@ import { site } from "@/content/site";
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
+  const menuButtonRef = useRef<HTMLButtonElement>(null);
   const pathname = usePathname();
 
   useEffect(() => {
@@ -28,10 +29,53 @@ export default function Navbar() {
   }, [pathname]);
 
   useEffect(() => {
-    document.body.style.overflow = menuOpen ? "hidden" : "";
+    if (!menuOpen) return;
+
+    const scrollY = window.scrollY;
+    const htmlOverflow = document.documentElement.style.overflow;
+    const bodyStyles = {
+      overflow: document.body.style.overflow,
+      position: document.body.style.position,
+      top: document.body.style.top,
+      left: document.body.style.left,
+      right: document.body.style.right,
+      width: document.body.style.width,
+    };
+
+    document.documentElement.style.overflow = "hidden";
+    document.body.style.overflow = "hidden";
+    document.body.style.position = "fixed";
+    document.body.style.top = `-${scrollY}px`;
+    document.body.style.left = "0";
+    document.body.style.right = "0";
+    document.body.style.width = "100%";
 
     return () => {
-      document.body.style.overflow = "";
+      document.documentElement.style.overflow = htmlOverflow;
+      Object.assign(document.body.style, bodyStyles);
+      window.scrollTo(0, scrollY);
+    };
+  }, [menuOpen]);
+
+  useEffect(() => {
+    if (!menuOpen) return;
+
+    const desktopQuery = window.matchMedia("(min-width: 1024px)");
+    const closeOnDesktop = () => {
+      if (desktopQuery.matches) setMenuOpen(false);
+    };
+    const closeOnEscape = (event: KeyboardEvent) => {
+      if (event.key !== "Escape") return;
+      setMenuOpen(false);
+      menuButtonRef.current?.focus();
+    };
+
+    desktopQuery.addEventListener("change", closeOnDesktop);
+    window.addEventListener("keydown", closeOnEscape);
+
+    return () => {
+      desktopQuery.removeEventListener("change", closeOnDesktop);
+      window.removeEventListener("keydown", closeOnEscape);
     };
   }, [menuOpen]);
 
@@ -46,7 +90,7 @@ export default function Navbar() {
   return (
     <header className="fixed inset-x-0 top-0 z-50">
       <div
-        className={`relative overflow-hidden border-b transition-all duration-500 ${
+        className={`relative z-50 overflow-hidden border-b transition-all duration-500 ${
           compact
             ? "border-white/10 bg-[rgba(13,6,37,0.64)] shadow-[0_14px_34px_rgba(7,3,24,0.24)] backdrop-blur-[20px]"
             : "border-white/8 bg-[rgba(13,6,37,0.9)] backdrop-blur-[12px]"
@@ -114,6 +158,7 @@ export default function Navbar() {
 
           <div className="flex items-center gap-2">
             <button
+              ref={menuButtonRef}
               type="button"
               onClick={() => setMenuOpen((prev) => !prev)}
               className={`inline-flex items-center justify-center rounded-full border border-[var(--border)] bg-white/[0.04] text-[var(--text)] transition-all duration-300 hover:border-[rgba(247,208,163,0.3)] hover:text-[var(--accent-soft)] lg:hidden ${
@@ -132,8 +177,10 @@ export default function Navbar() {
       <div
         id="mobile-nav"
         aria-hidden={!menuOpen}
-        className={`fixed inset-0 z-40 lg:hidden ${
-          menuOpen ? "pointer-events-auto" : "pointer-events-none"
+        className={`fixed inset-0 z-40 overflow-hidden lg:hidden ${
+          menuOpen
+            ? "visible pointer-events-auto"
+            : "invisible pointer-events-none delay-500"
         }`}
       >
         <button
@@ -150,43 +197,47 @@ export default function Navbar() {
             menuOpen ? "translate-y-0 opacity-100" : "-translate-y-3 opacity-0"
           }`}
         >
-          <div className="mx-auto flex min-h-screen w-full max-w-6xl flex-col px-4 pb-6 pt-20 sm:px-6 md:pb-8 md:pt-24">
-            <div className="panel-shell flex min-h-[calc(100dvh-7rem)] flex-1 flex-col rounded-[2rem] px-4 py-5 md:min-h-[calc(100dvh-8rem)] md:px-8 md:py-8">
-              <div className="border-b border-white/8 pb-5">
-                <span className="section-kicker">{activeNavItem.label}</span>
-                <p className="mt-4 max-w-md text-sm leading-7 text-[var(--text)]/76">
-                  {site.tagline}
-                </p>
-              </div>
+          <div className="mx-auto flex h-[100dvh] w-full max-w-6xl items-start px-3 pb-[max(0.75rem,env(safe-area-inset-bottom))] pt-[calc(4.5rem+env(safe-area-inset-top))] sm:px-6 md:pb-8 md:pt-[calc(5.25rem+env(safe-area-inset-top))]">
+            <div className="panel-shell flex max-h-full w-full flex-col overflow-hidden rounded-[1.55rem] px-4 py-5 md:rounded-[2rem] md:px-8 md:py-8">
+              <div className="min-h-0 overflow-y-auto overscroll-contain pr-1 [scrollbar-color:rgba(170,166,246,0.35)_transparent] [scrollbar-width:thin]">
+                <div className="border-b border-white/8 pb-4 md:pb-5">
+                  <span className="section-kicker">{activeNavItem.label}</span>
+                  <p className="mt-3 max-w-md text-sm leading-6 text-[var(--text)]/76 md:mt-4 md:leading-7">
+                    {site.tagline}
+                  </p>
+                </div>
 
-              <nav className="flex flex-1 flex-col justify-start gap-2 py-7 md:justify-center">
-                {site.nav.map((item, index) => (
+                <nav className="flex flex-col gap-1.5 py-4 md:gap-2 md:py-6">
+                  {site.nav.map((item, index) => (
+                    <Link
+                      key={item.href}
+                      href={item.href}
+                      onClick={() => setMenuOpen(false)}
+                      className={`group flex items-center justify-between rounded-[1.05rem] border px-4 py-3 transition md:rounded-[1.4rem] md:px-5 md:py-4 [@media(max-height:700px)]:py-2.5 ${
+                        isActive(item.href)
+                          ? "border-[rgba(247,208,163,0.24)] bg-[rgba(239,130,57,0.1)] text-[var(--text-strong)]"
+                          : "border-transparent bg-transparent text-[var(--muted)] hover:border-white/8 hover:bg-white/[0.03] hover:text-[var(--text-strong)]"
+                      }`}
+                    >
+                      <span className="text-[1.2rem] font-semibold leading-none md:text-[1.6rem]">
+                        {item.label}
+                      </span>
+                      <span className="text-[10px] uppercase tracking-normal text-[var(--muted-soft)] transition group-hover:text-[var(--accent-soft)] md:text-[11px] md:tracking-[0.24em]">
+                        0{index + 1}
+                      </span>
+                    </Link>
+                  ))}
+                </nav>
+
+                <div className="border-t border-white/8 pt-4">
                   <Link
-                    key={item.href}
-                    href={item.href}
-                    className={`group flex items-center justify-between rounded-[1.15rem] border px-4 py-3.5 transition md:rounded-[1.4rem] md:px-5 md:py-4 ${
-                      isActive(item.href)
-                        ? "border-[rgba(247,208,163,0.24)] bg-[rgba(239,130,57,0.1)] text-[var(--text-strong)]"
-                        : "border-transparent bg-transparent text-[var(--muted)] hover:border-white/8 hover:bg-white/[0.03] hover:text-[var(--text-strong)]"
-                    }`}
+                    href="/contacto"
+                    onClick={() => setMenuOpen(false)}
+                    className="inline-flex w-full items-center justify-center rounded-full border border-[rgba(247,208,163,0.2)] bg-[rgba(239,130,57,0.12)] px-5 py-3 text-[10px] font-semibold uppercase tracking-normal text-[var(--text-strong)] transition hover:border-[rgba(247,208,163,0.34)] hover:bg-[rgba(239,130,57,0.18)] sm:w-auto md:tracking-[0.18em]"
                   >
-                    <span className="text-[1.35rem] font-semibold leading-none md:text-[1.6rem]">
-                      {item.label}
-                    </span>
-                    <span className="text-[11px] uppercase tracking-normal text-[var(--muted-soft)] transition group-hover:text-[var(--accent-soft)] md:tracking-[0.24em]">
-                      0{index + 1}
-                    </span>
+                    Agendar diagnostico
                   </Link>
-                ))}
-              </nav>
-
-              <div className="pt-4">
-                <Link
-                  href="/contacto"
-                  className="inline-flex w-full items-center justify-center rounded-full border border-[rgba(247,208,163,0.2)] bg-[rgba(239,130,57,0.12)] px-5 py-3 text-[10px] font-semibold uppercase tracking-normal text-[var(--text-strong)] transition hover:border-[rgba(247,208,163,0.34)] hover:bg-[rgba(239,130,57,0.18)] sm:w-auto md:tracking-[0.18em]"
-                >
-                  Agendar diagnostico
-                </Link>
+                </div>
               </div>
             </div>
           </div>
