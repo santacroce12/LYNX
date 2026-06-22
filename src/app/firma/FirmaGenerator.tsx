@@ -25,8 +25,6 @@ type SignatureFields = {
   phone: string;
   email: string;
   linkedin: string;
-  instagram: string;
-  youtube: string;
 };
 
 type Status = {
@@ -48,8 +46,6 @@ const initialFields: SignatureFields = {
   phone: "+56 9 9216 2573",
   email: "nombre@lynx.cl",
   linkedin: "https://linkedin.com/company/lynxenergia",
-  instagram: "https://instagram.com/lynxenergia",
-  youtube: "https://youtube.com/@lynxenergia",
 };
 
 const fieldDefinitions: FieldDefinition[] = [
@@ -83,8 +79,6 @@ const fieldDefinitions: FieldDefinition[] = [
 
 const socialDefinitions = [
   { key: "linkedin", label: "LinkedIn" },
-  { key: "instagram", label: "Instagram" },
-  { key: "youtube", label: "YouTube" },
 ] as const;
 
 const fixedWebsite = "lynx.cl";
@@ -97,8 +91,6 @@ const signaturePanels: Record<SignatureVariant, string> = {
 
 const socialIcons = {
   linkedin: "/images/signature/linkedin.png",
-  instagram: "/images/signature/instagram.png",
-  youtube: "/images/signature/youtube.png",
 } as const;
 
 const defaultStatus: Status = {
