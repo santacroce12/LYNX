@@ -170,8 +170,8 @@ export default function SplitHero() {
               <div className="absolute left-[5%] top-[15%] hidden w-[31%] overflow-hidden rounded-[1.35rem] border border-[rgba(247,208,163,0.18)] bg-[rgba(13,6,37,0.68)] p-2 shadow-[0_30px_80px_rgba(2,6,23,0.34)] backdrop-blur-md md:block">
                 <div className="relative aspect-[4/3] overflow-hidden rounded-[1rem]">
                   <Image
-                    src="/images/energia/electrico.optimized.webp"
-                    alt="Infraestructura energética"
+                    src="/images/home/generated/lynx-hero-energy-automation.webp"
+                    alt="Automatización energética LYNX"
                     fill
                     sizes="(min-width: 1024px) 18vw, 32vw"
                     className="object-cover"
@@ -183,8 +183,8 @@ export default function SplitHero() {
               <div className="absolute right-0 top-0 w-full overflow-hidden rounded-[1.45rem] border border-[rgba(89,89,201,0.18)] bg-[rgba(6,10,20,0.66)] p-2.5 shadow-[0_34px_100px_rgba(2,6,23,0.42)] backdrop-blur-md md:w-[76%] md:rounded-[1.85rem] md:p-3">
                 <div className="relative aspect-[16/8.8] overflow-hidden rounded-[1.35rem] md:aspect-[16/10]">
                   <Image
-                    src="/images/tecnologia/tecnologico.optimized.webp"
-                    alt="Centro de control tecnológico"
+                    src="/images/home/generated/lynx-hero-energy-ot-support.webp"
+                    alt="Integración eléctrica y OT LYNX"
                     fill
                     sizes="(min-width: 1024px) 42vw, 100vw"
                     className="object-cover"
@@ -193,16 +193,16 @@ export default function SplitHero() {
                 </div>
               </div>
 
-              <div className="absolute bottom-0 right-[8%] hidden w-[64%] overflow-hidden rounded-[1.6rem] border border-white/12 bg-[rgba(6,10,20,0.78)] p-2.5 shadow-[0_30px_90px_rgba(2,6,23,0.4)] backdrop-blur-md md:block">
+              <div className="absolute bottom-0 right-[8%] hidden w-[64%] overflow-hidden rounded-[1.6rem] border border-[rgba(247,208,163,0.28)] bg-[rgba(6,10,20,0.62)] p-2.5 shadow-[0_30px_90px_rgba(239,130,57,0.14)] backdrop-blur-md md:block">
                 <div className="relative aspect-[16/9] overflow-hidden rounded-[1.1rem]">
                   <Image
-                    src="/images/tecnologia/generated/caso-tableros-gestion.optimized.webp"
-                    alt="Tableros y monitoreo operativo"
+                    src="/images/home/generated/lynx-hero-electric-grid-foreground.webp"
+                    alt="Red eléctrica inteligente LYNX"
                     fill
                     sizes="(min-width: 1024px) 36vw, 88vw"
                     className="object-cover"
                   />
-                  <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(6,10,20,0.02)_0%,rgba(6,10,20,0.14)_38%,rgba(6,10,20,0.76)_100%)]" />
+                  <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(6,10,20,0)_0%,rgba(6,10,20,0.05)_42%,rgba(6,10,20,0.28)_100%)]" />
                 </div>
               </div>
             </div>

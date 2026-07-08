@@ -18,33 +18,35 @@ export const metadata = buildMetadata({
 
 export default function HomePage() {
   return (
-    <TubesBackground
-      className="isolate min-h-0"
-      canvasClassName="pointer-events-none opacity-[0.42]"
-      fixedCanvas
-      intensity="low"
-    >
+    <>
       <HomeBrandIntro />
-      <SplitHero />
-      <Partners />
-      <AboutSection />
-      <Section id="que-hace">
-        <FeatureGrid
-          title={site.homeSection.title}
-          subtitle={site.homeSection.subtitle}
-          items={site.homeBullets}
-          columns={3}
+      <TubesBackground
+        className="isolate min-h-0"
+        canvasClassName="pointer-events-none opacity-[0.42]"
+        fixedCanvas
+        intensity="low"
+      >
+        <SplitHero />
+        <Partners />
+        <AboutSection />
+        <Section id="que-hace">
+          <FeatureGrid
+            title={site.homeSection.title}
+            subtitle={site.homeSection.subtitle}
+            items={site.homeBullets}
+            columns={3}
+          />
+          <div className="mt-8">
+            <EnergyFlow className="opacity-80" />
+          </div>
+        </Section>
+        <CTA
+          title={site.homeCta.title}
+          text={site.homeCta.text}
+          buttonLabel={site.homeCta.buttonLabel}
+          href={site.homeCta.href}
         />
-        <div className="mt-8">
-          <EnergyFlow className="opacity-80" />
-        </div>
-      </Section>
-      <CTA
-        title={site.homeCta.title}
-        text={site.homeCta.text}
-        buttonLabel={site.homeCta.buttonLabel}
-        href={site.homeCta.href}
-      />
-    </TubesBackground>
+      </TubesBackground>
+    </>
   );
 }

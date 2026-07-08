@@ -65,18 +65,18 @@ export default function FooterContent() {
           </div>
         </div>
 
-        <div className="hidden w-full sm:block xl:mx-auto xl:max-w-[380px] xl:justify-self-center">
+        <div className="hidden w-full sm:block xl:mx-auto xl:max-w-[360px] xl:justify-self-center">
           <h3 className="section-kicker">{site.footer.navTitle}</h3>
 
-          <div className="mt-4 grid gap-2.5">
+          <div className="mt-4 overflow-hidden rounded-[1rem] border border-white/[0.07] bg-white/[0.015] shadow-[inset_0_1px_0_rgba(255,255,255,0.035)]">
             {site.nav.map((item, index) => (
               <Link
                 key={item.label}
                 href={item.href}
-                className="group grid min-h-[56px] grid-cols-[1fr_auto] items-center gap-6 rounded-[1.05rem] border border-transparent bg-white/[0.01] px-4 py-3 text-base text-[var(--muted)] transition hover:border-white/8 hover:bg-white/[0.03] hover:text-[var(--text-strong)] md:min-h-[64px] md:gap-8 md:rounded-[1.15rem] md:px-5"
+                className="group grid min-h-[38px] grid-cols-[minmax(0,1fr)_auto] items-center gap-4 border-b border-white/[0.055] px-3.5 py-2 text-sm text-[var(--muted)] transition last:border-b-0 hover:bg-white/[0.035] hover:text-[var(--text-strong)] md:min-h-[40px] md:px-4"
               >
-                <span>{item.label}</span>
-                <span className="w-10 text-right text-[10px] uppercase tracking-normal text-[var(--muted-soft)] transition group-hover:text-[var(--accent-soft)] md:tracking-[0.2em]">
+                <span className="truncate">{item.label}</span>
+                <span className="w-7 text-right text-[9px] uppercase tracking-normal text-[var(--muted-soft)] transition group-hover:text-[var(--accent-soft)] md:text-[10px] md:tracking-[0.14em]">
                   0{index + 1}
                 </span>
               </Link>
@@ -88,10 +88,16 @@ export default function FooterContent() {
           <h3 className="section-kicker">{site.footer.contactTitle}</h3>
 
           <div className="mt-4 grid gap-3">
-            <div className="rounded-[1.4rem] border border-[var(--border)] bg-[rgba(255,255,255,0.03)] p-4 shadow-[inset_0_1px_0_rgba(255,255,255,0.04)]">
+            <a
+              href={site.contact.mapsHref}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label={`Abrir ubicación de ${site.name} en Google Maps`}
+              className="group rounded-[1.4rem] border border-[var(--border)] bg-[rgba(255,255,255,0.03)] p-4 shadow-[inset_0_1px_0_rgba(255,255,255,0.04)] transition hover:border-[rgba(247,208,163,0.34)] hover:bg-[rgba(239,130,57,0.06)]"
+            >
               <div className="flex items-start gap-3">
-                <MapPin className="mt-0.5 h-5 w-5 text-[var(--accent)]" />
-                <div>
+                <MapPin className="mt-0.5 h-5 w-5 text-[var(--accent)] transition group-hover:text-[var(--accent-soft)]" />
+                <div className="min-w-0">
                   <p className="text-sm font-semibold text-[var(--text-strong)]">
                     {site.contact.address}
                   </p>
@@ -99,8 +105,9 @@ export default function FooterContent() {
                     {site.contact.region}
                   </p>
                 </div>
+                <ExternalLink className="ml-auto mt-1 h-4 w-4 shrink-0 text-[var(--muted-soft)] transition group-hover:text-[var(--accent-soft)]" />
               </div>
-            </div>
+            </a>
 
             <a
               href={`mailto:${site.contact.email}`}

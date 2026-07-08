@@ -44,6 +44,165 @@ body {
   touch-action: pan-y pinch-zoom;
 }
 
+.lynx-intro-overlay {
+  animation: lynxIntroOverlay 2.45s linear both;
+}
+
+.lynx-intro-scan {
+  animation: lynxIntroScan 1.5s linear both;
+}
+
+.lynx-intro-logo-shell {
+  animation: lynxIntroLogoShell 0.5s cubic-bezier(0.25, 1, 0.5, 1) 0.04s both;
+}
+
+.lynx-intro-logo-mark {
+  animation: lynxIntroLogoMark 0.46s cubic-bezier(0.25, 1, 0.5, 1) 0.16s both;
+}
+
+.lynx-intro-blur-mask {
+  animation: lynxIntroBlurMask 1.5s linear both;
+}
+
+.lynx-intro-sharp-mask {
+  animation: lynxIntroSharpMask 1.5s linear both;
+}
+
+@keyframes lynxIntroOverlay {
+  0%,
+  84% {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+  }
+
+  100% {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+  }
+}
+
+@keyframes lynxIntroScan {
+  0%,
+  12% {
+    opacity: 0.64;
+    transform: translateX(0vw);
+  }
+
+  47% {
+    opacity: 0.64;
+    transform: translateX(41vw);
+  }
+
+  63% {
+    opacity: 0.56;
+    transform: translateX(59vw);
+  }
+
+  100% {
+    opacity: 0;
+    transform: translateX(102vw);
+  }
+}
+
+@keyframes lynxIntroLogoShell {
+  0% {
+    opacity: 0;
+    transform: scale(0.992);
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes lynxIntroLogoMark {
+  0% {
+    opacity: 0;
+    transform: scale(0.986);
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes lynxIntroBlurMask {
+  0%,
+  47% {
+    width: 100%;
+  }
+
+  63%,
+  100% {
+    width: 0%;
+  }
+}
+
+@keyframes lynxIntroSharpMask {
+  0%,
+  47% {
+    width: 0%;
+  }
+
+  63%,
+  100% {
+    width: 100%;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .lynx-intro-overlay {
+    animation: lynxIntroOverlay 0.65s linear both;
+  }
+
+  .lynx-intro-scan {
+    animation: lynxIntroScanReduced 0.01s linear both;
+  }
+
+  .lynx-intro-logo-shell,
+  .lynx-intro-logo-mark {
+    animation: lynxIntroLogoReduced 0.01s linear both;
+  }
+
+  .lynx-intro-blur-mask {
+    animation: lynxIntroBlurReduced 0.01s linear both;
+  }
+
+  .lynx-intro-sharp-mask {
+    animation: lynxIntroSharpReduced 0.01s linear both;
+  }
+}
+
+@keyframes lynxIntroScanReduced {
+  100% {
+    opacity: 0;
+    transform: translateX(100vw);
+  }
+}
+
+@keyframes lynxIntroLogoReduced {
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes lynxIntroBlurReduced {
+  100% {
+    width: 0%;
+  }
+}
+
+@keyframes lynxIntroSharpReduced {
+  100% {
+    width: 100%;
+  }
+}
+
 @supports (overflow: clip) {
   html,
   body {

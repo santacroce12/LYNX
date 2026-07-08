@@ -34,10 +34,10 @@ export default function ImpactStats({
           </Reveal>
         </div>
 
-        <div className="mb-6 grid gap-4 sm:grid-cols-2 xl:grid-cols-4">
+        <div className="mb-6 grid auto-rows-fr gap-4 sm:grid-cols-2 xl:grid-cols-4">
           {stats.map((stat, index) => (
-            <Reveal key={stat.label} delay={index * 0.08}>
-              <div className="rounded-[1.25rem] border border-[var(--border)] bg-[rgba(255,255,255,0.03)] px-4 py-5 text-center shadow-[inset_0_1px_0_rgba(255,255,255,0.04)]">
+            <Reveal key={stat.label} delay={index * 0.08} className="h-full">
+              <div className="flex h-full min-h-[8.25rem] flex-col items-center justify-center rounded-[1.25rem] border border-[var(--border)] bg-[rgba(255,255,255,0.03)] px-4 py-5 text-center shadow-[inset_0_1px_0_rgba(255,255,255,0.04)] md:min-h-[8.75rem]">
                 <div className="text-[1.85rem] font-semibold text-[var(--accent-soft)] md:text-4xl">
                   {stat.value}
                 </div>

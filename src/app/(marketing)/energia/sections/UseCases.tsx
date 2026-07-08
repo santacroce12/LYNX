@@ -32,17 +32,17 @@ export default function EnergiaUseCases() {
               }`}
             >
               <Reveal y={20}>
-                <div className="panel-shell overflow-hidden rounded-b-none rounded-t-[1.45rem] p-1.5 lg:rounded-[1.55rem] lg:p-2.5">
-                  <div className="relative aspect-[16/9] overflow-hidden rounded-[1.05rem] border border-white/8 md:aspect-[4/3] lg:rounded-[1.15rem]">
+                <div className="panel-shell group overflow-hidden rounded-b-none rounded-t-[1.45rem] p-1.5 lg:rounded-[1.55rem] lg:p-2.5">
+                  <div className="relative aspect-[16/8.6] overflow-hidden rounded-[1.05rem] border border-white/8 sm:aspect-video lg:rounded-[1.15rem]">
                     <Image
                       src={useCase.image || ""}
                       alt={useCase.title}
                       fill
                       priority={index < 3}
                       sizes="(min-width: 1024px) 50vw, 100vw"
-                      className="object-cover transition-transform duration-700 hover:scale-105"
+                      className="object-cover transition duration-700 group-hover:scale-105"
                     />
-                    <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(4,8,16,0.08)_0%,rgba(4,8,16,0.14)_36%,rgba(4,8,16,0.74)_100%)]" />
+                    <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(4,8,16,0.04)_0%,rgba(4,8,16,0.12)_38%,rgba(4,8,16,0.58)_100%)]" />
                   </div>
                 </div>
               </Reveal>

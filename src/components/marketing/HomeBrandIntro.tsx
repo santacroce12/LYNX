@@ -1,171 +1,70 @@
 "use client";
 
-import { useEffect, useLayoutEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import Image from "next/image";
-import { createPortal } from "react-dom";
-import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
 
-const INTRO_DURATION_MS = 2200;
-const REDUCED_DURATION_MS = 900;
-const INTRO_SESSION_KEY = "lynx-home-intro-seen";
+const INTRO_DURATION_MS = 2450;
+const REDUCED_DURATION_MS = 650;
 
 export default function HomeBrandIntro() {
-  const reduceMotion = useReducedMotion();
-  const [mounted, setMounted] = useState(false);
-  const [visible, setVisible] = useState(false);
-
-  useLayoutEffect(() => {
-    setMounted(true);
-
-    try {
-      const alreadySeen = window.sessionStorage.getItem(INTRO_SESSION_KEY) === "1";
-
-      if (!alreadySeen) {
-        window.sessionStorage.setItem(INTRO_SESSION_KEY, "1");
-        setVisible(true);
-      }
-    } catch {
-      setVisible(true);
-    }
-  }, []);
+  const [visible, setVisible] = useState(true);
 
   useEffect(() => {
     if (!visible) return;
 
     const previousOverflow = document.body.style.overflow;
     document.body.style.overflow = "hidden";
+    const introWindow = window as typeof window & {
+      __lynxIntroStartedAt?: number;
+    };
+    const startedAt = introWindow.__lynxIntroStartedAt ?? performance.now();
+    const reduceMotion = window.matchMedia(
+      "(prefers-reduced-motion: reduce)",
+    ).matches;
+    const duration = reduceMotion ? REDUCED_DURATION_MS : INTRO_DURATION_MS;
+    const remaining = Math.max(0, duration - (performance.now() - startedAt));
 
-    const timeout = window.setTimeout(
-      () => setVisible(false),
-      reduceMotion ? REDUCED_DURATION_MS : INTRO_DURATION_MS,
-    );
+    const timeout = window.setTimeout(() => setVisible(false), remaining);
 
     return () => {
       window.clearTimeout(timeout);
       document.body.style.overflow = previousOverflow;
     };
-  }, [reduceMotion, visible]);
-
-  useEffect(() => {
-    if (!visible) {
-      document.body.style.overflow = "";
-    }
   }, [visible]);
 
-  if (!mounted) return null;
-
-  return createPortal(
-    <AnimatePresence>
+  return (
+    <>
+      <script
+        dangerouslySetInnerHTML={{
+          __html:
+            "window.__lynxIntroStartedAt=window.__lynxIntroStartedAt||performance.now();",
+        }}
+      />
       {visible ? (
-        <motion.div
+        <div
           data-lynx-intro="true"
-          className="pointer-events-none fixed inset-0 z-[9999] overflow-hidden bg-[var(--bg)]"
-          initial={{ opacity: 1 }}
-          animate={{ opacity: 1 }}
-          exit={{
-            opacity: 0,
-            transition: {
-              duration: reduceMotion ? 0.2 : 0.55,
-              ease: [0.7, 0, 0.2, 1],
-            },
-          }}
+          aria-hidden="true"
+          className="lynx-intro-overlay pointer-events-auto fixed inset-0 z-[9999] overflow-hidden overscroll-contain bg-[var(--bg)]"
         >
-          <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(13,6,37,0.98)_0%,rgba(23,16,75,0.78)_45%,rgba(13,6,37,0.98)_100%)]" />
-          <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(13,6,37,0.92)_0%,rgba(13,6,37,0.34)_50%,rgba(13,6,37,0.92)_100%)]" />
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(89,89,201,0.24),transparent_32%)]" />
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_15%_50%,rgba(239,130,57,0.12),transparent_24%)]" />
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_85%_50%,rgba(247,208,163,0.1),transparent_24%)]" />
-
-          <motion.div
-            className="absolute inset-y-0 left-0 w-[18vw] min-w-16 bg-gradient-to-r from-[var(--accent)]/35 via-[var(--accent)]/12 to-transparent blur-2xl"
-            initial={{ x: "-110%", opacity: 0 }}
-            animate={{
-              x: reduceMotion ? "-15%" : ["-110%", "-8%", "-24%"],
-              opacity: reduceMotion ? 0.24 : [0, 0.4, 0.18],
-            }}
-            transition={{ duration: reduceMotion ? 0.6 : 1.8, ease: "easeOut" }}
-          />
-
-          <motion.div
-            className="absolute inset-y-0 right-0 w-[14vw] min-w-14 bg-gradient-to-l from-white/10 via-white/4 to-transparent blur-2xl"
-            initial={{ x: "110%", opacity: 0 }}
-            animate={{
-              x: reduceMotion ? "8%" : ["110%", "8%", "18%"],
-              opacity: reduceMotion ? 0.12 : [0, 0.18, 0.08],
-            }}
-            transition={{ duration: reduceMotion ? 0.6 : 1.8, ease: "easeOut" }}
-          />
-
-          <motion.div
-            className="absolute left-0 top-1/2 h-px w-full -translate-y-1/2 bg-gradient-to-r from-transparent via-[var(--accent)]/55 to-transparent"
-            initial={{ scaleX: 0, opacity: 0 }}
-            animate={{
-              scaleX: 1,
-              opacity: reduceMotion ? 0.5 : [0, 0.78, 0.34],
-            }}
-            transition={{
-              duration: reduceMotion ? 0.4 : 0.95,
-              ease: [0.16, 1, 0.3, 1],
-            }}
-          />
+          <div className="absolute inset-0 bg-[#1b143d]" />
+          <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(10,6,27,0.36)_0%,rgba(10,6,27,0)_50%,rgba(10,6,27,0.36)_100%)]" />
+          <div
+            className="lynx-intro-scan absolute inset-y-0 left-0 w-[18rem] max-w-[34vw]"
+          >
+            <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(210,205,255,0.22)_0%,rgba(137,132,230,0.12)_18%,rgba(89,89,201,0.045)_48%,transparent_100%)]" />
+            <div className="absolute left-0 top-0 h-full w-px bg-[rgba(224,220,255,0.42)]" />
+            <div className="absolute left-[-0.22rem] top-0 h-full w-2 bg-[linear-gradient(90deg,transparent,rgba(190,186,252,0.18),transparent)] blur-[2px]" />
+          </div>
 
           <div className="relative flex h-full items-center justify-center px-6">
-            <motion.div
-              className="relative flex flex-col items-center"
-              initial={{
-                opacity: 0,
-                scale: 0.94,
-              }}
-              animate={{
-                opacity: 1,
-                scale: reduceMotion ? 1 : [0.94, 1.015, 1],
-              }}
-              exit={{
-                opacity: 0,
-                scale: reduceMotion ? 1 : 1.02,
-              }}
-              transition={{
-                duration: reduceMotion ? 0.45 : 0.95,
-                ease: [0.16, 1, 0.3, 1],
-              }}
+            <div
+              className="lynx-intro-logo-shell relative flex h-auto w-[178px] items-center justify-center md:w-[266px]"
             >
-              <motion.div
-                className="absolute -inset-14 rounded-full bg-[var(--accent)]/10 blur-3xl"
-                animate={{
-                  opacity: reduceMotion ? 0.35 : [0.16, 0.55, 0.22],
-                  scale: reduceMotion ? 1 : [0.9, 1.08, 0.98],
-                }}
-                transition={{
-                  duration: reduceMotion ? 0.6 : 1.2,
-                  ease: "easeOut",
-                }}
-              />
-
-              <motion.div
-                className="overflow-hidden"
-                initial={{ opacity: 0, scaleX: 0.72, scaleY: 0.94 }}
-                animate={{
-                  opacity: 1,
-                  scaleX: reduceMotion ? 1 : [0.72, 1.03, 1],
-                  scaleY: reduceMotion ? 1 : [0.94, 1.01, 1],
-                }}
-                transition={{
-                  duration: reduceMotion ? 0.45 : 1.02,
-                  delay: reduceMotion ? 0.04 : 0.08,
-                  ease: [0.16, 1, 0.3, 1],
-                }}
+              <div
+                className="lynx-intro-logo-mark relative aspect-[10/3] w-full"
               >
-                <motion.div
-                  initial={{ opacity: 0.2, scale: 1.04 }}
-                  animate={{
-                    opacity: 1,
-                    scale: reduceMotion ? 1 : [1.04, 1, 1.005, 1],
-                  }}
-                  transition={{
-                    duration: reduceMotion ? 0.45 : 1.1,
-                    delay: reduceMotion ? 0.04 : 0.1,
-                    ease: [0.16, 1, 0.3, 1],
-                  }}
+                <div
+                  className="lynx-intro-blur-mask absolute inset-y-0 right-0 overflow-hidden"
                 >
                   <Image
                     src="/images/brand/lynx-logo-negative.png"
@@ -173,29 +72,28 @@ export default function HomeBrandIntro() {
                     width={720}
                     height={216}
                     priority
-                    className="relative h-auto w-[165px] drop-shadow-[0_0_18px_rgba(255,255,255,0.14)] drop-shadow-[0_0_38px_rgba(89,89,201,0.18)] md:w-[238px]"
+                    className="absolute right-0 top-0 h-full w-[178px] max-w-none select-none opacity-[0.65] blur-[5px] md:w-[266px]"
                   />
-                </motion.div>
-              </motion.div>
+                </div>
 
-              <motion.div
-                className="mt-5 h-px bg-gradient-to-r from-transparent via-[var(--accent)] to-transparent"
-                initial={{ width: 0, opacity: 0 }}
-                animate={{
-                  width: reduceMotion ? 96 : [0, 145, 108],
-                  opacity: 1,
-                }}
-                transition={{
-                  duration: reduceMotion ? 0.4 : 0.8,
-                  delay: reduceMotion ? 0.05 : 0.18,
-                  ease: [0.16, 1, 0.3, 1],
-                }}
-              />
-            </motion.div>
+                <div
+                  className="lynx-intro-sharp-mask absolute inset-y-0 left-0 overflow-hidden"
+                >
+                  <Image
+                    src="/images/brand/lynx-logo-negative.png"
+                    alt=""
+                    aria-hidden="true"
+                    width={720}
+                    height={216}
+                    priority
+                    className="absolute left-0 top-0 h-full w-[178px] max-w-none select-none md:w-[266px]"
+                  />
+                </div>
+              </div>
+            </div>
           </div>
-        </motion.div>
+        </div>
       ) : null}
-    </AnimatePresence>,
-    document.body,
+    </>
   );
 }

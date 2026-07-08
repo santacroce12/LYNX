@@ -28,8 +28,10 @@
     email: "soporte@lynx.cl",
     mobile: "+56 9 9219 1328",
     phone: "+56 9 9216 2573",
-    address: "Santiago, Chile",
+    address: "Antonio Varas 91, Providencia",
     region: "Operación en Chile y Argentina",
+    mapsHref:
+      "https://www.google.com/maps/search/?api=1&query=Antonio%20Varas%2091%2C%20Providencia%2C%20Region%20Metropolitana%2C%20Chile",
     social: [
       { label: "LinkedIn", href: "https://linkedin.com/company/lynxenergia" },
     ],
