@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { ArrowUpRight } from "lucide-react";
 import Section from "@/components/layout/Section";
 import Card from "@/components/ui/Card";
 import Reveal from "@/components/motion/Reveal";
@@ -117,8 +118,8 @@ export default function FeaturedProjects({
               className="group block h-full focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--accent)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--bg)]"
               aria-label={`Ver caso ${item.title}`}
             >
-              <Card className="flex min-h-[30rem] flex-col overflow-hidden p-0 transition duration-300 ease-out-expo group-hover:-translate-y-1 group-hover:shadow-glow">
-                <div className="relative h-48 flex-shrink-0">
+                <Card className="flex h-[31rem] flex-col overflow-hidden p-0 transition duration-300 ease-out-expo group-hover:border-[rgba(247,208,163,0.28)] group-hover:shadow-glow">
+                <div className="relative h-44 flex-shrink-0">
                   <FeaturedProjectImage item={item} />
                   <div className="absolute inset-0 bg-gradient-to-t from-[var(--bg)]/82 via-transparent to-transparent" />
                 </div>
@@ -144,9 +145,11 @@ export default function FeaturedProjects({
                     </p>
                   </div>
 
-                  <div className="mt-5 inline-flex items-center gap-2 text-xs uppercase tracking-normal text-[var(--accent-soft)] md:tracking-[0.24em]">
-                    <span className="h-px w-8 bg-[var(--accent)]/60" />
-                    Ver detalle
+                  <div className="mt-5 flex items-center justify-between border-t border-white/[0.08] pt-3">
+                    <span className="h-px w-10 bg-[var(--accent)]/60" />
+                    <span className="inline-flex h-8 w-8 items-center justify-center rounded-lg border border-white/[0.12] bg-white/[0.04] text-[var(--accent-soft)] transition duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:border-[rgba(247,208,163,0.34)] group-hover:bg-white/[0.08]">
+                      <ArrowUpRight className="h-4 w-4" aria-hidden="true" />
+                    </span>
                   </div>
                 </div>
               </Card>

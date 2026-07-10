@@ -427,14 +427,14 @@ function RecursosGridContent() {
                       </div>
 
                       <div
-                        className={[
-                          "mt-6 inline-flex items-center gap-3 text-xs font-semibold uppercase tracking-normal md:tracking-[0.18em]",
-                          accent.cta,
+                          className={[
+                            "mt-6 inline-flex items-center gap-3 text-xs font-semibold uppercase tracking-normal transition-colors duration-300 group-hover:brightness-125 md:tracking-[0.18em]",
+                            accent.cta,
                         ].join(" ")}
                       >
                         <span
                           className={[
-                            "h-px w-8 transition-all duration-300 group-hover:w-12",
+                            "h-px w-8 flex-shrink-0 opacity-70 transition-opacity duration-300 group-hover:opacity-100",
                             accent.line,
                           ].join(" ")}
                         />
