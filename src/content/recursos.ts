@@ -3,7 +3,14 @@ export type RecursoDetalle = {
   items: string[];
 };
 
-type RecursoCaso = {
+export type RecursoDesign = {
+  card?: "compact" | "visual" | "technical";
+  accent?: "orange" | "violet" | "blue" | "green";
+  image?: "cover" | "contain";
+  detail?: "cards" | "list";
+};
+
+export type RecursoCaso = {
   id: string;
   category: "Energía" | "Tecnología";
   title: string;
@@ -14,6 +21,8 @@ type RecursoCaso = {
   tags: string[];
   details: RecursoDetalle[];
   gallery: string[];
+  design?: RecursoDesign;
+  featured?: boolean;
 };
 
 export const recursos = {
