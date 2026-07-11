@@ -17,5 +17,5 @@ try {
     $cases = array_map('lynx_case_from_row', $stmt->fetchAll());
     lynx_json_response(['success' => true, 'cases' => $cases]);
 } catch (Throwable $error) {
-    lynx_json_response(['success' => false, 'message' => 'Could not load cases.'], 500);
+    lynx_json_response(['success' => false, 'message' => 'No se pudieron cargar los casos de éxito.'], 500);
 }

@@ -2,8 +2,14 @@
 
 declare(strict_types=1);
 
+header('Content-Type: text/html; charset=UTF-8');
+if (function_exists('mb_internal_encoding')) {
+    mb_internal_encoding('UTF-8');
+}
+
 session_start();
 require __DIR__ . '/../api/bootstrap.php';
+lynx_ensure_default_admin();
 
 function h(?string $value): string
 {
@@ -99,7 +105,7 @@ function featured_count(string $category, int $excludeId = 0): int
 function assert_featured_slot(string $category, int $excludeId = 0): void
 {
     if (featured_count($category, $excludeId) >= 3) {
-        throw new RuntimeException('Ya hay 3 casos seleccionados para ' . $category . '. Quita uno antes de agregar otro.');
+        throw new RuntimeException('Ya hay 3 casos seleccionados para ' . $category . '. Quitá uno antes de agregar otro.');
     }
 }
 
@@ -194,7 +200,7 @@ try {
             ];
             redirect_admin();
         }
-        $error = 'Email o contrasena invalidos.';
+        $error = 'Correo electrónico o contraseña inválidos.';
     }
 
     if ($action === 'logout') {
@@ -219,7 +225,7 @@ try {
         }
 
         if ($title === '' || $image === '') {
-            throw new RuntimeException('Titulo e imagen principal son obligatorios.');
+            throw new RuntimeException('El título y la imagen principal son obligatorios.');
         }
 
         $detailItems = lines_to_array((string)($_POST['detail_items'] ?? ''));
@@ -318,7 +324,7 @@ try {
             if ($case) {
                 if ($featured === 1) {
                     if ($case['status'] !== 'published') {
-                        throw new RuntimeException('Publica el caso antes de mostrarlo en la pagina de su categoria.');
+                        throw new RuntimeException('Publicá el caso antes de mostrarlo en la página de su categoría.');
                     }
                     assert_featured_slot((string)$case['category'], $id);
                 }
@@ -460,13 +466,13 @@ $baseUrl = rtrim($config['base_url'], '/');
   <main class="wrap">
     <?php if ($isLogin): ?>
       <section class="panel" style="max-width:420px;margin:8vh auto;">
-        <h1>Login marketing</h1>
+        <h1>Acceso de Marketing</h1>
         <?php if ($error): ?><div class="notice error"><?= h($error) ?></div><?php endif; ?>
         <form method="post">
           <input type="hidden" name="action" value="login">
-          <label>Email</label>
+          <label>Correo electrónico</label>
           <input type="email" name="email" required autocomplete="email">
-          <label>Contrasena</label>
+          <label>Contraseña</label>
           <input type="password" name="password" required autocomplete="current-password">
           <div style="margin-top:18px;"><button type="submit">Ingresar</button></div>
         </form>
@@ -474,13 +480,13 @@ $baseUrl = rtrim($config['base_url'], '/');
     <?php else: require_login(); ?>
       <div class="top">
         <div>
-          <h1>Casos de exito</h1>
-          <p class="help">Crear, editar, publicar y copiar links para LinkedIn.</p>
+          <h1>Casos de éxito</h1>
+          <p class="help">Crear, editar, publicar y copiar enlaces para LinkedIn.</p>
         </div>
         <div class="actions">
           <a class="button secondary" href="/admin/">Nuevo recurso</a>
           <a class="button secondary" href="/admin/?view=resources">Ver recursos</a>
-          <a class="button secondary" href="/recursos/" target="_blank" rel="noreferrer">Pagina publica</a>
+          <a class="button secondary" href="/recursos/" target="_blank" rel="noreferrer">Página pública</a>
           <a class="button secondary" href="/admin/?action=logout">Salir</a>
         </div>
       </div>
@@ -489,20 +495,20 @@ $baseUrl = rtrim($config['base_url'], '/');
       <?php if (isset($_GET['saved'])): ?><div class="notice">Caso guardado.</div><?php endif; ?>
       <?php if (isset($_GET['deleted'])): ?><div class="notice">Caso eliminado.</div><?php endif; ?>
       <?php if (isset($_GET['updated'])): ?><div class="notice">Estado actualizado.</div><?php endif; ?>
-      <?php if (isset($_GET['featured_updated'])): ?><div class="notice">Seleccion editorial actualizada.</div><?php endif; ?>
+      <?php if (isset($_GET['featured_updated'])): ?><div class="notice">Selección editorial actualizada.</div><?php endif; ?>
 
       <?php if ($view === 'resources'): ?>
         <div class="notice">
-          Casos visibles al final de cada pagina:
-          <strong>Energia <?= h((string)$featuredCounts['Energía']) ?>/3</strong> ·
-          <strong>Tecnologia <?= h((string)$featuredCounts['Tecnología']) ?>/3</strong>.
-          La apariencia en estas secciones siempre es clasica y no usa el diseno de Recursos.
+          Casos visibles al final de cada página:
+          <strong>Energía <?= h((string)$featuredCounts['Energía']) ?>/3</strong> ·
+          <strong>Tecnología <?= h((string)$featuredCounts['Tecnología']) ?>/3</strong>.
+          La apariencia en estas secciones siempre es clásica y no usa el diseño de Recursos.
         </div>
         <section class="resource-board">
           <?php if (count($cases) === 0): ?>
             <div class="panel">
               <h2>No hay recursos cargados</h2>
-              <p class="help">Creá el primer caso desde Nuevo recurso.</p>
+              <p class="help">Creá el primer caso desde “Nuevo recurso”.</p>
             </div>
           <?php endif; ?>
 
@@ -534,13 +540,13 @@ $baseUrl = rtrim($config['base_url'], '/');
                 </div>
               </div>
               <div class="resource-meta">
-                <span>Categoria: <?= h($case['category']) ?></span>
+                <span>Categoría: <?= h($case['category']) ?></span>
                 <span>Slug: <?= h($case['slug']) ?></span>
-                <span>Diseno: <?= h($caseDesign['card']) ?> / <?= h($caseDesign['accent']) ?></span>
+                <span>Diseño: <?= h($caseDesign['card']) ?> / <?= h($caseDesign['accent']) ?></span>
                 <?php if ((int)$case['featured'] === 1): ?>
                   <span class="status-pill featured-pill">Visible en <?= h($case['category']) ?></span>
                 <?php else: ?>
-                  <span>No seleccionado para seccion</span>
+                  <span>No seleccionado para sección</span>
                 <?php endif; ?>
                 <span>Actualizado: <?= h($case['updated_at']) ?></span>
                 <a class="preview-link" href="<?= h($publicUrl) ?>" target="_blank" rel="noreferrer">Abrir recurso</a>
@@ -558,11 +564,11 @@ $baseUrl = rtrim($config['base_url'], '/');
                   <input type="hidden" name="id" value="<?= h((string)$case['id']) ?>">
                   <input type="hidden" name="featured" value="<?= (int)$case['featured'] === 1 ? '0' : '1' ?>">
                   <button class="featured-toggle <?= (int)$case['featured'] === 1 ? 'selected' : 'secondary' ?>" type="submit">
-                    <?= (int)$case['featured'] === 1 ? 'En seccion' : 'Mostrar' ?>
+                    <?= (int)$case['featured'] === 1 ? 'En sección' : 'Mostrar' ?>
                   </button>
                 </form>
                 <button class="secondary" type="button" data-copy-url="<?= h($publicUrl) ?>">Copiar link</button>
-                <form method="post" onsubmit="return confirm('Eliminar este caso?');">
+                <form method="post" onsubmit="return confirm('¿Eliminar este caso?');">
                   <input type="hidden" name="action" value="delete">
                   <input type="hidden" name="id" value="<?= h((string)$case['id']) ?>">
                   <input type="hidden" name="return_view" value="resources">
@@ -592,52 +598,52 @@ $baseUrl = rtrim($config['base_url'], '/');
             <input type="hidden" name="existing_image" value="<?= h($row['image']) ?>">
             <input type="hidden" name="existing_gallery" value="<?= h(json_encode(lynx_decode_json_field($row['gallery']), JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES)) ?>">
 
-            <label>Titulo</label>
+            <label>Título</label>
             <input name="title" value="<?= h($row['title']) ?>" required>
 
             <label>Slug</label>
-            <input name="slug" value="<?= h($row['slug']) ?>" placeholder="se genera desde el titulo si queda vacio">
+            <input name="slug" value="<?= h($row['slug']) ?>" placeholder="Se genera desde el título si queda vacío">
 
-            <label>Subtitulo</label>
+            <label>Subtítulo</label>
             <input name="subtitle" value="<?= h($row['subtitle']) ?>">
 
-            <label>Categoria</label>
+            <label>Categoría</label>
             <select name="category">
-              <option value="Energía" <?= $row['category'] === 'Energía' ? 'selected' : '' ?>>Energia</option>
-              <option value="Tecnología" <?= $row['category'] === 'Tecnología' ? 'selected' : '' ?>>Tecnologia</option>
+              <option value="Energía" <?= $row['category'] === 'Energía' ? 'selected' : '' ?>>Energía</option>
+              <option value="Tecnología" <?= $row['category'] === 'Tecnología' ? 'selected' : '' ?>>Tecnología</option>
             </select>
 
             <div class="editorial-choice">
               <label class="editorial-checkbox">
                 <input type="checkbox" name="featured" value="1" <?= (int)($row['featured'] ?? 0) === 1 ? 'checked' : '' ?>>
-                <span>Mostrar este caso al final de la pagina de <span data-featured-category><?= h($row['category']) ?></span></span>
+                <span>Mostrar este caso al final de la página de <span data-featured-category><?= h($row['category']) ?></span></span>
               </label>
-              <p class="design-hint">Maximo 3 casos publicados por categoria. Se mostrara con la tarjeta clasica fija, independientemente del diseno elegido para Recursos.</p>
+              <p class="design-hint">Máximo 3 casos publicados por categoría. Se mostrará con la tarjeta clásica fija, independientemente del diseño elegido para Recursos.</p>
             </div>
 
             <label>Resumen</label>
             <textarea name="summary"><?= h($row['summary']) ?></textarea>
 
-            <label>Descripcion</label>
+            <label>Descripción</label>
             <textarea name="description" style="min-height:150px;"><?= h($row['description']) ?></textarea>
 
-            <label>Tags, uno por linea</label>
+            <label>Etiquetas, una por línea</label>
             <textarea name="tags"><?= h($tags) ?></textarea>
 
             <label>Imagen principal</label>
             <input type="file" name="image_file" accept="image/*">
             <?php if ($row['image']): ?><p class="help">Actual: <?= h($row['image']) ?></p><?php endif; ?>
 
-            <label>Imagenes adicionales, opcional</label>
+            <label>Imágenes adicionales (opcional)</label>
             <input type="file" name="gallery_files[]" accept="image/*" multiple>
             <?php
               $currentGalleryCount = max(0, count(lynx_decode_json_field($row['gallery'])) - ($row['image'] ? 1 : 0));
             ?>
-            <?php if ($currentGalleryCount > 0): ?><p class="help">Este recurso ya tiene <?= h((string)$currentGalleryCount) ?> imagenes adicionales.</p><?php endif; ?>
+            <?php if ($currentGalleryCount > 0): ?><p class="help">Este recurso ya tiene <?= h((string)$currentGalleryCount) ?> imágenes adicionales.</p><?php endif; ?>
 
-            <label>Puntos destacados, uno por linea</label>
+            <label>Puntos destacados, uno por línea</label>
             <textarea name="detail_items" style="min-height:120px;"><?= h($detailItems) ?></textarea>
-            <p class="help">Ejemplo: alcance del proyecto, solucion implementada, resultado obtenido.</p>
+            <p class="help">Ejemplo: alcance del proyecto, solución implementada, resultado obtenido.</p>
 
             <label>Estado</label>
             <select name="status">
@@ -651,9 +657,9 @@ $baseUrl = rtrim($config['base_url'], '/');
                 <select name="design_card">
                   <option value="compact" <?= $design['card'] === 'compact' ? 'selected' : '' ?>>Compacta</option>
                   <option value="visual" <?= $design['card'] === 'visual' ? 'selected' : '' ?>>Visual</option>
-                  <option value="technical" <?= $design['card'] === 'technical' ? 'selected' : '' ?>>Tecnica</option>
+                  <option value="technical" <?= $design['card'] === 'technical' ? 'selected' : '' ?>>Técnica</option>
                 </select>
-                <p class="design-hint">Define el tamano y presencia de la tarjeta publica.</p>
+                <p class="design-hint">Define el tamaño y la presencia de la tarjeta pública.</p>
               </div>
               <div class="design-tool">
                 <label>Color de acento</label>
@@ -663,7 +669,7 @@ $baseUrl = rtrim($config['base_url'], '/');
                   <option value="blue" <?= $design['accent'] === 'blue' ? 'selected' : '' ?>>Azul</option>
                   <option value="green" <?= $design['accent'] === 'green' ? 'selected' : '' ?>>Verde</option>
                 </select>
-                <p class="design-hint">Afecta bordes, etiquetas y llamados a la accion.</p>
+                <p class="design-hint">Afecta bordes, etiquetas y llamados a la acción.</p>
               </div>
               <div class="design-tool">
                 <label>Tratamiento de imagen</label>
@@ -671,15 +677,15 @@ $baseUrl = rtrim($config['base_url'], '/');
                   <option value="cover" <?= $design['image'] === 'cover' ? 'selected' : '' ?>>Recortar para portada</option>
                   <option value="contain" <?= $design['image'] === 'contain' ? 'selected' : '' ?>>Mostrar imagen completa</option>
                 </select>
-                <p class="design-hint">Usalo para logos, renders o placas con texto.</p>
+                <p class="design-hint">Úsalo para logos, renders o placas con texto.</p>
               </div>
               <div class="design-tool">
                 <label>Detalle interno</label>
                 <select name="design_detail">
                   <option value="cards" <?= $design['detail'] === 'cards' ? 'selected' : '' ?>>Bloques destacados</option>
-                  <option value="list" <?= $design['detail'] === 'list' ? 'selected' : '' ?>>Lista tecnica</option>
+                  <option value="list" <?= $design['detail'] === 'list' ? 'selected' : '' ?>>Lista técnica</option>
                 </select>
-                <p class="design-hint">Controla como se ven los puntos destacados en el modal.</p>
+                <p class="design-hint">Controla cómo se ven los puntos destacados en el modal.</p>
               </div>
             </div>
 
@@ -702,12 +708,12 @@ $baseUrl = rtrim($config['base_url'], '/');
               <div class="preview-gallery" data-preview-gallery></div>
               <div class="preview-body">
                 <span class="preview-status" data-preview-status>Borrador</span>
-                <h3 class="preview-title" data-preview-title>Titulo del caso</h3>
+                <h3 class="preview-title" data-preview-title>Título del caso</h3>
                 <p class="preview-text" data-preview-summary>Resumen del recurso.</p>
                 <div class="preview-tags" data-preview-tags></div>
                 <div class="preview-detail">
-                  <p class="preview-text" data-preview-subtitle>Subtitulo del caso.</p>
-                  <p class="preview-text" data-preview-description>Descripcion del caso.</p>
+                  <p class="preview-text" data-preview-subtitle>Subtítulo del caso.</p>
+                  <p class="preview-text" data-preview-description>Descripción del caso.</p>
                   <ul class="preview-points" data-preview-points></ul>
                   <a class="preview-link" data-preview-link href="/recursos/" target="_blank" rel="noreferrer">/recursos/</a>
                 </div>
@@ -889,7 +895,7 @@ $baseUrl = rtrim($config['base_url'], '/');
       };
 
       const updatePreview = () => {
-        const title = text(fields.title, "Titulo del caso");
+        const title = text(fields.title, "Título del caso");
         const slug = slugify(text(fields.slug, title));
         const status = fields.status?.value === "published" ? "Publicado" : "Borrador";
         const tags = text(fields.tags, "")
@@ -913,9 +919,9 @@ $baseUrl = rtrim($config['base_url'], '/');
           featuredCategory.textContent = text(fields.category, "Energía");
         }
         preview.title.textContent = title;
-        preview.subtitle.textContent = text(fields.subtitle, "Subtitulo del caso.");
+        preview.subtitle.textContent = text(fields.subtitle, "Subtítulo del caso.");
         preview.summary.textContent = text(fields.summary, "Resumen del recurso.");
-        preview.description.textContent = text(fields.description, "Descripcion del caso.");
+        preview.description.textContent = text(fields.description, "Descripción del caso.");
         preview.link.href = publicUrl;
         preview.link.textContent = publicUrl;
         preview.tags.replaceChildren(

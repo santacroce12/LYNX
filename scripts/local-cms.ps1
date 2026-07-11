@@ -4,7 +4,7 @@ param(
   [int]$DbPort = 3307,
   [int]$WebPort = 8088,
   [string]$AdminEmail = "marketing@lynx.local",
-  [string]$AdminPassword = "LynxLocal2026!"
+  [string]$AdminPassword = "LINX2026"
 )
 
 $ErrorActionPreference = "Stop"
@@ -197,7 +197,11 @@ return [
 ];
 "@
 
-  Set-Content -LiteralPath (Join-Path $apiDir "config.php") -Value $config -Encoding UTF8
+  [System.IO.File]::WriteAllText(
+    (Join-Path $apiDir "config.php"),
+    $config,
+    [System.Text.UTF8Encoding]::new($false)
+  )
   Write-Host "Config local escrita en out\api\config.php"
 }
 
@@ -208,7 +212,7 @@ function Start-Web {
     Write-Host "Sitio local:  http://127.0.0.1:$WebPort/recursos/"
     Write-Host "Admin local:  http://127.0.0.1:$WebPort/admin/?login=1"
     Write-Host "Usuario:      $AdminEmail"
-    Write-Host "Password:     $AdminPassword"
+    Write-Host "Contraseña:   $AdminPassword"
     Write-Host ""
     Write-Host "Para detener el sitio: Ctrl+C"
     Write-Host ""

@@ -6,7 +6,7 @@ require __DIR__ . '/bootstrap.php';
 
 $slug = trim((string)($_GET['slug'] ?? $_GET['id'] ?? ''));
 if ($slug === '') {
-    lynx_json_response(['success' => false, 'message' => 'Missing slug.'], 400);
+    lynx_json_response(['success' => false, 'message' => 'Falta el identificador del caso.'], 400);
 }
 
 try {
@@ -22,10 +22,10 @@ try {
     $row = $stmt->fetch();
 
     if (!$row) {
-        lynx_json_response(['success' => false, 'message' => 'Case not found.'], 404);
+        lynx_json_response(['success' => false, 'message' => 'No se encontró el caso solicitado.'], 404);
     }
 
     lynx_json_response(['success' => true, 'case' => lynx_case_from_row($row)]);
 } catch (Throwable $error) {
-    lynx_json_response(['success' => false, 'message' => 'Could not load case.'], 500);
+    lynx_json_response(['success' => false, 'message' => 'No se pudo cargar el caso de éxito.'], 500);
 }

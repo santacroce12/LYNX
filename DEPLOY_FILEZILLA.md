@@ -40,37 +40,40 @@ Antes de publicar, descargar una copia de respaldo del contenido actual.
 
 En FileZilla, activar la visualización de archivos ocultos para no borrar accidentalmente `.well-known`.
 
-## Recursos dinamicos: admin y base de datos
+## Recursos dinámicos: administración y base de datos
 
-La seccion `/recursos` puede cargar casos publicados desde PHP/MySQL. Si la API no esta configurada o falla, la pagina conserva los casos incluidos en el build como fallback.
+La sección `/recursos` puede cargar casos publicados desde PHP/MySQL. Si la API no está configurada o falla, la página conserva los casos incluidos en el build como respaldo.
 
 ### Configurar MySQL en BlueHost
 
 1. Crear una base de datos MySQL y un usuario con permisos sobre esa base.
-2. Ejecutar el SQL de `public/api/schema.sql` desde phpMyAdmin.
-3. Crear el primer usuario de marketing:
+2. Ejecutar el archivo `out/api/schema.sql` desde phpMyAdmin usando UTF-8 (`utf8mb4`).
+3. El SQL deja creada la cuenta de administración:
 
-```bash
-php -r "echo password_hash('CAMBIAR_PASSWORD', PASSWORD_DEFAULT), PHP_EOL;"
+```text
+Correo electrónico: marketing@lynx.local
+Contraseña: LINX2026
+Rol: admin
 ```
 
-Luego insertar el email y el hash generado en `admin_users`.
+Si la base ya existe, al abrir `/admin/` se ejecuta una migración única que crea o actualiza esta cuenta sin borrar los casos cargados.
 
 ### Configurar credenciales PHP
 
-1. Copiar `public/api/config.example.php` como `public/api/config.php`.
+1. Conservar el archivo `/public_html/api/config.php` que ya utiliza BlueHost. Si todavía no existe, copiar `out/api/config.example.php` como `config.php`.
 2. Completar `db_host`, `db_name`, `db_user`, `db_pass` y `base_url`.
 3. Subir `config.php` manualmente a `/public_html/api/config.php`.
 4. Crear o verificar permisos de escritura para `/public_html/uploads/cases/`.
 
-`config.php` no se versiona en git porque contiene credenciales.
+`config.php` no se incluye en `out/` porque contiene credenciales privadas y no debe reemplazarse con la configuración local de XAMPP.
 
 ### Publicar
 
-Despues de `npm run build`, subir el contenido de `out/` a `/public_html/`. El build incluye:
+Después de `npm run build`, subir el contenido de `out/` a `/public_html/`. El build incluye:
 
 - `/admin/` para el panel de marketing.
-- `/api/` para endpoints publicos.
+- `/api/` para endpoints públicos y el SQL de instalación.
 - `/recursos/` actualizado para consumir `/api/cases.php`.
+- `/uploads/cases/` con protección para impedir la ejecución de scripts subidos.
 
 No sobrescribir `api/config.php` en el servidor.

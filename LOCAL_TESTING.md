@@ -34,7 +34,7 @@ Credenciales locales:
 
 ```text
 Email: marketing@lynx.local
-Password: LynxLocal2026!
+Contraseña: LINX2026
 ```
 
 ## Correr el sitio local

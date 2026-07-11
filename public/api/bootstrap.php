@@ -8,13 +8,13 @@ function lynx_config(): array
     if (!file_exists($configPath)) {
         lynx_json_response([
             'success' => false,
-            'message' => 'Missing API config. Copy public/api/config.example.php to public/api/config.php.',
+            'message' => 'Falta la configuración de la API. Copiá config.example.php como config.php y completá las credenciales.',
         ], 500);
     }
 
     $config = require $configPath;
     if (!is_array($config)) {
-        lynx_json_response(['success' => false, 'message' => 'Invalid API config.'], 500);
+        lynx_json_response(['success' => false, 'message' => 'La configuración de la API no es válida.'], 500);
     }
 
     return $config;
@@ -36,6 +36,61 @@ function lynx_db(): PDO
     ]);
 
     return $pdo;
+}
+
+function lynx_ensure_default_admin(): void
+{
+    static $checked = false;
+    if ($checked) {
+        return;
+    }
+    $checked = true;
+
+    $db = lynx_db();
+    $db->exec(
+        "CREATE TABLE IF NOT EXISTS admin_users (
+            id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+            email VARCHAR(190) NOT NULL UNIQUE,
+            password_hash VARCHAR(255) NOT NULL,
+            role ENUM('admin', 'editor') NOT NULL DEFAULT 'editor',
+            created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP
+        ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci"
+    );
+    $db->exec(
+        "CREATE TABLE IF NOT EXISTS lynx_migrations (
+            migration_key VARCHAR(190) NOT NULL PRIMARY KEY,
+            applied_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP
+        ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci"
+    );
+
+    $migrationKey = '2026-07-default-admin-linx2026';
+    $migration = $db->prepare('SELECT 1 FROM lynx_migrations WHERE migration_key = :migration_key LIMIT 1');
+    $migration->execute(['migration_key' => $migrationKey]);
+    if ($migration->fetchColumn()) {
+        return;
+    }
+
+    $db->beginTransaction();
+    try {
+        $admin = $db->prepare(
+            "INSERT INTO admin_users (email, password_hash, role)
+             VALUES (:email, :password_hash, 'admin')
+             ON DUPLICATE KEY UPDATE password_hash = VALUES(password_hash), role = 'admin'"
+        );
+        $admin->execute([
+            'email' => 'marketing@lynx.local',
+            'password_hash' => '$2y$10$GnLJPxyZgOxtMcXRswNX7uDqDQXuH0iJxaitc9ztcl3WixLRLUtq.',
+        ]);
+
+        $record = $db->prepare('INSERT IGNORE INTO lynx_migrations (migration_key) VALUES (:migration_key)');
+        $record->execute(['migration_key' => $migrationKey]);
+        $db->commit();
+    } catch (Throwable $error) {
+        if ($db->inTransaction()) {
+            $db->rollBack();
+        }
+        throw $error;
+    }
 }
 
 function lynx_json_response(array $payload, int $status = 200): void
