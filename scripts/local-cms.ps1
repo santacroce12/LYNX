@@ -3,8 +3,8 @@ param(
   [string]$Action = "start",
   [int]$DbPort = 3307,
   [int]$WebPort = 8088,
-  [string]$AdminEmail = "marketing@lynx.local",
-  [string]$AdminPassword = "LINX2026"
+  [string]$AdminEmail = "admin",
+  [string]$AdminPassword = "LynxAdmin2026"
 )
 
 $ErrorActionPreference = "Stop"

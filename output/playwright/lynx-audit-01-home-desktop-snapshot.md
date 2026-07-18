@@ -1,0 +1,199 @@
+- generic [active] [ref=e1] [box=0,0,1425,3823]:
+  - banner [ref=e2] [box=0,0,1425,79]:
+    - generic [ref=e4] [box=122,0,1180,78]:
+      - link [ref=e5] [cursor=pointer] [box=146,22,128,34]:
+        - /url: /
+        - img "LYNX logo" [ref=e6] [box=146,22,128,34]
+      - navigation "Navegación principal" [ref=e394] [box=455,23,644,32]:
+        - link "Inicio" [ref=e395] [cursor=pointer] [box=455,23,47,32]:
+          - /url: /
+        - link "Energía" [ref=e396] [cursor=pointer] [box=530,23,64,32]:
+          - /url: /energia/
+        - link "Tecnología" [ref=e397] [cursor=pointer] [box=621,23,94,32]:
+          - /url: /tecnologia/
+        - link "Partners" [ref=e398] [cursor=pointer] [box=744,23,76,32]:
+          - /url: /partners/
+        - link "Recursos" [ref=e399] [cursor=pointer] [box=847,23,78,32]:
+          - /url: /recursos/
+        - link "FAQs" [ref=e400] [cursor=pointer] [box=953,23,37,32]:
+          - /url: /faqs/
+        - link "Contacto" [ref=e401] [cursor=pointer] [box=1018,23,80,32]:
+          - /url: /contacto/
+  - main [ref=e10] [box=0,0,1425,3823]:
+    - generic [ref=e25] [box=0,78,1425,3745]:
+      - generic [ref=e26] [box=0,78,1425,998]:
+        - img "Infraestructura digital de LYNX" [ref=e27] [box=0,78,1425,997]
+        - generic [ref=e30] [box=52,78,1320,997]:
+          - generic [ref=e31] [box=84,134,1256,450]:
+            - generic [ref=e32] [box=84,181,575,357]:
+              - generic [ref=e402] [box=84,181,575,30]: Operaciones críticas
+              - heading "Ingeniería para lo crítico." [level=1] [ref=e406] [box=84,231,575,132]
+              - paragraph [ref=e408] [box=84,383,575,32]: Integramos, desplegamos y mantenemos sistemas críticos.
+              - generic [ref=e410] [box=84,439,575,98]:
+                - generic [ref=e411] [box=84,439,184,98]
+                - generic [ref=e414] [box=280,439,184,98]
+                - generic [ref=e417] [box=476,439,184,98]
+            - generic [ref=e421] [box=692,134,649,450]:
+              - img "Automatización energética LYNX" [ref=e424] [box=733,210,183,138]
+              - img "Integración eléctrica y OT LYNX" [ref=e428] [box=860,147,467,292]
+              - img "Red eléctrica inteligente LYNX" [ref=e432] [box=884,352,394,221]
+          - generic [ref=e75] [box=84,668,1256,351]:
+            - generic [ref=e446] [box=84,668,672,88]:
+              - generic [ref=e447] [box=84,675,202,14]: Elegí una vertical
+              - paragraph [ref=e448] [box=84,700,672,56]: "Dos caminos claros para entrar a LYNX: energía para infraestructura crítica y tecnología para integración operativa."
+            - generic [ref=e81] [box=84,772,1256,247]:
+              - link "Ir a Energía" [ref=e450] [cursor=pointer] [box=84,772,620,247]:
+                - /url: /energia/
+                - generic [ref=e451] [box=105,793,578,205]
+              - link "Ir a Tecnología" [ref=e472] [cursor=pointer] [box=720,772,620,247]:
+                - /url: /tecnologia/
+                - generic [ref=e473] [box=741,793,578,205]
+      - generic [ref=e127] [box=136,1124,1152,273]:
+        - generic [ref=e128] [box=160,1124,1104,109]:
+          - generic [ref=e129] [box=160,1124,443,109]:
+            - generic [ref=e493] [box=160,1142,443,24]: Partners
+            - heading "Nuestros aliados tecnológicos" [level=2] [ref=e496] [box=160,1182,443,69]
+          - generic [ref=e497] [box=627,1154,637,97]:
+            - paragraph [ref=e498] [box=627,1154,637,56]: Tecnología global, integrada por LYNX para responder a operaciones críticas en energía e industria.
+            - link "Conocer el aporte de cada partner" [ref=e499] [cursor=pointer] [box=627,1230,256,20]:
+              - /url: /partners/
+        - region "Aliados tecnologicos" [ref=e507] [box=177,1300,1070,94]:
+          - generic [ref=e509] [box=3,1300,1070,94]:
+            - group [ref=e510] [box=3,1300,214,94]:
+              - link "SEL" [ref=e511] [cursor=pointer] [box=19,1300,198,94]:
+                - /url: /partners#sel
+                - img "SEL" [ref=e513] [box=23,1319,190,56]
+            - group [ref=e514] [box=217,1300,214,94]:
+              - link "Survalent" [ref=e515] [cursor=pointer] [box=233,1300,198,94]:
+                - /url: /partners#survalent
+                - img "Survalent" [ref=e517] [box=237,1319,190,56]
+            - group [ref=e518] [box=431,1300,214,94]:
+              - link "Systems With Intelligence" [ref=e519] [cursor=pointer] [box=447,1300,198,94]:
+                - /url: /partners#systems-with-intelligence
+                - img "Systems With Intelligence" [ref=e521] [box=451,1317,190,60]
+            - group [ref=e522] [box=645,1300,214,94]:
+              - link "N3uron" [ref=e523] [cursor=pointer] [box=661,1300,198,94]:
+                - /url: /partners#n3uron
+                - img "N3uron" [ref=e525] [box=665,1323,190,48]
+            - group [ref=e526] [box=860,1300,214,94]:
+              - link "LEXA" [ref=e527] [cursor=pointer] [box=876,1300,198,94]:
+                - /url: /partners#lexa
+                - img "LEXA" [ref=e529] [box=880,1319,190,56]
+            - group [ref=e530] [box=1074,1300,214,94]:
+              - link "Cisco" [ref=e531] [cursor=pointer] [box=1090,1300,198,94]:
+                - /url: /partners#cisco
+                - img "Cisco" [ref=e533] [box=1094,1319,190,56]
+            - group [ref=e534] [box=1288,1300,214,94]:
+              - link "SISCO" [ref=e535] [cursor=pointer] [box=1304,1300,198,94]:
+                - /url: /partners#sisco
+                - img "SISCO" [ref=e537] [box=1308,1323,190,48]
+      - generic [ref=e176] [box=136,1492,1152,1118]:
+        - generic [ref=e177] [box=160,1492,1104,613]:
+          - generic [ref=e178] [box=160,1674,529,251]:
+            - generic [ref=e538] [box=160,1692,529,24]: Nosotros
+            - heading "LYNX" [level=2] [ref=e541] [box=160,1740,529,35]
+            - paragraph [ref=e543] [box=160,1798,529,64]: Desde 1993 conectamos ingeniería, automatización y software para operaciones energéticas e industriales.
+            - paragraph [ref=e545] [box=160,1886,529,56]: "Diseñamos, implementamos y mantenemos soluciones completas: hardware crítico, supervisión, datos y ejecución en terreno."
+          - generic [ref=e548] [box=731,1527,517,579]:
+            - generic [ref=e550] [box=783,1560,412,412]:
+              - generic "Cobertura LYNX en Chile y Argentina" [ref=e554] [box=783,1560,412,412]
+              - generic [box=971,1821,74,44]:
+                - generic [box=980,1828,57,8]: Chile
+                - generic [box=980,1840,57,9]: Santiago
+              - generic [box=1043,1838,76,44]:
+                - generic [box=1052,1845,58,8]: Argentina
+                - generic [box=1052,1856,58,9]: Mendoza
+            - generic [ref=e556] [box=755,1997,384,85]:
+              - paragraph [ref=e557] [box=755,2004,214,14]: Cobertura regional
+              - heading "Presencia operativa en Chile y Argentina." [level=3] [ref=e558] [box=755,2033,384,49]
+        - generic [ref=e197] [box=160,2137,1104,473]:
+          - generic [ref=e560] [box=160,2155,357,229]:
+            - generic [ref=e561] [box=181,2176,316,48]: "01"
+            - heading "Trayectoria y Alcance" [level=3] [ref=e567] [box=181,2244,316,23]
+            - paragraph [ref=e568] [box=181,2279,316,84]: Desde 1993, integramos tecnologías de automatización con implementaciones exitosas en Argentina y el exterior.
+          - generic [ref=e570] [box=534,2155,357,229]:
+            - generic [ref=e571] [box=555,2176,316,48]: "02"
+            - heading "Foco en Energía" [level=3] [ref=e576] [box=555,2244,316,23]
+            - paragraph [ref=e577] [box=555,2279,316,84]: Especialistas en control, medición y protección de sistemas eléctricos con tecnología de vanguardia.
+          - generic [ref=e579] [box=907,2155,357,229]:
+            - generic [ref=e580] [box=928,2176,316,48]: "03"
+            - heading "Soluciones Integrales" [level=3] [ref=e587] [box=928,2244,316,23]
+            - paragraph [ref=e588] [box=928,2279,316,84]: Combinamos innovación, ingeniería y provisión de equipamiento para superar los resultados esperados.
+          - generic [ref=e590] [box=160,2400,357,229]:
+            - generic [ref=e591] [box=181,2421,316,48]: "04"
+            - heading "Ciclo de Proyecto 360°" [level=3] [ref=e596] [box=181,2489,316,23]
+            - paragraph [ref=e597] [box=181,2524,316,84]: "Acompañamos de punta a punta: desde la ingeniería conceptual hasta el montaje, pruebas y puesta en servicio."
+          - generic [ref=e599] [box=534,2400,357,229]:
+            - generic [ref=e600] [box=555,2421,316,48]: "05"
+            - heading "Partners Globales" [level=3] [ref=e606] [box=555,2489,316,23]
+            - paragraph [ref=e607] [box=555,2524,316,84]: Trabajamos con socios estratégicos cuyo respaldo tecnológico fortalece la calidad de nuestras soluciones.
+          - generic [ref=e609] [box=907,2400,357,229]:
+            - generic [ref=e610] [box=928,2421,316,48]: "06"
+            - heading "Equipo Experto" [level=3] [ref=e615] [box=928,2489,316,23]
+            - paragraph [ref=e616] [box=928,2524,316,84]: Profesionales con sólida formación en automatismos avanzados para asumir desafíos con confianza y solidez.
+      - generic [ref=e258] [box=160,2706,1104,307]:
+        - generic [ref=e259] [box=160,2706,1104,71]:
+          - generic [ref=e260] [box=160,2706,502,71]:
+            - generic [ref=e261] [box=160,2713,139,14]: Capacidades
+            - heading "¿Qué hace LYNX?" [level=2] [ref=e262] [box=160,2742,502,35]
+          - paragraph [ref=e263] [box=678,2749,586,28]: Diagnóstico, ejecución y soporte para energía e infraestructura tecnológica.
+        - generic [ref=e264] [box=160,2801,1104,213]:
+          - generic [ref=e620] [box=181,2840,316,171]:
+            - generic [ref=e621] [box=201,2860,276,36]: "01"
+            - generic [ref=e626] [box=201,2912,276,79]:
+              - heading "Diagnóstico experto" [level=3] [ref=e627] [box=201,2912,276,21]
+              - paragraph [ref=e628] [box=201,2943,276,48]: Relevamos requisitos y priorizamos el plan de acción.
+          - generic [ref=e632] [box=555,2840,316,171]:
+            - generic [ref=e633] [box=575,2860,276,36]: "02"
+            - generic [ref=e638] [box=575,2912,276,79]:
+              - heading "Ejecución integral" [level=3] [ref=e639] [box=575,2912,276,21]
+              - paragraph [ref=e640] [box=575,2943,276,48]: Coordinamos ingeniería, software e infraestructura.
+          - generic [ref=e644] [box=928,2840,316,171]:
+            - generic [ref=e645] [box=948,2860,276,36]: "03"
+            - generic [ref=e650] [box=948,2912,276,79]:
+              - heading "Escalabilidad real" [level=3] [ref=e651] [box=948,2912,276,21]
+              - paragraph [ref=e652] [box=948,2943,276,48]: Diseñamos soluciones mantenibles y preparadas para crecer.
+      - generic [ref=e312] [box=52,3182,1320,640]:
+        - generic [ref=e313] [box=84,3222,1256,79]:
+          - generic [ref=e314] [box=84,3222,700,79]:
+            - heading "Hablemos de tu operación" [level=2] [ref=e654] [box=84,3240,700,35]
+            - paragraph [ref=e656] [box=84,3287,640,32]: Contanos qué necesitás resolver y armamos el próximo paso.
+          - link "Hablemos" [ref=e659] [cursor=pointer] [box=1152,3258,188,44]:
+            - /url: /contacto/
+        - generic [ref=e322] [box=84,3341,1256,441]:
+          - generic [ref=e323] [box=84,3382,1256,322]:
+            - generic [ref=e324] [box=84,3382,360,322]:
+              - generic [ref=e325] [box=84,3388,261,14]: Infraestructura crítica
+              - generic [ref=e326] [box=84,3430,360,163]:
+                - link "LYNX" [ref=e328] [cursor=pointer] [box=101,3443,156,41]:
+                  - /url: /
+                - generic [ref=e330] [box=84,3516,360,76]
+            - generic [ref=e338] [box=532,3382,360,322]:
+              - heading "Navegación" [level=3] [ref=e339] [box=532,3388,138,14]
+              - generic [ref=e340] [box=532,3422,360,282]:
+                - link "Inicio 01" [ref=e341] [cursor=pointer] [box=533,3423,358,40]:
+                  - /url: /
+                - link "Energía 02" [ref=e344] [cursor=pointer] [box=533,3463,358,40]:
+                  - /url: /energia/
+                - link "Tecnología 03" [ref=e347] [cursor=pointer] [box=533,3503,358,40]:
+                  - /url: /tecnologia/
+                - link "Partners 04" [ref=e350] [cursor=pointer] [box=533,3542,358,40]:
+                  - /url: /partners/
+                - link "Recursos 05" [ref=e353] [cursor=pointer] [box=533,3582,358,40]:
+                  - /url: /recursos/
+                - link "FAQs 06" [ref=e356] [cursor=pointer] [box=533,3622,358,40]:
+                  - /url: /faqs/
+                - link "Contacto 07" [ref=e359] [cursor=pointer] [box=533,3662,358,40]:
+                  - /url: /contacto/
+            - generic [ref=e362] [box=964,3382,376,322]:
+              - heading "Contacto" [level=3] [ref=e363] [box=964,3388,117,14]
+              - generic [ref=e364] [box=964,3422,376,271]:
+                - link "Abrir ubicación de LYNX en Google Maps" [ref=e365] [cursor=pointer] [box=964,3422,376,74]:
+                  - /url: https://www.google.com/maps/search/?api=1&query=Antonio%20Varas%2091%2C%20Providencia%2C%20Region%20Metropolitana%2C%20Chile
+                - link "soporte@lynx.cl" [ref=e377] [cursor=pointer] [box=964,3507,376,54]:
+                  - /url: mailto:soporte@lynx.cl
+                - generic [ref=e382] [box=964,3573,376,119]
+          - generic [ref=e391] [box=84,3735,1256,47]:
+            - paragraph [ref=e392] [box=84,3756,364,26]: © 2026 LYNX. Todos los derechos reservados.
+            - paragraph [ref=e393] [box=1149,3756,191,26]: Ingeniería para lo crítico.
+  - alert [ref=e660] [box=-1,3822,1,1]

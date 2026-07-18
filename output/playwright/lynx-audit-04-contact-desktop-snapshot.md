@@ -1,0 +1,124 @@
+- generic [active] [ref=f1e1] [box=0,0,1425,2184]:
+  - banner [ref=f1e2] [box=0,0,1425,79]:
+    - generic [ref=f1e4] [box=122,0,1180,78]:
+      - link [ref=f1e5] [cursor=pointer] [box=146,22,128,34]:
+        - /url: /
+        - img "LYNX logo" [ref=f1e6] [box=146,22,128,34]
+      - navigation "Navegación principal" [ref=f1e7] [box=440,23,672,32]:
+        - link "Inicio" [ref=f1e8] [cursor=pointer] [box=440,23,49,32]:
+          - /url: /
+        - link "Energía" [ref=f1e9] [cursor=pointer] [box=517,23,68,32]:
+          - /url: /energia/
+        - link "Tecnología" [ref=f1e10] [cursor=pointer] [box=614,23,99,32]:
+          - /url: /tecnologia/
+        - link "Partners" [ref=f1e11] [cursor=pointer] [box=741,23,81,32]:
+          - /url: /partners/
+        - link "Recursos" [ref=f1e12] [cursor=pointer] [box=850,23,84,32]:
+          - /url: /recursos/
+        - link "FAQs" [ref=f1e13] [cursor=pointer] [box=962,23,40,32]:
+          - /url: /faqs/
+        - link "Contacto" [ref=f1e14] [cursor=pointer] [box=1030,23,83,32]:
+          - /url: /contacto/
+  - main [ref=f1e15] [box=0,0,1425,2184]:
+    - generic [ref=f1e17] [box=0,78,1425,2106]:
+      - generic [ref=f1e19] [box=136,98,1152,1500]:
+        - generic [ref=f1e20] [box=160,98,1104,936]:
+          - generic [ref=f1e22] [box=160,98,565,676]:
+            - generic [ref=f1e23] [box=160,98,565,24]: Contacto
+            - heading "Hablemos de tu próximo proyecto" [level=1] [ref=f1e26] [box=160,138,565,125]
+            - paragraph [ref=f1e28] [box=160,283,565,64]: Completa el formulario y nuestro equipo te responde con una propuesta clara.
+            - generic [ref=f1e40] [box=160,451,565,196]:
+              - link "Correo soporte@lynx.cl" [ref=f1e41] [cursor=pointer] [box=160,451,274,90]:
+                - /url: mailto:soporte@lynx.cl
+                - generic [ref=f1e46] [box=237,468,149,56]
+              - link "WhatsApp +56 9 9219 1328" [ref=f1e51] [cursor=pointer] [box=451,451,274,90]:
+                - /url: https://wa.me/56992191328
+                - generic [ref=f1e55] [box=528,468,149,56]
+              - link "WhatsApp +56 9 9216 2573" [ref=f1e60] [cursor=pointer] [box=160,557,274,90]:
+                - /url: https://wa.me/56992162573
+                - generic [ref=f1e64] [box=237,574,149,56]
+            - generic [ref=f1e75] [box=237,680,238,76]:
+              - paragraph [ref=f1e76] [box=237,680,238,18]: Ubicacion
+              - paragraph [ref=f1e77] [box=237,706,238,27]: Antonio Varas 91, Providencia
+              - paragraph [ref=f1e78] [box=237,737,238,20]: Operación en Chile y Argentina
+          - generic [ref=f1e80] [box=753,98,511,936]:
+            - generic [ref=f1e81] [box=786,131,445,214]:
+              - paragraph [ref=f1e82] [box=786,137,136,14]: Formulario
+              - heading "Contanos que necesitas." [level=2] [ref=f1e83] [box=786,171,445,77]
+              - paragraph [ref=f1e84] [box=786,264,445,56]: Dejanos el contexto y te respondemos con un siguiente paso claro.
+            - generic [ref=f1e85] [box=786,376,445,625]:
+              - generic [ref=f1e86] [box=786,376,445,541]:
+                - generic [ref=f1e87] [box=786,376,445,86]
+                - generic [ref=f1e89] [box=786,478,445,86]
+                - generic [ref=f1e91] [box=786,580,445,86]
+                - generic [ref=f1e93] [box=786,681,445,236]
+              - generic [ref=f1e95] [box=786,917,445,84]:
+                - button "Enviar mensaje" [ref=f1e96] [cursor=pointer] [box=786,941,445,44]
+                - paragraph [box=786,1001,445,0]
+        - generic [ref=f1e97] [box=160,1074,1104,524]:
+          - generic [ref=f1e99] [box=160,1074,1104,73]:
+            - generic [ref=f1e100] [box=160,1074,307,73]:
+              - generic [ref=f1e101] [box=160,1081,119,14]: Ubicacion
+              - heading "Donde operamos" [level=2] [ref=f1e102] [box=160,1110,307,37]
+            - paragraph [ref=f1e103] [box=688,1091,576,56]: Mantenemos presencia operativa en Chile y Argentina, con base en Santiago.
+          - iframe [ref=f1e106] [box=178,1180,1069,400]:
+            
+      - generic [ref=f1e109] [box=52,1703,1320,480]:
+        - generic [ref=f1e110] [box=84,1743,1256,322]:
+          - generic [ref=f1e111] [box=84,1743,360,322]:
+            - generic [ref=f1e112] [box=84,1750,271,14]: Infraestructura crítica
+            - generic [ref=f1e113] [box=84,1791,360,163]:
+              - link "LYNX" [ref=f1e115] [cursor=pointer] [box=101,1804,156,41]:
+                - /url: /
+                - img "LYNX" [ref=f1e116] [box=101,1804,156,41]
+              - generic [ref=f1e117] [box=84,1878,360,76]:
+                - paragraph [ref=f1e118] [box=84,1878,360,20]: "Redes:"
+                - link "LinkedIn" [ref=f1e120] [cursor=pointer] [box=84,1910,44,44]:
+                  - /url: https://linkedin.com/company/lynxenergia
+          - generic [ref=f1e125] [box=532,1743,360,322]:
+            - heading "Navegación" [level=3] [ref=f1e126] [box=532,1750,140,14]
+            - generic [ref=f1e127] [box=532,1783,360,282]:
+              - link "Inicio 01" [ref=f1e128] [cursor=pointer] [box=533,1784,358,40]:
+                - /url: /
+                - generic [ref=f1e129] [box=549,1793,282,20]: Inicio
+                - generic [ref=f1e130] [box=848,1793,28,20]: "01"
+              - link "Energía 02" [ref=f1e131] [cursor=pointer] [box=533,1824,358,40]:
+                - /url: /energia/
+                - generic [ref=f1e132] [box=549,1833,282,20]: Energía
+                - generic [ref=f1e133] [box=848,1833,28,20]: "02"
+              - link "Tecnología 03" [ref=f1e134] [cursor=pointer] [box=533,1864,358,40]:
+                - /url: /tecnologia/
+                - generic [ref=f1e135] [box=549,1873,282,20]: Tecnología
+                - generic [ref=f1e136] [box=848,1873,28,20]: "03"
+              - link "Partners 04" [ref=f1e137] [cursor=pointer] [box=533,1904,358,40]:
+                - /url: /partners/
+                - generic [ref=f1e138] [box=549,1913,282,20]: Partners
+                - generic [ref=f1e139] [box=848,1913,28,20]: "04"
+              - link "Recursos 05" [ref=f1e140] [cursor=pointer] [box=533,1944,358,40]:
+                - /url: /recursos/
+                - generic [ref=f1e141] [box=549,1953,282,20]: Recursos
+                - generic [ref=f1e142] [box=848,1953,28,20]: "05"
+              - link "FAQs 06" [ref=f1e143] [cursor=pointer] [box=533,1984,358,40]:
+                - /url: /faqs/
+                - generic [ref=f1e144] [box=549,1993,282,20]: FAQs
+                - generic [ref=f1e145] [box=848,1993,28,20]: "06"
+              - link "Contacto 07" [ref=f1e146] [cursor=pointer] [box=533,2024,358,40]:
+                - /url: /contacto/
+                - generic [ref=f1e147] [box=549,2034,282,20]: Contacto
+                - generic [ref=f1e148] [box=848,2034,28,20]: "07"
+          - generic [ref=f1e149] [box=964,1743,376,322]:
+            - heading "Contacto" [level=3] [ref=f1e150] [box=964,1750,119,14]
+            - generic [ref=f1e151] [box=964,1783,376,271]:
+              - link "Abrir ubicación de LYNX en Google Maps" [ref=f1e152] [cursor=pointer] [box=964,1783,376,74]:
+                - /url: https://www.google.com/maps/search/?api=1&query=Antonio%20Varas%2091%2C%20Providencia%2C%20Region%20Metropolitana%2C%20Chile
+                - generic [ref=f1e157] [box=1013,1800,212,40]
+              - link "soporte@lynx.cl" [ref=f1e164] [cursor=pointer] [box=964,1869,376,54]:
+                - /url: mailto:soporte@lynx.cl
+              - generic [ref=f1e169] [box=964,1934,376,119]:
+                - link "+56 9 9219 1328" [ref=f1e170] [cursor=pointer] [box=964,1934,376,54]:
+                  - /url: https://wa.me/56992191328
+                - link "+56 9 9216 2573" [ref=f1e174] [cursor=pointer] [box=964,2000,376,54]:
+                  - /url: https://wa.me/56992162573
+        - generic [ref=f1e178] [box=84,2097,1256,47]:
+          - paragraph [ref=f1e179] [box=84,2117,364,26]: © 2026 LYNX. Todos los derechos reservados.
+          - paragraph [ref=f1e180] [box=1148,2117,193,26]: Ingeniería para lo crítico.

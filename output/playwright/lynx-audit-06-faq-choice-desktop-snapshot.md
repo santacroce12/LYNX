@@ -1,0 +1,41 @@
+- generic [active] [ref=f3e1] [box=0,0,1440,1000]:
+  - banner [ref=f3e2] [box=0,0,1440,79]:
+    - generic [ref=f3e4] [box=130,0,1180,78]:
+      - link [ref=f3e5] [cursor=pointer] [box=154,22,128,34]:
+        - /url: /
+        - img "LYNX logo" [ref=f3e6] [box=154,22,128,34]
+      - navigation "Navegación principal" [ref=f3e7] [box=462,23,644,32]:
+        - link "Inicio" [ref=f3e8] [cursor=pointer] [box=462,23,47,32]:
+          - /url: /
+        - link "Energía" [ref=f3e9] [cursor=pointer] [box=537,23,64,32]:
+          - /url: /energia/
+        - link "Tecnología" [ref=f3e10] [cursor=pointer] [box=629,23,94,32]:
+          - /url: /tecnologia/
+        - link "Partners" [ref=f3e11] [cursor=pointer] [box=751,23,76,32]:
+          - /url: /partners/
+        - link "Recursos" [ref=f3e12] [cursor=pointer] [box=855,23,78,32]:
+          - /url: /recursos/
+        - link "FAQs" [ref=f3e13] [cursor=pointer] [box=960,23,37,32]:
+          - /url: /faqs/
+        - link "Contacto" [ref=f3e14] [cursor=pointer] [box=1026,23,80,32]:
+          - /url: /contacto/
+  - main [ref=f3e15] [box=0,0,1440,1000]:
+    - generic [ref=f3e19] [box=208,326,1024,426]:
+      - generic [ref=f3e20] [box=384,326,672,128]:
+        - generic [ref=f3e58] [box=384,326,672,24]: Preguntas frecuentes
+        - heading "Elegí una vertical" [level=1] [ref=f3e61] [box=384,366,672,52]
+        - paragraph [ref=f3e63] [box=432,430,576,24]: Seleccioná el área que querés consultar.
+      - generic [ref=f3e27] [box=272,482,896,270]:
+        - link "Energía Energía Automatización eléctrica, SCADA, PMU y commissioning." [ref=f3e65] [cursor=pointer] [box=272,482,438,270]:
+          - /url: /faqs/energia/
+          - generic [ref=f3e75] [box=297,595,388,132]:
+            - paragraph [ref=f3e76] [box=297,595,388,16]: Energía
+            - heading "Energía" [level=2] [ref=f3e77] [box=297,619,388,48]
+            - paragraph [ref=f3e78] [box=297,679,388,48]: Automatización eléctrica, SCADA, PMU y commissioning.
+        - link "Tecnología Tecnología Integración OT/IT, datos, hardware y soporte técnico." [ref=f3e80] [cursor=pointer] [box=730,482,438,270]:
+          - /url: /faqs/tecnologia/
+          - generic [ref=f3e90] [box=755,595,388,132]:
+            - paragraph [ref=f3e91] [box=755,595,388,16]: Tecnología
+            - heading "Tecnología" [level=2] [ref=f3e92] [box=755,619,388,48]
+            - paragraph [ref=f3e93] [box=755,679,388,48]: Integración OT/IT, datos, hardware y soporte técnico.
+  - alert [ref=f3e94] [box=-1,999,1,1]

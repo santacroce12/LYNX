@@ -200,7 +200,7 @@ try {
             ];
             redirect_admin();
         }
-        $error = 'Correo electrónico o contraseña inválidos.';
+        $error = 'Usuario o contraseña inválidos.';
     }
 
     if ($action === 'logout') {
@@ -470,8 +470,8 @@ $baseUrl = rtrim($config['base_url'], '/');
         <?php if ($error): ?><div class="notice error"><?= h($error) ?></div><?php endif; ?>
         <form method="post">
           <input type="hidden" name="action" value="login">
-          <label>Correo electrónico</label>
-          <input type="email" name="email" required autocomplete="email">
+          <label>Usuario</label>
+          <input type="text" name="email" required autocomplete="username">
           <label>Contraseña</label>
           <input type="password" name="password" required autocomplete="current-password">
           <div style="margin-top:18px;"><button type="submit">Ingresar</button></div>

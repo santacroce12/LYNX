@@ -1,0 +1,67 @@
+- generic [active] [ref=f8e1] [box=0,0,376,3856]:
+  - banner [ref=f8e2] [box=0,0,376,65]:
+    - generic [ref=f8e4] [box=0,0,376,64]:
+      - link [ref=f8e5] [cursor=pointer] [box=16,18,104,27]:
+        - /url: /
+        - img "LYNX logo" [ref=f8e6] [box=16,18,104,27]
+      - button "Abrir menu" [ref=f8e8] [cursor=pointer] [box=324,14,36,36]
+  - main [ref=f8e10] [box=0,0,376,3856]:
+    - generic [ref=f8e12] [box=0,64,376,3792]:
+      - generic [ref=f8e14] [box=0,72,376,494]:
+        - link "Volver a FAQs" [ref=f8e16] [cursor=pointer] [box=16,72,157,33]:
+          - /url: /faqs/
+        - generic [ref=f8e22] [box=50,174,276,254]:
+          - generic [ref=f8e23] [box=50,174,276,24]: FAQs – Energía
+          - heading "Preguntas frecuentes de energía" [level=1] [ref=f8e26] [box=50,218,276,106]
+          - paragraph [ref=f8e28] [box=50,344,276,84]: Automatización eléctrica, monitoreo, cumplimiento técnico, protocolos industriales y servicios en terreno.
+      - generic [ref=f8e36] [box=16,598,344,2065]:
+        - article [ref=f8e38] [box=16,598,344,283]:
+          - heading "¿Qué servicios de automatización y monitoreo eléctrico ofrece Lynx?" [level=2] [ref=f8e39] [box=33,615,310,48]
+          - paragraph [ref=f8e41] [box=33,696,310,168]: Desarrollamos proyectos de automatización, monitoreo y control para sistemas eléctricos. Implementamos plataformas SCADA, RTU, PMU y soluciones de monitoreo para generación, transmisión y almacenamiento de energía.
+        - article [ref=f8e43] [box=16,892,344,283]:
+          - heading "¿Realizan integración y cumplimiento técnico con el CEN?" [level=2] [ref=f8e44] [box=33,909,310,48]
+          - paragraph [ref=f8e46] [box=33,990,310,168]: Sí. Participamos en proyectos asociados al Coordinador Eléctrico Nacional (CEN), incluyendo integración SITR, validación de señales, pruebas FAT/SAT y configuración de sistemas SCADA para instalaciones eléctricas en Chile.
+        - article [ref=f8e48] [box=16,1187,344,227]:
+          - heading "¿Qué protocolos industriales integran en proyectos OT?" [level=2] [ref=f8e49] [box=33,1204,310,48]
+          - paragraph [ref=f8e51] [box=33,1285,310,112]: Trabajamos con protocolos como IEC 61850, DNP3, Modbus e IEEE C37.118 para automatización eléctrica, integración SCADA y monitoreo fasorial en entornos OT.
+        - article [ref=f8e53] [box=16,1426,344,255]:
+          - heading "¿Tienen experiencia implementando sistemas PMU?" [level=2] [ref=f8e54] [box=33,1443,310,48]
+          - paragraph [ref=f8e56] [box=33,1524,310,140]: Sí. Implementamos sistemas PMU y monitoreo fasorial bajo estándar IEEE C37.118 para observabilidad, análisis dinámico y monitoreo en tiempo real del sistema eléctrico.
+        - article [ref=f8e58] [box=16,1692,344,227]:
+          - heading "¿Pueden integrar PMU con plataformas SCADA?" [level=2] [ref=f8e59] [box=33,1709,310,48]
+          - paragraph [ref=f8e61] [box=33,1790,310,112]: Sí. Integramos PMU con plataformas SCADA y centros de control existentes, considerando interoperabilidad, sincronización temporal y disponibilidad de información operativa.
+        - article [ref=f8e63] [box=16,1931,344,227]:
+          - heading "¿Qué servicios realizan en subestaciones eléctricas?" [level=2] [ref=f8e64] [box=33,1948,310,48]
+          - paragraph [ref=f8e66] [box=33,2029,310,112]: Desarrollamos ingeniería, automatización, telecomunicaciones industriales, protecciones y puesta en servicio para subestaciones de alta y media tensión.
+        - article [ref=f8e68] [box=16,2170,344,227]:
+          - heading "¿Realizan commissioning y pruebas FAT/SAT?" [level=2] [ref=f8e69] [box=33,2186,310,48]
+          - paragraph [ref=f8e71] [box=33,2267,310,112]: Sí. Ejecutamos pruebas FAT/SAT, validación de señales, pruebas punto a punto y commissioning para proyectos eléctricos y sistemas de automatización.
+        - article [ref=f8e73] [box=16,2408,344,255]:
+          - heading "¿Ofrecen servicios de ciberseguridad OT?" [level=2] [ref=f8e74] [box=33,2425,310,48]
+          - paragraph [ref=f8e76] [box=33,2506,310,140]: Sí. Implementamos medidas de ciberseguridad OT orientadas a segmentación de redes, control de accesos, trazabilidad y protección de infraestructura tecnológica.
+      - generic [ref=f8e88] [box=0,2800,376,1056]:
+        - generic [ref=f8e89] [box=16,2832,344,231]:
+          - generic [ref=f8e90] [box=16,2832,344,163]:
+            - heading "¿Necesitás una respuesta más específica?" [level=2] [ref=f8e92] [box=16,2832,344,95]
+            - paragraph [ref=f8e94] [box=16,2939,344,56]: Contanos el contexto y orientamos el próximo paso técnico.
+          - link "Ir a contacto" [ref=f8e97] [cursor=pointer] [box=16,3019,344,44]:
+            - /url: /contacto/
+        - generic [ref=f8e98] [box=16,3095,344,729]:
+          - generic [ref=f8e99] [box=16,3127,344,553]:
+            - generic [ref=f8e100] [box=16,3127,344,211]:
+              - generic [ref=f8e101] [box=16,3135,156,12]: Infraestructura crítica
+              - generic [ref=f8e102] [box=16,3175,344,163]:
+                - link "LYNX" [ref=f8e104] [cursor=pointer] [box=33,3188,156,41]:
+                  - /url: /
+                - generic [ref=f8e106] [box=16,3262,344,76]
+            - generic [ref=f8e114] [box=16,3370,344,311]:
+              - heading "Contacto" [level=3] [ref=f8e115] [box=16,3377,76,12]
+              - generic [ref=f8e116] [box=16,3410,344,271]:
+                - link "Abrir ubicación de LYNX en Google Maps" [ref=f8e117] [cursor=pointer] [box=16,3410,344,74]:
+                  - /url: https://www.google.com/maps/search/?api=1&query=Antonio%20Varas%2091%2C%20Providencia%2C%20Region%20Metropolitana%2C%20Chile
+                - link "soporte@lynx.cl" [ref=f8e129] [cursor=pointer] [box=16,3496,344,54]:
+                  - /url: mailto:soporte@lynx.cl
+                - generic [ref=f8e134] [box=16,3561,344,119]
+          - generic [ref=f8e143] [box=16,3713,344,111]:
+            - paragraph [ref=f8e144] [box=16,3733,344,52]: © 2026 LYNX. Todos los derechos reservados.
+            - paragraph [ref=f8e145] [box=16,3797,344,26]: Ingeniería para lo crítico.

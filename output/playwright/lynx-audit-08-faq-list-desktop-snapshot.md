@@ -1,0 +1,71 @@
+- generic [active] [ref=f3e1] [box=0,-1100,1425,2735]:
+  - banner [ref=f3e2] [box=0,0,1425,65]:
+    - generic [ref=f3e4] [box=122,0,1180,64]:
+      - link [ref=f3e5] [cursor=pointer] [box=146,17,118,31]:
+        - /url: /
+        - img "LYNX logo" [ref=f3e6] [box=146,17,118,31]
+      - navigation "Navegación principal" [ref=f3e7] [box=450,16,644,32]:
+        - link "Inicio" [ref=f3e8] [cursor=pointer] [box=450,16,47,32]:
+          - /url: /
+        - link "Energía" [ref=f3e9] [cursor=pointer] [box=525,16,64,32]:
+          - /url: /energia/
+        - link "Tecnología" [ref=f3e10] [cursor=pointer] [box=616,16,94,32]:
+          - /url: /tecnologia/
+        - link "Partners" [ref=f3e11] [cursor=pointer] [box=739,16,76,32]:
+          - /url: /partners/
+        - link "Recursos" [ref=f3e12] [cursor=pointer] [box=842,16,78,32]:
+          - /url: /recursos/
+        - link "FAQs" [ref=f3e13] [cursor=pointer] [box=948,16,37,32]:
+          - /url: /faqs/
+        - link "Contacto" [ref=f3e14] [cursor=pointer] [box=1013,16,80,32]:
+          - /url: /contacto/
+  - main [ref=f3e15] [box=0,-1100,1425,2735]:
+    - generic [ref=f3e96] [box=0,-1022,1425,2657]:
+      - generic [ref=f3e98] [box=136,-1002,1152,432]:
+        - link "Volver a FAQs" [ref=f3e100] [cursor=pointer] [box=160,-1002,157,33]:
+          - /url: /faqs/
+        - generic [ref=f3e106] [box=210,-888,768,260]:
+          - generic [ref=f3e107] [box=210,-888,768,24]: FAQs – Energía
+          - heading "Preguntas frecuentes de energía" [level=1] [ref=f3e110] [box=210,-844,768,132]
+          - paragraph [ref=f3e112] [box=210,-692,672,64]: Automatización eléctrica, monitoreo, cumplimiento técnico, protocolos industriales y servicios en terreno.
+      - generic [ref=f3e120] [box=160,-475,1104,1265]:
+        - article [ref=f3e122] [box=160,-475,1104,155]:
+          - heading "¿Qué servicios de automatización y monitoreo eléctrico ofrece Lynx?" [level=2] [ref=f3e123] [box=181,-454,1062,24]
+          - paragraph [ref=f3e125] [box=181,-397,1062,56]: Desarrollamos proyectos de automatización, monitoreo y control para sistemas eléctricos. Implementamos plataformas SCADA, RTU, PMU y soluciones de monitoreo para generación, transmisión y almacenamiento de energía.
+        - article [ref=f3e127] [box=160,-308,1104,155]:
+          - heading "¿Realizan integración y cumplimiento técnico con el CEN?" [level=2] [ref=f3e128] [box=181,-287,1062,24]
+          - paragraph [ref=f3e130] [box=181,-230,1062,56]: Sí. Participamos en proyectos asociados al Coordinador Eléctrico Nacional (CEN), incluyendo integración SITR, validación de señales, pruebas FAT/SAT y configuración de sistemas SCADA para instalaciones eléctricas en Chile.
+        - article [ref=f3e132] [box=160,-141,1104,155]:
+          - heading "¿Qué protocolos industriales integran en proyectos OT?" [level=2] [ref=f3e133] [box=181,-120,1062,24]
+          - paragraph [ref=f3e135] [box=181,-64,1062,56]: Trabajamos con protocolos como IEC 61850, DNP3, Modbus e IEEE C37.118 para automatización eléctrica, integración SCADA y monitoreo fasorial en entornos OT.
+        - article [ref=f3e137] [box=160,25,1104,155]:
+          - heading "¿Tienen experiencia implementando sistemas PMU?" [level=2] [ref=f3e138] [box=181,46,1062,24]
+          - paragraph [ref=f3e140] [box=181,103,1062,56]: Sí. Implementamos sistemas PMU y monitoreo fasorial bajo estándar IEEE C37.118 para observabilidad, análisis dinámico y monitoreo en tiempo real del sistema eléctrico.
+        - article [ref=f3e142] [box=160,192,1104,155]:
+          - heading "¿Pueden integrar PMU con plataformas SCADA?" [level=2] [ref=f3e143] [box=181,213,1062,24]
+          - paragraph [ref=f3e145] [box=181,270,1062,56]: Sí. Integramos PMU con plataformas SCADA y centros de control existentes, considerando interoperabilidad, sincronización temporal y disponibilidad de información operativa.
+        - article [ref=f3e147] [box=160,359,1104,127]:
+          - heading "¿Qué servicios realizan en subestaciones eléctricas?" [level=2] [ref=f3e148] [box=181,379,1062,24]
+          - paragraph [ref=f3e150] [box=181,436,1062,28]: Desarrollamos ingeniería, automatización, telecomunicaciones industriales, protecciones y puesta en servicio para subestaciones de alta y media tensión.
+        - article [ref=f3e152] [box=160,497,1104,127]:
+          - heading "¿Realizan commissioning y pruebas FAT/SAT?" [level=2] [ref=f3e153] [box=181,518,1062,24]
+          - paragraph [ref=f3e155] [box=181,575,1062,28]: Sí. Ejecutamos pruebas FAT/SAT, validación de señales, pruebas punto a punto y commissioning para proyectos eléctricos y sistemas de automatización.
+        - article [ref=f3e157] [box=160,636,1104,155]:
+          - heading "¿Ofrecen servicios de ciberseguridad OT?" [level=2] [ref=f3e158] [box=181,657,1062,24]
+          - paragraph [ref=f3e160] [box=181,714,1062,56]: Sí. Implementamos medidas de ciberseguridad OT orientadas a segmentación de redes, control de accesos, trazabilidad y protección de infraestructura tecnológica.
+      - generic [ref=f3e172] [box=52,959,1320,674]:
+        - generic [ref=f3e173] [box=84,999,1256,113]:
+          - generic [ref=f3e174] [box=84,999,700,113]:
+            - heading "¿Necesitás una respuesta más específica?" [level=2] [ref=f3e176] [box=84,1017,700,69]
+            - paragraph [ref=f3e178] [box=84,1098,640,32]: Contanos el contexto y orientamos el próximo paso técnico.
+          - link "Ir a contacto" [ref=f3e181] [cursor=pointer] [box=1138,1052,202,44]:
+            - /url: /contacto/
+        - generic [ref=f3e182] [box=84,1152,1256,441]:
+          - generic [ref=f3e183] [box=84,1193,1256,322]:
+            - generic [ref=f3e184] [box=84,1193,360,322]
+            - generic [ref=f3e198] [box=532,1193,360,322]
+            - generic [ref=f3e222] [box=964,1193,376,322]
+          - generic [ref=f3e251] [box=84,1547,1256,47]:
+            - paragraph [ref=f3e252] [box=84,1568,364,26]: © 2026 LYNX. Todos los derechos reservados.
+            - paragraph [ref=f3e253] [box=1149,1568,191,26]: Ingeniería para lo crítico.
+  - alert [ref=f3e94] [box=-1,1634,1,1]: FAQs – Energía | LYNX

@@ -33,8 +33,8 @@ Esto hace:
 Credenciales locales:
 
 ```text
-Email: marketing@lynx.local
-Contraseña: LINX2026
+Usuario: admin
+Contraseña: LynxAdmin2026
 ```
 
 ## Correr el sitio local

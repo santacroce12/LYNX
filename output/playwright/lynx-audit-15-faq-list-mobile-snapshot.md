@@ -1,0 +1,60 @@
+- generic [active] [ref=f8e1] [box=0,-900,376,3856]:
+  - banner [ref=f8e2] [box=0,0,376,61]:
+    - generic [ref=f8e4] [box=0,0,376,60]:
+      - link [ref=f8e5] [cursor=pointer] [box=16,16,104,27]:
+        - /url: /
+        - img "LYNX logo" [ref=f8e6] [box=16,16,104,27]
+      - button "Abrir menu" [ref=f8e8] [cursor=pointer] [box=324,12,36,36]
+  - main [ref=f8e10] [box=0,-900,376,3856]:
+    - generic [ref=f8e12] [box=0,-836,376,3792]:
+      - generic [ref=f8e14] [box=0,-828,376,494]:
+        - link "Volver a FAQs" [ref=f8e16] [cursor=pointer] [box=16,-828,157,33]:
+          - /url: /faqs/
+        - generic [ref=f8e22] [box=50,-726,276,254]:
+          - generic [ref=f8e146] [box=50,-726,276,24]: FAQs – Energía
+          - heading "Preguntas frecuentes de energía" [level=1] [ref=f8e149] [box=50,-682,276,106]
+          - paragraph [ref=f8e151] [box=50,-556,276,84]: Automatización eléctrica, monitoreo, cumplimiento técnico, protocolos industriales y servicios en terreno.
+      - generic [ref=f8e36] [box=16,-302,344,2065]:
+        - article [ref=f8e158] [box=16,-302,344,283]:
+          - heading "¿Qué servicios de automatización y monitoreo eléctrico ofrece Lynx?" [level=2] [ref=f8e159] [box=33,-285,310,48]
+          - paragraph [ref=f8e161] [box=33,-204,310,168]: Desarrollamos proyectos de automatización, monitoreo y control para sistemas eléctricos. Implementamos plataformas SCADA, RTU, PMU y soluciones de monitoreo para generación, transmisión y almacenamiento de energía.
+        - article [ref=f8e163] [box=16,-7,344,283]:
+          - heading "¿Realizan integración y cumplimiento técnico con el CEN?" [level=2] [ref=f8e164] [box=33,9,310,48]
+          - paragraph [ref=f8e166] [box=33,90,310,168]: Sí. Participamos en proyectos asociados al Coordinador Eléctrico Nacional (CEN), incluyendo integración SITR, validación de señales, pruebas FAT/SAT y configuración de sistemas SCADA para instalaciones eléctricas en Chile.
+        - article [ref=f8e168] [box=16,287,344,227]:
+          - heading "¿Qué protocolos industriales integran en proyectos OT?" [level=2] [ref=f8e169] [box=33,304,310,48]
+          - paragraph [ref=f8e171] [box=33,385,310,112]: Trabajamos con protocolos como IEC 61850, DNP3, Modbus e IEEE C37.118 para automatización eléctrica, integración SCADA y monitoreo fasorial en entornos OT.
+        - article [ref=f8e173] [box=16,526,344,255]:
+          - heading "¿Tienen experiencia implementando sistemas PMU?" [level=2] [ref=f8e174] [box=33,543,310,48]
+          - paragraph [ref=f8e176] [box=33,624,310,140]: Sí. Implementamos sistemas PMU y monitoreo fasorial bajo estándar IEEE C37.118 para observabilidad, análisis dinámico y monitoreo en tiempo real del sistema eléctrico.
+        - article [ref=f8e178] [box=16,810,344,227]:
+          - heading "¿Pueden integrar PMU con plataformas SCADA?" [level=2] [ref=f8e179] [box=33,827,310,48]
+          - paragraph [ref=f8e181] [box=33,908,310,112]: Sí. Integramos PMU con plataformas SCADA y centros de control existentes, considerando interoperabilidad, sincronización temporal y disponibilidad de información operativa.
+        - article [ref=f8e183] [box=16,1049,344,227]:
+          - heading "¿Qué servicios realizan en subestaciones eléctricas?" [level=2] [ref=f8e184] [box=33,1066,310,48]
+          - paragraph [ref=f8e186] [box=33,1147,310,112]: Desarrollamos ingeniería, automatización, telecomunicaciones industriales, protecciones y puesta en servicio para subestaciones de alta y media tensión.
+        - article [ref=f8e188] [box=16,1288,344,227]:
+          - heading "¿Realizan commissioning y pruebas FAT/SAT?" [level=2] [ref=f8e189] [box=33,1305,310,48]
+          - paragraph [ref=f8e191] [box=33,1386,310,112]: Sí. Ejecutamos pruebas FAT/SAT, validación de señales, pruebas punto a punto y commissioning para proyectos eléctricos y sistemas de automatización.
+        - article [ref=f8e193] [box=16,1526,344,255]:
+          - heading "¿Ofrecen servicios de ciberseguridad OT?" [level=2] [ref=f8e194] [box=33,1543,310,48]
+          - paragraph [ref=f8e196] [box=33,1624,310,140]: Sí. Implementamos medidas de ciberseguridad OT orientadas a segmentación de redes, control de accesos, trazabilidad y protección de infraestructura tecnológica.
+      - generic [ref=f8e88] [box=0,1900,376,1056]:
+        - generic [ref=f8e89] [box=16,1932,344,231]:
+          - generic [ref=f8e90] [box=16,1932,344,163]:
+            - heading "¿Necesitás una respuesta más específica?" [level=2] [ref=f8e198] [box=16,1950,344,95]
+            - paragraph [ref=f8e200] [box=16,2057,344,56]: Contanos el contexto y orientamos el próximo paso técnico.
+          - link "Ir a contacto" [ref=f8e203] [cursor=pointer] [box=16,2137,344,44]:
+            - /url: /contacto/
+        - generic [ref=f8e98] [box=16,2195,344,729]:
+          - generic [ref=f8e99] [box=16,2228,344,553]:
+            - generic [ref=f8e100] [box=16,2228,344,211]:
+              - generic [ref=f8e101] [box=16,2235,156,12]: Infraestructura crítica
+              - generic [ref=f8e102] [box=16,2276,344,163]
+            - generic [ref=f8e114] [box=16,2470,344,311]:
+              - heading "Contacto" [level=3] [ref=f8e115] [box=16,2477,76,12]
+              - generic [ref=f8e116] [box=16,2510,344,271]
+          - generic [ref=f8e143] [box=16,2813,344,111]:
+            - paragraph [ref=f8e144] [box=16,2834,344,52]: © 2026 LYNX. Todos los derechos reservados.
+            - paragraph [ref=f8e145] [box=16,2898,344,26]: Ingeniería para lo crítico.
+  - alert [ref=f8e204] [box=-1,2955,1,1]

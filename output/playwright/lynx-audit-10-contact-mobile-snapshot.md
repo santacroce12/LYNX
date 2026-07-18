@@ -1,0 +1,79 @@
+- generic [active] [ref=f5e1] [box=0,0,376,3094]:
+  - banner [ref=f5e2] [box=0,0,376,65]:
+    - generic [ref=f5e4] [box=0,0,376,64]:
+      - link [ref=f5e5] [cursor=pointer] [box=16,18,104,27]:
+        - /url: /
+        - img "LYNX logo" [ref=f5e6] [box=16,18,104,27]
+      - button "Abrir menu" [ref=f5e8] [cursor=pointer] [box=324,14,36,36]
+  - main [ref=f5e10] [box=0,0,376,3094]:
+    - generic [ref=f5e12] [box=0,64,376,3030]:
+      - generic [ref=f5e14] [box=0,72,376,2172]:
+        - generic [ref=f5e15] [box=16,72,344,1655]:
+          - generic [ref=f5e17] [box=16,72,344,725]:
+            - generic [ref=f5e18] [box=16,72,344,24]: Contacto
+            - heading "Hablemos de tu próximo proyecto" [level=1] [ref=f5e21] [box=16,112,344,71]
+            - paragraph [ref=f5e23] [box=16,203,344,64]: Completa el formulario y nuestro equipo te responde con una propuesta clara.
+            - generic [ref=f5e35] [box=16,370,344,301]:
+              - link "Correo soporte@lynx.cl" [ref=f5e36] [cursor=pointer] [box=16,370,344,90]:
+                - /url: mailto:soporte@lynx.cl
+                - generic [ref=f5e41] [box=93,387,218,56]
+              - link "WhatsApp +56 9 9219 1328" [ref=f5e46] [cursor=pointer] [box=16,476,344,90]:
+                - /url: https://wa.me/56992191328
+                - generic [ref=f5e50] [box=93,493,218,56]
+              - link "WhatsApp +56 9 9216 2573" [ref=f5e55] [cursor=pointer] [box=16,582,344,90]:
+                - /url: https://wa.me/56992162573
+                - generic [ref=f5e59] [box=93,599,218,56]
+            - generic [ref=f5e70] [box=93,704,229,76]:
+              - paragraph [ref=f5e71] [box=93,704,229,18]: Ubicacion
+              - paragraph [ref=f5e72] [box=93,730,229,26]: Antonio Varas 91, Providencia
+              - paragraph [ref=f5e73] [box=93,760,229,20]: Operación en Chile y Argentina
+          - generic [ref=f5e75] [box=16,825,344,902]:
+            - generic [ref=f5e76] [box=37,850,302,196]:
+              - paragraph [ref=f5e77] [box=37,857,82,12]: Formulario
+              - heading "Contanos que necesitas." [level=2] [ref=f5e78] [box=37,890,302,59]
+              - paragraph [ref=f5e79] [box=37,964,302,56]: Dejanos el contexto y te respondemos con un siguiente paso claro.
+            - generic [ref=f5e80] [box=37,1077,302,625]:
+              - generic [ref=f5e81] [box=37,1077,302,541]:
+                - generic [ref=f5e82] [box=37,1077,302,86]
+                - generic [ref=f5e84] [box=37,1179,302,86]
+                - generic [ref=f5e86] [box=37,1281,302,86]
+                - generic [ref=f5e88] [box=37,1382,302,236]
+              - generic [ref=f5e90] [box=37,1618,302,84]:
+                - button "Enviar mensaje" [ref=f5e91] [cursor=pointer] [box=37,1642,302,44]
+                - paragraph [box=37,1702,302,0]
+        - generic [ref=f5e92] [box=16,1759,344,485]:
+          - generic [ref=f5e94] [box=16,1759,344,130]:
+            - generic [ref=f5e95] [box=16,1759,344,62]:
+              - generic [ref=f5e96] [box=16,1766,71,12]: Ubicacion
+              - heading "Donde operamos" [level=2] [ref=f5e97] [box=16,1795,344,26]
+            - paragraph [ref=f5e98] [box=16,1833,344,56]: Mantenemos presencia operativa en Chile y Argentina, con base en Santiago.
+          - iframe [ref=f5e101] [box=26,1915,324,320]:
+            
+      - generic [ref=f5e104] [box=0,2333,376,760]:
+        - generic [ref=f5e105] [box=20,2365,336,553]:
+          - generic [ref=f5e106] [box=20,2365,336,211]:
+            - generic [ref=f5e107] [box=20,2372,156,12]: Infraestructura crítica
+            - generic [ref=f5e108] [box=20,2413,336,163]:
+              - link "LYNX" [ref=f5e110] [cursor=pointer] [box=37,2426,156,41]:
+                - /url: /
+                - img "LYNX" [ref=f5e111] [box=37,2426,156,41]
+              - generic [ref=f5e112] [box=20,2500,336,76]:
+                - paragraph [ref=f5e113] [box=20,2500,336,20]: "Redes:"
+                - link "LinkedIn" [ref=f5e115] [cursor=pointer] [box=20,2532,44,44]:
+                  - /url: https://linkedin.com/company/lynxenergia
+          - generic [ref=f5e120] [box=20,2608,336,311]:
+            - heading "Contacto" [level=3] [ref=f5e121] [box=20,2615,76,12]
+            - generic [ref=f5e122] [box=20,2648,336,271]:
+              - link "Abrir ubicación de LYNX en Google Maps" [ref=f5e123] [cursor=pointer] [box=20,2648,336,74]:
+                - /url: https://www.google.com/maps/search/?api=1&query=Antonio%20Varas%2091%2C%20Providencia%2C%20Region%20Metropolitana%2C%20Chile
+                - generic [ref=f5e128] [box=69,2664,210,40]
+              - link "soporte@lynx.cl" [ref=f5e135] [cursor=pointer] [box=20,2733,336,54]:
+                - /url: mailto:soporte@lynx.cl
+              - generic [ref=f5e140] [box=20,2799,336,119]:
+                - link "+56 9 9219 1328" [ref=f5e141] [cursor=pointer] [box=20,2799,336,54]:
+                  - /url: https://wa.me/56992191328
+                - link "+56 9 9216 2573" [ref=f5e145] [cursor=pointer] [box=20,2865,336,54]:
+                  - /url: https://wa.me/56992162573
+        - generic [ref=f5e149] [box=20,2950,336,111]:
+          - paragraph [ref=f5e150] [box=20,2971,336,52]: © 2026 LYNX. Todos los derechos reservados.
+          - paragraph [ref=f5e151] [box=20,3035,336,26]: Ingeniería para lo crítico.

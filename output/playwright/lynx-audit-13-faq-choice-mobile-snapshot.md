@@ -1,0 +1,27 @@
+- generic [active] [ref=f7e1] [box=0,0,391,845]:
+  - banner [ref=f7e2] [box=0,0,391,65]:
+    - generic [ref=f7e4] [box=0,0,391,64]:
+      - link [ref=f7e5] [cursor=pointer] [box=16,18,104,27]:
+        - /url: /
+        - img "LYNX logo" [ref=f7e6] [box=16,18,104,27]
+      - button "Abrir menu" [ref=f7e8] [cursor=pointer] [box=339,14,36,36]
+  - main [ref=f7e10] [box=0,0,391,845]:
+    - generic [ref=f7e14] [box=16,161,359,587]:
+      - generic [ref=f7e15] [box=16,161,359,107]:
+        - generic [ref=f7e53] [box=16,161,359,24]: Preguntas frecuentes
+        - heading "Elegí una vertical" [level=1] [ref=f7e56] [box=16,201,359,31]
+        - paragraph [ref=f7e58] [box=16,244,359,24]: Seleccioná el área que querés consultar.
+      - generic [ref=f7e22] [box=16,292,359,456]:
+        - link "Energía Energía Automatización eléctrica, SCADA, PMU y commissioning." [ref=f7e60] [cursor=pointer] [box=16,292,359,222]:
+          - /url: /faqs/energia/
+          - generic [ref=f7e70] [box=33,381,325,116]:
+            - paragraph [ref=f7e71] [box=33,381,325,16]: Energía
+            - heading "Energía" [level=2] [ref=f7e72] [box=33,405,325,32]
+            - paragraph [ref=f7e73] [box=33,449,325,48]: Automatización eléctrica, SCADA, PMU y commissioning.
+        - link "Tecnología Tecnología Integración OT/IT, datos, hardware y soporte técnico." [ref=f7e75] [cursor=pointer] [box=16,526,359,222]:
+          - /url: /faqs/tecnologia/
+          - generic [ref=f7e85] [box=33,615,325,116]:
+            - paragraph [ref=f7e86] [box=33,615,325,16]: Tecnología
+            - heading "Tecnología" [level=2] [ref=f7e87] [box=33,639,325,32]
+            - paragraph [ref=f7e88] [box=33,683,325,48]: Integración OT/IT, datos, hardware y soporte técnico.
+  - alert [ref=f7e89] [box=-1,844,1,1]

@@ -1,0 +1,29 @@
+- generic [ref=f5e209] [box=16,-17,344,990]:
+  - generic [ref=f5e210] [box=37,8,302,196]:
+    - paragraph [ref=f5e211] [box=37,16,82,12]: Formulario
+    - heading "Contanos que necesitas." [level=2] [ref=f5e212] [box=37,48,302,59]
+    - paragraph [ref=f5e213] [box=37,123,302,56]: Dejanos el contexto y te respondemos con un siguiente paso claro.
+  - generic [ref=f5e214] [box=37,236,302,713]:
+    - generic [ref=f5e215] [box=37,236,302,613]:
+      - generic [ref=f5e216] [box=37,236,302,110]:
+        - text: Nombre completo
+        - textbox "Nombre completo" [invalid] [ref=f5e217] [box=37,268,302,54]:
+          - /placeholder: Tu nombre
+        - paragraph [ref=f5e233] [box=37,329,302,16]: Ingresa tu nombre.
+      - generic [ref=f5e218] [box=37,361,302,110]:
+        - text: Email
+        - textbox "Email" [invalid] [ref=f5e219] [box=37,393,302,54]:
+          - /placeholder: tu@email.com
+        - paragraph [ref=f5e234] [box=37,455,302,16]: Ingresa un email válido.
+      - generic [ref=f5e220] [box=37,487,302,86]:
+        - text: Empresa
+        - textbox "Empresa" [ref=f5e221] [box=37,519,302,54]:
+          - /placeholder: Tu empresa
+      - generic [ref=f5e222] [box=37,589,302,260]:
+        - text: Mensaje
+        - textbox "Mensaje" [invalid] [ref=f5e223] [box=37,621,302,198]:
+          - /placeholder: Contanos sobre tu proyecto
+        - paragraph [ref=f5e235] [box=37,833,302,16]: Contanos un poco más (mín. 10 caracteres).
+    - generic [ref=f5e224] [box=37,849,302,100]:
+      - button "Enviar mensaje" [active] [ref=f5e225] [cursor=pointer] [box=37,873,302,44]
+      - paragraph [ref=f5e236] [box=37,933,302,16]: Revisa los campos marcados.

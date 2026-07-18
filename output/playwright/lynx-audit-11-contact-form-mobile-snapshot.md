@@ -1,0 +1,59 @@
+- generic [active] [ref=f5e1] [box=0,-827,376,2774]:
+  - banner [ref=f5e2] [box=0,0,376,61]:
+    - generic [ref=f5e4] [box=0,0,376,60]:
+      - link [ref=f5e5] [cursor=pointer] [box=16,16,104,27]:
+        - /url: /
+        - img "LYNX logo" [ref=f5e6] [box=16,16,104,27]
+      - button "Abrir menu" [ref=f5e8] [cursor=pointer] [box=324,12,36,36]
+  - main [ref=f5e10] [box=0,-827,376,2774]:
+    - generic [ref=f5e12] [box=0,-763,376,2710]:
+      - generic [ref=f5e14] [box=0,-755,376,1852]:
+        - generic [ref=f5e15] [box=16,-755,344,1655]:
+          - generic [ref=f5e17] [box=16,-755,344,725]:
+            - generic [ref=f5e152] [box=16,-755,344,24]: Contacto
+            - heading "Hablemos de tu próximo proyecto" [level=1] [ref=f5e155] [box=16,-715,344,71]
+            - paragraph [ref=f5e157] [box=16,-625,344,64]: Completa el formulario y nuestro equipo te responde con una propuesta clara.
+            - generic [ref=f5e169] [box=16,-457,344,301]:
+              - link "Correo soporte@lynx.cl" [ref=f5e170] [cursor=pointer] [box=16,-457,344,90]:
+                - /url: mailto:soporte@lynx.cl
+              - link "WhatsApp +56 9 9219 1328" [ref=f5e180] [cursor=pointer] [box=16,-351,344,90]:
+                - /url: https://wa.me/56992191328
+              - link "WhatsApp +56 9 9216 2573" [ref=f5e189] [cursor=pointer] [box=16,-246,344,90]:
+                - /url: https://wa.me/56992162573
+            - generic [ref=f5e204] [box=93,-123,229,76]:
+              - paragraph [ref=f5e205] [box=93,-123,229,18]: Ubicacion
+              - paragraph [ref=f5e206] [box=93,-97,229,26]: Antonio Varas 91, Providencia
+              - paragraph [ref=f5e207] [box=93,-67,229,20]: Operación en Chile y Argentina
+          - generic [ref=f5e209] [box=16,-2,344,902]:
+            - generic [ref=f5e210] [box=37,22,302,196]:
+              - paragraph [ref=f5e211] [box=37,30,82,12]: Formulario
+              - heading "Contanos que necesitas." [level=2] [ref=f5e212] [box=37,62,302,59]
+              - paragraph [ref=f5e213] [box=37,137,302,56]: Dejanos el contexto y te respondemos con un siguiente paso claro.
+            - generic [ref=f5e214] [box=37,250,302,625]:
+              - generic [ref=f5e215] [box=37,250,302,541]
+              - generic [ref=f5e224] [box=37,791,302,84]
+        - generic [ref=f5e227] [box=16,950,344,130]:
+          - generic [ref=f5e228] [box=16,950,344,62]:
+            - generic [ref=f5e229] [box=16,957,71,12]: Ubicacion
+            - heading "Donde operamos" [level=2] [ref=f5e230] [box=16,986,344,26]
+          - paragraph [ref=f5e231] [box=16,1024,344,56]: Mantenemos presencia operativa en Chile y Argentina, con base en Santiago.
+      - generic [ref=f5e104] [box=0,1186,376,760]:
+        - generic [ref=f5e105] [box=20,1218,336,553]:
+          - generic [ref=f5e106] [box=20,1218,336,211]:
+            - generic [ref=f5e107] [box=20,1225,156,12]: Infraestructura crítica
+            - generic [ref=f5e108] [box=20,1266,336,163]:
+              - link "LYNX" [ref=f5e110] [cursor=pointer] [box=37,1279,156,41]:
+                - /url: /
+              - generic [ref=f5e112] [box=20,1352,336,76]
+          - generic [ref=f5e120] [box=20,1460,336,311]:
+            - heading "Contacto" [level=3] [ref=f5e121] [box=20,1468,76,12]
+            - generic [ref=f5e122] [box=20,1500,336,271]:
+              - link "Abrir ubicación de LYNX en Google Maps" [ref=f5e123] [cursor=pointer] [box=20,1500,336,74]:
+                - /url: https://www.google.com/maps/search/?api=1&query=Antonio%20Varas%2091%2C%20Providencia%2C%20Region%20Metropolitana%2C%20Chile
+              - link "soporte@lynx.cl" [ref=f5e135] [cursor=pointer] [box=20,1586,336,54]:
+                - /url: mailto:soporte@lynx.cl
+              - generic [ref=f5e140] [box=20,1652,336,119]
+        - generic [ref=f5e149] [box=20,1803,336,111]:
+          - paragraph [ref=f5e150] [box=20,1824,336,52]: © 2026 LYNX. Todos los derechos reservados.
+          - paragraph [ref=f5e151] [box=20,1888,336,26]: Ingeniería para lo crítico.
+  - alert [ref=f5e232] [box=-1,1946,1,1]

@@ -1,0 +1,55 @@
+- generic [active] [ref=f1e1] [box=0,-1110,1425,2184]:
+  - banner [ref=f1e2] [box=0,0,1425,65]:
+    - generic [ref=f1e4] [box=122,0,1180,64]:
+      - link [ref=f1e5] [cursor=pointer] [box=146,17,118,31]:
+        - /url: /
+        - img "LYNX logo" [ref=f1e6] [box=146,17,118,31]
+      - navigation "Navegación principal" [ref=f1e7] [box=450,16,644,32]:
+        - link "Inicio" [ref=f1e8] [cursor=pointer] [box=450,16,47,32]:
+          - /url: /
+        - link "Energía" [ref=f1e9] [cursor=pointer] [box=525,16,64,32]:
+          - /url: /energia/
+        - link "Tecnología" [ref=f1e10] [cursor=pointer] [box=616,16,94,32]:
+          - /url: /tecnologia/
+        - link "Partners" [ref=f1e11] [cursor=pointer] [box=739,16,76,32]:
+          - /url: /partners/
+        - link "Recursos" [ref=f1e12] [cursor=pointer] [box=842,16,78,32]:
+          - /url: /recursos/
+        - link "FAQs" [ref=f1e13] [cursor=pointer] [box=948,16,37,32]:
+          - /url: /faqs/
+        - link "Contacto" [ref=f1e14] [cursor=pointer] [box=1013,16,80,32]:
+          - /url: /contacto/
+  - main [ref=f1e15] [box=0,-1110,1425,2184]:
+    - generic [ref=f1e17] [box=0,-1032,1425,2106]:
+      - generic [ref=f1e19] [box=136,-1012,1152,1500]:
+        - generic [ref=f1e20] [box=160,-1012,1104,936]:
+          - generic [ref=f1e22] [box=160,-1012,565,738]:
+            - generic [ref=f1e181] [box=160,-1012,565,24]: Contacto
+            - heading "Hablemos de tu próximo proyecto" [level=1] [ref=f1e184] [box=160,-972,565,188]
+            - paragraph [ref=f1e186] [box=160,-764,565,64]: Completa el formulario y nuestro equipo te responde con una propuesta clara.
+            - generic [ref=f1e198] [box=160,-596,565,196]
+            - generic [ref=f1e233] [box=237,-367,233,76]
+          - generic [ref=f1e238] [box=753,-1012,511,936]:
+            - generic [ref=f1e239] [box=786,-979,445,214]
+            - generic [ref=f1e243] [box=786,-734,445,625]
+        - generic [ref=f1e97] [box=160,-36,1104,524]:
+          - generic [ref=f1e256] [box=160,-36,1104,73]:
+            - generic [ref=f1e257] [box=160,-36,312,73]
+            - paragraph [ref=f1e260] [box=688,-19,576,56]: Mantenemos presencia operativa en Chile y Argentina, con base en Santiago.
+          - iframe [ref=f1e106] [box=178,70,1069,400]:
+            
+      - generic [ref=f1e109] [box=52,593,1320,480]:
+        - generic [ref=f1e110] [box=84,633,1256,322]:
+          - generic [ref=f1e111] [box=84,633,360,322]:
+            - generic [ref=f1e112] [box=84,639,261,14]: Infraestructura crítica
+            - generic [ref=f1e113] [box=84,681,360,163]
+          - generic [ref=f1e125] [box=532,633,360,322]:
+            - heading "Navegación" [level=3] [ref=f1e126] [box=532,639,138,14]
+            - generic [ref=f1e127] [box=532,673,360,282]
+          - generic [ref=f1e149] [box=964,633,376,322]:
+            - heading "Contacto" [level=3] [ref=f1e150] [box=964,639,117,14]
+            - generic [ref=f1e151] [box=964,673,376,271]
+        - generic [ref=f1e178] [box=84,986,1256,47]:
+          - paragraph [ref=f1e179] [box=84,1007,364,26]: © 2026 LYNX. Todos los derechos reservados.
+          - paragraph [ref=f1e180] [box=1149,1007,191,26]: Ingeniería para lo crítico.
+  - alert [ref=f1e261] [box=-1,1073,1,1]

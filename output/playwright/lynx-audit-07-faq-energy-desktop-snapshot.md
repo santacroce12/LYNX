@@ -1,0 +1,99 @@
+- generic [active] [ref=f3e1] [box=0,0,1425,2735]:
+  - banner [ref=f3e2] [box=0,0,1425,79]:
+    - generic [ref=f3e4] [box=122,0,1180,78]:
+      - link [ref=f3e5] [cursor=pointer] [box=146,22,128,34]:
+        - /url: /
+        - img "LYNX logo" [ref=f3e6] [box=146,22,128,34]
+      - navigation "Navegación principal" [ref=f3e7] [box=455,23,644,32]:
+        - link "Inicio" [ref=f3e8] [cursor=pointer] [box=455,23,47,32]:
+          - /url: /
+        - link "Energía" [ref=f3e9] [cursor=pointer] [box=530,23,64,32]:
+          - /url: /energia/
+        - link "Tecnología" [ref=f3e10] [cursor=pointer] [box=621,23,94,32]:
+          - /url: /tecnologia/
+        - link "Partners" [ref=f3e11] [cursor=pointer] [box=744,23,76,32]:
+          - /url: /partners/
+        - link "Recursos" [ref=f3e12] [cursor=pointer] [box=847,23,78,32]:
+          - /url: /recursos/
+        - link "FAQs" [ref=f3e13] [cursor=pointer] [box=953,23,37,32]:
+          - /url: /faqs/
+        - link "Contacto" [ref=f3e14] [cursor=pointer] [box=1018,23,80,32]:
+          - /url: /contacto/
+  - main [ref=f3e15] [box=0,0,1425,2735]:
+    - generic [ref=f3e96] [box=0,78,1425,2657]:
+      - generic [ref=f3e98] [box=136,98,1152,432]:
+        - link "Volver a FAQs" [ref=f3e100] [cursor=pointer] [box=160,98,157,33]:
+          - /url: /faqs/
+        - generic [ref=f3e106] [box=210,212,768,260]:
+          - generic [ref=f3e107] [box=210,212,768,24]: FAQs – Energía
+          - heading "Preguntas frecuentes de energía" [level=1] [ref=f3e110] [box=210,256,768,132]
+          - paragraph [ref=f3e112] [box=210,408,672,64]: Automatización eléctrica, monitoreo, cumplimiento técnico, protocolos industriales y servicios en terreno.
+      - generic [ref=f3e120] [box=160,626,1104,1265]:
+        - article [ref=f3e122] [box=160,626,1104,155]:
+          - heading "¿Qué servicios de automatización y monitoreo eléctrico ofrece Lynx?" [level=2] [ref=f3e123] [box=181,646,1062,24]
+          - paragraph [ref=f3e125] [box=181,703,1062,56]: Desarrollamos proyectos de automatización, monitoreo y control para sistemas eléctricos. Implementamos plataformas SCADA, RTU, PMU y soluciones de monitoreo para generación, transmisión y almacenamiento de energía.
+        - article [ref=f3e127] [box=160,792,1104,155]:
+          - heading "¿Realizan integración y cumplimiento técnico con el CEN?" [level=2] [ref=f3e128] [box=181,813,1062,24]
+          - paragraph [ref=f3e130] [box=181,870,1062,56]: Sí. Participamos en proyectos asociados al Coordinador Eléctrico Nacional (CEN), incluyendo integración SITR, validación de señales, pruebas FAT/SAT y configuración de sistemas SCADA para instalaciones eléctricas en Chile.
+        - article [ref=f3e132] [box=160,977,1104,155]:
+          - heading "¿Qué protocolos industriales integran en proyectos OT?" [level=2] [ref=f3e133] [box=181,998,1062,24]
+          - paragraph [ref=f3e135] [box=181,1055,1062,56]: Trabajamos con protocolos como IEC 61850, DNP3, Modbus e IEEE C37.118 para automatización eléctrica, integración SCADA y monitoreo fasorial en entornos OT.
+        - article [ref=f3e137] [box=160,1144,1104,155]:
+          - heading "¿Tienen experiencia implementando sistemas PMU?" [level=2] [ref=f3e138] [box=181,1164,1062,24]
+          - paragraph [ref=f3e140] [box=181,1221,1062,56]: Sí. Implementamos sistemas PMU y monitoreo fasorial bajo estándar IEEE C37.118 para observabilidad, análisis dinámico y monitoreo en tiempo real del sistema eléctrico.
+        - article [ref=f3e142] [box=160,1310,1104,155]:
+          - heading "¿Pueden integrar PMU con plataformas SCADA?" [level=2] [ref=f3e143] [box=181,1331,1062,24]
+          - paragraph [ref=f3e145] [box=181,1388,1062,56]: Sí. Integramos PMU con plataformas SCADA y centros de control existentes, considerando interoperabilidad, sincronización temporal y disponibilidad de información operativa.
+        - article [ref=f3e147] [box=160,1477,1104,127]:
+          - heading "¿Qué servicios realizan en subestaciones eléctricas?" [level=2] [ref=f3e148] [box=181,1498,1062,24]
+          - paragraph [ref=f3e150] [box=181,1555,1062,28]: Desarrollamos ingeniería, automatización, telecomunicaciones industriales, protecciones y puesta en servicio para subestaciones de alta y media tensión.
+        - article [ref=f3e152] [box=160,1615,1104,127]:
+          - heading "¿Realizan commissioning y pruebas FAT/SAT?" [level=2] [ref=f3e153] [box=181,1636,1062,24]
+          - paragraph [ref=f3e155] [box=181,1693,1062,28]: Sí. Ejecutamos pruebas FAT/SAT, validación de señales, pruebas punto a punto y commissioning para proyectos eléctricos y sistemas de automatización.
+        - article [ref=f3e157] [box=160,1754,1104,155]:
+          - heading "¿Ofrecen servicios de ciberseguridad OT?" [level=2] [ref=f3e158] [box=181,1775,1062,24]
+          - paragraph [ref=f3e160] [box=181,1832,1062,56]: Sí. Implementamos medidas de ciberseguridad OT orientadas a segmentación de redes, control de accesos, trazabilidad y protección de infraestructura tecnológica.
+      - generic [ref=f3e172] [box=52,2060,1320,674]:
+        - generic [ref=f3e173] [box=84,2100,1256,113]:
+          - generic [ref=f3e174] [box=84,2100,700,113]:
+            - heading "¿Necesitás una respuesta más específica?" [level=2] [ref=f3e176] [box=84,2118,700,69]
+            - paragraph [ref=f3e178] [box=84,2199,640,32]: Contanos el contexto y orientamos el próximo paso técnico.
+          - link "Ir a contacto" [ref=f3e181] [cursor=pointer] [box=1138,2152,202,44]:
+            - /url: /contacto/
+        - generic [ref=f3e182] [box=84,2253,1256,441]:
+          - generic [ref=f3e183] [box=84,2294,1256,322]:
+            - generic [ref=f3e184] [box=84,2294,360,322]:
+              - generic [ref=f3e185] [box=84,2300,261,14]: Infraestructura crítica
+              - generic [ref=f3e186] [box=84,2342,360,163]:
+                - link "LYNX" [ref=f3e188] [cursor=pointer] [box=101,2354,156,41]:
+                  - /url: /
+                - generic [ref=f3e190] [box=84,2428,360,76]
+            - generic [ref=f3e198] [box=532,2294,360,322]:
+              - heading "Navegación" [level=3] [ref=f3e199] [box=532,2300,138,14]
+              - generic [ref=f3e200] [box=532,2333,360,282]:
+                - link "Inicio 01" [ref=f3e201] [cursor=pointer] [box=533,2334,358,40]:
+                  - /url: /
+                - link "Energía 02" [ref=f3e204] [cursor=pointer] [box=533,2374,358,40]:
+                  - /url: /energia/
+                - link "Tecnología 03" [ref=f3e207] [cursor=pointer] [box=533,2414,358,40]:
+                  - /url: /tecnologia/
+                - link "Partners 04" [ref=f3e210] [cursor=pointer] [box=533,2454,358,40]:
+                  - /url: /partners/
+                - link "Recursos 05" [ref=f3e213] [cursor=pointer] [box=533,2494,358,40]:
+                  - /url: /recursos/
+                - link "FAQs 06" [ref=f3e216] [cursor=pointer] [box=533,2534,358,40]:
+                  - /url: /faqs/
+                - link "Contacto 07" [ref=f3e219] [cursor=pointer] [box=533,2574,358,40]:
+                  - /url: /contacto/
+            - generic [ref=f3e222] [box=964,2294,376,322]:
+              - heading "Contacto" [level=3] [ref=f3e223] [box=964,2300,117,14]
+              - generic [ref=f3e224] [box=964,2333,376,271]:
+                - link "Abrir ubicación de LYNX en Google Maps" [ref=f3e225] [cursor=pointer] [box=964,2333,376,74]:
+                  - /url: https://www.google.com/maps/search/?api=1&query=Antonio%20Varas%2091%2C%20Providencia%2C%20Region%20Metropolitana%2C%20Chile
+                - link "soporte@lynx.cl" [ref=f3e237] [cursor=pointer] [box=964,2419,376,54]:
+                  - /url: mailto:soporte@lynx.cl
+                - generic [ref=f3e242] [box=964,2485,376,119]
+          - generic [ref=f3e251] [box=84,2647,1256,47]:
+            - paragraph [ref=f3e252] [box=84,2668,364,26]: © 2026 LYNX. Todos los derechos reservados.
+            - paragraph [ref=f3e253] [box=1149,2668,191,26]: Ingeniería para lo crítico.
+  - alert [ref=f3e94] [box=-1,2734,1,1]: FAQs – Energía | LYNX

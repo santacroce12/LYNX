@@ -51,8 +51,8 @@ La sección `/recursos` puede cargar casos publicados desde PHP/MySQL. Si la API
 3. El SQL deja creada la cuenta de administración:
 
 ```text
-Correo electrónico: marketing@lynx.local
-Contraseña: LINX2026
+Usuario: admin
+Contraseña: LynxAdmin2026
 Rol: admin
 ```
 

@@ -63,7 +63,7 @@ function lynx_ensure_default_admin(): void
         ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci"
     );
 
-    $migrationKey = '2026-07-default-admin-linx2026';
+    $migrationKey = '2026-07-default-admin-lynxadmin2026';
     $migration = $db->prepare('SELECT 1 FROM lynx_migrations WHERE migration_key = :migration_key LIMIT 1');
     $migration->execute(['migration_key' => $migrationKey]);
     if ($migration->fetchColumn()) {
@@ -78,9 +78,10 @@ function lynx_ensure_default_admin(): void
              ON DUPLICATE KEY UPDATE password_hash = VALUES(password_hash), role = 'admin'"
         );
         $admin->execute([
-            'email' => 'marketing@lynx.local',
-            'password_hash' => '$2y$10$GnLJPxyZgOxtMcXRswNX7uDqDQXuH0iJxaitc9ztcl3WixLRLUtq.',
+            'email' => 'admin',
+            'password_hash' => '$2y$10$mg7mEqOs7hSCMSnd0FTI5.v9mLu.UoegyWkdKRKmTJVG9vI2oLRUq',
         ]);
+        $db->prepare('DELETE FROM admin_users WHERE email = :email')->execute(['email' => 'marketing@lynx.local']);
 
         $record = $db->prepare('INSERT IGNORE INTO lynx_migrations (migration_key) VALUES (:migration_key)');
         $record->execute(['migration_key' => $migrationKey]);

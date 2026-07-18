@@ -35,8 +35,8 @@ CREATE TABLE IF NOT EXISTS success_cases (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 INSERT INTO admin_users (email, password_hash, role)
-VALUES ('marketing@lynx.local', '$2y$10$GnLJPxyZgOxtMcXRswNX7uDqDQXuH0iJxaitc9ztcl3WixLRLUtq.', 'admin')
+VALUES ('admin', '$2y$10$mg7mEqOs7hSCMSnd0FTI5.v9mLu.UoegyWkdKRKmTJVG9vI2oLRUq', 'admin')
 ON DUPLICATE KEY UPDATE password_hash = VALUES(password_hash), role = 'admin';
 
 INSERT IGNORE INTO lynx_migrations (migration_key)
-VALUES ('2026-07-default-admin-linx2026');
+VALUES ('2026-07-default-admin-lynxadmin2026');
